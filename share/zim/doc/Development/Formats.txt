@@ -1,0 +1,41 @@
+====== Formats ======
+
+Formats parse plain text with markup into a parse-tree
+
+All Formats should support the IO object interface. Do not assume that the IO object always maps to a file, this is responsibility of the Repository object. DBI interfaces could be used by the Repository object, in which case IO::Scalar could be used to feed the Format.
+
+//TODO: document parse tree//
+
+//TODO: Document how to write parsers//
+
+Comment on format restrictions and how to deal with them, e.g. number of header levels, ital and bold versus emphasis and strong etc.
+
+Main difficulty is how to do linking. Explain that when we do not get an URL we will apply zim's internal lookup.
+URL syntax to overload zims lookup, e.g. page://foo (zim:// already used for interwiki) - or use property ?
+
+----
+
+Differentiate between import/export and read/write. See e.g. the script for converting Tomboy notes. For import/export we potentially need control over the storage, while read/write only converts one file at a time and let the default storage worry about where the files go.
+
+----
+
+* dokuwiki (subclass wiki ?)
+	* extra options for images
+	* nested tags
+	* bullet lists have whitespace indent
+	* locking mechanism ?
+	* honor change log
+	* check media dir
+	* add title read-only on top
+	* renders a link like "[[:users:pardus]]" as "pardus"
+		* need "prefix" or "base" to keep link direct editable
+	* numbered lists with "-" prefix
+* kwiki
+	* reversed order for headings
+	* single chars for markup / and *
+	* uses ''[=text]'' for inline verbatim
+	* uses ''-text-'' for strike
+	* supports html entities with ''&entity'';
+	* camelcase for links and ''[text url text]'' for forced links
+	* "!" escapes camelcase or url
+	* lists use multiple ''*'' or ''0'' characters

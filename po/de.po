@@ -1,0 +1,1911 @@
+# German translation for zim
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the zim package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: zim\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-27 21:09+0100\n"
+"PO-Revision-Date: 2008-11-03 20:47+0000\n"
+"Last-Translator: Klaus Vormweg <klaus.vormweg@gmx.de>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2008-11-09 09:04+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Hokey https://launchpad.net/~hokeyrocks\n"
+"  Jaap Karssenberg https://launchpad.net/~pardus-cpan\n"
+"  Klaus Vormweg https://launchpad.net/~klaus-vormweg\n"
+"  Matthias Mailänder https://launchpad.net/~mailaender\n"
+"  Nikolaus Klumpp https://launchpad.net/~nickk-137\n"
+"  René 'Necoro' Neumann https://launchpad.net/~necoro"
+
+#. Name for desktop menu
+#: share/applications/zim.desktop:-
+msgid "Zim Desktop Wiki"
+msgstr "Zim Desktop Wiki"
+
+#. Comment for desktop menu
+#: share/applications/zim.desktop:-
+msgid "Edit text files \"wiki style\""
+msgstr "Bearbeite Textdateien im 'Wiki-Stil'"
+
+#. GenericName for desktop menu AND
+#. application type AND
+#. application type
+#: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
+#: lib/Zim/GUI/VersionsDialog.pm:402
+msgid "Text Editor"
+msgstr "Texteditor"
+
+#. error
+#: bin/zim:373
+msgid "No such file or directory: {name}"
+msgstr "Datei oder Verzeichnis {name} nicht gefunden"
+
+#. error
+#: bin/zim:374
+msgid "No such notebook: {name}"
+msgstr "Notizbuch {name} existiert nicht"
+
+#. Error SVN not installed
+#: lib/Zim/FS/Bazaar.pm:74
+msgid "Can not find application \"bzr\""
+msgstr "Kann das Programm \"bzr\" nicht finden"
+
+#. error SVN not installed
+#: lib/Zim/FS/Subversion.pm:89
+msgid ""
+"Failed to load SVN plugin,\n"
+"do you have subversion utils installed?"
+msgstr ""
+"SVN Plugin konnte nicht geladen werden,\n"
+"haben Sie die Subversion Tools installiert?"
+
+#. menu label & tooltip for FileMenu
+#: lib/Zim/GUI.pm:183
+msgid "_File|"
+msgstr "_Datei|Datei"
+
+#. menu label & tooltip for EditMenu
+#: lib/Zim/GUI.pm:184
+msgid "_Edit|"
+msgstr "_Bearbeiten|Bearbeiten"
+
+#. menu label & tooltip for ViewMenu
+#: lib/Zim/GUI.pm:185
+msgid "_View|"
+msgstr "_Ansicht|Ansicht"
+
+#. menu label & tooltip for InsertMenu
+#: lib/Zim/GUI.pm:186
+msgid "_Insert|"
+msgstr "_Einfügen|Einfügen"
+
+#. menu label & tooltip for SearchMenu
+#: lib/Zim/GUI.pm:187
+msgid "_Search|"
+msgstr "_Suchen|Suchen"
+
+#. menu label & tooltip for FormatMenu
+#: lib/Zim/GUI.pm:188
+msgid "For_mat|"
+msgstr "For_matierung|Formatierung"
+
+#. menu label & tooltip for ToolsMenu
+#: lib/Zim/GUI.pm:189
+msgid "_Tools|"
+msgstr "_Werkzeuge|Werkzeuge"
+
+#. menu label & tooltip for GoMenu
+#: lib/Zim/GUI.pm:190
+msgid "_Go|"
+msgstr "_Gehe|Gehe"
+
+#. menu label & tooltip for HelpMenu
+#: lib/Zim/GUI.pm:191
+msgid "_Help|"
+msgstr "_Hilfe|Hilfe"
+
+#. menu label & tooltip for PathBarMenu
+#: lib/Zim/GUI.pm:192
+msgid "P_athbar type|"
+msgstr "Pf_adleisten-Stil|Pfadleisten-Stil"
+
+#. menu label & tooltip for NewPage
+#: lib/Zim/GUI.pm:198
+msgid "_New Page|New page"
+msgstr "_Neue Seite|Neue Seite"
+
+#. menu label & tooltip for OpenNotebook
+#: lib/Zim/GUI.pm:200
+msgid "_Open Another Notebook...|Open notebook"
+msgstr "Öffne ein weiteres N_otizbuch...|Öffne Notizbuch"
+
+#. menu label & tooltip for Save
+#: lib/Zim/GUI.pm:201
+msgid "_Save|Save page"
+msgstr "_Speichern|Seite speichern"
+
+#. menu label & tooltip for SaveVersion
+#: lib/Zim/GUI.pm:202
+msgid "S_ave Version...|Save Version"
+msgstr "Fassung S_peichern|Fassung Speichern"
+
+#. menu label & tooltip for Versions
+#: lib/Zim/GUI.pm:203
+msgid "_Versions...|Versions"
+msgstr "_Fassungen...|Fassungen"
+
+#. menu label & tooltip for Export
+#: lib/Zim/GUI.pm:204
+msgid "E_xport...|Export"
+msgstr "E_xportieren...|Exportieren"
+
+#. menu label & tooltip for EmailPage
+#: lib/Zim/GUI.pm:205
+msgid "_Send To...|Mail page"
+msgstr "_Senden an...|Per E-Mail versenden"
+
+#. menu label & tooltip for CopyPage
+#: lib/Zim/GUI.pm:206
+msgid "_Copy Page...|Copy page"
+msgstr "_Kopiere Seite...|Kopiere Seite"
+
+#. menu label & tooltip for RenamePage
+#: lib/Zim/GUI.pm:208
+msgid "_Rename Page...|Rename page"
+msgstr "_Umbenennen| Seite umbenennen"
+
+#. menu label & tooltip for DeletePage
+#: lib/Zim/GUI.pm:210
+msgid "_Delete Page|Delete page"
+msgstr "_Löschen|Lösche Seite"
+
+#. menu label & tooltip for Props
+#: lib/Zim/GUI.pm:212
+msgid "Proper_ties|Properties dialog"
+msgstr "_Eigenschaften|Eigenschaften"
+
+#. menu label & tooltip for Close
+#: lib/Zim/GUI.pm:213
+msgid "_Close|Close window"
+msgstr "_Schließen|Fenster schließen"
+
+#. menu label & tooltip for Quit
+#: lib/Zim/GUI.pm:214
+msgid "_Quit|Quit"
+msgstr "_Beenden|Programm Beenden"
+
+#. menu label & tooltip for Search
+#: lib/Zim/GUI.pm:215
+msgid "_Search...|Search"
+msgstr "_Suchen...|Suchen"
+
+#. menu label & tooltip for SearchBL
+#: lib/Zim/GUI.pm:216
+msgid "Search _Backlinks...|Search Back links"
+msgstr "Suche nach _Backlinks...|Suche nach Backlinks..."
+
+#. menu label & tooltip for CopyLocation
+#: lib/Zim/GUI.pm:217
+msgid "Copy Location|Copy location"
+msgstr ""
+"Kopiere Seiten_adresse|Adresse der Wikiseite in die Zwischenablage kopieren"
+
+#. menu label & tooltip for Prefs
+#: lib/Zim/GUI.pm:218
+msgid "Pr_eferences|Preferences dialog"
+msgstr "_Einstellungen|Einstellungen"
+
+#. menu label & tooltip for Reload
+#: lib/Zim/GUI.pm:219
+msgid "_Reload|Reload page"
+msgstr "_Neu laden|Seite neu laden"
+
+#. menu label & tooltip for OpenFolder
+#: lib/Zim/GUI.pm:220
+msgid "Open Document _Folder|Open document folder"
+msgstr "Dokumentverzeichnis _öffnen|Dokumentverzeichnis öffnen"
+
+#. menu label & tooltip for OpenRootFolder
+#: lib/Zim/GUI.pm:221
+msgid "Open Document _Root|Open document root"
+msgstr "_Zim-Wurzelverzeichnis öffnen|Zim-Wurzelverzeichnis öffnen"
+
+#. menu label & tooltip for AttachFile
+#: lib/Zim/GUI.pm:222
+msgid "Attach _File|Attach external file"
+msgstr "Anhang hinzu_fügen|Eine externe Datei hinzufügen"
+
+#. menu label & tooltip for EditSource
+#: lib/Zim/GUI.pm:223
+msgid "Edit _Source|Open source"
+msgstr ""
+"_Quelltext bearbeiten|Quelltext der Seite mit externem Editor bearbeiten"
+
+#. menu label & tooltip for RBIndex
+#: lib/Zim/GUI.pm:224
+msgid "Re-build Index|Rebuild index"
+msgstr "Index erneuern|Index löschen und neu erstellen"
+
+#. menu label & tooltip for GoBack
+#: lib/Zim/GUI.pm:225
+msgid "_Back|Go page back"
+msgstr "_Zurück|Eine Seite zurück"
+
+#. menu label & tooltip for GoForward
+#: lib/Zim/GUI.pm:226
+msgid "_Forward|Go page forward"
+msgstr "_Vorwärts|Eine Seite vorwärts"
+
+#. menu label & tooltip for GoParent
+#: lib/Zim/GUI.pm:227
+msgid "_Parent|Go to parent page"
+msgstr "_Übergeordnet|Gehe zur übergeordneten Seite"
+
+#. menu label & tooltip for GoChild
+#: lib/Zim/GUI.pm:228
+msgid "_Child|Go to child page"
+msgstr "_Untergeordnet|Gehe zur untergeordneten Seite"
+
+#. menu label & tooltip for GoPrev
+#: lib/Zim/GUI.pm:229
+msgid "_Previous in index|Go to previous page"
+msgstr "_Vorherige Seite im Index|Gehe zur vorherigen Seite im Index"
+
+#. menu label & tooltip for GoNext
+#: lib/Zim/GUI.pm:230
+msgid "_Next in index|Go to next page"
+msgstr "_Nächste Seite im Index|Gehe zur nächsten Seite im Index"
+
+#. menu label & tooltip for GoHome
+#: lib/Zim/GUI.pm:231
+msgid "_Home|Go home"
+msgstr "_Startseite|Gehe zur Startseite"
+
+#. menu label & tooltip for JumpTo
+#: lib/Zim/GUI.pm:232
+msgid "_Jump To...|Jump to page"
+msgstr "S_pringe zu...|Springe zu Seite"
+
+#. menu label & tooltip for ShowHelp
+#: lib/Zim/GUI.pm:233
+msgid "_Contents|Help contents"
+msgstr "_Inhalt|Inhalt der Hilfe"
+
+#. menu label & tooltip for ShowHelpFAQ
+#: lib/Zim/GUI.pm:234
+msgid "_FAQ|FAQ"
+msgstr "_FAQ|FAQ"
+
+#. menu label & tooltip for ShowHelpKeys
+#: lib/Zim/GUI.pm:235
+msgid "_Keybindings|Key bindings"
+msgstr "_Tastenkombinationen|Tastenkombinationen"
+
+#. menu label & tooltip for ShowHelpBugs
+#: lib/Zim/GUI.pm:236
+msgid "_Bugs|Bugs"
+msgstr "_Fehlermeldungen|Fehlermeldungen"
+
+#. menu label & tooltip for About
+#: lib/Zim/GUI.pm:237
+msgid "_About|About"
+msgstr "_Über|Über Zim"
+
+#. menu label & tooltip for TToolBar
+#: lib/Zim/GUI.pm:243
+msgid "_Toolbar|Show toolbar"
+msgstr "Werkzeugleis_te|Zeige Werkzeugleiste"
+
+#. menu label & tooltip for TStatusBar
+#: lib/Zim/GUI.pm:244
+msgid "_Statusbar|Show statusbar"
+msgstr "_Statuszeile|Schalte Statuszeile an oder ab"
+
+#. menu label & tooltip for TPane
+#: lib/Zim/GUI.pm:245
+msgid "_Index|Show index"
+msgstr "_Index|Index anzeigen"
+
+#. menu label & tooltip for PBRecent
+#: lib/Zim/GUI.pm:251
+msgid "_Recent pages|."
+msgstr "Kü_rzlich besuchte Seiten|Kürzlich besuchte Seiten"
+
+#. menu label & tooltip for PBHistory
+#: lib/Zim/GUI.pm:252
+msgid "_History|."
+msgstr "_Verlauf|Verlauf"
+
+#. menu label & tooltip for PBNamespace
+#: lib/Zim/GUI.pm:253
+msgid "_Namespace|."
+msgstr "_Namensraum|Namensraum"
+
+#. menu label & tooltip for PBHidden
+#: lib/Zim/GUI.pm:254
+msgid "H_idden|."
+msgstr "V_ersteckt|Versteckt"
+
+#. ...
+#: lib/Zim/GUI.pm:944
+msgid "Plugin already loaded: {name}"
+msgstr "Plugin {name} ist schon aktiv"
+
+#. ...
+#: lib/Zim/GUI.pm:951
+msgid "No such plugin: {name}"
+msgstr "Plugin {name} existiert nicht"
+
+#. error
+#: lib/Zim/GUI.pm:961 share/zim/plugins/VersionControl.pl:20
+msgid "Failed to load plugin: {name}"
+msgstr "Plugin {name} konnte nicht aktiviert werden"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+msgid "File browser"
+msgstr "Dateibrowser"
+
+#. Dialog question, answers are 'yes' or 'no'
+#: lib/Zim/GUI.pm:1176
+msgid ""
+"<b>Folder does not exist.</b>\n"
+"\n"
+"The folder: {path}\n"
+"does not exist, do you want to create it now?"
+msgstr ""
+"<b>Verzeichnis existiert nicht.</b>\n"
+"\n"
+"Das verzeichnis: {path}\n"
+"gibt es noch nicht. Wollen Sie es anlegen?"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1206
+msgid "Choose {app_type}"
+msgstr "Wähle {app_type}"
+
+#. dialog input label
+#: lib/Zim/GUI.pm:1207
+msgid "Command"
+msgstr "Befehl"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1209
+msgid "Please enter a {app_type}"
+msgstr "Bitte geben Sie ein: {app_type}"
+
+#. error
+#: lib/Zim/GUI.pm:1213
+msgid "You have no {app_type} configured"
+msgstr "Es wurde kein {app_type} konfiguriert"
+
+#. ...
+#: lib/Zim/GUI.pm:1234
+msgid "Can't find {url}"
+msgstr "Finde {url} nicht"
+
+#. ...
+#: lib/Zim/GUI.pm:1236
+msgid "Not an url: {url}"
+msgstr "Keine URL: {url}"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+msgid "Email client"
+msgstr "Mail Programm"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+msgid "Web browser"
+msgstr "Web-Browser"
+
+#. ...
+#: lib/Zim/GUI.pm:1285 lib/Zim/GUI.pm:1312
+msgid "Could not load page: {name}"
+msgstr "Konnte Seite {name} nicht öffnen"
+
+#. error: 404 - page not found
+#: lib/Zim/GUI.pm:1291
+msgid ""
+"This page does not exist\n"
+"404"
+msgstr ""
+"Die Seite gibt es nicht\n"
+"404"
+
+#. ...
+#: lib/Zim/GUI.pm:1328
+msgid "{number} _Back link"
+msgid_plural "{number} _Back links"
+msgstr[0] "{number} Rückverweis"
+msgstr[1] "{number} Rückverweise"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1382
+msgid "New page"
+msgstr "Neue Seite anlegen"
+
+#. input
+#: lib/Zim/GUI.pm:1383
+msgid "Page name"
+msgstr "Seitenname"
+
+#. ...
+#: lib/Zim/GUI.pm:1385
+msgid ""
+"Note that linking to a non-existing page\n"
+"also automatically creates a new page."
+msgstr ""
+"Bitte beachten Sie, dass der Link auf eine\n"
+"nicht existierende Seite automatisch eine\n"
+"neue, leere Seite erzeugt"
+
+#. ...
+#: lib/Zim/GUI.pm:1476
+msgid "Could not save page"
+msgstr "Speichern der Seite fehlgeschlagen"
+
+#. dialog button
+#: lib/Zim/GUI.pm:1478
+msgid "_Discard changes"
+msgstr "Änderungen _verwerfen"
+
+#. dialog button
+#: lib/Zim/GUI.pm:1479
+msgid "_Save a copy..."
+msgstr "_Speichern unter"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1532
+msgid "Save version"
+msgstr "Fassung speichern"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1550
+msgid "Please enter a comment for this version"
+msgstr "Bitte geben Sie eine Beschreibung für diese Fassung ein"
+
+#. label
+#: lib/Zim/GUI.pm:1558
+msgid "Details"
+msgstr "Details"
+
+#. button AND
+#. button label
+#: lib/Zim/GUI.pm:1568 lib/Zim/GUI/VersionsDialog.pm:129
+msgid "_Notebook Changes..."
+msgstr "Änderungsprotokoll _Notizbuch"
+
+#. error
+#: lib/Zim/GUI.pm:1588
+msgid "Can not save a version without comment"
+msgstr "Fassungen ohne Beschreibung können nicht gespeichert werden"
+
+#. error
+#: lib/Zim/GUI.pm:1592
+msgid "Could not save version"
+msgstr "Konnte Fassung nicht speichern"
+
+#. question dialog, options are 'help', 'cancel' and 'ok'
+#: lib/Zim/GUI.pm:1605
+msgid ""
+"<b>Enable Version Control</b>\n"
+"\n"
+"Version control is currently not enabled for this notebook.\n"
+"Do you want to enable it ?"
+msgstr ""
+"<b>Versionskontrolle einschalten</b>\n"
+"\n"
+"Versionskontrolle ist für dieses Notizbuch nicht aktiviert.\n"
+"Wollen Sie sie einschalten?"
+
+#. detailed notice in prompt to enable version control
+#: lib/Zim/GUI.pm:1607
+msgid ""
+"You can choose using either the <b>Bazaar</b> or the <b>Subversion</b> "
+"Version Control System.\n"
+"Please click 'help' to read about the system requirements."
+msgstr ""
+"Sie können entweder das Versionskontrollsystem <b>Bazaar</b> oder "
+"<b>Subversion</b> verwenden.\n"
+"In der Hilfe finden Sie sie Systemanforderungen."
+
+#. error dialog
+#: lib/Zim/GUI.pm:1645
+msgid "Could not initialize version control"
+msgstr "Kann die Versionskontrolle nicht initialisieren."
+
+#. default comment for first version after initializing version control
+#: lib/Zim/GUI.pm:1648
+msgid "Initial version"
+msgstr "Startversion"
+
+#. default name for new page in save copy action
+#: lib/Zim/GUI.pm:1690
+msgid "{name}_(Copy)"
+msgstr "{name}_(Kopie)"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1692
+msgid "Save Copy"
+msgstr "Speichern unter"
+
+#. enrty label AND
+#. tab label AND
+#. header search results AND
+#. column TODO list: zim page AND
+#. input label
+#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
+#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
+#: lib/Zim/GUI/VersionsDialog.pm:57
+msgid "Page"
+msgstr "Seite"
+
+#. save button
+#: lib/Zim/GUI.pm:1694
+msgid "_Save Copy"
+msgstr "_Speichern unter"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1695
+msgid "Please enter a name to save a copy of page: {page}"
+msgstr ""
+"Bitte geben Sie einen Namen ein, um eine Kopie der Seite {page} zu speichern."
+
+#. ...
+#: lib/Zim/GUI.pm:1703
+msgid "Can not save to page: {name}"
+msgstr "Kann Seite {name} nicht speichern"
+
+#. warning dialog, answers are 'cancel' or 'ovewrite'
+#: lib/Zim/GUI.pm:1709
+msgid ""
+"<b>Page already exists</b>\n"
+"\n"
+"The page '{name}'\n"
+"already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"<b>Seite existiert schon</b>\n"
+"\n"
+"Die Seite '{name}'\n"
+"exisitiert schon. Wollen Sie\n"
+"sie überschreiben?"
+
+#. save button
+#: lib/Zim/GUI.pm:1711
+msgid "_Overwrite"
+msgstr "_Überschreiben"
+
+#. error message
+#: lib/Zim/GUI.pm:1768
+msgid "Could not rename {from} to {to}"
+msgstr "Umbenennen von {from} nach {to} ist gescheitert"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1773
+msgid "Updating links"
+msgstr "Links anpassen"
+
+#. progress bar label
+#: lib/Zim/GUI.pm:1774
+msgid "Updating.."
+msgstr "Passe an..."
+
+#. progress bar label
+#: lib/Zim/GUI.pm:1782
+msgid "Updating links in {name}"
+msgstr "Passe Links in {name} an"
+
+#. warning dialog, answers are 'cancel' or 'delete'
+#: lib/Zim/GUI.pm:1837
+msgid ""
+"<b>Delete page</b>\n"
+"\n"
+"Are you sure you want to delete\n"
+"page '{name}' ?"
+msgstr ""
+"<b>Seite löschen</b>\n"
+"\n"
+"Sind Sie sicher, dass sie die Seite\n"
+"'{name}' löschen wollen?"
+
+#. error message
+#: lib/Zim/GUI.pm:1846
+msgid "Could not delete page: {name}"
+msgstr "Konnte Seite {name} nicht löschen"
+
+#. error
+#: lib/Zim/GUI.pm:2145
+msgid "This page does not have a document folder"
+msgstr "Diese Seite gehört zu keinem Dokumentverzeichnis"
+
+#. error
+#: lib/Zim/GUI.pm:2162
+msgid "This notebook does not have a document root"
+msgstr "Diese Notizbuch besitzt kein übergeordnetes Dokumentverzeichnis"
+
+#. ...
+#: lib/Zim/GUI.pm:2184
+msgid "This page does not have a source"
+msgstr "Diese Seite hat keine Quelle"
+
+#. dialog title
+#: lib/Zim/GUI.pm:2345
+msgid "Jump to"
+msgstr "Springe zu"
+
+#. dialog label
+#: lib/Zim/GUI.pm:2347
+msgid "Jump to Page"
+msgstr "Springe zu Seite"
+
+#. dialog title
+#: lib/Zim/GUI.pm:2505
+msgid "Rename page"
+msgstr "Seite umbenennen"
+
+#. dialog label
+#: lib/Zim/GUI.pm:2507
+msgid "Rename to"
+msgstr "Umbenennen in"
+
+#. save button
+#: lib/Zim/GUI.pm:2509
+msgid "_Rename"
+msgstr "_Umbennenen"
+
+#. ...
+#: lib/Zim/GUI.pm:2517
+msgid "_Update links in this page"
+msgstr "_Links in dieser Seite anpassen"
+
+#. ...
+#: lib/Zim/GUI.pm:2519
+msgid "_Update {number} page linking here"
+msgid_plural "_Update {number} pages linking here"
+msgstr[0] "{number} Link auf diese Seite akt_ualisieren"
+msgstr[1] "{number} Links auf diese Seite akt_ualisieren"
+
+#. dialog title AND
+#. dialog prompt
+#: lib/Zim/GUI/Automount.pm:55 lib/Zim/GUI/Automount.pm:56
+msgid "Password"
+msgstr "Passwort"
+
+#. dialog text
+#: lib/Zim/GUI/Automount.pm:58
+msgid ""
+"Please provide the password for\n"
+"{path}"
+msgstr ""
+"Bitte geben Sie das Passwort für\n"
+"{path} ein"
+
+#. dialog title
+#: lib/Zim/GUI/Calendar.pm:52
+msgid "Calendar"
+msgstr "Kalender"
+
+#. strftime format for current date - default suggested in perldoc localtime
+#: lib/Zim/GUI/Calendar.pm:63
+msgid "%a %b %e %Y"
+msgstr "%a %b %e %Y"
+
+#. button
+#: lib/Zim/GUI/Calendar.pm:94
+msgid "_Today"
+msgstr "_Heute"
+
+#. question dialog, answers are 'yes', 'no' or 'not now'
+#: lib/Zim/GUI/Calendar.pm:281
+msgid ""
+"<b>Upgrade calendar pages to 0.24 format?</b>\n"
+"\n"
+"This notebook contains pages for dates using the format yyyy_mm_dd.\n"
+"Since Zim 0.24 the format yyyy:mm:dd is used by default, creating\n"
+"namespaces per month.\n"
+"\n"
+"Do you want to upgrade this notebook to the new layout?\n"
+msgstr ""
+"<b>Kalenderseiten in das Format der Version 0.24 umwandeln?</b>\n"
+"\n"
+"Diese Verzeichnis enthält Seiten für Tage im  Format yyyy_mm_dd.\n"
+"Ab Zim 0.24 wird das Format yyyy:mm:dd benutzt. Das erzeugt\n"
+"einen Namensraum pro Monat.\n"
+"\n"
+"Wollen Sie Ihre Sammlung in das neue Layout umwandeln?\n"
+
+#. button
+#: lib/Zim/GUI/Calendar.pm:282
+msgid "Not Now"
+msgstr "Jetzt nicht"
+
+#. ...
+#: lib/Zim/GUI/Component.pm:414
+msgid "Not a valid page name: {name}"
+msgstr "Kein gültiger Seitenname: {name}"
+
+#. button
+#: lib/Zim/GUI/Component.pm:681 lib/Zim/GUI/ExportDialog.pm:137
+#: lib/Zim/GUI/ExportDialog.pm:148
+msgid "_Browse..."
+msgstr "_Durchsuchen…"
+
+#. dialog title
+#: lib/Zim/GUI/Component.pm:970
+msgid "Select Folder"
+msgstr "Ordner auswählen"
+
+#. dialog title
+#: lib/Zim/GUI/Component.pm:970
+msgid "Select File"
+msgstr "Datei auswählen"
+
+#. error when external application is not found
+#: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
+msgid "Can not find application \"{name}\""
+msgstr "Kann die Anwendung \"{name}\" nicht finden"
+
+#. dialog title
+#: lib/Zim/GUI/EquationEditor.pm:63
+msgid "Equation Editor"
+msgstr "Formel-Editor"
+
+#. button
+#: lib/Zim/GUI/EquationEditor.pm:96
+msgid "_Preview"
+msgstr "_Vorschau"
+
+#. button
+#: lib/Zim/GUI/EquationEditor.pm:104
+msgid "View _Log"
+msgstr "_Protokoll anzeigen"
+
+#. error when no .tex file exists
+#: lib/Zim/GUI/EquationEditor.pm:121
+msgid ""
+"The equation for image: {path}\n"
+"is missing. Can not edit equation."
+msgstr ""
+"Die Formel für das Bild: {path}\n"
+"fehlt. Die Formel kann nicht\n"
+"bearbeitet werden."
+
+#. warning dialog, answers are 'save' or 'cancel'
+#: lib/Zim/GUI/EquationEditor.pm:178
+msgid "The equation failed to compile. Do you want to save anyway?"
+msgstr "Die Formel war fehlerhaft. Trotzdem speichern?"
+
+#. dialog title
+#: lib/Zim/GUI/EquationEditor.pm:293
+msgid "Equation Editor Log"
+msgstr "Formel-Editor Protokoll"
+
+#. context menu
+#: lib/Zim/GUI/EquationEditor.pm:326
+msgid "_Edit Equation"
+msgstr "Formel b_earbeiten"
+
+#. dialog title
+#: lib/Zim/GUI/ExportDialog.pm:40 lib/Zim/GUI/ExportDialog.pm:275
+msgid "Export page"
+msgstr "Exportiere Seite"
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:51
+msgid "Pages"
+msgstr "Seiten"
+
+#. radio button
+#: lib/Zim/GUI/ExportDialog.pm:61
+msgid "_All"
+msgstr "_Alle"
+
+#. radio button
+#: lib/Zim/GUI/ExportDialog.pm:69
+msgid "_Page"
+msgstr "_Seite"
+
+#. check box
+#: lib/Zim/GUI/ExportDialog.pm:77
+msgid "Recursive"
+msgstr "Rekursiv"
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:90
+msgid "Output"
+msgstr "Ausgabe"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Format"
+msgstr "Format"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Template"
+msgstr "Vorlage"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Output dir"
+msgstr "Ausgabeverzeichnis"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Index page"
+msgstr "Indexseite"
+
+#. item in dropdown menu
+#: lib/Zim/GUI/ExportDialog.pm:170
+msgid "other..."
+msgstr "andere..."
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:196
+msgid "Media"
+msgstr "Medien"
+
+#. ...
+#: lib/Zim/GUI/ExportDialog.pm:209
+msgid "Prefix document root"
+msgstr "Präfix für Wurzelverzeichnis"
+
+#. ...
+#: lib/Zim/GUI/ExportDialog.pm:218
+msgid "Attach external files"
+msgstr "Externe Dateien anhängen"
+
+#. progress bar label
+#: lib/Zim/GUI/ExportDialog.pm:276 lib/Zim/GUI/ExportDialog.pm:282
+msgid "Exporting page {number}"
+msgstr "Exportiere Seite {number}"
+
+#. dialog title
+#: lib/Zim/GUI/FindReplaceDialog.pm:47
+msgid "Find and Replace"
+msgstr "Suchen und Ersetzen"
+
+#. input label
+#: lib/Zim/GUI/FindReplaceDialog.pm:66
+msgid "Find what"
+msgstr "Suche was"
+
+#. check box
+#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
+msgid "Match c_ase"
+msgstr "_Groß- und Kleinschreibung beachten"
+
+#. check box
+#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
+msgid "Whole _word"
+msgstr "Ganzes _Wort"
+
+#. input label
+#: lib/Zim/GUI/FindReplaceDialog.pm:78
+msgid "Replace with"
+msgstr "Ersetzen durch"
+
+#. button AND
+#. search button
+#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
+msgid "_Next"
+msgstr "_Nächstes"
+
+#. button AND
+#. search button
+#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
+msgid "_Previous"
+msgstr "_Vorheriges"
+
+#. button
+#: lib/Zim/GUI/FindReplaceDialog.pm:110
+msgid "_Replace"
+msgstr "_Ersetzen"
+
+#. button
+#: lib/Zim/GUI/FindReplaceDialog.pm:120
+msgid "Replace _all"
+msgstr "_Alles ersetzen"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:86
+msgid "Open notebook"
+msgstr "Öffne Notizbuch"
+
+#. list header
+#: lib/Zim/GUI/NotebookDialog.pm:116
+msgid "Notebooks"
+msgstr "Notizbücher"
+
+#. button
+#: lib/Zim/GUI/NotebookDialog.pm:174
+msgid "Cha_nge"
+msgstr "Ä_ndern"
+
+#. prompt
+#: lib/Zim/GUI/NotebookDialog.pm:210
+msgid "Default notebook"
+msgstr "Standard-Notizbuch"
+
+#. error
+#: lib/Zim/GUI/NotebookDialog.pm:334
+msgid "Please select a notebook first"
+msgstr "Bitte wählen Sie zuerst ein Notizbuch aus"
+
+#. error
+#: lib/Zim/GUI/NotebookDialog.pm:342
+msgid "No such directory: {name}"
+msgstr "Verzeichnis {name} existiert nicht"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:371
+msgid "New notebook"
+msgstr "Neues Notizbuch"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:372
+msgid "Edit notebook"
+msgstr "Editiere Notizbuch"
+
+#. ...
+#: lib/Zim/GUI/NotebookDialog.pm:374
+msgid ""
+"Please give at least a directory to store your pages.\n"
+"For a new notebook this should be an empty directory.\n"
+"For example a \"Notes\" directory in your home dir."
+msgstr ""
+"Bitte mindestens ein Verzeichnis zum Abspeichern von Seiten angeben.\n"
+"Für ein neues Notizbuch sollte dies ein leeres Verzeichnis sein.\n"
+"Zum Beispiel ein Verzeichnis \"Notizen\" im Persönlichen Ordner."
+
+#. menu label & tooltip for Head1
+#: lib/Zim/GUI/PageView.pm:54
+msgid "Head _1|Heading 1"
+msgstr "Überschrift _1|Überschrift 1"
+
+#. menu label & tooltip for Head2
+#: lib/Zim/GUI/PageView.pm:55
+msgid "Head _2|Heading 2"
+msgstr "Überschrift _2|Überschrift 2"
+
+#. menu label & tooltip for Head3
+#: lib/Zim/GUI/PageView.pm:56
+msgid "Head _3|Heading 3"
+msgstr "Überschrift _3|Überschrift 3"
+
+#. menu label & tooltip for Head4
+#: lib/Zim/GUI/PageView.pm:57
+msgid "Head _4|Heading 4"
+msgstr "Überschrift _4|Überschrift 4"
+
+#. menu label & tooltip for Head5
+#: lib/Zim/GUI/PageView.pm:58
+msgid "Head _5|Heading 5"
+msgstr "Überschrift _5|Überschrift 5"
+
+#. menu label & tooltip for Normal
+#: lib/Zim/GUI/PageView.pm:59
+msgid "_Normal|Normal"
+msgstr "_Normal|Normal"
+
+#. menu label & tooltip for Bold AND
+#. menu label & tooltip for TBold
+#: lib/Zim/GUI/PageView.pm:60 lib/Zim/GUI/PageView.pm:70
+msgid "_Bold|Bold"
+msgstr "_Fett|Fett"
+
+#. menu label & tooltip for Italic AND
+#. menu label & tooltip for TItalic
+#: lib/Zim/GUI/PageView.pm:61 lib/Zim/GUI/PageView.pm:71
+msgid "_Italic|Italic"
+msgstr "_Kursiv|Kursiv"
+
+#. menu label & tooltip for Underline AND
+#. menu label & tooltip for TUnderline
+#: lib/Zim/GUI/PageView.pm:62 lib/Zim/GUI/PageView.pm:72
+msgid "_Underline|Underline"
+msgstr "_Unterstrichen|Unterstrichen"
+
+#. menu label & tooltip for Strike AND
+#. menu label & tooltip for TStrike
+#: lib/Zim/GUI/PageView.pm:63 lib/Zim/GUI/PageView.pm:73
+msgid "Stri_ke|Strike"
+msgstr "_Durchgestrichen|Durchgestrichen"
+
+#. menu label & tooltip for Verbatim
+#: lib/Zim/GUI/PageView.pm:64
+msgid "_Verbatim|Verbatim"
+msgstr "_Vorformatiert|Vorformatiert"
+
+#. menu label & tooltip for TLink AND
+#. menu label & tooltip for Link
+#: lib/Zim/GUI/PageView.pm:69 lib/Zim/GUI/PageView.pm:101
+msgid "_Link|Link"
+msgstr "_Link|Link"
+
+#. menu label & tooltip for Undo
+#: lib/Zim/GUI/PageView.pm:78
+msgid "_Undo|Undo"
+msgstr "_Rückgängig|Rückgängig"
+
+#. menu label & tooltip for Redo
+#: lib/Zim/GUI/PageView.pm:79
+msgid "_Redo|Redo"
+msgstr "_Wiederholen|Wiederholen"
+
+#. menu label & tooltip for Delete
+#: lib/Zim/GUI/PageView.pm:80
+msgid "_Delete|Delete"
+msgstr "_Löschen|Löschen"
+
+#. menu label & tooltip for ToggleCheckbox
+#: lib/Zim/GUI/PageView.pm:81
+msgid "Toggle Checkbox 'V'|Toggle checkbox"
+msgstr "Ankreuzfeld 'V' umschalten|Ankreuzfeld umschalten"
+
+#. menu label & tooltip for XToggleCheckbox
+#: lib/Zim/GUI/PageView.pm:82
+msgid "Toggle Checkbox 'X'|Toggle checkbox"
+msgstr "Ankreuzfeld 'X' umschalten|Ankreuzfeld umschalten"
+
+#. menu label & tooltip for EditObject
+#: lib/Zim/GUI/PageView.pm:83
+msgid "_Edit Link...|Edit link"
+msgstr "Link _bearbeiten|Link bearbeiten"
+
+#. menu label & tooltip for InsertDate
+#: lib/Zim/GUI/PageView.pm:84
+msgid "_Date and Time...|Insert date"
+msgstr "_Datum und Zeit...|Datum und Uhrzeit einfügen"
+
+#. menu label & tooltip for InsertLink
+#: lib/Zim/GUI/PageView.pm:85
+msgid "_Link...|Insert link"
+msgstr "_Link...|Link einfügen"
+
+#. menu label & tooltip for InsertExtLink
+#: lib/Zim/GUI/PageView.pm:86
+msgid "E_xternal Link...|Insert external link"
+msgstr "E_xterner Link|Externen Link einfügen"
+
+#. menu label & tooltip for InsertImage
+#: lib/Zim/GUI/PageView.pm:87
+msgid "_Image...|Insert image"
+msgstr "_Bild...|Bild einfügen"
+
+#. menu label & tooltip for InsertFromFile
+#: lib/Zim/GUI/PageView.pm:88
+msgid "Text _From File...|Insert text from file"
+msgstr "Text aus Datei ein_fügen...|Text aus einer Datei einfügen"
+
+#. menu label & tooltip for FindReplace
+#: lib/Zim/GUI/PageView.pm:89
+msgid "_Replace...|Find and Replace"
+msgstr "_Ersetzen|Suchen und Ersetzen"
+
+#. menu label & tooltip for Cut
+#: lib/Zim/GUI/PageView.pm:94
+msgid "Cu_t|Cut"
+msgstr "Aus_schneiden|Ausschneiden"
+
+#. menu label & tooltip for Copy
+#: lib/Zim/GUI/PageView.pm:95
+msgid "_Copy|Copy"
+msgstr "_Kopieren|Kopieren"
+
+#. menu label & tooltip for Paste
+#: lib/Zim/GUI/PageView.pm:96
+msgid "_Paste|Paste"
+msgstr "_Einfügen|Einfügen"
+
+#. menu label & tooltip for Find
+#: lib/Zim/GUI/PageView.pm:102
+msgid "_Find...|Find"
+msgstr "_Suchen|Suchen"
+
+#. menu label & tooltip for FindNext
+#: lib/Zim/GUI/PageView.pm:103
+msgid "Find Ne_xt|Find next"
+msgstr "_Vorwärts Suchen|Vorwärts Suchen"
+
+#. menu label & tooltip for FindPrev
+#: lib/Zim/GUI/PageView.pm:104
+msgid "Find Pre_vious|Find previous"
+msgstr "_Rückwärts Suchen|Rückwärts Suchen"
+
+#. menu label & tooltip for WordCount
+#: lib/Zim/GUI/PageView.pm:105
+msgid "_Word Count|Word count"
+msgstr "_Worte zählen|Worte zählen"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:188
+msgid "Head1"
+msgstr "Überschrift1"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:189
+msgid "Head2"
+msgstr "Überschrift2"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:190
+msgid "Head3"
+msgstr "Überschrift3"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:191
+msgid "Head4"
+msgstr "Überschrift4"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:192
+msgid "Head5"
+msgstr "Überschrift5"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:193
+msgid "Normal"
+msgstr "Standard"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:194
+msgid "Bold"
+msgstr "Fett"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:195
+msgid "Italic"
+msgstr "Kursiv"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:196
+msgid "Underline"
+msgstr "Unterstrichen"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:197
+msgid "Strike"
+msgstr "Durchgestrichen"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:198
+msgid "Verbatim"
+msgstr "Vorformatiert"
+
+#. query entry label
+#: lib/Zim/GUI/PageView.pm:311
+msgid "Find"
+msgstr "Suchen"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:810
+msgid "Insert Date"
+msgstr "Datum einfügen"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:815
+msgid "_Edit"
+msgstr "B_earbeiten"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:818
+msgid "_Insert"
+msgstr "E_infügen"
+
+#. check box
+#: lib/Zim/GUI/PageView.pm:828
+msgid "_Link to date"
+msgstr "Ver_linke datum"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
+msgid "Insert Image"
+msgstr "Bild einfügen"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:972
+msgid "Insert from file"
+msgstr "Aus Datei einfügen"
+
+#. ...
+#: lib/Zim/GUI/PageView.pm:976
+msgid "No such file: {file}"
+msgstr "Datei {file} existiert nicht"
+
+#. error
+#: lib/Zim/GUI/PageView.pm:980
+msgid "File is not a text file: {file}"
+msgstr "Datei {file} ist keine Textdatei"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:1023
+msgid "Word Count"
+msgstr "Wortanzahl"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1035
+msgid "Lines"
+msgstr "Zeilen"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1036
+msgid "Words"
+msgstr "Worte"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1037
+msgid "Chars"
+msgstr "Zeichen"
+
+#. status bar info
+#: lib/Zim/GUI/PageView.pm:1089
+msgid "Go to \"{link}\""
+msgstr "Gehe zu \"{link}\""
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1200
+msgid "_Edit Link"
+msgstr "Bearbeite Link"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1212
+msgid "Copy Email Address"
+msgstr "E-Mail Adresse kopieren"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1213
+msgid "Copy _Link"
+msgstr "Kopiere _Link"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1232
+msgid "Open _Directory"
+msgstr "Öffne _Verzeichnis"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1263
+msgid "_Open link"
+msgstr "Öffne _Link"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1305
+msgid "Customise"
+msgstr "Anpassen"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1310
+msgid "Send To..."
+msgstr "Senden an …"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2069
+msgid "Edit Link"
+msgstr "Verknüpfung bearbeiten"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2069
+msgid "Insert Link"
+msgstr "Link einfügen"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2071
+msgid "Text"
+msgstr "Text"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2072
+msgid "Links to"
+msgstr "Verweist auf"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+msgid "_Link"
+msgstr "_Link"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2101
+msgid "Edit Image"
+msgstr "Bild bearbeiten"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2102
+msgid "Source"
+msgstr "Quelle"
+
+#. expander label
+#: lib/Zim/GUI/PageView.pm:2113
+msgid "_Properties"
+msgstr "_Eigenschaften"
+
+#. input label
+#: lib/Zim/GUI/PageView.pm:2130
+msgid "Width"
+msgstr "Breite"
+
+#. input label
+#: lib/Zim/GUI/PageView.pm:2131
+msgid "Height"
+msgstr "Höhe"
+
+#. button
+#: lib/Zim/GUI/PageView.pm:2166
+msgid "_Reset"
+msgstr "_Zurücksetzen"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:44
+msgid "Application to open urls"
+msgstr "Anwendung um URLs zu öffnen"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:48
+msgid "Application to open directories"
+msgstr "Dateibrowser"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:52
+msgid "Application to compose email"
+msgstr "Mailprogramm"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:55
+msgid "Text editor"
+msgstr "Text Editor"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:56
+msgid "Application to edit text files"
+msgstr "Text Editor"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:59
+msgid "Diff editor"
+msgstr "Diff-Editor"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:60
+msgid "Application show two text files side by side"
+msgstr "Programm, um zwei Textdateien nebeneinander darzustellen"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:63
+msgid "User name"
+msgstr "Benutzername"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:64
+msgid "Your name; this can be used in export templates"
+msgstr "Ihr Name (wird benutzt in Export-Templates)"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:67
+msgid "Follow new link"
+msgstr "Folge neuem Link"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:68
+msgid "Creating a new link directly opens the page"
+msgstr "Wenn Sie einen neuen Link erzeugen, öffnen Sie damit eine neue Seite"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:71
+msgid "Show cursor for read-only"
+msgstr "Zeige Cursor bei schreibgeschützten Seiten"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:72
+msgid ""
+"Show the cursor even when you can not edit the page. This is useful for "
+"keyboard based browsing."
+msgstr ""
+"Zeige den Cursor, auch wenn die Seite schreibgeschützt ist. Das ist "
+"nützlich, wenn Sie sich mit Hilfe der Tastatur durch die Seiten bewegen"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:75
+msgid "Tearoff menus"
+msgstr "Abreißbare Menüs"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:76
+msgid "Add 'tearoff' strips to the menus"
+msgstr "Menüs 'abreißbar' machen"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:79
+msgid "Auto-link CamelCase"
+msgstr "KamelSchreibWeise automatisch verlinken"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:80
+msgid "Automaticly link CamelCase words when you type"
+msgstr "Worte in KamelSchreibWeise während der Eingabe automatisch verlinken"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:83
+msgid "Auto-link files"
+msgstr "Dateien automatisch verlinken"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:84
+msgid "Automatically link file names when you type"
+msgstr "Dateien während der Eingabe automatisch verlinken"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:87
+msgid "Auto-format entities"
+msgstr "Automatische Umsetzung von Sonderzeichen"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:88
+msgid "Use autoformatting to type special characters"
+msgstr "Automatische Umsetzung von Sonderzeichen"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:91
+msgid "Auto-increment numbered lists"
+msgstr "Automatisches Hochzählen numerierter Listen"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:92
+msgid "Automatically increment items in a numbered list"
+msgstr "Zählt automatisch die Einträge einer numerierten Liste"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:95
+msgid "Check checkbox lists recursive"
+msgstr "Ankreuzlisten rekursiv ankreuzen"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:96
+msgid "Checking a checkbox list item will also check any sub-items"
+msgstr ""
+"Ankreuzen eines Ankreuzfelds wird auch alle darunter liegenden Felder "
+"ankreuzen"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:99
+msgid "Use \"Backspace\" to un-indent"
+msgstr "Ausrücken mit der 'Zurück'-Taste"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:100
+msgid ""
+"Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
+msgstr ""
+"'Zurück(Backspace)'-Taste verkleinert Einzug von unsortierten Listen (oder "
+"'Hochstell-Tabulator')"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:103
+msgid "Auto-select words"
+msgstr "Worte automatisch markieren"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:104
+msgid "Automaticly select the current word when you toggle the format"
+msgstr ""
+"Markiert das aktuelle Wort automatisch, wenn Sie die Formatierung ändern"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:107
+msgid "Use \"Enter\" to follow links"
+msgstr "'Eingabe'-Taste folgt Links"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:108
+msgid ""
+"Use the \"Enter\" key to follow links. If disabled you still can use \"Alt-"
+"Enter\""
+msgstr ""
+"'Eingabe'-Taste folgt Links. Sollte das abgestellt sein, benutzen Sie bitte "
+"'Alt-Eingabe'"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:111
+msgid "Use \"Ctrl-Space\" to switch focus"
+msgstr "'Strg-Leertaste' wechselt Fokus"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:112
+msgid ""
+"Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
+"If disabled you can still use \"Alt-Space\"."
+msgstr ""
+"'Strg-Leertaste' wechselt den Fokus zwischen Textfenster und Seitenleiste. "
+"Sollte das abgestellt sein, benutzen Sie bitte 'Alt-Leertaste'"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:115
+msgid "Expand side pane"
+msgstr "Seitenleiste erweitern"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:116
+msgid "Start the side pane with the whole tree expanded."
+msgstr "Zeige expandierten Seitenbaum in der Seitenleiste"
+
+#. dialog title
+#: lib/Zim/GUI/PreferencesDialog.pm:124
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:170
+msgid "General"
+msgstr "Allgemein"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:194
+msgid "Interface"
+msgstr "Erscheinungsbild"
+
+#. check box
+#: lib/Zim/GUI/PreferencesDialog.pm:216
+msgid "Use custom font"
+msgstr "Benutze eigene Schriftart"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:244
+msgid "Editing"
+msgstr "Bearbeiten"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:266
+msgid "Plugins"
+msgstr "Plugins"
+
+#. ...
+#: lib/Zim/GUI/PreferencesDialog.pm:270
+msgid ""
+"You need to restart the application\n"
+"for plugin changes to take effect."
+msgstr ""
+"Sie müssen Zim neustarten, damit Änderungen\n"
+"der Plugin-Einstellungen wirksam werden"
+
+#. header plugin list
+#: lib/Zim/GUI/PreferencesDialog.pm:285
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#. header plugin list AND
+#. input
+#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+msgid "Name"
+msgstr "Name"
+
+#. dialog title
+#: lib/Zim/GUI/PropertiesDialog.pm:35
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#. tab label
+#: lib/Zim/GUI/PropertiesDialog.pm:52
+msgid "Notebook"
+msgstr "Notizbuch"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:100
+msgid "Directory"
+msgstr "Verzeichnis"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:102
+msgid "Home Page"
+msgstr "Startseite"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:103
+msgid "Icon"
+msgstr "Symbol"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:104
+msgid "Document Root"
+msgstr "Zim-Startverzeichnis"
+
+#. check box
+#: lib/Zim/GUI/PropertiesDialog.pm:114
+msgid "Slow file system"
+msgstr "Langsames Dateisystem"
+
+#. check box
+#: lib/Zim/GUI/PropertiesDialog.pm:120
+msgid "Auto-save version on close"
+msgstr "Automatisches Speichern der Version beim Schließen"
+
+#. label for page property Content-Type
+#: lib/Zim/GUI/PropertiesDialog.pm:189
+msgid "Source Format"
+msgstr "Quellformat"
+
+#. label for page property Creation-Date
+#: lib/Zim/GUI/PropertiesDialog.pm:190
+msgid "Creation Date"
+msgstr "Erstellungsdatum"
+
+#. label for page property Modification-Date
+#: lib/Zim/GUI/PropertiesDialog.pm:191
+msgid "Modification Date"
+msgstr "Änderungsdatum"
+
+#. dialog title AND
+#. input label AND
+#. menu item
+#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
+#: lib/Zim/GUI/TrayIcon.pm:262
+msgid "Search"
+msgstr "Suche"
+
+#. header search results
+#: lib/Zim/GUI/SearchDialog.pm:75
+msgid "Rank"
+msgstr "Rang"
+
+#. dialog title
+#: lib/Zim/GUI/SearchDialog.pm:177
+msgid "Edit Query"
+msgstr "Abfrage bearbeiten"
+
+#. dialog text
+#: lib/Zim/GUI/SearchDialog.pm:189
+msgid "You can add rules to your search query below"
+msgstr "Unten können Regeln zur Suchabfrage hinzugefügt werden"
+
+#. menu label & tooltip for TSpell
+#: lib/Zim/GUI/Spell.pm:31
+msgid "Check _spelling|Spell check"
+msgstr "_Rechtschreibprüfung|Rechtschreibprüfung"
+
+#. dialog title
+#: lib/Zim/GUI/TODOListDialog.pm:46
+msgid "TODO List"
+msgstr "Aufgabenliste"
+
+#. prompt
+#: lib/Zim/GUI/TODOListDialog.pm:69
+msgid "Filter"
+msgstr "Filter"
+
+#. Button label
+#: lib/Zim/GUI/TODOListDialog.pm:73
+msgid "_Filter"
+msgstr "_Filter"
+
+#. column TODO list: priority
+#: lib/Zim/GUI/TODOListDialog.pm:109
+msgid "Prio"
+msgstr "Prio"
+
+#. column TODO list: task description
+#: lib/Zim/GUI/TODOListDialog.pm:110
+msgid "Task"
+msgstr "Aufgabe"
+
+#. column TODO list: due date AND
+#. column header for timstamp
+#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+msgid "Date"
+msgstr "Datum"
+
+#. ...
+#: lib/Zim/GUI/TODOListDialog.pm:139
+msgid "Include all open checkboxes"
+msgstr "Alle offenen Ankreuzfelder einschließen"
+
+#. number of tasks in TODO list
+#: lib/Zim/GUI/TODOListDialog.pm:284
+msgid "{number} item total"
+msgid_plural "{number} items total"
+msgstr[0] "insgesamt {number} Eintrag"
+msgstr[1] "insgesamt {number} Einträge"
+
+#. menu item "Other notebook"
+#: lib/Zim/GUI/TrayIcon.pm:201
+msgid "Other..."
+msgstr "Andere…"
+
+#. status bar info
+#: lib/Zim/GUI/TreeView.pm:363
+msgid "Scanning tree ..."
+msgstr "Durchsuche Baum..."
+
+#. dialog title
+#: lib/Zim/GUI/VersionsDialog.pm:39
+msgid "Versions"
+msgstr "Versionen"
+
+#. button
+#: lib/Zim/GUI/VersionsDialog.pm:76
+msgid "View _Annotated..."
+msgstr "Ansicht mit _Anmerkungen"
+
+#. button
+#: lib/Zim/GUI/VersionsDialog.pm:79
+msgid "_Restore Version..."
+msgstr "Ve_rsion wiederherstellen..."
+
+#. column header for version id
+#: lib/Zim/GUI/VersionsDialog.pm:86
+msgid "Id"
+msgstr "Id"
+
+#. column header for committer
+#: lib/Zim/GUI/VersionsDialog.pm:88
+msgid "User"
+msgstr "Benutzer"
+
+#. frame label
+#: lib/Zim/GUI/VersionsDialog.pm:101
+msgid "Comment"
+msgstr "Kommentar"
+
+#. label for version entry
+#: lib/Zim/GUI/VersionsDialog.pm:118
+msgid "Compare this version with"
+msgstr "Diese Fassung vergleichen mit"
+
+#. special name for current version
+#: lib/Zim/GUI/VersionsDialog.pm:120 lib/Zim/GUI/VersionsDialog.pm:412
+msgid "Current"
+msgstr "Aktuell"
+
+#. button label
+#: lib/Zim/GUI/VersionsDialog.pm:131
+msgid "_Page Changes..."
+msgstr "_Änderungen an der Seite..."
+
+#. button label
+#: lib/Zim/GUI/VersionsDialog.pm:133
+msgid "Co_mpare Page..."
+msgstr "_Vergleiche Seite..."
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:229
+msgid "No such page: {page}"
+msgstr "Seite existiert nicht: {page}"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:230
+msgid "Please give a page first"
+msgstr "Bitte zuerst eine Seite angeben"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:240
+msgid "Please select a version first"
+msgstr "Bitte zuerst eine Fassung wählen"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:316
+msgid "Could not get file for page: {page}"
+msgstr "Kann auf die Datei für die Seite \"{page}\" nicht zugreifen"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:346
+msgid "Could not get changes for page: {page}"
+msgstr "Kann auf die Änderungen für die Seite \"{page}\" nicht zugreifen"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:347
+msgid "Could not get changes for this notebook"
+msgstr "Konnte Änderungen für dieses Notizbuch nicht lesen"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:365
+msgid "Could not get versions to compare"
+msgstr "Kann auf die zu vergleichenden Fassungen nicht zugreifen"
+
+#. application type
+#: lib/Zim/GUI/VersionsDialog.pm:375
+msgid "Diff Editor"
+msgstr "Diff-Editor"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:389
+msgid "Could not get annotated source for page {page}"
+msgstr ""
+"Konnte den Quelltext mit Anmerkungen für die Seite {page} nicht laden"
+
+#. confirmation for restore version, answers are 'cancel' or 'ok'
+#: lib/Zim/GUI/VersionsDialog.pm:415
+msgid ""
+"<b>Restore page to saved version?</b>\n"
+"\n"
+"Do you want to restore page: {page}\n"
+"to saved version: {version} ?\n"
+"\n"
+"All changes since the last saved version will be lost !"
+msgstr ""
+"<b>Seite durch eine ältere Version ersetzen!</b>\n"
+"\n"
+"Wollsen Sie die Seite: {page}\n"
+"durch die Version {version} ersetzen?\n"
+"\n"
+"Alle Änderungen nach dieser Version gehen verloren!"
+
+#. menu label & tooltip for GoToday
+#: share/zim/plugins/Calendar.pl:7
+msgid "To_day|Today"
+msgstr "_Heute|Erzeuge eine neue Seite für heute"
+
+#. menu label & tooltip for TCalendar
+#: share/zim/plugins/Calendar.pl:11
+msgid "Calen_dar|Show calendar"
+msgstr "_Kalender|Öffne Kalenderfenster"
+
+#. menu label & tooltip for InsertEquation
+#: share/zim/plugins/EquationEditor.pl:14
+msgid "E_quation...|Insert equation"
+msgstr "_Formel...|Formel einfügen"
+
+#. menu label & tooltip for InsertScreenshot
+#: share/zim/plugins/InsertScreenshot.pl:20
+msgid "_Screenshot...|Insert screenshot"
+msgstr "_Bildschirmfoto|Bildschirmfoto einfügen"
+
+#. menu label & tooltip for TmpPrint
+#: share/zim/plugins/PrintToBrowser.pl:32
+msgid "Print to Browser|Print to browser"
+msgstr "In HTML drucken|In HTML drucken"
+
+#. menu label & tooltip for TTODOList
+#: share/zim/plugins/TODOList.pl:7
+msgid "_TODO List...|Open TODO List"
+msgstr "_Aufgabenliste...|Öffne Aufgabenliste"
+
+#. menu label & tooltip for TEditMode
+#: share/zim/plugins/ToggleReadOnly.pl:13
+msgid "Page Editable|Page editable"
+msgstr "Seite editierbar|Seite editierbar"
+
+#. menu label & tooltip for SvnCommit
+#: share/zim/plugins/VersionControl/Subversion.pl:30
+msgid "SVN commit|Commit notebook to SVN repository"
+msgstr "SVN commit|Notizbuch ins SVN Archive einchecken"
+
+#. menu label & tooltip for SvnUpdate
+#: share/zim/plugins/VersionControl/Subversion.pl:31
+msgid "SVN update|Update notebook from SVN repository"
+msgstr "SVN update|Notizbuch aus dem SVN Archiv erneuern"
+
+#. menu label & tooltip for SvnCleanup
+#: share/zim/plugins/VersionControl/Subversion.pl:32
+msgid "SVN cleanup|Cleanup SVN working copy"
+msgstr "SVN cleanup|SVN Arbeitskopie entsperren"
+
+#. SVN warning
+#: share/zim/plugins/VersionControl/Subversion.pl:90
+msgid ""
+"This page was updated in the repository.\n"
+"Please update your working copy (Tools -> SVN update)."
+msgstr ""
+"Diese Seite wurde im SVN Archiv geändert.\n"
+"Bitte erneuern sie Ihre Arbeitskopie (Werkzeuge -> SVN update)."
+
+#. Error in SVN update
+#: share/zim/plugins/VersionControl/Subversion.pl:104
+msgid "Failed update working copy."
+msgstr "Erneuern der Arbeitskopie fehlgeschlagen"
+
+#. ...
+#: share/zim/plugins/VersionControl/Subversion.pl:117
+msgid "Failed to cleanup SVN working copy."
+msgstr "Entsperren der Arbeitskopie fehlgeschlagen"

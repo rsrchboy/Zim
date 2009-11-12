@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Sat, 25 Oct 2008 13:04:34 +0200
+
+====== Version Control ======
+
+Zim implements version control based on external version control systems that operate on a directory with files. You can either use the [[http://bazaar-vcs.org/|Bazaar Version Control System]] or [[http://subversion.tigris.org/|Subversion]]. If you are familiar with such systems it will be easy for you to set this up manually according to your own preferences (see below for some tips). Otherwise you can let zim initializing the default setup.
+
+When you do not have a preferred version control system **Bazaar **is a good default. To use the Bazaar version control system you need to have this program installed; check for an installation package called either "bazaar" or "bzr". A windows version is also available from their website.
+
+===== Initializing version control =====
+
+By default version control is not used until you save a version of the notebook for the first time. Just select the "//File// -> //Save Version...//" menu item and zim will prompt you whether you want to initialize version control. Once version control is enabled the Versions dialog will also be available.
+
+**Note:** Zim will detect when the notebook directory is under control of any of the known version control systems. So if you initialize version control manually all you have to do is restart zim to have it enabled. Check the Versions dialog (//File// -> //Versions...//) to see if it is working properly.
+
+===== Using version control =====
+
+To save a snapshot of the notebook as it is at the moment select **Save Version...** for the "//File//" menu. This will prompt for a comment, you can for example put in some description of changes you made to the notebook since the last version you saved. ( If you decide to cancel the dialog the comment is still remembered for the next time you open the dialog. ) The bottom of the dialog shows an overview of which files were changed since the last version. If you want to inspect the changes you made in detail you an use the "Notebook Changes..." button. This will show the changes in the "diff" format in an external editor.
+
+If you want to **save versions automatically** you can set the auto-save option in the notebook [[properties]].
+
+To inspect the version history of a page and compare versions open the **Versions dialog** from the "//File//" menu. When you open the dialog it will show a list of versions in which the current page was changed. To see all versions of the notebook use the small "clear" button next to the page entry. When you select a specific version the comment for that version will be shown in the text box below the version list. The following actions are available from this dialog:
+
+The **View Annotated...** button will show an annotated version of the source of the current page. This is a view where for each line of content the version is given for which the line was last edited.
+
+The **Restore Version...** button allows you to restore the page to a previous version. It will take the version you selected in the list and prompt you if you are sure. After that the page is reverted to how it was for that specific version and saved. //All changes since the last version you saved will be lost if you use this function.//
+
+The **Notebook Changes...** button will show the differences between two versions in the "diff" format. This is a summary format that shows which lines were changed in which files. Since this diff goes over the complete notebook it can be quiet large depending on how many changes you made. The first version is always the version you selected in the list. The second version to compare with can be set in the input field below. If the second version is set to "Current" the version from the list is compared with the current version of the notebook. The **Page Changes...** button does the same but focuses on the current page. The **Compare page...** button shows the differences for the current page in an other view. This requires an external application that can show two versions side by side. Examples of such applications are "''meld''" ([[http://meld.sourceforge.net/|screenshots]]) or "''gvim -d''". On first usage you will prompted for the application, later you can use the [[preferences]] dialog to change it.
+
+===== Initializing manually =====
+
+You can setup a bzr or svn version control manually for the notebook directory (or one of it's parent directories). Zim will detect the version control system after restarting and be able to use the version control features. It is best to ignore the "''.zim/''" directory since this is used as a cache directory by zim. 
+
+* With Bazaar use "''bzr ignore .zim/''"
+* With Subversion use "''svn propset svn:ignore .zim/ .''"
+
+Of course you can also use version control systems other than Bazaar and Subversion, but zim will not recognize them. In that case you need to do your commits manual as well.
+
+===== Trouble shooting =====
+
+Because version control relies on external tools it can be that errors thrown by those tools are not always handled graciously by zim. Try running zim from a terminal using the ''-V'' switch. In this mode zim will show all external commands that are executed as terminal output. Check for error messages or try to run the same commands manually.
+
+===== References =====
+
+* [[http://doc.bazaar-vcs.org/latest/en/user-guide/index.html|Bazaar user manual]]
+* [[http://svnbook.red-bean.com/|Subversion book]]

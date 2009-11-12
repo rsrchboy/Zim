@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Tue, 20 Jan 2009 22:56:48 +0100
+
+====== Installing Zim ======
+
+===== Installation =====
+
+To install **zim** unpack the archive, change directory and run:
+
+'''
+perl Build.PL
+./Build
+./Build test
+./Build install
+'''
+
+Detailed installation instructions are available for:
+
+* [[.unix|Linux and other unix flavors]]
+* [[.windows|Windows]]
+* [[.OS X|OS X]] 
+
+==== Testing ====
+When you have tests failing please run in verbose mode before reporting, there are warnings there for tests known to fail occasionally.
+
+'''
+./Build test verbose=1
+'''
+
+==== Run without install ====
+You don't need to install **zim** to run it. Just unpack the source and go to the package directory. Now run ''./bin/zim'' and **zim** will find it's files relative to the package directory. This is useful when testing a new version or when you lack the rights to do a proper installation.

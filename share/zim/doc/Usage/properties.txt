@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 20:32:12 +0200
+
+====== Properties ======
+
+The property dialog allows you to modify notebook properties. You can open the properties dialog using the "//File//->//Properties//" menu item. It is also shown when you edit or add a notebook in the "Open notebook" dialog.
+
+===== Notebook properties =====
+
+The **Name** is used for identifying this notebook when you have multiple notebooks opened.
+
+The **Directory** field shows the directory where the notes are stored. This is usually not editable unless you are configuring a new notebook.
+
+The **Document Root** is a directory used to lookup files that are linked from the wiki. If this property is set any file linked as "''/foo.txt''" will be looked for in this directory instead of in the file system root. If you use this setting you still can link files in an absolute way using the "''file://''" syntax. See also: [[Attaching_Files|attaching files]].
+
+The **Icon** property can be used to use a custom icon for this notebook.
+
+You can set **Home page** to the page you want to use as default start page for this notebook.
+
+The **Slow file system** option can be used if the directory where the pages are saved is for example on a remote file system. If this option is enabled caching will be done in the your home directory instead of in the notebook directory. Also the auto-save function will use the home directory for intermediate saving and only synchronizes with the notebook directory when you navigate away from the page.
+
+The **Auto-save version on close** option can be used when [[VersionControl]] is enabled. With this option "Save Version" is called automatically every time zim is closed. Keep in mind that when the TrayIcon [[plugins:|plugin]] is enabled notebooks are not closed until you select "Quit".
+
+===== Page properties =====
+
+The page properties tab shows the source format, the creation date and the modification date of the page. 
+
+The **source format** shows the syntax that is used to store the page source. The default is "text/x-zim-wiki" for the [[syntax|wiki syntax]]. 
+
+The **creation date** shows the timestamp the creation of this page. If it is set to "unknown" the page was either created with an older version of zim or an external editor. The **modification date** just shows the last time the page was saved.

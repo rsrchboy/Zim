@@ -1,0 +1,21 @@
+====== Tags, Categories & Selections ======
+
+Categories and Tags differ with respect to subclassing. A category can have sub-categories, a tag does not. Tags refine by adding multiple tags that overlap. Categories differ from namespacing in so far that a page can belong to multiple categories, but only to a single namespace.
+
+Namespaces are used to determine physical storage. All other organisation can be build upon linking structure. E.g. a page linking to a category or a tag. Ideally we want these links to have a type, else linking to a category just to mention it pollutes the category. Namespace structure can be abstracted as a special type of link.
+
+( When types are introduced probably we want some sigil in the wiki syntax to link to tags and categories without typing the full type name like IsMemberOf o.i.d. )
+
+Another difference may be that while categories can be build explicitly, tags always use backward reference. So a tag is in the page that is tagged, while a category may be an external index.
+
+For tags we want special pages that show all backlinks inline. We should probably use an IconView for this because IconView can show multiple columns, while TreeView shows only one. Use a split-screen so we also can type in some text describing the use of the tag. See TagsPlugin for details on how to implement a tag namespace.
+
+For categories we might want to have a function to add the current page to a certain category. This would be the same as bookmarking in terms of interface. Menu item -> dialog -> choose folder in hierarchy. Just make sure the dialog clearly indicates when we are categorized in multiple sections. E.g. show a "current categories" list above the hierarchy. Maybe call this bookmarking and never mention categories ? Of course each category is a simple, editable, page and "bookmarking" just adds a link to the bottom of that page.
+
+Now we come to selections. Basicly every sub-set of pages can be a selection. Typically we want to be able to create a selection based on a search query. We build upon the linking structure by making sure search can handle the linking structure intelligently. Apart from tags and categories also normal backlinks or searches can be a selection. Special selections include the history and the index (which contains all pages). To handle selections quick and efficiently we should build them upon a database.
+
+Since we consider all backlink sets as a selection (or link sets for that matter) why not support the IconView pane for every page ? Just want to be able to toggle it on/off when needed, but have it always on for certain special pages. Only do this for backlinks though, other kinds of saved searches should go into the search dialog, although technically they do not really differ.
+
+In terms of interface we could put a lot more in the side pane. E.g. show history / recent pages / search in the history. Make side pane, pathbar and dialog more or less interchangeable. Have a single API for selection objects which these widgets can use. Pathbar is limited to non-hierarchical selections (history / recent / path) while side bar and dialog can be used for anything. Technically backlinks are also non-hierarchical, but still do not belong in pathbar. Make it possible to dock the dialog in the side bar or un-dock it. Also make it possible to "dock" the backlinks list. This allows browsing the list easily.
+
+...

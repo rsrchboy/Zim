@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 20:32:50 +0200
+
+====== Usage ======
+
+For a general introduction to **zim** see [[:about|About]].
+
+For a quick introduction have a look at [[.Getting Started|Getting Started]].
+
+===== Topics =====
+
+* [[.Commandline|Commandline]] options
+* [[.Notebooks|Notebooks]]
+
+* [[.Linking|Linking]]
+* [[.Autoformat|Autoformatting]]
+* [[.Exporting|Exporting]]
+* [[.Searching|Searching]]
+* [[.Keybindings|Keybindings]]
+* [[.syntax|Wiki Syntax]]
+* [[.VersionControl|Version Control]]
+
+* Application [[.Preferences|preferences]]
+* Notebook and page [[.properties|properties]]
+* [[.Plugins|Plugins]]
+* [[.Profiles|Profiles]]
+* [[.Config|Config]] files
+* Color [[.styles|styles]]

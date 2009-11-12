@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 19:32:34 +0200
+
+====== User interface ======
+
+There is a central application object which is the single instantiation of the class [[man?Zim::GUI|Zim::GUI]]. This object manages a number of objects that handle certain parts of the interface. These can be either pieces of the program that are split out to a separate module or objects defined by plugins. Examples of such components are the main interface widgets like the [[man?Zim::GUI::PageView|PageView]], the [[man?Zim::GUI::TreeView|TreeView]] and the [[man?Zim::GUI::PathBar|PathBar]]. These components typically inherit from the base class [[man?Zim::GUI::Component|Zim::GUI::Component]]. They can access the main object using the attribute "''{app}''". The Zim::GUI object also holds a reference the the Zim [[notebook]] object which can be accessed using the "''{notebook}''" attribute.
+
+
+{{./relations_gui_layer.png}}
+
+
+**Autoloading modules:** [[man?Zim::GUI|Zim::GUI]] autoloads methods that return child objects. For example "''$app->PageView''" returns the PageView object. When there is no such object defined zim looks in the ''Zim::GUI::'' namespace for a module of the same name and load it. Almost all classes used by zim are autoloaded, this makes sense because this way if a user for e.g. does not use a certain dialog we do not need to bother initializing it. The same mechanism can be use by [[plugins]] simply by defining new modules in the ''Zim::GUI::'' namespace.
+
+**Widgets:** Specialized widgets that are not strictly zim specific are in the Gtk2::Ex:: namespace. The plan is that these will be released to CPAN at some point.
+
+===== Actions =====
+Actions are the methods that are triggered by menu items and by toolbar items. The menu and toolbar items are defined using [[man?Gtk2::UIManager|Gtk2::UIManager]] but [[man?Zim::GUI::Component|Zim::GUI::Component]] contains convenience routines to add new actions and new interface items.
+
+In the API of the various components the action methods start with a capital to distinguish them from normal methods. The actions form the most stable part of the API, so for example [[plugins]] should try to do as much as possible just sticking to these methods. Also the [[Daemon|IPC interface]] is only allowed to call capitalized methods.

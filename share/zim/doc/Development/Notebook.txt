@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 19:35:10 +0200
+
+====== Notebook ======
+
+The notebook object manage the collection of pages. There is a main dispatcher object of class Zim that reads the notebook config and loads one or more handlers to do the actual work, these handlers are subclasses of [[man?Zim::Store|Zim::Store]]. The most important one is [[man?Zim::Store::Files|Zim::Store::Files]], which is the default backend.
+
+Pages are implemented by the [[man?Zim::Page|Zim::Page]] class. The Store constructs the Page objects and sets a source and a Format for the Page. In the case of [[man?Zim::Store::Files|Zim::Store::Files]] the source is a file, but this does not necessarily have to be the case. For example the [[man?Zim::Store::Man|Zim::Store::Man]] backend uses the output of the "man" command as source.
+
+The class [[man?Zim::Selection|Zim::Selection]] is used to handle groups of pages. It is bound to a notebook object but can for example represent a subset of the notebook. Zim::Selection objects are for example used to collect the pages for export or to return a search result.
+
+The [[man?Zim::History|History]] object contains a sequence of pages together with records of for example the last cursor position and the undo stack for these pages.
+
+
+
+{{./relations_data_layer.png}}
+
+
+====== Repository ======
+
+The repository objects handle the source of the data, the page object handles the content of the data. Therefore something went wrong when any other object outside the repository needs to know a file name for a page. The page object uses filehandles, but it needs the repository to open them.
+
+The repository is the object that manages where data comes from and where it goes to when you save it. The default repository maps the pages to simple text files, but adds some logic to deal with things like case-sensitivity. The GUI only has to deal with one repository object, it is not possible to open multiple repositories. All page names are resolved within this repository. But it is possible to have "child" repositories under this root repository. This model can be thought of as a filesystem with mount-points. A child repository takes control of one namespace and all namespaces below that node.
+
+Pages within the repository can be organized with namespaces. In the default repository these map to directories. But if a repository maps to a table in a database these namespaces would probably just be another column in this table. Repositories that do not have a hierarchical representation don't have to show a namespace list at all.
+
+The GUI is always allowed to ask to load a page that does not exist and/or is not shown in the namespace list. In this case either a new page can be created or the request can be ignored.
+
+The top level API for the repository is through Zim.pm, this object does little apart from checking the method arguments and then dispatches to an object of the class Store. The dispatch is done by namespace, so different parts of the tree can be managed by different backends.
+
+-
+
+The main Zim object has a directory object for storage of the pages. Although the Store classes get to decide how to store the data the assumption is that all stores that actually store data on the filesystem will do so below this directory. For example how version control is implemented based on this top level directory. A sub-store that uses a different directory path with a different version control system would make things much more complex.
+
+
+====== Page ======
+
+The page object represents the data that should be shown as one page. It is the responsibility of the [[repository|repository objects]] to map data objects to page objects. In the most simple case the data objects are files and each page corresponds to a file. In a more complex case the data object might for example be a table in a database while the page object represents only a selection from the data in the table.
+
+By default pages can contain a source (which is handled with IO objects) and a [[Formats|formatter]]. These are both initialized by the repository object when creating the page object. 
+
+Each page object has a ref to the toplevel zim object ("''{root}''") and to it's store ("''{store}''"). Use toplevel for resolving etc., use store to manipulate source.
+
+===== Page Names =====
+* Page names can only contain alpha-numeric charcters and the following chars: "''.''", "''-''", "''_''", "''(''", "'')''", ":" and "%".
+* The underscore "_" is used as a substitute for spaces.
+* The colon "'':''" is used as the namespace separator and is not part of the name itself.
+* The "%" can be used by repositories for url encoding strange characters
+* The first character of any part of the name (that is the character directly after a "'':''") can only be alpha-numeric or "%" (and not an "_").
+* The last character of any part can not be a underscore.
+* Utf8 letters and numbers are allowed with page names
+
+=== Rationale ===
+* This set of allowed characters is expected to be portable in the sense that they are allowed as part of a filename is almost any filesystem.
+* White-space is not allowed because so it can be used as a separator between page names.
+* A non-letter character at the begin of the name is reserved for special uses.
+* The ":" was choosen as the separator so the "/" can be reserved for file names and can be used to distinguise between files and pages.
+* Having an underscore as last character would result in a trailing whitespace being part of the name, which could be confusing.
+
+Note that utf8 characters in the page name are simply passed to the filesystem. If your filesystem can not handle utf8 this migh be a problem.
+
+When dealing with user input page names are converted to a valid form by changing all invalid characters into underscores and removing leading non-letter characters. Since a white space is a very common invalid character some parts of the interface show whitespace instead of underscores. Effectively all forbidden characters are rendered as whitespace in the GUI. For this reason trailing underscores or trailing forbidden characters are also forbidden, they would result in a trailing whitespace that is part of the name.
+
+===== Subclasses =====
+Subclasses of ''Zim::Page'' can add extra methods to get and set special parts of the page. However the ''get_parse_tree()'' and ''set_parse_tree()'' methods should always give and take the complete page contents, including special parts. This parse tree is for example used when exporting the page to html. Any content not in the parse tree will get lost during export or copying the page. Have a look at ''Zim::Page::Image'' for an example.
+
+===== Random: =====
+* When talking about a DBI interface it is not intended that the raw dbi object is exposed to the gui. Rather the page object would have methods to update and insert records that use this dbi object. If the actual SQL queries are done from the page object it can more easily be subclassed. In the IO interface a raw IO object is exposed, but not the filename (after all we might be using IO::Scalar).
+
+* When it is the //repository// that uses DBI, you're still going to want to use the IO interface for pages, in this case IO::Scalar comes in handy
+
+* Complete model-view support where the page is the model would call for a TextBuffer interface that directly manipulates the parsetree instead of doing load/save requests. This would be nice but will turn out to be rather complicated.

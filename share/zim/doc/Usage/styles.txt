@@ -1,0 +1,44 @@
+====== Formatting styles ======
+
+At the moment zim can apply only one formatting style to any piece of text. This means that you can not make text bold //and// italic at the same time. Also you can not make links bold or italic.
+
+See [[syntax]] if you want to know how this formatting is saved in the text files.
+
+===== Stylesheet =====
+Zim has certain defaults on how to display styles. For example it displays links as blue text without underline. Once you export content from zim to other formats, only the name of the style is kept. The various formats may have their own conventions on how to display these styles. In the html output for example you can work with stylesheets to change the look.
+
+Zim also uses a kind of stylesheet to configure how the various styles look in the editor. To change this style copy "''/usr/share/zim/default.style''" to "''~/.config/zim/''" and edit it. Each style has it's own section which starts with the style name between square brackets and contains key value pairs for the various display properties.
+
+Example:
+
+	[TextView]
+	tabs = 40
+
+	[Tag bold]
+	weight = PANGO_WEIGHT_BOLD
+
+	[Tag italic]
+	style = italic
+
+
+Known properties for TextView:
+* **tabs**: //integer//	 - position of the tab stop in pixels
+
+
+Known properties for Tags:
+* **family**: ''monospace'', ''sans'', ...
+* **foreground**: ''grey'', ''blue'', ''#cccccc'', etc.
+* **background**: ''yellow'', ''#cccccc'', etc.
+* **weight**: ''PANGO_WEIGHT_BOLD'', ...
+* **scale**: //integer//
+* **style**: ''italic'', ...
+* **underline**: ''single'', ...
+* **striketrough**: ''true'', ''false''
+* **wrap**_**mode**: "''none"'', ...
+* **indent**: //integer//
+
+==== Profiles ====
+If you use multiple profiles you can specify a different display style for each profile; e.g. use "''debug.style''" for a profile called "debug". If there is no stylesheet with the same name as the profile "''default.style''" will be used as the fallback. See [[profiles]] for more information.
+
+==== Export to HTML ====
+The display styles for the GUI are not used when exporting to HTML. If you want your HTML to show certain custom styles you should write a HTML [[exporting|template]] with a CSS stylesheet.

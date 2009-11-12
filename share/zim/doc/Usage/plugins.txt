@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 20:37:48 +0200
+
+====== Plugins ======
+
+To enable or disable plugins, check or un-check them in the [[preferences|Preferences dialog]] and restart **zim**.
+
+There are a couple of plugins packaged with the default installation:
+
+==== Calendar ====
+Plugin that adds a calendar widget to zim linking each day to a page in a special namespace. This plugin is intended for keeping journals etc.
+
+To control the look of a page in the date namespace edit the template "''_Date.txt''" in "''templates/wiki/''".
+
+==== TODO List ====
+Plugin to add a dialog with TODO items. See [[.TODOList|TODOList]] for details.
+
+==== Tray Icon ====
+This plugin shows an icon in the system tray and enables a "hide to tray" feature. This can be particularly useful when you want to have zim running at all times. This plugin also modifies the behavior of the "''--iconify''" [[commandline]] switch. This allows you to start zim in the system tray.
+
+When you are running a gtk+ version < 2.10 the tray icon plugin will need the ''Gtk2::TrayIcon'' perl module to function. This can also be the case if your gtk+ is up to date, but the Gtk2 perl bindings were compiled against an older version.
+
+You can choose to have only one trayicon or to have a trayicon per notebook. To enable this second option you need to edit the [[config]] file manually. When you have an icon per notebook you can have a different icon image per notebook, see [[properties]].
+
+==== Spell Checking ====
+The spell checking plugin needs the ''Gtk2::Spell'' perl module, which in turn needs the gtkspell package. 
+
+TODO: still needs controls to change the language of the spell checking. You can set the language in the [[config|config file]].
+
+==== Print To Browser ====
+This plugin is added to fill the gap of lacking printing support in zim. It adds a "print to browser" menu item (keybinding ''^P'') which does actually an export of the current page to html and opens the html file in your browser. If your browser does have printing support pressing ''^P'' twice should send the current page to your printer.
+
+The PrintToBrowser plugin uses the Html template called "Print". To customize this template you can create "''~/.local/share/zim/templates/html/Print.html''". See [[templates]] for more details.
+
+==== Equation Editor ====
+This plugin allows you to insert equations into a page using latex. See [[.EquationEditor|EquationEditor]] for details.
+
+==== Insert Screenshot ====
+Adds a menu item for "Insert screenshot". Depends on an external program called "''scrot''".
+
+==== ToggleReadOnly ====
+This plugin adds a toolbar button that allows you to toggle the notebook to read-only mode. This can protect you from accidental edits while browsing your notes.
+
+==== VersionControl ====
+This plugin tries to detect which version control system you are using and loads advanced controls for that specific backend. See [[VersionControl]] for general version control support.

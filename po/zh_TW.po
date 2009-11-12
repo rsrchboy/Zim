@@ -1,0 +1,1885 @@
+# Traditional Chinese translation for zim
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the zim package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: zim\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-10-27 21:09+0100\n"
+"PO-Revision-Date: 2008-11-02 07:11+0000\n"
+"Last-Translator: cyberik <cyberikee@gmail.com>\n"
+"Language-Team: Traditional Chinese <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2008-11-09 09:05+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  cyberik https://launchpad.net/~cyberikee"
+
+#. Name for desktop menu
+#: share/applications/zim.desktop:-
+msgid "Zim Desktop Wiki"
+msgstr "Zim 桌面維基"
+
+#. Comment for desktop menu
+#: share/applications/zim.desktop:-
+msgid "Edit text files \"wiki style\""
+msgstr "以維基樣式編輯文字檔案"
+
+#. GenericName for desktop menu AND
+#. application type AND
+#. application type
+#: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
+#: lib/Zim/GUI/VersionsDialog.pm:402
+msgid "Text Editor"
+msgstr "文字編輯器"
+
+#. error
+#: bin/zim:373
+msgid "No such file or directory: {name}"
+msgstr "無此檔案或目錄: {name}"
+
+#. error
+#: bin/zim:374
+msgid "No such notebook: {name}"
+msgstr "無此書冊: {name}"
+
+#. Error SVN not installed
+#: lib/Zim/FS/Bazaar.pm:74
+msgid "Can not find application \"bzr\""
+msgstr "未發現應用程式 \"bzr\""
+
+#. error SVN not installed
+#: lib/Zim/FS/Subversion.pm:89
+msgid ""
+"Failed to load SVN plugin,\n"
+"do you have subversion utils installed?"
+msgstr ""
+"無法載入 SVN 元件,\n"
+"是否有安裝版本控制系統工具?"
+
+#. menu label & tooltip for FileMenu
+#: lib/Zim/GUI.pm:183
+msgid "_File|"
+msgstr "檔案(_F)|"
+
+#. menu label & tooltip for EditMenu
+#: lib/Zim/GUI.pm:184
+msgid "_Edit|"
+msgstr "編輯(_E)|"
+
+#. menu label & tooltip for ViewMenu
+#: lib/Zim/GUI.pm:185
+msgid "_View|"
+msgstr "檢視(_V)|"
+
+#. menu label & tooltip for InsertMenu
+#: lib/Zim/GUI.pm:186
+msgid "_Insert|"
+msgstr "加入(_I)|"
+
+#. menu label & tooltip for SearchMenu
+#: lib/Zim/GUI.pm:187
+msgid "_Search|"
+msgstr "搜尋(_S)|"
+
+#. menu label & tooltip for FormatMenu
+#: lib/Zim/GUI.pm:188
+msgid "For_mat|"
+msgstr "格式(_m)|"
+
+#. menu label & tooltip for ToolsMenu
+#: lib/Zim/GUI.pm:189
+msgid "_Tools|"
+msgstr "工具(_T)|"
+
+#. menu label & tooltip for GoMenu
+#: lib/Zim/GUI.pm:190
+msgid "_Go|"
+msgstr "到(_G)|"
+
+#. menu label & tooltip for HelpMenu
+#: lib/Zim/GUI.pm:191
+msgid "_Help|"
+msgstr "說明(_H)|"
+
+#. menu label & tooltip for PathBarMenu
+#: lib/Zim/GUI.pm:192
+msgid "P_athbar type|"
+msgstr "路徑列顯示方式(_a)|"
+
+#. menu label & tooltip for NewPage
+#: lib/Zim/GUI.pm:198
+msgid "_New Page|New page"
+msgstr "新書頁(_N)|新書頁"
+
+#. menu label & tooltip for OpenNotebook
+#: lib/Zim/GUI.pm:200
+msgid "_Open Another Notebook...|Open notebook"
+msgstr "開啟其他書冊(_O)...|開啟書冊"
+
+#. menu label & tooltip for Save
+#: lib/Zim/GUI.pm:201
+msgid "_Save|Save page"
+msgstr "存檔(_S)|書頁存檔"
+
+#. menu label & tooltip for SaveVersion
+#: lib/Zim/GUI.pm:202
+msgid "S_ave Version...|Save Version"
+msgstr "版本存檔(_a)...|版本存檔"
+
+#. menu label & tooltip for Versions
+#: lib/Zim/GUI.pm:203
+msgid "_Versions...|Versions"
+msgstr "版本(_V)...|版本"
+
+#. menu label & tooltip for Export
+#: lib/Zim/GUI.pm:204
+msgid "E_xport...|Export"
+msgstr "匯出(_x)...|匯出"
+
+#. menu label & tooltip for EmailPage
+#: lib/Zim/GUI.pm:205
+msgid "_Send To...|Mail page"
+msgstr "郵寄至(_S)..|郵寄書頁"
+
+#. menu label & tooltip for CopyPage
+#: lib/Zim/GUI.pm:206
+msgid "_Copy Page...|Copy page"
+msgstr "複製書頁(_C)...|複製書頁"
+
+#. menu label & tooltip for RenamePage
+#: lib/Zim/GUI.pm:208
+msgid "_Rename Page...|Rename page"
+msgstr "書頁更名(_R)...|更名書頁"
+
+#. menu label & tooltip for DeletePage
+#: lib/Zim/GUI.pm:210
+msgid "_Delete Page|Delete page"
+msgstr "刪除書頁(_D)|刪除書頁"
+
+#. menu label & tooltip for Props
+#: lib/Zim/GUI.pm:212
+msgid "Proper_ties|Properties dialog"
+msgstr "屬性(_t)|屬性"
+
+#. menu label & tooltip for Close
+#: lib/Zim/GUI.pm:213
+msgid "_Close|Close window"
+msgstr "關閉(_C)|關閉視窗"
+
+#. menu label & tooltip for Quit
+#: lib/Zim/GUI.pm:214
+msgid "_Quit|Quit"
+msgstr "離開(_Q)|離開程式"
+
+#. menu label & tooltip for Search
+#: lib/Zim/GUI.pm:215
+msgid "_Search...|Search"
+msgstr "跨頁搜尋(_S)...|跨頁搜尋"
+
+#. menu label & tooltip for SearchBL
+#: lib/Zim/GUI.pm:216
+msgid "Search _Backlinks...|Search Back links"
+msgstr "搜尋反向連結(_B)...|搜尋反向連結"
+
+#. menu label & tooltip for CopyLocation
+#: lib/Zim/GUI.pm:217
+msgid "Copy Location|Copy location"
+msgstr "複製目前位置|複製目前位置"
+
+#. menu label & tooltip for Prefs
+#: lib/Zim/GUI.pm:218
+msgid "Pr_eferences|Preferences dialog"
+msgstr "偏好設定(_e)|偏好設定互動框"
+
+#. menu label & tooltip for Reload
+#: lib/Zim/GUI.pm:219
+msgid "_Reload|Reload page"
+msgstr "重新載入(_R)|重新載入書頁"
+
+#. menu label & tooltip for OpenFolder
+#: lib/Zim/GUI.pm:220
+msgid "Open Document _Folder|Open document folder"
+msgstr "開啟文件資料夾(_F)|開啟文件資料夾"
+
+#. menu label & tooltip for OpenRootFolder
+#: lib/Zim/GUI.pm:221
+msgid "Open Document _Root|Open document root"
+msgstr "開啟文件根目錄(_R)|開啟文件根目錄"
+
+#. menu label & tooltip for AttachFile
+#: lib/Zim/GUI.pm:222
+msgid "Attach _File|Attach external file"
+msgstr "附加檔案(_F)|增添外部檔案"
+
+#. menu label & tooltip for EditSource
+#: lib/Zim/GUI.pm:223
+msgid "Edit _Source|Open source"
+msgstr "編輯原始碼(_S)|開啟原始碼"
+
+#. menu label & tooltip for RBIndex
+#: lib/Zim/GUI.pm:224
+msgid "Re-build Index|Rebuild index"
+msgstr "重建索引|重建索引"
+
+#. menu label & tooltip for GoBack
+#: lib/Zim/GUI.pm:225
+msgid "_Back|Go page back"
+msgstr "前一頁(_B)|到前一頁"
+
+#. menu label & tooltip for GoForward
+#: lib/Zim/GUI.pm:226
+msgid "_Forward|Go page forward"
+msgstr "下一頁(_F)|到下一頁"
+
+#. menu label & tooltip for GoParent
+#: lib/Zim/GUI.pm:227
+msgid "_Parent|Go to parent page"
+msgstr "上層(父)頁面(_P)|到上層(父)頁面"
+
+#. menu label & tooltip for GoChild
+#: lib/Zim/GUI.pm:228
+msgid "_Child|Go to child page"
+msgstr "到下層(子)頁面(_C)|到下層(子)頁面"
+
+#. menu label & tooltip for GoPrev
+#: lib/Zim/GUI.pm:229
+msgid "_Previous in index|Go to previous page"
+msgstr "索引上一條(_P)|至索引上一條"
+
+#. menu label & tooltip for GoNext
+#: lib/Zim/GUI.pm:230
+msgid "_Next in index|Go to next page"
+msgstr "索引下一條(_N)|至索引下一條"
+
+#. menu label & tooltip for GoHome
+#: lib/Zim/GUI.pm:231
+msgid "_Home|Go home"
+msgstr "書冊首頁(_H)|到書冊首頁"
+
+#. menu label & tooltip for JumpTo
+#: lib/Zim/GUI.pm:232
+msgid "_Jump To...|Jump to page"
+msgstr "跳至(_J)...|跳至某頁"
+
+#. menu label & tooltip for ShowHelp
+#: lib/Zim/GUI.pm:233
+msgid "_Contents|Help contents"
+msgstr "內文(_C)|說明內文"
+
+#. menu label & tooltip for ShowHelpFAQ
+#: lib/Zim/GUI.pm:234
+msgid "_FAQ|FAQ"
+msgstr "常見問題(_F)|常見問題"
+
+#. menu label & tooltip for ShowHelpKeys
+#: lib/Zim/GUI.pm:235
+msgid "_Keybindings|Key bindings"
+msgstr "組合鍵(_K)|組合鍵"
+
+#. menu label & tooltip for ShowHelpBugs
+#: lib/Zim/GUI.pm:236
+msgid "_Bugs|Bugs"
+msgstr "問題回報(_B)|問題回報"
+
+#. menu label & tooltip for About
+#: lib/Zim/GUI.pm:237
+msgid "_About|About"
+msgstr "關於(_A)|關於"
+
+#. menu label & tooltip for TToolBar
+#: lib/Zim/GUI.pm:243
+msgid "_Toolbar|Show toolbar"
+msgstr "工具列(_T)|顯示工具列"
+
+#. menu label & tooltip for TStatusBar
+#: lib/Zim/GUI.pm:244
+msgid "_Statusbar|Show statusbar"
+msgstr "狀態列(_S)|顯示狀態列"
+
+#. menu label & tooltip for TPane
+#: lib/Zim/GUI.pm:245
+msgid "_Index|Show index"
+msgstr "索引(_I)|顯示索引"
+
+#. menu label & tooltip for PBRecent
+#: lib/Zim/GUI.pm:251
+msgid "_Recent pages|."
+msgstr "最近使用頁面(_R)|."
+
+#. menu label & tooltip for PBHistory
+#: lib/Zim/GUI.pm:252
+msgid "_History|."
+msgstr "歷史紀錄(_H)|."
+
+#. menu label & tooltip for PBNamespace
+#: lib/Zim/GUI.pm:253
+msgid "_Namespace|."
+msgstr "名稱標示(_N)|."
+
+#. menu label & tooltip for PBHidden
+#: lib/Zim/GUI.pm:254
+msgid "H_idden|."
+msgstr "隱藏(_i)|."
+
+#. ...
+#: lib/Zim/GUI.pm:944
+msgid "Plugin already loaded: {name}"
+msgstr "已載入元件: {name}"
+
+#. ...
+#: lib/Zim/GUI.pm:951
+msgid "No such plugin: {name}"
+msgstr "無此元件: {name}"
+
+#. error
+#: lib/Zim/GUI.pm:961 share/zim/plugins/VersionControl.pl:20
+msgid "Failed to load plugin: {name}"
+msgstr "元件載入失敗: {name}"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+msgid "File browser"
+msgstr "檔案瀏覽器"
+
+#. Dialog question, answers are 'yes' or 'no'
+#: lib/Zim/GUI.pm:1176
+msgid ""
+"<b>Folder does not exist.</b>\n"
+"\n"
+"The folder: {path}\n"
+"does not exist, do you want to create it now?"
+msgstr ""
+"<b>無此資料夾</b>\n"
+"\n"
+"資料夾: {path} 不存在\n"
+"是否現在建立?"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1206
+msgid "Choose {app_type}"
+msgstr "選擇 {app_type}"
+
+#. dialog input label
+#: lib/Zim/GUI.pm:1207
+msgid "Command"
+msgstr "指令"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1209
+msgid "Please enter a {app_type}"
+msgstr "請鍵入 {app_type}"
+
+#. error
+#: lib/Zim/GUI.pm:1213
+msgid "You have no {app_type} configured"
+msgstr "無設定過的 {app_type}"
+
+#. ...
+#: lib/Zim/GUI.pm:1234
+msgid "Can't find {url}"
+msgstr "找不到網址 {url}"
+
+#. ...
+#: lib/Zim/GUI.pm:1236
+msgid "Not an url: {url}"
+msgstr "無此網址: {url}"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+msgid "Email client"
+msgstr "電子郵件程式"
+
+#. application type AND
+#. pref. label
+#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+msgid "Web browser"
+msgstr "網頁瀏覽器"
+
+#. ...
+#: lib/Zim/GUI.pm:1285 lib/Zim/GUI.pm:1312
+msgid "Could not load page: {name}"
+msgstr "無法載入: {name}"
+
+#. error: 404 - page not found
+#: lib/Zim/GUI.pm:1291
+msgid ""
+"This page does not exist\n"
+"404"
+msgstr ""
+"無此網頁\n"
+"404"
+
+#. ...
+#: lib/Zim/GUI.pm:1328
+msgid "{number} _Back link"
+msgid_plural "{number} _Back links"
+msgstr[0] "{number} 個_反向連結"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1382
+msgid "New page"
+msgstr "新書頁"
+
+#. input
+#: lib/Zim/GUI.pm:1383
+msgid "Page name"
+msgstr "書頁名"
+
+#. ...
+#: lib/Zim/GUI.pm:1385
+msgid ""
+"Note that linking to a non-existing page\n"
+"also automatically creates a new page."
+msgstr ""
+"建立一個指向不存在書頁的連結\n"
+"將自動建立新書頁"
+
+#. ...
+#: lib/Zim/GUI.pm:1476
+msgid "Could not save page"
+msgstr "無法儲存書頁"
+
+#. dialog button
+#: lib/Zim/GUI.pm:1478
+msgid "_Discard changes"
+msgstr "放棄修改(_D)"
+
+#. dialog button
+#: lib/Zim/GUI.pm:1479
+msgid "_Save a copy..."
+msgstr "儲存副本(_S)..."
+
+#. dialog title
+#: lib/Zim/GUI.pm:1532
+msgid "Save version"
+msgstr "儲存版本"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1550
+msgid "Please enter a comment for this version"
+msgstr "請評註這個版本"
+
+#. label
+#: lib/Zim/GUI.pm:1558
+msgid "Details"
+msgstr "詳細資訊"
+
+#. button AND
+#. button label
+#: lib/Zim/GUI.pm:1568 lib/Zim/GUI/VersionsDialog.pm:129
+msgid "_Notebook Changes..."
+msgstr "書冊修訂(_N)..."
+
+#. error
+#: lib/Zim/GUI.pm:1588
+msgid "Can not save a version without comment"
+msgstr "無法儲存沒有評註的版本"
+
+#. error
+#: lib/Zim/GUI.pm:1592
+msgid "Could not save version"
+msgstr "無法儲存版本"
+
+#. question dialog, options are 'help', 'cancel' and 'ok'
+#: lib/Zim/GUI.pm:1605
+msgid ""
+"<b>Enable Version Control</b>\n"
+"\n"
+"Version control is currently not enabled for this notebook.\n"
+"Do you want to enable it ?"
+msgstr ""
+"<b>啟動版本控制</b>\n"
+"\n"
+"尚未啟動此書冊的版本控制\n"
+"是否要啟動?"
+
+#. detailed notice in prompt to enable version control
+#: lib/Zim/GUI.pm:1607
+msgid ""
+"You can choose using either the <b>Bazaar</b> or the <b>Subversion</b> "
+"Version Control System.\n"
+"Please click 'help' to read about the system requirements."
+msgstr ""
+"版本控制系統可選擇 <b>Bazaar</b> 或 <b>Subversion</b>.\n"
+"請按下 '求助' 以瞭解系統需求."
+
+#. error dialog
+#: lib/Zim/GUI.pm:1645
+msgid "Could not initialize version control"
+msgstr "無法初始化版本控制"
+
+#. default comment for first version after initializing version control
+#: lib/Zim/GUI.pm:1648
+msgid "Initial version"
+msgstr "初始版本"
+
+#. default name for new page in save copy action
+#: lib/Zim/GUI.pm:1690
+msgid "{name}_(Copy)"
+msgstr "{name}_(副本)"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1692
+msgid "Save Copy"
+msgstr "儲存副本"
+
+#. enrty label AND
+#. tab label AND
+#. header search results AND
+#. column TODO list: zim page AND
+#. input label
+#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
+#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
+#: lib/Zim/GUI/VersionsDialog.pm:57
+msgid "Page"
+msgstr "書頁"
+
+#. save button
+#: lib/Zim/GUI.pm:1694
+msgid "_Save Copy"
+msgstr "儲存副本(_S)"
+
+#. dialog text
+#: lib/Zim/GUI.pm:1695
+msgid "Please enter a name to save a copy of page: {page}"
+msgstr "請鍵入名稱以儲存書頁副本: {page}"
+
+#. ...
+#: lib/Zim/GUI.pm:1703
+msgid "Can not save to page: {name}"
+msgstr "無法存入書頁: {name}"
+
+#. warning dialog, answers are 'cancel' or 'ovewrite'
+#: lib/Zim/GUI.pm:1709
+msgid ""
+"<b>Page already exists</b>\n"
+"\n"
+"The page '{name}'\n"
+"already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"<b>已有此書頁</b>\n"
+"\n"
+"書頁 '{name}'\n"
+"已存在\n"
+"是否要覆寫?"
+
+#. save button
+#: lib/Zim/GUI.pm:1711
+msgid "_Overwrite"
+msgstr "覆寫(_O)"
+
+#. error message
+#: lib/Zim/GUI.pm:1768
+msgid "Could not rename {from} to {to}"
+msgstr "無法將 {from} 更名為 {to}"
+
+#. dialog title
+#: lib/Zim/GUI.pm:1773
+msgid "Updating links"
+msgstr "更新連結"
+
+#. progress bar label
+#: lib/Zim/GUI.pm:1774
+msgid "Updating.."
+msgstr "更新中.."
+
+#. progress bar label
+#: lib/Zim/GUI.pm:1782
+msgid "Updating links in {name}"
+msgstr "更新 {name} 內的連結"
+
+#. warning dialog, answers are 'cancel' or 'delete'
+#: lib/Zim/GUI.pm:1837
+msgid ""
+"<b>Delete page</b>\n"
+"\n"
+"Are you sure you want to delete\n"
+"page '{name}' ?"
+msgstr ""
+"<b>刪除書頁</b>\n"
+"\n"
+"確定要刪除\n"
+"'{name}' 這個書頁 ?"
+
+#. error message
+#: lib/Zim/GUI.pm:1846
+msgid "Could not delete page: {name}"
+msgstr "無法刪除書頁: {name}"
+
+#. error
+#: lib/Zim/GUI.pm:2145
+msgid "This page does not have a document folder"
+msgstr "此書頁無文件資料夾"
+
+#. error
+#: lib/Zim/GUI.pm:2162
+msgid "This notebook does not have a document root"
+msgstr "此書冊無文件根目錄"
+
+#. ...
+#: lib/Zim/GUI.pm:2184
+msgid "This page does not have a source"
+msgstr "此書頁無原始碼"
+
+#. dialog title
+#: lib/Zim/GUI.pm:2345
+msgid "Jump to"
+msgstr "跳至"
+
+#. dialog label
+#: lib/Zim/GUI.pm:2347
+msgid "Jump to Page"
+msgstr "跳至書頁"
+
+#. dialog title
+#: lib/Zim/GUI.pm:2505
+msgid "Rename page"
+msgstr "書頁更名"
+
+#. dialog label
+#: lib/Zim/GUI.pm:2507
+msgid "Rename to"
+msgstr "更名為"
+
+#. save button
+#: lib/Zim/GUI.pm:2509
+msgid "_Rename"
+msgstr "更名(_R)"
+
+#. ...
+#: lib/Zim/GUI.pm:2517
+msgid "_Update links in this page"
+msgstr "更新此書頁之連結(_U)"
+
+#. ...
+#: lib/Zim/GUI.pm:2519
+msgid "_Update {number} page linking here"
+msgid_plural "_Update {number} pages linking here"
+msgstr[0] "更新連結至此的  {number} 張書頁(_U)"
+
+#. dialog title AND
+#. dialog prompt
+#: lib/Zim/GUI/Automount.pm:55 lib/Zim/GUI/Automount.pm:56
+msgid "Password"
+msgstr "密碼"
+
+#. dialog text
+#: lib/Zim/GUI/Automount.pm:58
+msgid ""
+"Please provide the password for\n"
+"{path}"
+msgstr ""
+"請提供存取這個路徑的密碼\n"
+"{path}"
+
+#. dialog title
+#: lib/Zim/GUI/Calendar.pm:52
+msgid "Calendar"
+msgstr "日曆"
+
+#. strftime format for current date - default suggested in perldoc localtime
+#: lib/Zim/GUI/Calendar.pm:63
+msgid "%a %b %e %Y"
+msgstr "%a %b %e %Y"
+
+#. button
+#: lib/Zim/GUI/Calendar.pm:94
+msgid "_Today"
+msgstr "今天(_T)"
+
+#. question dialog, answers are 'yes', 'no' or 'not now'
+#: lib/Zim/GUI/Calendar.pm:281
+msgid ""
+"<b>Upgrade calendar pages to 0.24 format?</b>\n"
+"\n"
+"This notebook contains pages for dates using the format yyyy_mm_dd.\n"
+"Since Zim 0.24 the format yyyy:mm:dd is used by default, creating\n"
+"namespaces per month.\n"
+"\n"
+"Do you want to upgrade this notebook to the new layout?\n"
+msgstr ""
+"<b>更新日曆頁面至 0.24 版格式?</b>\n"
+"\n"
+"此書冊包含使用 yyyy_mm_dd 日期格式的書頁\n"
+"Zim 0.24 版之後預設使用 yyyy:mm:dd 格式\n"
+"以分別為各月創建名稱標示\n"
+"\n"
+"是否將此書冊更新至新格式?\n"
+
+#. button
+#: lib/Zim/GUI/Calendar.pm:282
+msgid "Not Now"
+msgstr "非此時"
+
+#. ...
+#: lib/Zim/GUI/Component.pm:414
+msgid "Not a valid page name: {name}"
+msgstr "此書頁名稱不合適: {name}"
+
+#. button
+#: lib/Zim/GUI/Component.pm:681 lib/Zim/GUI/ExportDialog.pm:137
+#: lib/Zim/GUI/ExportDialog.pm:148
+msgid "_Browse..."
+msgstr "瀏覽(_B)..."
+
+#. dialog title
+#: lib/Zim/GUI/Component.pm:970
+msgid "Select Folder"
+msgstr "選擇資料夾"
+
+#. dialog title
+#: lib/Zim/GUI/Component.pm:970
+msgid "Select File"
+msgstr "選擇檔案"
+
+#. error when external application is not found
+#: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
+msgid "Can not find application \"{name}\""
+msgstr "未發現應用程式 \"{name}\""
+
+#. dialog title
+#: lib/Zim/GUI/EquationEditor.pm:63
+msgid "Equation Editor"
+msgstr "方程式編輯器"
+
+#. button
+#: lib/Zim/GUI/EquationEditor.pm:96
+msgid "_Preview"
+msgstr "預覽(_P)"
+
+#. button
+#: lib/Zim/GUI/EquationEditor.pm:104
+msgid "View _Log"
+msgstr "觀看日誌(_L)"
+
+#. error when no .tex file exists
+#: lib/Zim/GUI/EquationEditor.pm:121
+msgid ""
+"The equation for image: {path}\n"
+"is missing. Can not edit equation."
+msgstr ""
+"欠缺此圖像: {path} 的方程式\n"
+"無法編輯方程式"
+
+#. warning dialog, answers are 'save' or 'cancel'
+#: lib/Zim/GUI/EquationEditor.pm:178
+msgid "The equation failed to compile. Do you want to save anyway?"
+msgstr "方程式編譯失敗. 仍要儲存?"
+
+#. dialog title
+#: lib/Zim/GUI/EquationEditor.pm:293
+msgid "Equation Editor Log"
+msgstr "方程式編輯器日誌"
+
+#. context menu
+#: lib/Zim/GUI/EquationEditor.pm:326
+msgid "_Edit Equation"
+msgstr "編輯方程式(_E)"
+
+#. dialog title
+#: lib/Zim/GUI/ExportDialog.pm:40 lib/Zim/GUI/ExportDialog.pm:275
+msgid "Export page"
+msgstr "匯出書頁"
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:51
+msgid "Pages"
+msgstr "書頁設定"
+
+#. radio button
+#: lib/Zim/GUI/ExportDialog.pm:61
+msgid "_All"
+msgstr "全部書頁(_A)"
+
+#. radio button
+#: lib/Zim/GUI/ExportDialog.pm:69
+msgid "_Page"
+msgstr "個別書頁(_P)"
+
+#. check box
+#: lib/Zim/GUI/ExportDialog.pm:77
+msgid "Recursive"
+msgstr "包含所有子目錄"
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:90
+msgid "Output"
+msgstr "輸出設定"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Format"
+msgstr "格式"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Template"
+msgstr "模板"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Output dir"
+msgstr "匯出至目錄"
+
+#. label input field
+#: lib/Zim/GUI/ExportDialog.pm:102
+msgid "Index page"
+msgstr "設定索引頁"
+
+#. item in dropdown menu
+#: lib/Zim/GUI/ExportDialog.pm:170
+msgid "other..."
+msgstr "其他..."
+
+#. group label
+#: lib/Zim/GUI/ExportDialog.pm:196
+msgid "Media"
+msgstr "媒體設定"
+
+#. ...
+#: lib/Zim/GUI/ExportDialog.pm:209
+msgid "Prefix document root"
+msgstr "文件根目錄前置標識符"
+
+#. ...
+#: lib/Zim/GUI/ExportDialog.pm:218
+msgid "Attach external files"
+msgstr "附加外部檔案"
+
+#. progress bar label
+#: lib/Zim/GUI/ExportDialog.pm:276 lib/Zim/GUI/ExportDialog.pm:282
+msgid "Exporting page {number}"
+msgstr "匯出 {number} 頁書頁"
+
+#. dialog title
+#: lib/Zim/GUI/FindReplaceDialog.pm:47
+msgid "Find and Replace"
+msgstr "尋找及代換"
+
+#. input label
+#: lib/Zim/GUI/FindReplaceDialog.pm:66
+msgid "Find what"
+msgstr "找什麼"
+
+#. check box
+#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
+msgid "Match c_ase"
+msgstr "大小寫相符(_a)"
+
+#. check box
+#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
+msgid "Whole _word"
+msgstr "找完整單字(_w)"
+
+#. input label
+#: lib/Zim/GUI/FindReplaceDialog.pm:78
+msgid "Replace with"
+msgstr "代換為"
+
+#. button AND
+#. search button
+#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
+msgid "_Next"
+msgstr "下一個(_N)"
+
+#. button AND
+#. search button
+#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
+msgid "_Previous"
+msgstr "上一個(_P)"
+
+#. button
+#: lib/Zim/GUI/FindReplaceDialog.pm:110
+msgid "_Replace"
+msgstr "代換(_R)"
+
+#. button
+#: lib/Zim/GUI/FindReplaceDialog.pm:120
+msgid "Replace _all"
+msgstr "全部代換(_a)"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:86
+msgid "Open notebook"
+msgstr "開啟書冊"
+
+#. list header
+#: lib/Zim/GUI/NotebookDialog.pm:116
+msgid "Notebooks"
+msgstr "書冊"
+
+#. button
+#: lib/Zim/GUI/NotebookDialog.pm:174
+msgid "Cha_nge"
+msgstr "修改(_N)"
+
+#. prompt
+#: lib/Zim/GUI/NotebookDialog.pm:210
+msgid "Default notebook"
+msgstr "預設書冊"
+
+#. error
+#: lib/Zim/GUI/NotebookDialog.pm:334
+msgid "Please select a notebook first"
+msgstr "請先選擇書冊"
+
+#. error
+#: lib/Zim/GUI/NotebookDialog.pm:342
+msgid "No such directory: {name}"
+msgstr "無此目錄: {name}"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:371
+msgid "New notebook"
+msgstr "新書冊"
+
+#. dialog title
+#: lib/Zim/GUI/NotebookDialog.pm:372
+msgid "Edit notebook"
+msgstr "編輯書冊"
+
+#. ...
+#: lib/Zim/GUI/NotebookDialog.pm:374
+msgid ""
+"Please give at least a directory to store your pages.\n"
+"For a new notebook this should be an empty directory.\n"
+"For example a \"Notes\" directory in your home dir."
+msgstr ""
+"請至少安排一個目錄以儲存您的書頁\n"
+"就新書冊而言，此目錄應該是空的\n"
+"像是您的家目錄底下，稱之為 \"Notes\" 的目錄"
+
+#. menu label & tooltip for Head1
+#: lib/Zim/GUI/PageView.pm:54
+msgid "Head _1|Heading 1"
+msgstr "1號標題(_1)|1號標題"
+
+#. menu label & tooltip for Head2
+#: lib/Zim/GUI/PageView.pm:55
+msgid "Head _2|Heading 2"
+msgstr "2號標題(_2)|2號標題"
+
+#. menu label & tooltip for Head3
+#: lib/Zim/GUI/PageView.pm:56
+msgid "Head _3|Heading 3"
+msgstr "3號標題(_3)|3號標題"
+
+#. menu label & tooltip for Head4
+#: lib/Zim/GUI/PageView.pm:57
+msgid "Head _4|Heading 4"
+msgstr "4號標題(_4)|4號標題"
+
+#. menu label & tooltip for Head5
+#: lib/Zim/GUI/PageView.pm:58
+msgid "Head _5|Heading 5"
+msgstr "5號標題(_5)|5號標題"
+
+#. menu label & tooltip for Normal
+#: lib/Zim/GUI/PageView.pm:59
+msgid "_Normal|Normal"
+msgstr "正體字(_N)|正體字"
+
+#. menu label & tooltip for Bold AND
+#. menu label & tooltip for TBold
+#: lib/Zim/GUI/PageView.pm:60 lib/Zim/GUI/PageView.pm:70
+msgid "_Bold|Bold"
+msgstr "粗體字(_B)|粗體字"
+
+#. menu label & tooltip for Italic AND
+#. menu label & tooltip for TItalic
+#: lib/Zim/GUI/PageView.pm:61 lib/Zim/GUI/PageView.pm:71
+msgid "_Italic|Italic"
+msgstr "斜體字(_I)|斜體字"
+
+#. menu label & tooltip for Underline AND
+#. menu label & tooltip for TUnderline
+#: lib/Zim/GUI/PageView.pm:62 lib/Zim/GUI/PageView.pm:72
+msgid "_Underline|Underline"
+msgstr "底線字(_U)|底線字"
+
+#. menu label & tooltip for Strike AND
+#. menu label & tooltip for TStrike
+#: lib/Zim/GUI/PageView.pm:63 lib/Zim/GUI/PageView.pm:73
+msgid "Stri_ke|Strike"
+msgstr "刪除線字(_k)|刪除線字"
+
+#. menu label & tooltip for Verbatim
+#: lib/Zim/GUI/PageView.pm:64
+msgid "_Verbatim|Verbatim"
+msgstr "無格式逐字(_V)|無格式逐字"
+
+#. menu label & tooltip for TLink AND
+#. menu label & tooltip for Link
+#: lib/Zim/GUI/PageView.pm:69 lib/Zim/GUI/PageView.pm:101
+msgid "_Link|Link"
+msgstr "連結(_L)|連結"
+
+#. menu label & tooltip for Undo
+#: lib/Zim/GUI/PageView.pm:78
+msgid "_Undo|Undo"
+msgstr "回復(_U)|回復"
+
+#. menu label & tooltip for Redo
+#: lib/Zim/GUI/PageView.pm:79
+msgid "_Redo|Redo"
+msgstr "放棄回復(_R)|放棄回復"
+
+#. menu label & tooltip for Delete
+#: lib/Zim/GUI/PageView.pm:80
+msgid "_Delete|Delete"
+msgstr "刪除(_D)|刪除"
+
+#. menu label & tooltip for ToggleCheckbox
+#: lib/Zim/GUI/PageView.pm:81
+msgid "Toggle Checkbox 'V'|Toggle checkbox"
+msgstr "切換勾選框 'V'|切換勾選框"
+
+#. menu label & tooltip for XToggleCheckbox
+#: lib/Zim/GUI/PageView.pm:82
+msgid "Toggle Checkbox 'X'|Toggle checkbox"
+msgstr "切換勾選框 'V'|切換勾選框"
+
+#. menu label & tooltip for EditObject
+#: lib/Zim/GUI/PageView.pm:83
+msgid "_Edit Link...|Edit link"
+msgstr "編輯連結(_E)...|編輯連結"
+
+#. menu label & tooltip for InsertDate
+#: lib/Zim/GUI/PageView.pm:84
+msgid "_Date and Time...|Insert date"
+msgstr "日期時間(_D)...|加入日期時間"
+
+#. menu label & tooltip for InsertLink
+#: lib/Zim/GUI/PageView.pm:85
+msgid "_Link...|Insert link"
+msgstr "連結(_L)...|加入連結"
+
+#. menu label & tooltip for InsertExtLink
+#: lib/Zim/GUI/PageView.pm:86
+msgid "E_xternal Link...|Insert external link"
+msgstr "外部連結(_x)...|加入外部連結"
+
+#. menu label & tooltip for InsertImage
+#: lib/Zim/GUI/PageView.pm:87
+msgid "_Image...|Insert image"
+msgstr "圖像(_I)...|加入圖像"
+
+#. menu label & tooltip for InsertFromFile
+#: lib/Zim/GUI/PageView.pm:88
+msgid "Text _From File...|Insert text from file"
+msgstr "加入其他檔案的內容(_F)...|加入其他檔案的內容"
+
+#. menu label & tooltip for FindReplace
+#: lib/Zim/GUI/PageView.pm:89
+msgid "_Replace...|Find and Replace"
+msgstr "代換(_R)...|尋找及代換"
+
+#. menu label & tooltip for Cut
+#: lib/Zim/GUI/PageView.pm:94
+msgid "Cu_t|Cut"
+msgstr "剪下(_t)|剪下"
+
+#. menu label & tooltip for Copy
+#: lib/Zim/GUI/PageView.pm:95
+msgid "_Copy|Copy"
+msgstr "複製(_C)|複製"
+
+#. menu label & tooltip for Paste
+#: lib/Zim/GUI/PageView.pm:96
+msgid "_Paste|Paste"
+msgstr "貼上(_P)|貼上"
+
+#. menu label & tooltip for Find
+#: lib/Zim/GUI/PageView.pm:102
+msgid "_Find...|Find"
+msgstr "尋找(_F)...|尋找"
+
+#. menu label & tooltip for FindNext
+#: lib/Zim/GUI/PageView.pm:103
+msgid "Find Ne_xt|Find next"
+msgstr "找下一個(_x)|找下一個"
+
+#. menu label & tooltip for FindPrev
+#: lib/Zim/GUI/PageView.pm:104
+msgid "Find Pre_vious|Find previous"
+msgstr "找上一個(_v)|找上一個"
+
+#. menu label & tooltip for WordCount
+#: lib/Zim/GUI/PageView.pm:105
+msgid "_Word Count|Word count"
+msgstr "統計字數(_W)|統計字數"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:188
+msgid "Head1"
+msgstr "1號標題"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:189
+msgid "Head2"
+msgstr "2號標題"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:190
+msgid "Head3"
+msgstr "3號標題"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:191
+msgid "Head4"
+msgstr "4號標題"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:192
+msgid "Head5"
+msgstr "5號標題"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:193
+msgid "Normal"
+msgstr "正體字"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:194
+msgid "Bold"
+msgstr "粗體字"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:195
+msgid "Italic"
+msgstr "斜體字"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:196
+msgid "Underline"
+msgstr "底線字"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:197
+msgid "Strike"
+msgstr "刪除線字"
+
+#. Text style
+#: lib/Zim/GUI/PageView.pm:198
+msgid "Verbatim"
+msgstr "無格式逐字"
+
+#. query entry label
+#: lib/Zim/GUI/PageView.pm:311
+msgid "Find"
+msgstr "尋找"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:810
+msgid "Insert Date"
+msgstr "加入日期"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:815
+msgid "_Edit"
+msgstr "_編輯"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:818
+msgid "_Insert"
+msgstr "加入(_I)"
+
+#. check box
+#: lib/Zim/GUI/PageView.pm:828
+msgid "_Link to date"
+msgstr "日期連結(_L)"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
+msgid "Insert Image"
+msgstr "加入圖像"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:972
+msgid "Insert from file"
+msgstr "從檔案加入"
+
+#. ...
+#: lib/Zim/GUI/PageView.pm:976
+msgid "No such file: {file}"
+msgstr "無此檔案: {file}"
+
+#. error
+#: lib/Zim/GUI/PageView.pm:980
+msgid "File is not a text file: {file}"
+msgstr "該檔非文字檔: {file}"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:1023
+msgid "Word Count"
+msgstr "統計字數"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1035
+msgid "Lines"
+msgstr "行數"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1036
+msgid "Words"
+msgstr "字數"
+
+#. label
+#: lib/Zim/GUI/PageView.pm:1037
+msgid "Chars"
+msgstr "字元數"
+
+#. status bar info
+#: lib/Zim/GUI/PageView.pm:1089
+msgid "Go to \"{link}\""
+msgstr "至 \"{link}\""
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1200
+msgid "_Edit Link"
+msgstr "編輯連結(_E)"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1212
+msgid "Copy Email Address"
+msgstr "複製電子郵址"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1213
+msgid "Copy _Link"
+msgstr "複製連結(_L)"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1232
+msgid "Open _Directory"
+msgstr "開啟目錄(_D)"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1263
+msgid "_Open link"
+msgstr "開啟連結(_O)"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1305
+msgid "Customise"
+msgstr "客製化"
+
+#. context menu
+#: lib/Zim/GUI/PageView.pm:1310
+msgid "Send To..."
+msgstr "傳送至..."
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2069
+msgid "Edit Link"
+msgstr "編輯連結"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2069
+msgid "Insert Link"
+msgstr "加入連結"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2071
+msgid "Text"
+msgstr "顯示文字"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2072
+msgid "Links to"
+msgstr "連結至"
+
+#. dialog button
+#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+msgid "_Link"
+msgstr "連結(_L)"
+
+#. dialog title
+#: lib/Zim/GUI/PageView.pm:2101
+msgid "Edit Image"
+msgstr "編修圖像"
+
+#. dialog label
+#: lib/Zim/GUI/PageView.pm:2102
+msgid "Source"
+msgstr "來源"
+
+#. expander label
+#: lib/Zim/GUI/PageView.pm:2113
+msgid "_Properties"
+msgstr "屬性(_P)"
+
+#. input label
+#: lib/Zim/GUI/PageView.pm:2130
+msgid "Width"
+msgstr "寬"
+
+#. input label
+#: lib/Zim/GUI/PageView.pm:2131
+msgid "Height"
+msgstr "高"
+
+#. button
+#: lib/Zim/GUI/PageView.pm:2166
+msgid "_Reset"
+msgstr "重新設定(_R)"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:44
+msgid "Application to open urls"
+msgstr "開啟網址的程式"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:48
+msgid "Application to open directories"
+msgstr "開啟目錄的程式"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:52
+msgid "Application to compose email"
+msgstr "撰寫電子郵件的程式"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:55
+msgid "Text editor"
+msgstr "文字編輯器"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:56
+msgid "Application to edit text files"
+msgstr "編輯文字檔案的程式"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:59
+msgid "Diff editor"
+msgstr "差異比對編輯器"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:60
+msgid "Application show two text files side by side"
+msgstr "可並列顯示文字檔案的程式"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:63
+msgid "User name"
+msgstr "使用者名稱"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:64
+msgid "Your name; this can be used in export templates"
+msgstr "您的大名，可用於匯出模板"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:67
+msgid "Follow new link"
+msgstr "立即連至新連結"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:68
+msgid "Creating a new link directly opens the page"
+msgstr "建立新連結即直接開啟連結"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:71
+msgid "Show cursor for read-only"
+msgstr "唯讀時顯示游標"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:72
+msgid ""
+"Show the cursor even when you can not edit the page. This is useful for "
+"keyboard based browsing."
+msgstr "無法編輯書頁時仍顯示游標，此選項有助於以鍵盤進行瀏覽作業"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:75
+msgid "Tearoff menus"
+msgstr "虛折線選單"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:76
+msgid "Add 'tearoff' strips to the menus"
+msgstr "選單增添虛折線"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:79
+msgid "Auto-link CamelCase"
+msgstr "CamelCase 格式自動連結"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:80
+msgid "Automaticly link CamelCase words when you type"
+msgstr "鍵入 CamelCase 字母時自動製作連結"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:83
+msgid "Auto-link files"
+msgstr "自動連結檔案"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:84
+msgid "Automatically link file names when you type"
+msgstr "鍵入檔案名稱時自動製作連結"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:87
+msgid "Auto-format entities"
+msgstr "自動格式字元"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:88
+msgid "Use autoformatting to type special characters"
+msgstr "以自動格式機能鍵入特殊字元"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:91
+msgid "Auto-increment numbered lists"
+msgstr "自動遞增序列式條目"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:92
+msgid "Automatically increment items in a numbered list"
+msgstr "自動遞增序列式條目裡的項目編號"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:95
+msgid "Check checkbox lists recursive"
+msgstr "勾選框遞迴式列表"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:96
+msgid "Checking a checkbox list item will also check any sub-items"
+msgstr "選擇勾選框列表項目將同時選擇所有子項目"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:99
+msgid "Use \"Backspace\" to un-indent"
+msgstr "按 \"Backspace\" 鍵取消縮排"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:100
+msgid ""
+"Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
+msgstr "以 \"Backspace\" 鍵取消非序列式條目的縮排 (功能同 \"Shift-Tab\")"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:103
+msgid "Auto-select words"
+msgstr "自動選擇單字"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:104
+msgid "Automaticly select the current word when you toggle the format"
+msgstr "轉換格式時自動選擇目前單字"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:107
+msgid "Use \"Enter\" to follow links"
+msgstr "按 \"Enter\" 鍵連至連結"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:108
+msgid ""
+"Use the \"Enter\" key to follow links. If disabled you still can use \"Alt-"
+"Enter\""
+msgstr "按 \"Enter\" 鍵立即連至連結，若取消此設定仍可使用 \"Alt-Enter\" 組合鍵進行作業"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:111
+msgid "Use \"Ctrl-Space\" to switch focus"
+msgstr "按 \"Ctrl-Space\" 鍵轉換焦點"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:112
+msgid ""
+"Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
+"If disabled you can still use \"Alt-Space\"."
+msgstr "以 \"Ctrl-Space\" 組合鍵在文字與邊欄間轉換焦點，若取消此設定仍可使用 \"Alt-Space\" 組合鍵進行作業"
+
+#. pref. label
+#: lib/Zim/GUI/PreferencesDialog.pm:115
+msgid "Expand side pane"
+msgstr "展開邊欄"
+
+#. pref. tooltip
+#: lib/Zim/GUI/PreferencesDialog.pm:116
+msgid "Start the side pane with the whole tree expanded."
+msgstr "開啟邊欄時完全展開樹狀結構"
+
+#. dialog title
+#: lib/Zim/GUI/PreferencesDialog.pm:124
+msgid "Preferences"
+msgstr "偏好設定"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:170
+msgid "General"
+msgstr "總類"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:194
+msgid "Interface"
+msgstr "界面"
+
+#. check box
+#: lib/Zim/GUI/PreferencesDialog.pm:216
+msgid "Use custom font"
+msgstr "自訂字型"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:244
+msgid "Editing"
+msgstr "編輯"
+
+#. tab label
+#: lib/Zim/GUI/PreferencesDialog.pm:266
+msgid "Plugins"
+msgstr "元件"
+
+#. ...
+#: lib/Zim/GUI/PreferencesDialog.pm:270
+msgid ""
+"You need to restart the application\n"
+"for plugin changes to take effect."
+msgstr ""
+"需重新啟動程式\n"
+"以更新元件選擇"
+
+#. header plugin list
+#: lib/Zim/GUI/PreferencesDialog.pm:285
+msgid "Enabled"
+msgstr "已啟用"
+
+#. header plugin list AND
+#. input
+#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+msgid "Name"
+msgstr "書冊名稱"
+
+#. dialog title
+#: lib/Zim/GUI/PropertiesDialog.pm:35
+msgid "Properties"
+msgstr "屬性"
+
+#. tab label
+#: lib/Zim/GUI/PropertiesDialog.pm:52
+msgid "Notebook"
+msgstr "書冊"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:100
+msgid "Directory"
+msgstr "書冊使用目錄"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:102
+msgid "Home Page"
+msgstr "書冊首頁"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:103
+msgid "Icon"
+msgstr "書冊圖示"
+
+#. input
+#: lib/Zim/GUI/PropertiesDialog.pm:104
+msgid "Document Root"
+msgstr "文件根目錄"
+
+#. check box
+#: lib/Zim/GUI/PropertiesDialog.pm:114
+msgid "Slow file system"
+msgstr "低速檔案系統的快取"
+
+#. check box
+#: lib/Zim/GUI/PropertiesDialog.pm:120
+msgid "Auto-save version on close"
+msgstr "關閉時自動儲存版本"
+
+#. label for page property Content-Type
+#: lib/Zim/GUI/PropertiesDialog.pm:189
+msgid "Source Format"
+msgstr "原始碼格式"
+
+#. label for page property Creation-Date
+#: lib/Zim/GUI/PropertiesDialog.pm:190
+msgid "Creation Date"
+msgstr "建立時間"
+
+#. label for page property Modification-Date
+#: lib/Zim/GUI/PropertiesDialog.pm:191
+msgid "Modification Date"
+msgstr "更新時間"
+
+#. dialog title AND
+#. input label AND
+#. menu item
+#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
+#: lib/Zim/GUI/TrayIcon.pm:262
+msgid "Search"
+msgstr "搜尋"
+
+#. header search results
+#: lib/Zim/GUI/SearchDialog.pm:75
+msgid "Rank"
+msgstr "相關性級數"
+
+#. dialog title
+#: lib/Zim/GUI/SearchDialog.pm:177
+msgid "Edit Query"
+msgstr "編輯查詢"
+
+#. dialog text
+#: lib/Zim/GUI/SearchDialog.pm:189
+msgid "You can add rules to your search query below"
+msgstr "您可在底下的搜尋查詢中加入條件"
+
+#. menu label & tooltip for TSpell
+#: lib/Zim/GUI/Spell.pm:31
+msgid "Check _spelling|Spell check"
+msgstr "拼字檢查(_s)|拼字檢查"
+
+#. dialog title
+#: lib/Zim/GUI/TODOListDialog.pm:46
+msgid "TODO List"
+msgstr "待辦事項"
+
+#. prompt
+#: lib/Zim/GUI/TODOListDialog.pm:69
+msgid "Filter"
+msgstr "篩選"
+
+#. Button label
+#: lib/Zim/GUI/TODOListDialog.pm:73
+msgid "_Filter"
+msgstr "篩選條件(_F)"
+
+#. column TODO list: priority
+#: lib/Zim/GUI/TODOListDialog.pm:109
+msgid "Prio"
+msgstr "重要性"
+
+#. column TODO list: task description
+#: lib/Zim/GUI/TODOListDialog.pm:110
+msgid "Task"
+msgstr "工作"
+
+#. column TODO list: due date AND
+#. column header for timstamp
+#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+msgid "Date"
+msgstr "日期"
+
+#. ...
+#: lib/Zim/GUI/TODOListDialog.pm:139
+msgid "Include all open checkboxes"
+msgstr "包含所有開啟的勾選框"
+
+#. number of tasks in TODO list
+#: lib/Zim/GUI/TODOListDialog.pm:284
+msgid "{number} item total"
+msgid_plural "{number} items total"
+msgstr[0] "共有 {number} 個事項"
+
+#. menu item "Other notebook"
+#: lib/Zim/GUI/TrayIcon.pm:201
+msgid "Other..."
+msgstr "其他..."
+
+#. status bar info
+#: lib/Zim/GUI/TreeView.pm:363
+msgid "Scanning tree ..."
+msgstr "掃描樹狀結構 ..."
+
+#. dialog title
+#: lib/Zim/GUI/VersionsDialog.pm:39
+msgid "Versions"
+msgstr "版本"
+
+#. button
+#: lib/Zim/GUI/VersionsDialog.pm:76
+msgid "View _Annotated..."
+msgstr "檢視註解(_A)..."
+
+#. button
+#: lib/Zim/GUI/VersionsDialog.pm:79
+msgid "_Restore Version..."
+msgstr "版本回復(_R)..."
+
+#. column header for version id
+#: lib/Zim/GUI/VersionsDialog.pm:86
+msgid "Id"
+msgstr "編號"
+
+#. column header for committer
+#: lib/Zim/GUI/VersionsDialog.pm:88
+msgid "User"
+msgstr "使用者"
+
+#. frame label
+#: lib/Zim/GUI/VersionsDialog.pm:101
+msgid "Comment"
+msgstr "註解"
+
+#. label for version entry
+#: lib/Zim/GUI/VersionsDialog.pm:118
+msgid "Compare this version with"
+msgstr "此版本的比較對象為"
+
+#. special name for current version
+#: lib/Zim/GUI/VersionsDialog.pm:120 lib/Zim/GUI/VersionsDialog.pm:412
+msgid "Current"
+msgstr "現正使用的版本"
+
+#. button label
+#: lib/Zim/GUI/VersionsDialog.pm:131
+msgid "_Page Changes..."
+msgstr "書頁修訂(_P)..."
+
+#. button label
+#: lib/Zim/GUI/VersionsDialog.pm:133
+msgid "Co_mpare Page..."
+msgstr "書頁比較(_m)..."
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:229
+msgid "No such page: {page}"
+msgstr "無此書頁: {page}"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:230
+msgid "Please give a page first"
+msgstr "請先點明書頁"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:240
+msgid "Please select a version first"
+msgstr "請先選擇版本"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:316
+msgid "Could not get file for page: {page}"
+msgstr "無法取得此書頁之檔案: {page}"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:346
+msgid "Could not get changes for page: {page}"
+msgstr "無法取得此書頁的修訂內容: {page}"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:347
+msgid "Could not get changes for this notebook"
+msgstr "無法取得此書冊的修訂內容"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:365
+msgid "Could not get versions to compare"
+msgstr "無法取得可進行比較的版本"
+
+#. application type
+#: lib/Zim/GUI/VersionsDialog.pm:375
+msgid "Diff Editor"
+msgstr "差異比對編輯器"
+
+#. error
+#: lib/Zim/GUI/VersionsDialog.pm:389
+msgid "Could not get annotated source for page {page}"
+msgstr "無法取得 {page} 這個書頁的註解原始碼"
+
+#. confirmation for restore version, answers are 'cancel' or 'ok'
+#: lib/Zim/GUI/VersionsDialog.pm:415
+msgid ""
+"<b>Restore page to saved version?</b>\n"
+"\n"
+"Do you want to restore page: {page}\n"
+"to saved version: {version} ?\n"
+"\n"
+"All changes since the last saved version will be lost !"
+msgstr ""
+"<b>將書頁回復至已儲存的版本?</b>\n"
+"\n"
+"要將此書頁: {page}\n"
+"回復至已儲存的這個版本: {version} ?\n"
+"\n"
+"將失去此儲存版本之後的所有修訂內容 !"
+
+#. menu label & tooltip for GoToday
+#: share/zim/plugins/Calendar.pl:7
+msgid "To_day|Today"
+msgstr "今天(_d)|今天"
+
+#. menu label & tooltip for TCalendar
+#: share/zim/plugins/Calendar.pl:11
+msgid "Calen_dar|Show calendar"
+msgstr "日曆(_d)|顯示日曆"
+
+#. menu label & tooltip for InsertEquation
+#: share/zim/plugins/EquationEditor.pl:14
+msgid "E_quation...|Insert equation"
+msgstr "方程式(_q)...|加入方程式"
+
+#. menu label & tooltip for InsertScreenshot
+#: share/zim/plugins/InsertScreenshot.pl:20
+msgid "_Screenshot...|Insert screenshot"
+msgstr "螢幕快照(_S)...|加入螢幕快照"
+
+#. menu label & tooltip for TmpPrint
+#: share/zim/plugins/PrintToBrowser.pl:32
+msgid "Print to Browser|Print to browser"
+msgstr "列印至瀏覽器|列印至瀏覽器"
+
+#. menu label & tooltip for TTODOList
+#: share/zim/plugins/TODOList.pl:7
+msgid "_TODO List...|Open TODO List"
+msgstr "待辦事項(_T)...|開啟待辦事項"
+
+#. menu label & tooltip for TEditMode
+#: share/zim/plugins/ToggleReadOnly.pl:13
+msgid "Page Editable|Page editable"
+msgstr "可編輯書頁|可編輯書頁"
+
+#. menu label & tooltip for SvnCommit
+#: share/zim/plugins/VersionControl/Subversion.pl:30
+msgid "SVN commit|Commit notebook to SVN repository"
+msgstr "紀錄 SVN|將書冊蒐藏於 SVN 儲庫"
+
+#. menu label & tooltip for SvnUpdate
+#: share/zim/plugins/VersionControl/Subversion.pl:31
+msgid "SVN update|Update notebook from SVN repository"
+msgstr "更新 SVN|自 SVN 儲庫更新書冊"
+
+#. menu label & tooltip for SvnCleanup
+#: share/zim/plugins/VersionControl/Subversion.pl:32
+msgid "SVN cleanup|Cleanup SVN working copy"
+msgstr "清理 SVN|清理 SVN 工作副本"
+
+#. SVN warning
+#: share/zim/plugins/VersionControl/Subversion.pl:90
+msgid ""
+"This page was updated in the repository.\n"
+"Please update your working copy (Tools -> SVN update)."
+msgstr ""
+"儲庫已更新此書頁.\n"
+"請更新工作副本 (工具 -> 更新 SVN)."
+
+#. Error in SVN update
+#: share/zim/plugins/VersionControl/Subversion.pl:104
+msgid "Failed update working copy."
+msgstr "無法更新工作副本"
+
+#. ...
+#: share/zim/plugins/VersionControl/Subversion.pl:117
+msgid "Failed to cleanup SVN working copy."
+msgstr "無法清理 SVN 工作副本."

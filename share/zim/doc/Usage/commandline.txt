@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+
+====== Commandline Usage ======
+
+Usage: zim [OPTIONS] [NOTEBOOK [PAGE]]
+
+* OPTIONS: see below
+* NOTEBOOK: name or directory
+* PAGE: the page to open
+
+===== Options =====
+
+**--doc**
+Open the zim documentation.
+
+**--man**
+Open zim as a man page reader.
+
+**-l**, **--list**
+Show the notebook dialog even if a default notebook is set.
+
+**--export** //OPTIONS//
+Export pages to another format. OPTIONS should at least contain 'dir' and 'format', and optionally 'template', and 'media'.
+
+Example:
+
+'''
+zim --export dir=./html,format=html ./Wiki
+'''
+
+This will export all pages in the notebook dir "./Wiki" to a dir "./html" using the html format.
+
+**-p**, **--profile** //NAME//
+Open using a certain profile. For example use ''-p reader'' to open a notebook read-only.
+
+**--pidfile** //FILE//
+Write the process id of to //FILE//.
+
+**--geometry** //W//x//H//[+//X//+//Y//]
+Set the size of the main window to //W//x//H// pixels and position the window at //X//,//Y//.
+
+**--gtk-path** //path//
+Set the path to the gtk+ libraries. Used on win32 when the system does not allow overloading the PATH environment variable.
+
+**--iconify**
+Start zim iconified. If the TrayIcon plugin is enabled this option will start zim in the system tray.
+
+**--quiet**
+Do not print any information to the terminal.
+
+**--daemon**
+Keep a daemon running to kick-start new instances even when no notebook is open.
+
+**--no-daemon**
+Do not start the daemon but just run in single process mode.
+
+**-V**, **--verbose**
+Print more verbose information to the terminal.
+
+**-D**, **--debug**
+Print developer information to the terminal.
+
+**-v**, **--version**
+Print version and copyright information and quit.
+

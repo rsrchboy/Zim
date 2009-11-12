@@ -1,0 +1,37 @@
+====== Strategies ======
+
+This page tries to gather some usage strategies for zim. Not every style of working works for everybody so these are just suggestions, not enforced use cases or something like that.
+
+=== Bullet lists ===
+The way to keep a TODO list tor something similar is to make a bullet lists with the items you need to to. You can add deadlines in the list but do not add descriptions of the tasks. Keep each item on one line, so you have a good overview over the list. To add descriptions etc. just make the name of the task a link. On the corresponding page you can keep notes on the details of the task, links to files etc.
+
+=== Bold and italic ===
+We implemented the styles "bold" and "italic" purely because most users expect them in a rich text editor. But the problem with these elements is that they only define markup information but no structure information. Therefor it might have been better to implement an "emphasis" and "strong emphasis" style instead. When structuring your text it is best to use italic for emphasis to stress words in a sentence, while using bold for strong emphasis, for example for keywords that should be indexed by a search engine.
+
+Underline is traditionally used on typewriters where italic is not available to put emphasis. In personal note underline is often used for stressing the most important sentences, for this it would be better to have a "highlight" or "mark" function. Also underline is often used for titles of books etc. These are also set in italic in printed bibliographies. Of course in a wiki titles should be links :)
+
+=== Logbook ===
+**Zim** has a way to map dates to pages. This can be used through the calendar dialog, or by using the "//Go//->//Today//" menu item. This feature is //not// very well suited to keep your agenda together - you will probably need another kind of program for that - but it can be used very effectively when keeping a logbook. For example when working on a large project just write each day a few lines about what you did, which problems you encountered and how you solved them. Add relevant files, images or graphs using drag and drop. 
+
+===== Maintaining overview =====
+One of the main problems with large data sets is maintaining overview. 
+
+=== Searching ===
+The brute-force method to solve this is a powerful search function. The problem with searching, however, is that although potentially you can find everything, in reality you will only find the things you are looking for. This sounds like a good thing, but when you think about it it doesn't create overview. A search function is like a flashlight in a forest at night - you only see the things you point it at, but you'll never see the thing just outside the light circle.
+
+=== Structuring ===
+So we need to look for a more structured way of keeping overview. The best way to do this is by dividing your data into eatable chunks. This means having a hierarchical structure with pages instead of one long list. If the page list get so long you can't visually scan it at once you need to structure it in smaller categories; in practice it works best when you have between 5 and 25 items per category, but your mileage may vary.
+
+The same goes for pages. Especially when brainstorming one tends to get long pages with unrelated or half-related thoughts, this needs to be avoided. Try to keep pages strongly topicalized and try to keep them shorter then about 3 times the length that fits on the screen. One can not visually scan text while scrolling so the first few paragraphs should clearly state the topic of the page.
+
+=== Tags ===
+FIXME
+
+=== Archiving ===
+FIXME
+
+Refactoring - refactoring is the key to come from a collection of random thoughts to a structured text
+
+Multiple ways of using namespaces .. categories .. collection managers .. topics
+
+outlining - dub zim as a multi-page outliner

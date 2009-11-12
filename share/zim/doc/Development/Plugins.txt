@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Tue, 29 Jul 2008 21:59:19 +0200
+
+====== Plugins ======
+
+See [[:Usage:Plugins]] for information on the available plugins.
+See [[TODO:PluginInterface]] for planned improvements.
+
+Zim has a simple plugin system to extend the functionality. Plugins are just perl scripts that are installed in a directory where zim can find them. If the user chooses to use the plugin the script is loaded during program initialization. The script can add some code to zim directly or it can load a module with the functionality.
+
+===== Locations =====
+Plugin scripts should be installed in ''XDG_DATA_DIR/zim/plugins/'' this means that by default they will be located in ''/usr/share/zim/plugins'' or ''/usr/local/zim/plugins''. Users can install their own plugins in ''~/.local/share/zim/plugins''. ( For more information on this directory scheme have a look at the freedesktop [[http://freedesktop.org/wiki/Standards_2fbasedir_2dspec|basedir specification]]. )
+
+If the plugin uses it's own perl module this module should be installed in the normal perl library path.
+
+Any custom icons you need should be put in ''XDG_DATA_DIR/pixmaps/zim/'', they will be loaded automatically as stock icons. You can use the basename of the icon file as the stock name.
+
+===== Object structure =====
+The main purpose of plugins is to add new functionality in the user interface. Adding stuff to the data backend is done by adding new modules to the backend. Of course there are cases where a plugin can be used to load specific backend modules. However you should realize that since plugins are only loaded by the user interface the result will be that these backend modules then are not available when using for example the command line export function.
+
+The picture below shows schematically where the plugins go in the stack of classes.
+
+{{../layers.png}}
+
+Plugins can extend the GUI classes or add new GUI components. For an overview of the GUI classes see [[UserInterface]], for an overview of the classes see [[Notebook]], and for the filesystem classes see [[FileSystem]]. For detailed documentation of each class look for the inline POD documentation. For example type "''perldoc Zim::GUI''" in a terminal to see the methods defined in the main GUI object.
+
+===== Example =====
+Below an example is given of a plugin defining a new menu item. See [[../ExamplePlugin.pl]] for the full template.
+
+To access the application objects "''Zim::GUI->current()''" can be called from the plugin script. This will return the main application object which hold references to all other objects in use. A standard start of a plugin script would be:
+
+'''
+use strict;
+use Zim::Utils; # import util functions
+
+my $app = Zim::GUI->current;
+'''
+
+Typically plugins start with defining a new menu item. This is done using by calling "''$app->add_actions()''" and "''$app->add_ui()''". These methods are defined in in the ''Zim::GUI::Component'' base class and are wrappers for the ''Gtk2::UIManager ''functionality. We wrap the action definition with the "''__actions()''" function in order to make them translatable. So we can add an action to the "Tools" menu using:
+
+'''
+my $actions = __actions( q{
+MyAction	gtk-open	My Action	.	Execute my action
+} );
+
+$app->add_ui( q{
+<ui>
+	<menubar name='MenuBar'>
+		<menu action='ToolsMenu'>
+			<menuitem action='MyAction'/>
+		</menu>
+	</menubar>
+</ui> } );
+'''
+
+Now the actual code for this action goes in a subroutine called "''MyAction()''". This method will be called when the menu item is clicked but also serves as public interface that might be called by other plugins.
+
+===== Random notes =====
+
+**Error handling**
+The plugin script should return ''true'' when successful. When the script does not return ''true'' or dies the user gets an error dialog and the plugin will not be loaded again next time zim starts. If your plugin has dependencies it is nice to check them and trow an error dialog explaining to the user what went wrong before returning ''false''. See for the TrayIcon plugin for an example.
+
+**Autoloading a module**
+For small plugin functions all the code goes directly in the plugin script. Larger plugins will be easier to maintain when the logic goes into a separate perl module and the plugin script is used to load this module. Zim autoloads modules from the ''Zim::GUI::'' namespace, so when the module defines for example a dialog that only needs to be loaded after the user clicks a menu item the script is used to add the menu items while it trusts the module with the dialog code to be loaded when needed. This is how the Calendar and TODOList plugins work. Typically modules in the ''Zim::GUI::'' namespace inherit from ''Zim::GUI::Component'' and define a single interface component, e.g. a dialog or a pane in the main interface.
+
+To autoload a module which is not in the ''Zim::GUI::'' namespace you can specify the class in the ''{autoload}'' hash. The same mechanism can be used to overload one of the core modules. An example of this is the Bazaar plugin which overloads the default Versions dialog.
+
+**Adding a section to the config file**
+Zim uses ini-style config files that can have multiple sections. So it makes sense for plugins that have config items to define a new section to store their config items. See [[ConfigFiles]] to determine which kind of config items go in which config file. There are two convenience routines to get a hash that maps to a section in one of these files: ''init_settings()'' and ''init_state()'' which are defined in ''Zim::GUI::Component''. These can be called on the ''$app'' object from the plugin script or can be used during initialization of a module. For example the EquationEditor plugin uses this to set config items for the latex and dvipng commands that are used.
+
+**Use signals as hooks for new functionality**
+The idea is that you can connect to signals to trigger new functionality. Basically triggering an action trough a menu or toolbar item also emits a signal, but here the signal is wrapped by default already and will call the like named module. The main application object and the main notebook object also emit signals for events like loading a new page - see the POD documentation. And of course all the Gtk widget have signals for various events. This is used by for example the Calendar plugin to know when a page is loaded for a date and update the dialog to show the corresponding month.

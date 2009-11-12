@@ -1,0 +1,505 @@
+#!/usr/bin/perl
+
+require 5.008; # make sure perl is new enough
+use strict;
+use File::Spec;
+
+binmode STDOUT, ':utf8';
+binmode STDERR, ':utf8';
+
+# Library path bootstrap
+my @path;
+if (defined $ENV{PAR_TEMP}) { # See PAR.pm
+	@path = ($ENV{PAR_TEMP}, 'inc');
+}
+else {
+	my $binary = File::Spec->rel2abs($0);
+	my ($vol, $dirs, undef) = File::Spec->splitpath($binary);
+	@path = ($vol, $dirs, File::Spec->updir);
+}
+my $libdir = File::Spec->catdir(@path, 'lib');
+unshift @INC, $libdir if -d $libdir;
+
+# Load modules needed in this script
+eval q/
+	use File::BaseDir qw(config_files);
+	use Zim::Utils;
+	use Zim::GUI::Automount;
+	use Zim;
+/;
+die $@ if $@;
+
+# i18n initialization
+$Zim::CODESET = 'utf8';
+$Zim::LANG = '';
+
+for (qw/LC_ALL LC_MESSAGES LANGUAGE LANG/) {
+	next unless $ENV{$_};
+	$Zim::LANG = $ENV{$_};
+	last;
+}
+$Zim::LANG =~ s/[\.\@].*//; # remove encoding / modifier
+$Zim::LANG = '' if $Zim::LANG eq 'C' or $Zim::LANG eq 'POSIX';
+
+eval {
+	require I18N::Langinfo;
+	I18N::Langinfo->import(qw(langinfo CODESET));
+	$Zim::CODESET = langinfo(CODESET()) || 'utf8';
+};
+warn "No langinfo available. Defaulting to utf8\n" if $@;
+
+# Data dir bootstrap
+my $sharedir = File::Spec->catdir(@path, 'share');
+if (-d $sharedir) {
+	$ENV{XDG_DATA_DIRS} =
+		join ':', $sharedir, File::BaseDir->xdg_data_dirs;
+}
+
+# Parse command line options
+my $verbose = 1; # 0 = quiet, 1 = normal, 2 = verbose, 3 = debug
+my $daemon  = 1; # 0 = no daemon, 1 = implicit, 2 = explicit daemon
+$daemon = 0 if $^O eq 'MSWin32';
+my $export  = 0; # do not run GUI but export
+my ($notebook, $page, $pidfile);
+my %opt; # options passed on to open_notebook()
+
+while ($ARGV[0] =~ /^-/) {
+	$_ = shift @ARGV;
+
+	if (/^-(\w\w+)$/) { # Expand multiple single-letter options
+		unshift @ARGV, map "-$_", split '', $1;
+		next;
+	}
+	elsif (/^--?$/) { last } # End of option list
+	
+	if (/^(--version|-v)$/) {
+		print $Zim::LONG_VERSION;
+		exit;
+	}
+	elsif (/^--quiet$/)        { $verbose = 0   }
+	elsif (/^(--verbose|-V)$/) { $verbose = 2   }
+	elsif (/^(--debug|-D)$/)   { $verbose = 3   }
+	elsif (/^(--doc|--man)$/) {
+		$notebook = ($1 eq '--doc') ? '_doc_' : '_man_' ;
+		$opt{profile} ||= 'reader';
+	}
+	elsif (/^(--list|-l)$/) { $notebook = '_new_'    }
+	elsif (/^--daemon$/)    { $daemon = 2            }
+	elsif (/^--no-daemon$/) { $daemon = 0            }
+	elsif (/^--export$/)    { $export  = shift @ARGV }
+	elsif (/^--pidfile$/)   { $pidfile = shift @ARGV }
+	elsif (/^(--profile|-p)$/) { $opt{profile} = lc shift @ARGV }
+	elsif (/^--geometry$/)  { 
+		my $g = shift @ARGV;
+		$g =~ /^(\d+)[xX](\d+)(?:\+(\d+)\+(\d+))?$/
+		   or die "$0: --geometry needs argument of form wxh[+x+y]\n";
+		$opt{geometry} = join ',', $1, $2, $3, $4;
+	}
+	elsif (/^--iconify$/)   { $opt{iconify} = 1 }
+	elsif (/^--gtk-path$/) {
+		# Force gtk+ to front of path, overloading any other 
+		# installation. Somehow Win32 does not always
+		# allow this to be done in the environment !?
+		my $path = shift @ARGV;
+		my $sep = ($^O eq 'MSWin32') ? ';' : ':' ;
+		$ENV{PATH} = $path.$sep.$ENV{PATH};
+	}
+	elsif (/^(--help|--usage|-h|-u)$/) { exit_usage() } # Exit with message
+	elsif (/^--?\w/) { exit_usage($_) } # Exit with unknown option
+	
+	last if /^--?$/;
+}
+
+$notebook ||= shift @ARGV;
+$page = shift @ARGV;
+$page = undef unless $page =~ /\S/;
+exit_usage() if @ARGV and ! $export;
+
+$Zim::DEBUG = 1 if $verbose == 3;
+
+$SIG{__WARN__} = sub {
+	return if $verbose == 0; # no messages at all
+	my ($lvl, $error) = (1, shift);
+	$lvl += length $1 if $error =~ /^(#+)\s/;
+	print STDERR $error, @_ unless $lvl > $verbose;
+};
+
+if ($daemon) {
+	eval q/use Zim::GUI::Daemon/;
+	die $@ if $@;
+}
+
+# Check for file argument
+if (-f $notebook) {
+	my $file = Zim::FS->abs_path($notebook);
+
+	# find notebook dir
+	my @path = split '/', $file;
+	pop @path; # remove file part
+	while (@path) {
+		my $dir = join '/', @path;
+		last if -d $dir and Zim->is_notebook($dir);
+		pop @path;
+	}
+	#exit_not_found_file($notebook) unless @path;
+	$notebook = join '/', @path if @path;
+
+	# find page
+	# TODO: how do we make the actual Store do this ?
+	unless ($file =~ /\.(zim|gjots)$/) {
+		exit_usage() if defined $page;
+		$page = $file;
+		$page =~ s/^\Q$notebook\E\/*/:/;
+		$page =~ s/\.\w+$//;
+		$page =~ s/\/+/:/g;
+	}
+	# else we opened the config file or a gjots notebook
+}
+
+# Lookup notebook
+if (defined $notebook) {
+	# notebook can be name or path
+	my $nb;
+	if ($notebook =~ m#[/\\]#) {
+		$nb = Zim::FS->abs_path($notebook); # relative to PWD
+	}
+	else {
+		$nb = Zim->get_notebook($notebook);
+		$nb = Zim::FS->abs_path($notebook) # relative to PWD
+			if ! defined($nb) and -e $notebook;
+	}
+	$notebook = $nb if defined $nb;
+	warn "## Got notebook: $notebook\n";
+}
+elsif ($daemon == 2) {
+	# --daemon so no notebook needed
+	if (Zim::GUI::Daemon->exists) {
+		warn "$0: Daemon already running\n";
+		exit;
+	}
+}
+else {
+	# try default or open notebook dialog
+	$notebook = Zim->get_notebook('_default_');
+		# Returns undef if we don't have a default
+	$notebook = '_new_' if ! defined $notebook or ! -d $notebook;
+		# If default does not exist we want to trigger the 
+		# NotebookDialog, not an error.
+	warn "## Got notebook: $notebook\n";
+}
+
+# Make page an absolute name
+$page =~ s/^:?/:/ if defined $page;
+
+# Export and exit
+if ($export) {
+	eval q/use Zim::Selection/;
+	die $@ if $@;
+	exit_usage() unless defined $notebook;
+	$notebook = notebook_object($notebook);
+	
+	my %opts = map split('=', $_, 2), split ',', $export;
+	$opts{media} ||= 'default';
+	$opts{doc_root} ||= '/';
+	
+	my $o = {
+		resolve => 1,
+		recurse => defined($opts{recurse}) ? $opts{recurse} : 1
+	};
+	
+	my @pages = grep defined($_), ($page, @ARGV);
+	@pages = (':') unless @pages;
+	
+	my $s = Zim::Selection->new($notebook, $o, @pages);
+	$s->export(\%opts);
+	exit;
+}
+
+# Check daemon - exit on success
+if ($daemon) {
+	eval { Zim::GUI::Daemon->do('open', $notebook, $page, %opt) };
+	if ($@) {
+		warn "# No daemon listening .. let's start one\n"
+	}
+	else {
+		warn "# Send command to daemon .. exitting\n";
+		exit;
+	}
+}
+
+# Load messages
+warn "# locale: $Zim::LANG.$Zim::CODESET\n";
+Zim::Utils::find_translation();
+
+# (Pre-)load GUI modules
+warn "# This is zim $Zim::VERSION\n";
+eval q/
+	use Gtk2;
+	use Zim::GUI;
+/;
+die $@ if $@;
+
+if ($verbose > 1) {
+	my $compiled = join '.', Gtk2->GET_VERSION_INFO;
+	my $linked   = join '.', Gtk2->get_version_info;
+	warn   "# Gtk2 version is $Gtk2::VERSION\n",
+	       "#   compiled against gtk+ $compiled\n",
+	       "#   linked   against gtk+ $linked\n" ;
+	warn defined($notebook)
+	     ? "# Notebook path = $notebook\n"
+	     . "#          page = $page\n"
+	     : "# No notebook defined\n"   ;
+}
+
+# Start daemon and/or UI
+Zim::FS::File->new($pidfile)->write("$$\n")
+	if defined $pidfile;
+	
+if ($daemon) {
+	$Zim::GUI::Daemon::Background = 0 unless $daemon == 2;
+	Zim::GUI::Daemon->daemonize(\&open_notebook);
+	Zim::GUI::Daemon->ACTION_open($$, $notebook, $page, %opt)
+		unless $daemon == 2 and ! defined $notebook;
+		# only run in background if --daemon without NOTEBOOK
+	Zim::GUI::Daemon->main;
+}
+else { open_notebook($notebook, $page, %opt) }
+
+unlink $pidfile if defined $pidfile;
+
+exit;
+
+###
+
+sub open_notebook {
+	my ($notebook, $page, %opt) = @_;
+	return warn "BUG: undefined notebook !?" unless defined $notebook;
+	# This routine can be called multiple times when running a daemon.
+	# The arguments NOTEBOOK and PAGE are not necessarily the same as
+	# parsed in the script above, but notebook lookup is already done
+	# in Deamon - only check if notebook exists or not.
+	# From here we use GUI dialogs to throw errors. 
+
+	# initialize in child process if using daemon
+	Gtk2->init;
+
+	# Show NotebookDialog for new notebooks
+	if ($notebook eq '_new_') {
+		eval q/use Zim::GUI::NotebookDialog/;
+		die $@ if $@;
+		
+		$notebook = Zim::GUI::NotebookDialog->new->run($daemon);
+			exit 2 unless defined $notebook;
+			# Dialog has already shown error dialog if needed.
+			# Notebook is always absolute path.
+
+		if ($daemon) {
+			# For daemon we run either dialog or GUI, for
+			# no-daemon we run both in the same process.
+			Zim::GUI::Daemon->do('open', $notebook);
+			Zim::GUI::Daemon->do('tell', $$, 'ack');
+			<STDIN>; # avoid daemon exiting by our exit by waiting
+			return;
+		}
+		else { %opt = () } # ignore options
+	}
+	elsif ($notebook eq '_man_') {
+		$notebook = Zim->new( config => { type => 'Man' } );
+	}
+
+	# Initialize application object
+	my $zim = Zim::GUI->new(
+		notebook  => notebook_object($notebook),
+		profile   => $opt{profile},
+		no_daemon => ! $daemon,
+	);
+
+	# Initialize application window
+	$zim->gui_init;
+
+	if ($page) {
+		eval { $zim->JumpTo($page) };
+			# dies when page does not exist in read-only mode
+		warn $@ if $@;
+	}
+
+	$zim->gui_show(%opt);
+
+	# Run application
+	Gtk2->main;
+}
+
+sub notebook_object {
+	my $notebook = shift;
+	return $notebook if ref $notebook and ref $notebook eq 'Zim';
+
+	# notebook can be a dir or file object, or path, or name
+	exit_not_found($notebook) unless $notebook =~ m#[/\\]#;
+
+	my $mount = Zim::GUI::Automount->mount($notebook);
+	
+	my $is_f = -e $notebook ? -f _ : undef;
+	exit_not_found($notebook) unless defined $is_f;
+	#exit_not_found_file($notebook) if ...
+
+	my $nb = $is_f ? Zim->new(file => $notebook)
+	               : Zim->new(dir  => $notebook) ;
+	$$nb{automount} = $mount;
+	return $nb;
+}
+
+sub exit_usage {
+	my $opt = shift;
+	print STDERR << "EOT" if defined $opt;
+Unknown option: $opt
+
+EOT
+	print STDERR << "EOT";
+Usage: $0 [OPTIONS] [NOTEBOOK] [PAGE]
+
+  NOTEBOOK is the directory to store all docs, for example ~/Notes/
+           or the name of an earlier configured notebook
+  PAGE     is the page you want to open
+
+  See man zim(1) for OPTIONS, try "$0 --doc" for the user manual
+EOT
+	unlink $pidfile if defined $pidfile and $daemon == 0;
+	exit 1;
+}
+
+sub exit_not_found {
+	my $notebook = shift;
+	my $error = ($notebook =~ m#[/\\]#)
+	  ? __("No such file or directory: {name}", name => $notebook) #. error
+	  : __("No such notebook: {name}", name => $notebook) ; #. error
+
+	# Try throwing an error as dialog, use terminal if GUI fails
+	# We use GUI because most users will not use terminal
+  	eval { Zim::GUI::Component->error_dialog($error) };
+	print STDERR "$0: $error\n" if $@;
+	
+	unlink $pidfile if defined $pidfile and $daemon == 0;
+	exit 2;
+}
+
+sub exit_not_found_file {
+	print STDERR "$0: File not inside notebook: $_[0]\n";
+	unlink $pidfile if defined $pidfile and $daemon == 0;
+	exit 2;
+}
+
+1;
+
+__END__
+
+=head1 NAME
+
+zim - A desktop wiki and outliner
+
+=head1 SYNOPSIS
+
+B<zim> [I<OPTIONS>] [I<NOTEBOOK> [I<PAGE>]]
+
+=head1 DESCRIPTION
+
+B<Zim> is a desktop wiki writtin in perl using Gtk2.
+
+Try to execute C<zim --doc> to view the user manual.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<--doc>
+
+Open the zim documentation.
+
+=item B<--man>
+
+Open zim as a man page reader.
+
+=item B<-l>, B<--list>
+
+Show the notebook dialog even if a default notebook is set.
+
+=item B<--export> I<OPTIONS>
+
+Export pages to another format. OPTIONS should at least
+contain 'dir' and 'format', and optionally 'template',
+and 'media'.
+
+Example:
+
+	zim --export dir=./html,format=html ./Wiki
+
+This will export all pages in the notebook dir "./Wiki"
+to a dir "./html" using the html format.
+
+=item B<-p>, B<--profile> I<NAME>
+
+Open using a certain profile. For example use C<-p reader>
+to open a notebook read-only.
+
+=item B<--pidfile> I<FILE>
+
+Write the process id of to I<FILE>.
+
+=item B<--geometry> I<W>xI<H>[+I<X>+I<Y>]
+
+Set the size of the main window to I<W>xI<H> pixels
+and position the window at I<X>,I<Y>.
+
+=item B<--gtk-path> I<path>
+
+Set the path to the gtk+ libraries. Used on win32 when the
+system does not allow overloading the PATH environment variable.
+
+=item B<--iconify>
+
+Start zim iconified. If the TrayIcon plugin is enabled
+this option will start zim in the system tray.
+
+=item B<--quiet>
+
+Do not print any information to the terminal.
+
+=item B<--daemon>
+
+Keep a daemon running to kick-start new instances even when no notebook is open.
+
+=item B<--no-daemon>
+
+Do not start the daemon but just run in single process mode.
+
+=item B<-V>, B<--verbose>
+
+Print more verbose information to the terminal.
+
+=item B<-D>, B<--debug>
+
+Print developer information to the terminal.
+
+=item B<-v>, B<--version>
+
+Print version and copyright information and quit.
+
+=back
+
+=head1 AUTHOR
+
+Jaap Karssenberg E<lt>pardus@cpan.orgE<gt>
+
+Copyright (c) 2005, 2008 Jaap G Karssenberg. All rights
+reserved. This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MER-
+CHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See either the GNU
+General Public License or the Artistic License for more details.
+
+=head1 SEE ALSO
+
+L<Zim>(3)
+
+=cut

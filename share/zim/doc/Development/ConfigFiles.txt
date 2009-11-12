@@ -1,0 +1,42 @@
+====== ConfigFiles ======
+
+Zim uses several config files for different kinds of data:
+
+**XDG_CONFIG_HOME/zim/default.conf**
+This file is used for all kinds of settings that are constant across notebooks. Mainly the contents of the "preferences" dialog. Can be accessed by "''{settings}"'' in the main application object. See also ''SaveSettings()'' in Gui.pm and ''init_settings()'' in Component.pm.
+
+**NOTEBOOK/notebook.zim**
+Used to save notebook specific settings. This file has the same format as the other ".conf" files, but the extension ".zim" is used so we can have our own mimetype (''application/x-zim-notebook''). When we configure zim as the default application for this mimetype we get to open notebooks by clicking on this file in the notebook. The hash can be accessed by "''{notebook}{config}''" and is saved on "''{notebook}->save''".
+
+**NOTEBOOK/.zim/state.conf**
+Used for state parameters that are specific per notebook but do not belong to the notebook configuration. E.g. the window size, the last template used for export etc. We want to keep these out of notebook.zim because when the notebook is for example under version control, we do not want notebook.conf to change after every usage of zim. The state hash can be accessed by "''{state}''", see also ''SaveState()'' in Gui.pm and ''init_state()'' in Component.pm.
+
+**Note:** The files in NOTEBOOK/.zim/ can also be saved in XDG_CACHE/notebook_path/ when the notebook is read-only.
+
+**XDG_CONFIG_HOME/zim/accelmap**
+Specifies the key bindings for menu items if these are customized. See also [[:Usage:keybindings]].
+
+**XDG_CONFIG_DIRS/zim/default.style**
+Specifies the look of the various text styles. E.g. specifies that "italic" looks italic, and what colors to use for links. See [[:Usage:styles]]. Copy to XDG_CONFIG_HOME to overload.
+
+===== Profiles =====
+
+See also: [[Usage:Profiles]] 
+
+Zim has support for different "profiles" to be able to have different sets of configuration. Each profile has it's own config file for general settings. For example by default we use the "''default.conf''" config file, but for the help manual we have a different configuration under "''reader.conf''". Each profile can also have it's own style settings.
+
+The profile can be specified on the commandline or can be set in the notebook configuration.
+
+==== Settings ====
+
+Some settings in the config file the can differ between profiles are:
+
+**plugins**
+
+The "reader" profile for example does not need the Calendar and TODOList plugins, while these are enabled by default.
+
+**read_only**
+
+When "read_only" is set in the config file the interface will hide menu items and toolbar items that are used for editing. Also the behavior of kay bindings differs slightly. This setting is used by the "reader" profile.
+
+Not that setting "read_only" in the notebook config will make the notebook read-only but will not change the user interface. In this case the menu items and toolbar items are made insensitive.

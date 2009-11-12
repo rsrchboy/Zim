@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Thu, 16 Oct 2008 22:17:58 +0200
+
+====== Config ======
+
+This page documents the various config files used. See [[preferences]] for documentation of the preferences dialog.
+
+===== Paths =====
+
+Zim uses the scheme as laid down in the "XDG Base Directory Specification" as published by [[http://freedesktop.org|freedesktop.org]]. The default paths are:
+
+'''
+XDG_CONFIG_HOME = HOME/.config/
+XDG_DATA_HOME   = HOME/.local/share
+XDG_DATA_DIRS   = /usr/local/share/:/usr/share
+'''
+
+These can be overloaded with the coresponding environment variables.
+
+When zim writes config files it always uses XDG_CONFIG_HOME. Data files are read only and are searched for in XDG_DATA_HOME and XDG_DATA_DIRS. The installation defaults for config files are also installed in XDG_DATA_DIRS, but these are copied on first use to XDG_CONFIG_HOME.
+
+===== Files =====
+
+==== Main config file ====
+The default config file is ''XDG_CONFIG_HOME/zim/default.conf''. If you use another profile the config file will take the name of the profile. For example when you have a profile called "album" the correponding config file will be ''XDG_CONFIG_HOME/zim/album.conf''.
+
+The config file is written automatically when you close zim. So if you want to change it manually you need to close all instances of zim first.
+
+A number of the values in the config file can be set using the [[preferences]] dialog from the GUI. Others are state variables which record the state of the GUI. There are also some hidden settings that are not shown in the preferences dialog.
+
+Hidden settings include:
+
+**default_home  (Home)**
+Default home page. This is used for the "home" button and keybinding.
+
+**hist_max  (20)**
+Maximum number of items on any of the history stacks.
+
+**undo_max  (50)**
+Maximum number of steps in the undo stack.
+
+**save_interval  (5000)**
+Interval for autosaving in milliseconds. //Be aware that increasing this timer increases the chance of loosing data when the application is killed unexpectedly.//
+
+=== [Spell Plugin] ===
+
+**Language (en_US)**
+Language code for the spell checker language. Is only used when the spell checker [[plugins|plugin]] is enabled.
+
+==== Interwiki URL list ====
+The file ''XDG_DATA/zim/urls.list'' gives a list of urls which are used for the [[linking|interwiki]] function. All files in the XDG_DATA path are read when looking for an url, so you can use XDG_DATA_HOME to overload the installation defaults.
+
+The format consist of one url per line, each line giving the key (which is the interwiki name), followed by whitespace, followed by the actual url. The url can conatin place holders "''{NAME}''" or "{URL}", the first will be replaced by the name of the interwiki page, the second by this name in url encoding. If no placeholder is found in the url the url encoded name is appended to the url.
+
+==== Date format list ====
+
+The file ''XDG_DATA/zim/date.list'' gives a list of [[man?strftime(3)|strftime(3)]] formats, one on each line, to be used to populate the "Insert Date and Time" dialog. The first instance of this file that is found in the XDG_DATA path is used.
+
+==== Entities list ====
+The file ''XDG_DATA/zim/entities.list'' contains a list of html entities. These are used to insert special characters by name, see [[autoformat]] for details. Each line consists of the entity name followed by whitespace, followed by the decimal character number of the key. All files in the XDG_DATA path are read when looking for an entity, so you can use XDG_DATA_HOME to overload the installation defaults.
+
+==== Automount ====
+The file ''XDG_CONFIG_HOME/zim/automount'' can be used to make zim mount an un-mount notebooks automatically. You can define multiple mount points and supply commands for mounting and unmounting as well as password options. Each mount point can contain multiple notebooks. The format of each entry should be as follows:
+
+'''
+[/path/to/mount/point/]
+mount  = command for mounting
+umount = command for un-mounting
+passwd = "stdin" or "file"
+'''
+
+The "mount" and "umount" commands can contain "''%f''" to be replaced with the actual notebook path. The passwd option defines how to supply the password to the mount command. You can either get the password over a pipe to stdin (followed by a trailing "\n") or trough a temporary file. In case you use passwd option "file" the mount command should contain a "''%p''" which will be replaced by the path to the temp file. Some programs will ask for a password as commandline argument. This is not supported because it is bad practice and makes it easy for others to sniff your password. Of course you can whip up a small script to wrap the command if you really want to use those programs. Both "unmount" and "passwd" are optional.
+
+See [[encryption]] for an example how to use a fuse file system.

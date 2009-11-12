@@ -1,0 +1,21 @@
+====== NoteBooks ======
+
+A **notebook** is a collection of pages that are linked to each other. Typically all pages within a notebook belong to the some project; although it is also very common to have a "dump" or "scratch" notebook were all odds and ends end up.
+
+===== Open Notebook Dialog =====
+
+**If you run zim for the first time** you get the "Open notebook" dialog asking you to select a notebook. Assuming you don't have any content yet you should start with adding an empty (or non-existent) directory as a notebook. When you select this new notebook and open it, all pages you create in **zim** will be placed within that directory.
+
+When you add a new notebook **zim** will prompt for a number of properties for the new notebook. These are described in [[properties]].
+
+You can have multiple notebooks, for example for separate projects. Or you can have a single notebook for all your stuff. In general when you have separate groups of pages that do not interlink, it is best to put these groups in separate notebooks. That way **zim** remembers the state and history of each of these groups independent of the others.
+
+When working with several notebooks you can get to the "Open notebook" dialog from **zim** using the "//File//->//Open Another Notebook//" menu item.
+
+If you don't want to see the "Open notebook" dialog each time you start zim, you can set a default using the "**Set Default**" button in this dialog. The default can either be a directory or the name of one of the notebooks in the list.
+
+===== Configuration file =====
+
+In the notebook directory **zim** will write a configuration file called "''zim.notebook''". This file contains the settings and state that are notebook specific. You can open the notebook from your file browser by opening this config file with **zim** (which should be the default application).
+
+If you do not like to see this config file in your file browser you can always rename it to "''.notebook.zim''" to hide it.

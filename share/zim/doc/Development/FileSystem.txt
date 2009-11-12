@@ -1,0 +1,47 @@
+====== FileSystem ======
+
+The filesystem classes are implemented in Zim::FS. Normally you don't call this class directly but use the "''file( )''" and "''dir( )''" routines from Zim::Utils to construct filesystem objects.
+
+//TODO: summarize FS classes//
+
+//TODO: explain how to implement VCS sub classes//
+
+//TODO: mention the Zim::FS::Buffer class//
+
+-----
+
+* Page should have a file API
+	* use dir object in Store / Repository if any
+	* check file
+		* checks if file is within repository controlled dir(s)
+			* call check file on repository (?)
+			* merge this with function to make paths relative to page or notebook
+		* needed to do correct OO lookup
+		* GUI can still use simple File object for files outside this dir
+	* get folder
+		* replace "base" logic in parse tree
+	* get attachment
+	* make sure that the export "media" options work nicely together with attachments in document root
+
+
+* store api  (Zim::Store::Documents)
+	* get_document_dir(PAGE)
+	* resolve_file(PATH, [PAGE])
+	* store_file(FILE, [PAGE])
+	* relative_path(PATH|FILE, [PAGE])
+
+* page file api
+	* get_document_dir()
+		* return DIR or undef - does not need to exist
+		* if it is undef, store and resolve could still work - UPDATE doc Zim.pm
+	* resolve_file(PATH)
+		* return absolute PATH if PATH is file:// uri
+		* resolve relatively to DIR and return FILE object
+	* store_file(FILE)
+		* copy FILE to DIR
+		* returns relative path
+	* relative_path(PATH)
+		* returns undef if PATH absolute and not relative to DIR
+			* FIXME: maybe return file:// uri for abs paths ?
+		* resolve relative to DIR
+		* returns path relative to DIR

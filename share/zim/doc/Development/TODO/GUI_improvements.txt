@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 23 Jul 2008 12:29:31 +0200
+
+====== GUI improvements ======
+
+* add profile drop down to properties
+* Make trayicon show icons for open notebooks ?
+* make open notebook dialog show paths and show open notebooks in bold, optionally include icons as well
+* Better feedback from autosave and ^S for "paranoid" users
+* Set sensitivity for next/prev/child when applicable
+* optional bottom pane with iconview showing attachments may be nice
+
+
+* Fix bug in redo with the edit mode
+	* chars without markup behind e.g. bold region can become bold after redo
+* group user actions for atomic undo/redo of auto-formatting actions
+* rich copy-paste between zim instances
+* rich copy-paste to e.g. abiword, open-office, ..
+* class based style sheets
+	* don't add more types of tags, just (sub)class them (h1 - h5 should be subclass of "h")
+	* dialog to modify this stylesheet file
+* Listing available languages for spell checking not possible at this point (will be in gtkspell3)
+	* therefor make it a text input, defaulting to locale
+	* add this to repository / page properties
+* have a menu item to update links
+	* allow updating links to files/urls/etc. as well
+* trigger "parse_word" at , . ; " ' ) etc.
+* trigger "parse_word" on move cursor
+* render "<hr>" elements
+* Make bullet lists indent properly so line wrapping looks better
+* Search dialog could have page selection all/pages (like export has)
+* Search should give better feedback if no results are found
+* Better support for ordered lists (plugin for roman numerals ??)

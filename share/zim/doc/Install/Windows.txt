@@ -1,0 +1,85 @@
+====== Installation of Zim on Windows ======
+
+This page describes how to install Zim on Windows manually. This means that you need to download and install dependencies from various sources and build Zim yourself. //We are still looking for a volunteer to build and maintain a self-contained windows executable.//
+
+===== Gtk+, Perl and the Gtk2-Perl bindings =====
+
+The first step is to set up an environment consisting of the Perl interpreter, the Gtk+ interface libraries and the Gtk2-Perl bindings.
+
+The Perl interpreter can be downloaded from [[http://www.activestate.com/|ActiveState]]. For pre-compiled pacakges of the Gtk+ runtime environment and the Gtk2-Perl bindings for windows there are various resources. It is important to make sure the versions of the runtime environment and the bindings match, else you could experience a lot of strange bugs when running zim.
+
+Have a look at http://www.lostmind.de/gtk2-perl/, this page explains how to set up this environment step by step and has a set of pre-compiled binaries that work.
+
+Usually, Perl is installed in "''C:\perl''"; you can also use "''C:\Program Files\Perl''". This directory will be called PERLDIR in the following. Make sure the executable directory (''PERLDIR\bin'') is added to the PATH. The installer usually does this automatically. Test if the PATH was set correctly by running "''perl -v''" or "''perl -V''" from  the command-line to check if you have a working Perl intrpreter.
+
+Gtk+ usually installs in "''C:\Program Files\Common Files\GTK\2.0''". On non-english Windows systems, the path is called differently (e.g., "''C:\Programme\Gemeinsame Dateien\GTK\2.0''" on German Windows). This directory will be called GTKDIR in the following. Again, make sure that the directory "''GTKDIR\bin''" is added to the PATH.
+
+After installing the Gtk2-Perl bindings check the whole environment by running "''perl -MGtk2 -e 1"'' from a command line. If this does not give an error, perl knows where to find Gtk+ and the Gtk2-Perl bindings.
+
+If dlls such as ''iconv.dll'', ''charset.dll'', ''libgmodule-2.0-0.dll'' or ''libglib-2.0-0.dll'' are not found, make sure that:
+* they can be found in ''GTKDIR\bin''
+* this directory is in the PATH
+* or try restarting the cmd shell
+
+If one or more of this dlls are not in the directory, download them from http://www.gimp.org/~tml/gimp/win32/. You may need ''glib-XXX.zip'' and/or ''libiconv-X.X.X.bin.woe32.zip''. Unpack them into the GTKDIR, or somewhere else in the PATH.
+
+**Other resources:**
+http://www.gtk.org/download-windows.html
+http://gtk2-perl.sourceforge.net/win32/
+
+===== Other dependencies =====
+
+Zim also needs a couple of Perl modules to be installed. These are available from the ActiveState repository, so installation is straight forward. Newer versions of ActiveState Perl come with a graphical package manager which can be used.
+
+You need to search and install the following packages:
+* Module-Build
+* File-DesktopEntry
+* File-MimeInfo
+
+You can also use the command-line installer. Type the following commands in a command shell:
+
+	> ppm install Module-Build
+	> ppm install File-DesktopEntry
+	> ppm install File-MimeInfo
+
+
+===== Zim =====
+
+Once you have the environment working you can install Zim in more or less the same way you would do on a Unix platform.
+
+Download the current version of Zim [[http://zim-wiki.org|from the website]]. Unpack it and run the following commands in a command shell in this directory:
+
+	> perl Build.PL
+	> perl Build
+	> perl Build test
+	> perl Build install
+
+You will get a warning that only File-MimeInfo version 0.11 could be found, yet a version >= 0.12 is requested. Ignore this. It works anyway. If you get an error for other missing Perl modules you might need to go back to the previous section and install these modules in the same way.
+
+The Zim files are installed in PERLDIR. You can start Zim by typing ''zim'' into some command line or the Windows "Run" menu. Also, you can create a shortcut to PERLDIR\bin\zim.bat. To have an icon for the shortcut, you can convert PERLDIR\share\pixmaps\zim.png into an .ico file, using a program like IrfanView.
+
+==== Configuration ====
+After creating a new notebook there will be a file in the notebook directory called "''notebook.zim''" use the "Open with .." item from the file browsers context menu to set zim as the default application for this file type. This will allow you to open notebooks by clicking on the config file.
+
+==== Shortfalls ====
+
+=== TrayIcon ===
+The TrayIcon plugin does not work; I'm not sure whether the Win32 tray icons are at all supported by Gtk2. Probably it will work with Gtk+ 2.10, but untested since all the pre-compiled binaries are still at version 2.8.
+
+=== MimeInfo ===
+The 0.12 and 0.13 versions of File-MimeInfo do not install on ActivePerl; this has to be looked into.
+
+When starting, Zim gives the message:
+"You don't seem to have a mime-info database.
+ See http://freedesktop.org/Software/shared-mime-info
+ Could not use 'File::MimeInfo::Applications', disabling application bindings"
+This can be ignored.
+
+=== Langinfo ===
+When starting, Zim gives the message: "No langinfo available. Defaulting to utf8". I have not yet looked into this ... utf8 is probably not a good idea on windows which uses the ansi charset (Windows-1252) in most countries.
+
+===== Alternatives =====
+As an alternative you can consider installing [[http://www.cygwin.com|CygWin]], within this environment you should be able to install Zim following the installation instructions for [[unix]]. Although on the moment of writing it seems that there are issues installing ''Module::Build'' on CygWin.
+
+===== References =====
+Revisions of this page are based on Ingo Wiarda's "[[http://dewarim.de/wms/programme/installing_zim.html|Installing Zim on Windows XP]]", Vedanta Barooah's "[[http://netvoodoo.net/index.php?/archives/59-Gtk2-Perl-on-ActivePerl.html|Gtk2-Perl on ActivePerl]]", and input by Sebastian Brandt <SBrandt@nospam@gmx.de>.

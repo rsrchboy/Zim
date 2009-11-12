@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Sat, 08 Nov 2008 11:42:25 +0100
+
+====== TODO List ======
+
+The TODO list plugin adds a dialog that shows a summary of open TODO items in this notebook. It works like a search for the "TODO" and "FIXME" tags, but instead of the normal search results, it shows a more customized list. Alternatively, instead of using the "TODO" tag you can regard any [[checkboxes|checkbox]] as an TODO item.
+
+The idea is that instead of using one page as a dedicated TODO list, you can use multiple pages to keep notes on various ongoing projects. Each of these pages can contain one or more TODO items and the dialog shows the overview of the whole notebook. 
+
+Another use case is when you write something like a paper or an article in zim you just put TODO items in the middle of the page where content is missing. Now the dialog shows a summary of all places in your text that need attention. A third example is the usage of calendar pages to keep the minutes of a project meeting. Now you can use the TODO tag or an open checkbox to flag any personal action items.
+
+===== Syntax =====
+You can put TODO items in your pages like this:
+
+	TODO: fix item 1
+
+	FIXME: update this information
+
+or like this:	
+
+	* fix item 1 - TODO
+
+or like this:	
+
+	TODO:
+	* fix item 1
+	* fix item 2
+	* fix item 3
+
+Each line describes one TODO item, sub tasks are not supported. The tag needs to be in all caps in order to be found. For a single item the tag should be at the begin of the line, but the tag is allowed anywhere in the line for list items (i.e. when the line starts with a bullet). To define multiple items at once the tag should be on the first line of the paragraph without any other text on the same line.
+
+Using [[checkboxes]] this might look like:
+
+	TODO:
+	[ ] fix item 1
+	[*] fix item 2
+	[ ] fix item 3
+
+When you want all checkbox items in your notebook to show up without the need to use a "TODO" tag for each list you can enable the **include all open checkboxes **option in the TODOList dialog.
+
+===== Priorities =====
+To set a priority for items you add one or more exclamation marks:
+
+	TODO: important item !
+	TODO: very important item !!
+
+The number of exclamation marks is the priority given for each item in the list.	
+
+===== Due date =====
+You can also add a due date for TODO items. Two formats are supported: "''dd/mm/yy''" or "''dd/mm''". This date is matched anywhere in the description. For example each of the following sets a high priority item for 24 December:
+
+	TODO: buy christmas presents 24/12 !!
+	TODO: 24/12 buy christmas presents !!
+	[ ] buy christmas presents 24/12 !!
+
+	TODO:
+	!! Buy christmas presents before 24/12
+
+	* Buy christmas presents - TODO 24/12 !!
+
+===== Checking items =====
+To mark items as done you can either remove them, use strike-trough formatting or put the tag "DONE" on the same line. For example:
+
+	TODO:
+	* item 1
+	* item 2 - DONE: trivial update
+	* item 3
+
+Will only show "item 1" and "item 3" in the TODO list.
+
+Of course when using [[checkboxes]] any item that is checked will be considered DONE. So in this list only item 1 will show up in the TODO list:
+
+	TODO:
+	[ ] item 1
+	[*] item 2
+	[x] item 3
+
+===== Configuration =====
+By default the TODOList plugin looks for the tags "TODO" and "FIXME". If you want to disable these (e.g. to only use checkboxes) or want to use different tags you can change them in the [[config|config file]]. The section for this plugin has an option "tags" which takes a comma seperated list of tags to look for.

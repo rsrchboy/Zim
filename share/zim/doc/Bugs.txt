@@ -1,0 +1,14 @@
+====== Bugs ======
+
+**Zim** uses the [[https://bugs.launchpad.net/zim/|launchpad bug tracker]] to collect bug reports. You can check there for problems under active development and submit new bugs. If you are not sure about a bug or you have a more general suggestion feel free to mail pardus@cpan.org.
+
+==== Current Bugs and Problems ====
+* A number of menu items are made insensitive when focus shifts away from the TextView, this is a temporary hack.
+
+==== Known Issues / Limitations ====
+* Zim does not detect when the desktop or X server exits and therefore does not save it's state when it is killed.
+* Files are always expected to have utf8 content, there is no character set detection.
+* Horizontal scrolling doesn't handle long verbatim lines correctly. Probably a bug in the gtk+ TextView widget.
+* Selections do not always behave as expected, this is a Gtk+ issue
+	* http://bugzilla.gnome.org/show_bug.cgi?id=333514
+* The about dialog does not close for certain versions of Gtk+, this is a Gtk+ issue.

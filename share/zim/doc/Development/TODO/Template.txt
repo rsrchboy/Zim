@@ -1,0 +1,27 @@
+====== Template ======
+
+* pull template code from Html.pm into Zim::Formats->bootstrap_template
+* dispatch event through the Zim.pm object for each bootstrap
+* add hooks in tempalte for link() etc.
+* support array of pages / parts - use <HR> a page break
+* base class for exporters
+	* have atomic routines to call from unit testing
+
+* some way (plugin?) of defining extra variables for a page template. eg some way a plugin could register a callback that gets called just before the template is filled in for each page. 
+	* Formats->bootstrap_template(template, page)
+		* need to asociate format to template for format specific functions
+		* event of the same name, dispatch trough Zim
+		* standard functions:
+			* strftime(fmt, var) - utime to timestamp
+			* url(var) - url encoding
+			* link(page) - format specific page to link conversion
+			* file(var) - link to file
+			* name(page) - beautify page name (tr/_/ /)
+		* maybe implement number of these as virtual functions ?
+
+* Do NOT allow arbitrary expressions, functions can have string arguments only
+* get rid of caching in template, support objects and subroutine refs
+	* expose object that masks number of routines for page
+* for prev, next and index also expose objects
+* expose repository object (?)
+* expose hash with environment: zim_version, user, date etc.

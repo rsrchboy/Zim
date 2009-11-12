@@ -1,0 +1,284 @@
+===== Changes for zim =====
+Jaap Karssenberg pardus@cpan.org
+
+=== 0.28 - Tue Feb 17 2009 ===
+* Reversed behavior of html export to use <br> elements - lp #311292
+* Fixed install script for Module::Build version 0.3x - lp #319964
+* Added support for RTL languages in html export - lp #303108
+* Added DiagramEditor plugin to insert Graphviz diagrams
+* Added SortSelection plugin - lp #318904
+* Applied patch to improve perl Pod format backend by Christoph Rudorff
+* Applied patch to set toolbar style by Christoph Rudorff
+* Added calendar icon with tango colors, submitted by Gabriel Hurley
+* Changed EquationEditor latex template to allow line breaks - lp #301658
+* Fixed two syntax bugs - lp #297932 & lp #312894
+* Fixed bug where checkboxlist with an empty line causes a freeze - lp #300184
+* Fixed bug where page headers show in "send to.." email content - lp #316153
+* Replaced horizontal scrollbar for page index by ellipsize - lp #297682
+
+=== 0.27 - Wed Nov 12 2008 ===
+* Added translation for traditional Chinese
+* Fixed Subversion support same level as Bazaar - lp #263043
+* Added support for checkbox lists - lp #283901
+* Added feature to automount notebooks - e.g. to use fuse encfs
+* Fixed bug that the Bazaar test did not skip properly if bzr not installed
+* Fixed bugs for using gjots notebooks
+* Fixed bug open notebooks were not italized in notebook dialog - lp #272518
+* Fixed bug with toggling format buttons - lp #273577
+* Added tooltips to pathbar buttons - lp #273593
+* Changed window title to notebook name instead of page name - lp #272430
+
+=== 0.26 - Sun Aug 24 2008 ===
+* Added translations for Finnish, Turkish and Simplified Chinese
+* Added integrated version control support for zim notebooks based on Bazaar.
+  Added "Save Version" (<Ctrl><Shift>S) and "Versions" dialog to File menu.
+* Zim text files now have headers with content type and time stamps
+* Changed wiki syntax for Verbatim blocks, now allows non-verbatim paragaphs
+  and bullet lists to be indented - lp #208986
+* Added mimetype for zim text files text/x-zim-wiki
+* Changed mimetype for .zim files to application/x-zim-notebook
+* Added special notebook for man pages with "--man" commandline option
+* Added support for reading gjots2(1) files; added application/x-gjots mimetype
+* Made auto incrementing a numbered list optional - lp #235020
+* Added translation support for plural forms - lp #226976
+* Fixed bugs for perl 5.10 - lp #235030, #242490
+* Fixed bug in Calendar plugin when namespace is read-only
+* Fixed bug in ToggleReadOnly plugin when first page is read-only
+* Fixed bug with TrayIcon for single notebook mode - lp #252712
+* Fixed bug that prevented typing under win32 - lp #252005
+
+=== 0.25 - Tue May 20 2008 ===
+* Added translations for Danish, Russian and Galician
+* Added --gtk-path to work around win32 environment behavior
+* Fixed a bug when opening files without asociated application
+* Fixed a bug for older versions of Exporter
+* Fixed bug that prevented using Gtk2::StatusIcon this means we can
+  drop dependency on Gtk2::TrayIcon for gtk+ >= 2.10
+* Fixed bug with utf8 notebook name not showing correctly in TrayIcon menu
+* Fixed TrayIcon to hide window when it already has focus
+* Fixed bug with file selection dialog for certain gtk versions
+* Fixed bug where a few strings were skipped when indexing translatable text
+
+=== 0.24 - Mon Apr 21 2008 ===
+* Added translations for German, French, Italian and Hebrew
+* Improved support for attaching files and images
+* Added daemon component to make seperate instances communicate
+* Added a TODO list plugin that searches for TODO tags in the notebook
+* Added a ToggleReadOnly plugin to make a notebook temporary read-only
+* Moved Zim::File to Zim::FS::File, also added Zim::FS::Dir objects
+  made whole file system access much more object oriented
+* Config files now use proper INI-style layout
+* Notebook config file is now called "notebook.zim" and has it's own mimetype
+* The history, cache and state are now saved under ".zim/" in the notebook
+* Changed directory structure of the manual
+* Moved Calendar functionality back into plugin
+* Calendar now namespaces date pages per month for better scalability.
+  On first use zim will prompt to move exiting pages.
+* Date namespace now has it's own template for new pages
+* Added a keybinding ( ">" ) to quote selections
+* Updated Build script, we now need Module::Build >= 0.28
+* Website changed, zim now lives at: http://zim-wiki.org
+
+=== 0.23 - Wed Nov 21 2007 ===
+* Added translation support - translators welcome !
+* Added translations for Dutch, Spanish, Czech, Swedish and Portuguese
+* Renamed "repository" to "notebook" for better conceptual mapping
+* Fixed bug when writing to symlinked files
+* Fixed bug with "Edit Link" action on unlinked text
+* Fixed bug in conversion of link text in exported HTML
+* Added key bindings to side pane: '\' and '*' for collapse and expand all
+* Now requires File::BaseDir 0.03 and File::DesktopEntry 0.03 or better
+
+=== 0.22 - Thu Oct 11 2007 ===
+Bug fix release :(
+* Fixed bug that prevented the creation of pages in new namespaces by
+  labelling them as read-only
+* Added current format style to status bar
+* Fixed bug with "Send To..." menu item
+
+=== 0.21 - Sun Sep 30 2007 ===
+* Added an EquationEditor plugin using latex and dvipng
+* Added a InsertScreenshot plugin using scrot(1) - idea from Armin Taschwer
+* Added a "Open in external editor" menu item
+* Made read_only property switch per page
+* Fixed bug with the file name for the home page
+* Fixed bug with utf8 in template for new pages
+
+=== 0.20 - Sun Aug 19 2007 ===
+* Added config file to control display styles of text formatting
+* Added template to control the look of new pages which can be customized
+* Added default repository to GUI, replaces "default_root"
+* Added a document root setting to the repository properties which can
+  be used as a top level directory for external files
+* Added option to name the index page for Html export
+* Added option to handle autosave on slow filesystems by caching
+* Improved rendering of links in Html output
+* Improved robustness of error handling when writing a page fails
+* Updated the undo mechanism to also understand links and formats
+* Fixed bug causing infinite loop after "Link" on some platforms
+* Fixed bug that could corrupt links when updating links after move
+* Fixed win32 bug when executing external programs
+* Fixed bug with TrayIcon menu
+* Fixed bug in Txt2tags output - fix by Pierre Duquesne
+* Fixed typo in "--quiet" commandline option
+
+=== 0.19 - Tue Mar 20 2007 ===
+Bugfix release :(
+* Tests work on win32 now
+* History is initialized properly
+
+=== 0.18 - Sat Mar 17 2007 ===
+* Added "Update Link" feature when moving
+* Fine-tuned auto-linking behavior
+* Added "Copy Media" option for export
+* Added dialog to choose format for InsertDate
+* Added label and button for current date to Calendar
+* Fixed various win32 specific bugs
+* Fixed application hangs due to utf8 in page names
+* Added keybindings Shift-^L and for the side pane ^L and ^C
+  to copy and paste links
+* Enabled drag-n-drop linking and ordering from the side pane
+* It is now possible to set a size for embedded images
+* Added --iconify and --geometry commandline switches
+* Added preliminary txt2tags export support
+* Added prelimenary support for multiple interface profiles
+* Merged Zim::Page::Text with Zim::Page - changing api for page
+
+=== 0.17 - Mon Nov  6 2006 ===
+* The keybindings for formats (^B, ^I, etc.) now toggle an editing mode
+* Relative links are now resolved more intelligent using an upward search
+  through the path
+* Search function is non-blocking now
+* Fixed bug with utf8 characters in search function
+* Removed KDE fix for TrayIcon, conflicted with other environments
+* Templates for html export now support conditionals and loops
+* Keybindings Alt-PgUp and Alt-PgDown added to go to prev/next page in index
+* Option to use Alt-Enter instead of Enter to follow links
+* Accelerators are saved to allow changing accelerators interactively
+* Added properties dialog which allows to set a name and an icon for
+  the repository
+* Fixed bugs with parsing of wiki content
+* Fixed bugs with parsing of copy-paste contents
+* Fixed bugs in autoformatting
+* Cache more efficient now due to better use of mtime
+
+=== 0.16 - Mon Jul 17 2006 ===
+* Implemented simple 'mtime' detection
+* Added "Find and Replace" dialog
+* Added font selection to the preferences dialog
+* Added --pidfile option and handler for the USR1 signal
+  to hide/unhide the window
+* Interwiki links to other (named) repositories work
+* Changed Interwiki link syntax from "key>page" into "key?page"
+* Edit logic to parse links to man pages like "ls(1)"
+* Repositories can specify a custom icon
+* Added "email client" preferences option
+* Applied patches for TrayIcon behavior on KDE by Johan Ekenberg
+* Removed 'Delete' accelerator closing Debian bug #351539
+* Added drag-and-drop support for external files
+* Made page and tree search entries case-insensitive
+* Added (hidden) "autolink" option
+
+=== 0.15 - Mon Apr 17 2006 ===
+* Added "open with" menuitems for images and file links
+* Updated the documentation
+* Added global search dialog
+* Added a cache with backlinks
+* Added CamelCase autoformatting
+
+=== 0.14 - Wed Mar 29 2006 ===
+* Added simple preferences dialog
+* Added "Export" dialog and improved Html export
+* Added interwiki feature
+* The PathBar now can handle right-to-left locale
+* Fixed bug with unicode parsing for non-utf8 locale
+* Fixed win32 specific bug with executing processes
+* Deleted pages are now removed from the 'recent pages' stack
+* Added plugin directory ''share/zim/plugins/''
+
+=== 0.13 - Wed Mar  1 2006 ===
+* Fixed a bug with the 'namespace' pathbar type
+* Fixed bug with "open repository" dialog for new users
+* Fixed bug in copy-paste behaviour
+* Added a tooltip for the TrayIcon
+
+=== 0.12 - Tue Feb 14 2006 ===
+* Added Calendar plugin
+* New icon/logo for zim
+* Added strike-through formatting type
+* Added auto-selection
+* Added "open repository" dialog
+* We now explicitly depend on perl 5.8 because of utf8 support
+* Added experimental autoformatting codes for html-entities
+* Fixed a bug with the GtkSpell support, is more safe now
+* Fixed 2.6.0 dependency bug for gtk_action_set_sensitive
+* Zim now also remembers the window position
+
+=== 0.11 - Thu Jan 19 2006 ===
+* Fixed bug in move_page that could result in data loss :(
+* Fixed bug in delete_page
+
+=== 0.10 - Mon Jan 16 2006 ===
+* Added basic GtkSpell support
+* Added a MenuBar
+* Added UIManager framework; now explicitly depending on gtk+ 2.4
+
+=== 0.09 - Mon Jan  2 2006 ===
+* Overhauled Page object, added Zim::Page::Text
+* Added a Recent Pages mode for the PathBar and TrayIcon
+* Fine tuned regexes for URLs and email adresses
+* Fixed utf8 bug for strftime in the page template
+* Fixed a bug that disabled "quit" when using the TrayIcon
+
+=== 0.08 - Thu Dec  1 2005 ===
+* Added rich copy-paste between pages
+* Made Home key behave more intelligent
+* Added Alt-Down keybinding
+* Fixed a segfault for gtk+ 2.8.7
+* Fixed bug with utf8 characters in filenames
+* Added a TrayIcon component
+
+=== 0.07 - Fri Nov  4 2005 ===
+* Added basic support for images, this fixes a serious bug that could
+  result in data loss when image tags occur in a page in previous versions
+* Added dialogs for moving and deleting pages
+* Added application file and moved icon into share/pixmaps
+* Added a rough dialog to prompt for a default root
+* Made PathBar look&feel more consistent with the gtk filechooser
+* Fixed a bug in PathBar that fixes rendering for gtk+ < 2.8.x
+* Fixed a bug with the History object
+
+=== 0.06 - Tue Oct 25 2005 ===
+* Added proof-of-concept html export
+* Added keybindings to indent a selection at once and
+  to make selections into bullet lists
+* Moved gui components from bin/zim to their own modules
+* Fixed a bug in the index tree that made the ctrl-space
+  keybinding unuseable
+
+=== 0.05 - Thu Oct 20 2005 ===
+* Made the TreeView open pages on single-click
+* Added a "button path bar" to show a trace
+* Refactore Zim:: modules to allow for other data formats
+* Fixed various small bugs
+
+=== 0.04 - Tue Oct  4 2005 ===
+* Replaced ^N and ^O by ^G for "Go to"
+* Fixed various small bugs
+* Added 'Copy Link' context menu item
+* Added proof of concept man page reader plugin
+* Added mailto: links for email adresses
+* Changed ^N behaviour
+
+=== 0.03 - Mon Sep 26 2005 ===
+* Tuned a lot of details of the GUI behaviour.
+* Added in-page search function.
+* Added persistent undo stack.
+
+=== 0.02 - Fri Sep 23 2005 ===
+* Refactored Zim.pm to have a workable OO api.
+* File name parsing is much more stable now.
+
+=== 0.01 - Tue Sep 20 2005 ===
+* Packed first tar ball for alpha-tester(s).
+

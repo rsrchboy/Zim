@@ -1,0 +1,29 @@
+====== Linking ======
+
+**Priority: Medium**
+**Difficulty: Medium**
+**Status: draft**
+
+* Anchors
+	* automatic anchors for headings
+	* also see [[brainstorm]]
+* Aliases, stored in the page they belong to, cached index
+* Typed links
+
+===== Typed links =====
+
+Make it possible to have a type on a link. This creates triplets of nodes like in RDF.
+
+In www jargon the "rel" property is used for typed links, "type" is reserved for mime.
+See http://www.w3.org/TR/html4/types.html#h-6.1 for examples of possible types.
+
+For zim put the pages related as Next / Prev / Parent / Index / ... could have special types like "_Next", "_Prev" etc.
+
+Embedded images are special links - should fit into type framework.
+Similar for inclusion of paragraphs from other docs or pages.
+
+Annotations would be like "reversed" links where the end-point links to the origin.
+Even this can be covered with a type or a property of a type.
+In WWW jargon we have a "rev" property complementary to "rel".
+
+Of course type would be part of the [[caching|cache]]. [[Searching|Search]] functionality should be able to use the type of the link in the query.

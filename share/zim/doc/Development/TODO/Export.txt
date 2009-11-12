@@ -1,0 +1,18 @@
+====== Export ======
+
+API for export seems a bit messy. Can we simplify ?
+
+Improvements for the export feature:
+
+* **Export to single file**
+	* needs a close / commit / DESTROY call
+* Export option for "Follow links"
+* Export should warn about dead internal links (or remove them)
+
+* make ToC logic in Selection available in API
+	* InsertToC plugin which can include lists of links in a page
+	* print/printToBrowser the outline (left panel)
+
+* add "update" (= compare mtime) to commandline export interface ?
+
+* Make export use [[selections]]

@@ -1,0 +1,14 @@
+====== RecentChanges ======
+
+**Priority: low**
+**Difficulty: medium**
+**Status: draft**
+
+A Recent Changes page is typically a special page that shows an edit history of the wiki.
+
+In zim this should be a dialog giving a list of pages with modification time, creation time (?) and the user that did the last modification.
+
+We can do this simply using the file system timestamps, but that is error prone. More robust would be to include this information as [[headers]] in the files (and index it in the [[caching|cache]]). This is the way to go.
+
+Of course once we start using version control we would want to integrate with it. However this could be difficult since most VCS don't have a command to generate this kind of listing. Version control systems typically give a history of the whole repository or of a single file, but not of a selection of files sorted by latest revision.
+

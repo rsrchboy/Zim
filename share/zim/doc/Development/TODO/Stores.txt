@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Mon, 28 Jul 2008 22:15:45 +0200
+
+====== Stores ======
+
+**Gjots** derives from Store directly and loads everything in memory.
+
+Would like a **MultiPartFile** store that uses a single file in multipart mime style but uses cache to save parts as not to write the whole file all the time. Does this make sense ?
+
+Then we would have a derived class **FlatMultiPartFile**  that uses a single
+file per namespace but still uses dirs to get sub namespaces. This is the
+format the [[AlbumPlugin]] would use.
+
+Also consider how **XML** could encode multiple pages in a single file.

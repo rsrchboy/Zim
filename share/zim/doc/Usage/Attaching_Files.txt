@@ -1,0 +1,10 @@
+====== Attaching files ======
+
+To attach a file you can use the //"Tools// -> //Attach File//" menu item. You can also open one of the directories for documents from the //Tools// menu and use your file manager to copy or move files. Now linking is done just by dragging a file from the file manager to zim. There are two special folders in the //Tools// menu that can be used for this: the "Document Folder" and the "Document Root".
+
+The **document folder** is a folder in the notebook structure below the namespace for the current page. This is the default folder for attachments, included images, equations etc. These can be linked from the notebook using a syntax like "''./filename''". If you try to open this folder but it doesn't exist yet (because the current page does not have any attachments yet) zim will ask you if you would like to create it.
+
+The **document root** is optional and can be set to a folder external to the notebook (or maybe a parent folder of the the notebook). Stuff in this root folder can be linked using "''/filename''". If the document root is not set this will link to the filesystem root - if it is set you need ''file://'' to link to the filesystem root. The whole idea of having this document root is that it is useful e.g. when you maintain a website in zim; in that case the document root can point to the directory you intend to use as top level web root
+and links will not break. Of course you can also use it when you just want to separate notebook pages and external documents while having a short syntax for linking the documents.
+
+When using the document folder setting you might want to set a different path or url to link to this special folder when exporting. For example when your website does not have a toplevel domain but is below a server specific path. Hence the "**prefix document root**" setting in the [[exporting|export dialog]]. This setting means that if we have a document root all links like "''/filename''" will have this prefix prepended when exporting.

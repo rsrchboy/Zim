@@ -1,0 +1,40 @@
+====== Formats ======
+
+* Write object to manage parse tree in DOM style
+	* Hide parse tree behind method API.
+	* Make this object suitable for use in template and make it interface to HyperTextBuffer.
+	* Make this object automatically adapt headers when exporting.
+	* get_parse_tree in HyperTextBuffer has some code to clean up trees
+* Make it that formats do not need to know page object, do logic in parent class ? 
+
+* Parsetree nodes for items in a list
+* Serialize parse tree ?
+* Style difference for non-existing links, external links etc. (both in GUI and in Export)
+* Some way to embed raw HTML in a page that filters through to the html output
+* different formats
+	* pod - add perldoc plugin to documentation repository
+	* XML - no transparent source format - parse '''<''' to ''&lt;''
+		* use subset of HTML tags
+	* latex
+	* proof of concept dokuwiki support
+
+* more native formats (pod, kwiki, ...)
+* more import/export formats (latex, docbook, oo.org, ..)
+
+* Wiki code for sub-/super-script ?
+
+===== Zim Wiki format =====
+
+==== Block quotes ====
+
+Now we have block quotes for Verbatim we might also add them for e.g. for quoted sections. Maybe use this:
+
+
+	"""
+	This is a quote, rendered italic
+		-- A.U. Thor
+	"""
+
+==== Extensions ====
+
+Codes for upper, lower etc. and extensions ?

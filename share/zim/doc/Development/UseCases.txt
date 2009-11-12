@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 19:39:56 +0200
+
+====== UseCases ======
+
+//TODO: expand descriptions and define features for the various use cases//
+
+* Student taking class notes
+* Student / researcher keeping a lab journal
+* Student / researcher keeping notes for master or phd thesis etc.
+* Engineer taking notes on meetings, topics and TODO items
+* RPG dungeon master keeping notes on his campaign / world / etc.
+* Hacker preparing a presentation for an open conference
+* People keeping a diary
+* People keeping a general notebook
+* Software engineer collecting use cases and concepts for a new project
+

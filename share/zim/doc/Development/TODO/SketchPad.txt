@@ -1,0 +1,11 @@
+====== SketchPad ======
+
+**Priority: low**
+**Difficulty: high**
+**Status: draft**
+
+We could use a plugin that allows you to quickly draw a sketch and insert it in a note. Ideally this could be done with a simple external "paint" program. However there don't seems to be a default application for this on the linux desktop. Just big image programs like Inkscape and Gimp.
+
+If you know of a small paint like application we can use for the plugin please let me know. That would save a lot of time and make this plugin trivial.
+
+The alternative is to write a small stand-alone application. Just select brushes and colors and draw by mouse pressure. There is no need for this app to be in perl, for example python will do as well. Must be examples on the internet how to do drawing in Gtk, just copy paste. Having the application use STDIN and STDOUT to communicate makes it easier to wrap it in a plugin.

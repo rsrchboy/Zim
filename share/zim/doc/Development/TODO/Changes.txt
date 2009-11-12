@@ -1,0 +1,26 @@
+====== Changes ======
+
+//By "changes" we understand a fine-grained undo-stack stored as diffs. This is not fundamentally different from versions except that versions are stored permanently, while changes are stored in cache for limited time only.//
+
+Save diff to log file for each auto-save. Use the diff utility. Implementation can always be optimized when needed. Always need a copy of last version in cache to diff against. This makes robust against external edits. (No, we can not use the tmp file of the CheckOnWrite class here.)
+
+Data goes in sub dir of cache dir in repository. (Also history and index should go in this cache dir.) For slow FS use subdir of users home cache dir.
+
+When commiting a new version of the page (close page, close app, ^S etc.) we close the undo log and give it a sequence number in the name and a header/name identifying the commit. (Using sequence number "0" for current will guarantee unique file names for page names ending in a number.)
+
+Undo steps do not show up in the "revert from disk" option. We show version control revisions there. Although even without real versioning we can show the various batches of undo files as revisions that can be reverted to. (Commit for file => new log can be different from VCS commit - double check how when to do which commit and how to show in dialog.)
+
+* Hook undo-log into bottom of the normal undo stack
+	* hard save (?) + swap buffer to cache in memory stack
+	* if start editing from revision, throw away undo stack, diff against last save
+		* => folded undo stack
+	* if redo swap buffer back in
+* Cache in-memory undo stack for X recent pages in PageView
+	* Give parse tree a time stamp to check if page has changed
+	* Set default to 1 cache item, this allows to go one level deep while editing
+		* option to increase this cache
+	* Also cache buffer, since parsing the tree again can invalidate the undo stack
+	* maybe put buffer and stack in the page object and cache page objects ?
+		* seems good approach, add "HEAD" method to repo to check if page has changed
+* Throw away undo stack on reload of the parse tree (e.g. explicit ^R)
+

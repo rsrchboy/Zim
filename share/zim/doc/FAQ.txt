@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Thu, 29 Jan 2009 18:48:20 +0100
+
+====== FAQ ======
+
+Mail [[pardus@cpan.org|p]][[pardus@cpan.org|ardus]] if you have questions that you would like to see answered below.
+
+
+=== How do I create a new page? ===
+You can just link non-existing pages. If you follow such a link the page will be created automatically when needed.
+
+
+=== How do you close these "tabs" ? ===
+Uhm, if you mean the buttons above your page, technically that are not tabs but a path bar keeping track of your history or recent pages. The buttons in this bar map to pages in your browse history, not to open pages or something like that. You can not "close" something that is in your history.
+
+
+=== How do I organize my pages in a tree structure? ===
+You can use "namespaces" to organize your pages. A "namespace" is similar to a directory for files, it is a named group of pages. Namespaces are separated by the "'':''" character in the page name. Thus if you link to "''foo:bar''" you will link to the page called "bar" in the namespace "foo". Just link a non-existing page and follow the link to create it.
+
+
+=== I would like zim to hide in the system tray. ===
+There is a [[usage:plugins|plugin]] for that which can be turned on in the [[usage:preferences|preferences dialog]]. Note that you need to have the ''Gtk2::TrayIcon'' perl module installed to use this plugin.
+
+
+=== Can I make zim appear with a global keybinding? ===
+Since release 0.24 **zim** will by default only run a single instance of each notebook. Trying to open the same notebook again will just pop the corresponding window to the foreground. So you can set a default notebook (see [[:Usage:notebooks|notebooks]]) and just make a global key binding run the command "''zim''".
+
+Earlier versions needed a shell script to check if an instance was running already. Of course you can still use that. Just make sure to us "''--no--daemon''" An example can be found [[./start-zim.sh|here]].
+
+
+=== Can I start zim automatically when I log in? ===
+Most desktops allow you to specify commands to run on startup. You can just autostart the zim daemon using: "''zim --daemon''". This will speed up how quickly zim starts later on.
+
+To open a notebook in the background you probably want to enable the TrayIcon [[:Usage:plugins:|plugin]], set a default [[:Usage:notebooks|notebook]] and use: "''zim --daemon --iconify _default_''". This will open your default notebook and hide it in the background. When you later run the command "''zim''" it will see that the default notebook is open already and just push it to the foreground,
+
+
+=== Can I change the colors used for links, underline etc. ? ===
+Yes. Copy "''/usr/share/zim/default.style''" to "''~/.config/zim/''" and edit as you see fit. See [[usage:styles|styles]] for the syntax of this file.
+
+
+=== Can I have encrypted notebooks? ===
+Zim notebooks do not support encryption or password protection natively. However you can use //encfs// to encrypt your notebooks and have zim mount and unmount them automatically. See [[:Usage:Encryption|encryption]] for more details.
+
+
+=== Can I have full calendaring in zim? ===
+Well, if you really want to, you can use zim as your agenda. However, the Calendar feature is more intended to keep various kinds of journals or logbooks. I'm very hesitant to add calendaring features because these are usually tied to email applications. I admit that it would be really cool to link notes, emails and appointments, but I have no plans to extend zim to become an email reader.
+
+
+=== Does it run on windows? ===
+Yes it does. You will need to get Perl, Gtk+ and the perl Gtk2 bindings to work though before you can install **Zim**. See the download page on the website for more notes on installing on the win32 platform.
+
+//We are still looking for a volunteer to build and maintain a windows executable.//
+
+
+=== What about the Gnome HIG? ===
+**Zim** tries to follow the [[http://developer.gnome.org/projects/gup/hig/|HIG]] when practical, but doesn't adhere very strictly to it. Please note that **zim** does not depend on Gnome libraries, only some plugin functions require Gnome.
+
+
+=== How do I compile a "statically linked" binary? ===
+Theoretically you can do this using the [[http://search.cpan.org/~autrijus/PAR/|PAR module]]. Practically speaking there are a number of bugs to fix before this will work.
+
+If you want to give it a try type "./''Build static''" in the source tree on a system that has **zim** installed. This should build a single executable containing perl, gtk+ and **zim** This is a highly experimental build action though. The resulting executable is buggy and may segfault at random. This has not been tested for windows.
+
+
+=== Do you recommend any other applications? ===
+I really like the Thunar file manager and the Mirage image viewer. These are well designed aplications that fit a Gtk+ environment. Xfce is my desktop of choice.
+
+* http://www.xfce.org
+* http://thunar.xfce.org
+* http://mirageiv.berlios.de

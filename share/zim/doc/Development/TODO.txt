@@ -1,0 +1,164 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Sun, 09 Nov 2008 11:32:35 +0100
+
+====== TODO ======
+Also have a look at [[bugs]] and [[.brainstorm|brainstorm]]
+
+===== Objectives =====
+* WYSIWYG editing
+* Rich hyper-Linking
+* Desktop integration
+* Multiple backends
+* Versioning support
+
+===== Plans =====
+* [[.Searching|Searching]]
+* [[.PluginInterface|PluginInterface]]
+* [[.Linking|Linking]]
+* [[.MindMap|MindMap]]
+* [[.ImageMap|ImageMap]]
+* [[.SketchPad|SketchPad]]
+* [[.AlbumPlugin|AlbumPlugin]]
+* [[.TagsPlugin|TagsPlugin]]
+* [[TagsCategoriesSelections]]
+* [[.Formats|Formats]]
+* [[.RecentChanges|RecentChanges]]
+* [[.Changes|Changes]]
+
+===== Tasks =====
+
+* Insensitive on focus fix
+	* need a dispatcher that checks focus for all actions defined in pageview
+
+* Printing support - bug #206168
+	* Needs code to render text + images on cairo context
+
+* [[.Tests|Tests]] - __expand test coverage !__
+* [[.GUI improvements|GUI improvements]]
+* [[.Template|Template]]
+* [[.Export|Export]]
+* [[.Caching|Caching]]
+
+-------
+
+* recursive checkboxes do not work when inserting / deleting a checkbox
+	* move this code from TextView to TextBuffer
+* Per notebook Language setting for Spell plugin
+* add advanced tools menu for Bazaar
+* attach image should directly insert image instead of link - implement in attach action, not in InsertLink
+
+* BUG: in undo links can be broken - see escaped test case in test 70
+* BUG: links that point to the same target should be merged if they touch each other - prevents "broken" link text - see above item
+* BUG: spaces in repository names conflict with interwiki link syntax
+
+* Update messages
+	* "Checkbox 'V'" => "Checkbox 'OK'"
+	* "Checkbox 'X'" => "Checkbox 'NOK'"
+	* "Document Folder" => "Attachments Folder"
+	* "Document Root" => "Document Folder"
+	* "Media" => "Documents" in export + commandline option
+	* grep -i "dir" => "folder"
+	* grep -i "file" => "document"
+
+* For managing lists need to convert tabs to indent levels.
+
+* need to look into mediawikifs + mediawiki syntax in zim
+	* where do attachments go ?
+
+* if deleting a page also deletes parent dirs, they still are listed
+in the side pane
+
+* Gjots resolve_case
+
+* load and cache index tree for --man ?
+
+* import [[TomBoy]]
+* import Gjots
+* import HTML
+	* allow import as single page or split X level of heading into separate pages
+
+* Have option to show completed tasks in TODOList plugin
+* Have a "TODO" header also trigger TODOList indexing
+
+* Fix hack for date template in Store
+	* fix date template for month / year pages
+* Fix hack for date namespace in InsertDate dialog
+
+**Website needs:**
+* embed some html to set e.g. alignment
+* need to be able to set links on images
+
+* __move sub-tree__
+	* move update logic from GUI.pm to ZIm.pm
+	* move_pages("page:*" => new_name)
+	* use same glob in update links
+	* make moving subtree default in GUI
+	* hook moving subtree in side pane as well - need confirmation ???
+
+* signals in GUI for page_renamed and page_deleted belong in Zim.pm
+	* update history on on these events (and update pathbar)
+
+* Accept image data from clipboard - attach as image
+* How about a "copy as.." menuitem for mediawiki, dokuwiki etc. - only export is needed
+
+* Refactor Utils
+	* see if we can hide url encoding logic in Zim::FS::URI object
+	* set default class for files in dir, not in store !
+	* automatic DOS to Unix line-ending conversion in IO object ?
+	* maybe store tmp files under NOTEBOOK/.zim/tmp - gives us better control
+
+* For drag 'n drop and InsertImage should give choice between link / copy / move
+	* setting in prefs for copy / move / link / ask
+	* For InsertImage put a radio box in the file browse dialog ?
+
+* Dialog to import notes from tomboy, see tzim.py for example code
+	* Maybe also add Newton import ?
+	* Ans also plain text and strip html ?
+	* Import from gjots - but also support read/write gjots (?)
+
+* Icons
+	* Check the [[http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html|Freedesktop spec]] - provide 48x48, 64x64 and svg
+	* Install stock using xdg-icon-resource ? 
+	* Draw new icon for application/x-zim-notebook ?
+
+* More keybindings to control email-style quoting. E.g.:
+
+'''
+"> ..."  TAB  ">> ..."
+">> ..." SHIFT-TAB "> ..."
+'''
+
+* Module for tar.gz access should consider zip file a read-only dir
+	* probably cache file index
+	* completely transparent file access for other modules	
+
+* Make undo grouping letters into words (see sourceview code for example)
+* Make it possible to use more characters in page names, use url encoding
+* Format that calls external python script for [[ReST]] support - see mail liraz
+* Have a look at explicit ordering in the side pane
+
+* Add support for hierarchical trees of tasks to TODOList
+
+* Plugins
+	* Gnuplot plugin - similar to latex equation plugin and proposed graphviz plugin
+	* Plugin that can dowload internet pages and images
+		* use external (wget) program or libwww ?
+		* hook on drag n drop / insert link signals
+		* either only download and insert images or also cache complete pages
+
+* Refactor PageView
+	* move FindReplaceDialog to namespace below PageView
+		* We can shell out much more dialogs from [[PageView]] to their own module files.
+		* Use bare minimal POD
+	* how bout moving stuff from PageView to HyperTextEditor ?
+
+* Refactor Parse Tree
+	* DOM class to handle the parse tree
+	* formats are input / output layers for this object like Zim::DOM::Wiki
+	* special class Zim::DOM::GtkTextView to input/ouput to GUI
+	* formats need to be chainable, e.g. a converter to html layered trough the html input module
+
+* Release Gtk2::Ex::* modules to CPAN
+	* grep for "zim" to make sure all apis are fixed

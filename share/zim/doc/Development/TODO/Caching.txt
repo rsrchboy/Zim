@@ -1,0 +1,9 @@
+====== Caching ======
+
+We need to cache both the index and the linking structure of a notebook in order to be able to do quick lookups. So far this is done by a simple text file.
+
+Disadvantage is that this scales badly (although no complaints so far - probably we are saved by the kernel file system layer caching this file in memory). Another issue is that the code separation is messy because I tried to optimize for this plain text file.
+
+The Good Way® to do this would be to pull in SQLite. There is a good CPAN module for this using the DBI interface and for windows ActiveState ships this module as part of the core package (albeit an older version).
+
+Extra advantage is that apart from the default tables with index and links special storage backends like e.g. the [[AlbumPlugin]] or the [[TagsPlugin]] could define their own tables with additional properties that might need caching.

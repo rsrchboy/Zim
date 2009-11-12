@@ -1,0 +1,26 @@
+===== Hacking Zim =====
+
+* Documentation
+
+You can find the documentation in the source package under "./share/zim/doc/"
+This includes not only the user manual but also the development documents.
+
+Of course each of the perl modules also contain POD documentation that
+describes the API of each class.
+
+* Running zim from the source directory
+
+While hacking you want to be able to run zim without installing it. You can
+just call "./bin/zim" from the source directory and it will find the libs
+and config files included in the source dir instead of the system defaults.
+
+* Testing
+
+It is good practise to add tests for any new features you implement or for
+any bugs that you are fixing. Please have a look at all the tests in "./t/"
+for examples on how to test various things.
+
+Run "./Build test" to run the whole test suite. Another very usefull tool
+is the test coverage report. Run "./Build testcover" to see which parts of the
+code are covered by tests.
+

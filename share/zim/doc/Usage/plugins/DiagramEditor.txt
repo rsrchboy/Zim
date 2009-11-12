@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Tue, 20 Jan 2009 23:48:30 +0100
+Modification-Date: Tue, 20 Jan 2009 23:55:07 +0100
+
+====== DiagramEditor ======
+
+This plugin allows you to create and modify diagrams, or graphs, using the **dot** script. In order to use this plugin you need to have the **graphviz** package installed.
+
+See http://www.graphviz.org/ for details, documentation and full examples.
+
+===== Example =====
+
+A simple example is a graph 3 nodes linking each other.
+
+Given the source:
+
+'''
+digraph G {
+	foo -> bar
+	bar -> baz
+	baz -> foo
+}
+'''
+
+
+You get the following graph:
+
+{{./diagram_01.png?type=diagram}}

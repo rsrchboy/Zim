@@ -1,0 +1,41 @@
+===== Packaging =====
+
+Some tips for packagers:
+
+=== Compiling ===
+
+Since perl is written in perl completely there is little to compile. The build
+action mainly figures out which files to install.
+
+However some config files and translations are "compiled" when building.
+
+=== Installing ===
+
+When creating a binary package you typically you need to install to a directory
+that is zipped into the package. You can use:
+
+	./Build install --install_base /my/path
+
+to install to a package directory. Have a look at the Module::Build
+documentation for more advanced stuff.
+
+=== Post actions ===
+
+If you use the freedesktop.org mime and application databases you need to run
+update actions after installing zim. When you run install from the source
+build these actions are run automatically, but I guess you will need to include
+them in a package as a post action:
+
+To make sure zim is listed in the applications menu run:
+
+	update-desktop-database
+
+To make sure the mimetype for zim notebooks is installed run:
+
+	update-mime-database /usr/share/mime
+
+And to ensure the mimetype has an icon run:
+
+	xdg-icon-resource install --context mimetypes --size 64 \
+	./share/pixmaps/zim.png text-x-zim-notebook
+

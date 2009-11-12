@@ -1,0 +1,22 @@
+====== Printing ======
+
+Zim does not have printing support. There is a work-around to "print" to a browser, so you can use the browser to do the real printing. This is implemented in the "PrintToBrowser" plugin.
+
+In order to do printing natively we need to use the Gtk printing interface (introduced in Gtk+ 2.10). This involves rendering the contents of the page to a cairo context. Examples can be found on the internet how to do this for text only using Pango. We need a little bit more advanced implementation that also takes care of images.
+
+See also: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=343369
+See also: https://bugs.launchpad.net/zim/+bug/206168
+
+----
+
+* printing
+	* gtk 2.10 printing support
+		* most distros still at 2.8 (?)
+	* pango layout with markup language
+	* pagination ?
+	* http://cvs.gnome.org/viewcvs/libegg/libegg/print-operation/printedit.c?rev=1.8&view=markup
+		* one big pango layout
+		* calc page breaks in terms of pango lines
+		* render per-line on the cairo page
+		* how to handle images ?
+	* Using the same interface PDF export can also be done

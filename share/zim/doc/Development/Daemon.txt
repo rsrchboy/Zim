@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 19:27:41 +0200
+
+====== Daemon ======
+
+The user interface supports an IPC interface to be able to synchronize various instances. This allows us to make sure that there is only one instance of each notebook. This improves the overall look and feel of the application. It also makes it easier to work with multiple notebooks linking to each other, since clicking an interwiki link will now raise the corresponding window instead of opening a second instance.
+
+===== IPC interface =====
+
+'''
+socket <--> daemon
+              |
+              |__ pipe -> child 1
+              |__ pipe -> child 2
+              |__ pipe -> child 3
+'''
+
+The first zim process that starts will run the daemon. After that all new instances can connect to the socket to tell the daemon to e.g. open a new notebook. The original process then exits while the daemon spans a new child process to take care of the instructions. The daemon is listening to the socket, which is the public interface, while the child processes just watch ''STDIN'' for instructions from the daemon. Child processes also should listen for ''SIGUSR1'' which is used to tell instances that they should present themselves on the foreground.
+
+Note the that the daemon can not have any window itself. In order to show a widget we need to run "''use Gtk2 '-init'''", but after this initialization we can not fork children that show widgets anymore. Therefore the daemon pre-loads a number of modules, but does not initialize them.
+
+Not all child processes have to be notebooks. Special cases are the NotebookDialog and the TrayIcon processes.
+
+
+See [[man?Zim::GUI::Daemon|Zim::GUI::Daemon]] for the IPC code. This module is called directly from the script "bin/zim". Also the hook which code to run for a new notebook is defined in that script.
+
+There is a tool in the source tree to help debugging the socket interface: "''dev/gui-client.pl''". This tool allows you to send arbitrary commands to the socket.
+
+See [[:Usage:Commandline|commandline usage]] and the [[FAQ]] on how to use the various command options controlling IPC behavior.
+
+===== API =====
+
+For the notebook processes all methods that start with a capital can be called. In general that will be all GUI actions.
+
+//TODO: expand this section//

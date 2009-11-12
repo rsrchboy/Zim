@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Sun, 10 Aug 2008 21:06:29 +0200
+
+====== Archives ======
+Created Monday 28 July 2008
+
+* ~~Make bin/zim 	pass file names as repository~~
+* Make zim match files
+	* for tar.* call Zim::FS::Tar, no VCS
+	* for gjots use Store::Gjots as top level
+		* how to set dir ?
+		* disable writing history / cache because multiple files share same dir
+* Add Zim::FS::Tar class
+	* read only dir that calls the tar command
+	* file objects subclass buffer and set to read-only as well
+* After constructign the Tar dir find the "notebook.zim" file to strip directory prefix and create subdir to use for store
+* Figure out how to do caching for these arhives
+	* Obviously need to use cache from archive if possible
+	* Copy to xdg-cache dir and use from there
+	* If not available initialize cache from tar file list
+		* page lookups should use the cache when possible
+	* need --build-index switch to be able to compile index before pacakging a notebook
+* If all this works, package zim manual as tar.gz to save space
+
+Do use external calls to gnu tar instead of usign e.g. Archive::Tar because tar is faster and does not read whole archive in memory.

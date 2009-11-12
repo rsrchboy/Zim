@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Fri, 15 Aug 2008 22:17:22 +0200
+
+====== Encryption ======
+
+Zim does not support encryption or password protection of notebooks natively. One reason for this is that encryption is difficult to do right, another reason is that zim operates and a directory structure and not on a single file, so it is difficult to adopt standard encryption schemes. In general if you don't want others to read your data you should set the file system permissions correctly. If you are afraid your hard drive may fall into the wrong hands, you should use an encrypted file system.
+
+===== Encfs =====
+However there is one common case where people want others to be able to use their desktop without allowing access to all their private notes. In this case we recommend using [[http://www.arg0.net/encfs|encfs]]. This is a variant of an encrypted file system where you only encrypt part of the directory structure. It is based on the [[http://fuse.sourceforge.net/|fuse]] file system layer. Most Linux distros will have ready made packages for //fuse// and //encfs//, it is also available for various BSD variants as well as OS X. One of the big advantages of using //encfs// is that it allow directory access to the encrypted notebook, so you will still be able to use external application on attachments as well as [[:Usage:VersionControl|version control]] systems.
+
+==== Limitations ====
+As stated in the introduction, encryption is very difficult to do right. Even when the bulk of your data is encrypted there may still be traces of it all over your computer. Using zim with //encfs// encrypted notebooks will probably keep the opportunistic laptop thief or your little brother from going trough your private diary. But if your little brother happens to study computer forensics, you may want to get some professional advise and consult a few books on cryptography yourself.
+
+**The most important thing to remember is that all data can be accessed as long as the notebook is open.** Remember that when usign the tray icon, notebooks stay open as long the icon is there. Also the data will remain accessible if zim closed unexpectedly and did not un mount the directory properly. When in doubt use the file browser to check the mount point.
+
+Other things to keep in mind when you want to clean all traces is that zim sometimes uses the ''/tmp'' and the ''~/.cache'' directories. Files in the tmp directory are removed on close but there is no guarantee this works if e.g. another program still has them open. The cache directory is used extensively for notebooks that have the "[[:Usage:properties|slow file system]]" option enabled or for read-only notebooks.
+
+==== Configuration ====
+Aftes you install //fuse// and //encfs// you should create a directory for your encrypted data and mount it. Now you should be able to add the mounted directory as a zim notebook. If you have an existing notebook you want encrypted, move it to the mounted directory.
+
+You could use zim with //encfs// by manually mounting and un-mounting the notebook directory. However zim can do that automatically as well. For this you need to set up an [[:Usage:config|automount]] configuration file for zim.
+
+For example, if your encrypted data is located in ''/home/user/Notes.raw'' and you want to mount it at ''/home/user/Notes'' when opening it with zim, you should edit ''~/.config/zim/automount'' to look like this:
+
+'''
+[/home/user/Notes]
+mount  = encfs -S /home/user/Notes.raw /home/user/Notes
+umount = fusermount -u /home/user/Notes
+passwd = stdin
+'''
+
+This tells zim to mount the //encfs// directory first time you open it and un-mount it when you close zim. Zim will prompt for the password and supply it to //encfs//.

@@ -1,0 +1,19 @@
+====== SpecialPages ======
+
+//Do not put stuff in special pages that would fit a separate widget or dialog better. This is a desktop application, not a webpage!//
+
+For example:
+* Index belongs in the side pane, not in a page
+* [[TODO:RecentChanges|RecentChanges]] belongs in a separate dialog (or embedded in side pane)
+
+However for some purposes we need a special page:
+* The [[TODO:AlbumPlugin|AlbumPlugin]] needs image pages and thumbnail pages
+* The [[TODO:TagsPlugin|TagsPlugin]] needs a tag cloud page and index pages
+
+A special page typically consists of two parts: a GUI part and a Storage part.
+
+The Storage part parses some data source that is not a normal page. For example the album puts together an image file and a text file, not just a single text source. Thus we need a Store subclass and a Page subclass to wrap this data.
+
+The page class can have a special API for the GUI to use. However - if at all possible - it should always implement the parse tree interface as well and include all data in the parse tree. This is needed to ensure that when we export to e.g. HTML we can treat this page as any other. So in the case of the image page we can have an interface that gives the text and the image separately. However it needs to provide a parse tree that includes both the image and the text. Apart from export, this parse tree will also be used by algorithms like the one that changes links when moving a page or e.g. a [[.TagsPlugin|TagsPlugin]] that automatically adds links to a page.
+
+The GUI class should be a subclass of PageView. There is some support already for switch views in the page view code - see the classes of the album prototype for example code. Basically the Page object will set a property to hint which "view" it wants. The GUI then loads a subclass of that name to render the page. This subclass can use the extended API of the page object. 

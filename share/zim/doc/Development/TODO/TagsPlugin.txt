@@ -1,0 +1,19 @@
+====== Tags plugin ======
+
+**Priority: low**
+**Difficulty: medium**
+**Status: draft**
+
+See first: [[TagsCategoriesSelections]]
+
+The idea is to be able to "tag" a page. Since we have the linking structure already we can re-use that. So a tag is a special link. If [[searching]] gets smart enough to report on links it can be used to query the tags. Easiest way would be to make the tag a special page, e.g. in a namespace like "tag:" so all links like "tag:foo" would be tags. We need special display for these pages to show a backlink index. The namespace is special because it auto-vivicates tags (pages) that are linked but do not exist and shows them in the index. Sub namespaces in the tag namespace should probably be considered as if the separate parts of the name were separate tags in the top level tag namespace. Displaying such a nested page should show a query for pages linking these tags (implicit search query).
+
+Another nice idea might be to have a special page show a tag cloud.
+
+Maybe the tag pages should also have an editable part so we can comment on the tag. How to implement this in the interface - split screen in two text buffers ?
+
+A customize search dialog can be optimised for browsing tags. Also an "insert tag" action that allows you to choose from the list of existing tags would be a nice feature - this helps avoid duplicate or synonymous tags.
+
+For extra points: think of a way to automatically render a link to a tag could as an icon or image. E.g. TODO can be turned into a bit flashier sign (think dokuwiki) other tags can be rendered as small non-invasive icons that can be inserted e.g. at the top or bottom of a page. Maybe have a tooltip on these tags to show their name.
+
+See also [[SpecialPages]] for some implementation hints.

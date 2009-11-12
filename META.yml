@@ -1,0 +1,193 @@
+---
+name: Zim
+version: 0.28
+author:
+  - 'Jaap Karssenberg <pardus@cpan.org>'
+abstract: A desktop wiki
+license: perl
+requires:
+  Encode: 0
+  File::BaseDir: 0.03
+  File::Copy: 0
+  File::DesktopEntry: 0.03
+  File::MimeInfo: 0.12
+  File::Spec: 0
+  Gtk2: 1.040
+  IO::File: 0
+  POSIX: 0
+  perl: 5.8.0
+build_requires:
+  File::Path: 0
+  Module::Build: 0.28
+  Test::More: 0
+recommends:
+  Gtk2::Spell: 0
+dynamic_config: 1
+generated_by: Module::Build version 0.31012
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
+provides:
+  Gtk2::Ex::DesktopEntryMenu:
+    file: lib/Gtk2/Ex/DesktopEntryMenu.pm
+    version: 0.20
+  Gtk2::Ex::HyperTextBuffer:
+    file: lib/Gtk2/Ex/HyperTextBuffer.pm
+    version: 0.28
+  Gtk2::Ex::HyperTextView:
+    file: lib/Gtk2/Ex/HyperTextView.pm
+    version: 0.28
+  Gtk2::Ex::PathBar:
+    file: lib/Gtk2/Ex/PathBar.pm
+    version: 0.14
+  Zim:
+    file: lib/Zim.pm
+    version: 0.28
+  Zim::Events:
+    file: lib/Zim/Events.pm
+    version: 0.26
+  Zim::FS:
+    file: lib/Zim/FS.pm
+    version: 0.26
+  Zim::FS::Bazaar:
+    file: lib/Zim/FS/Bazaar.pm
+    version: 0.27
+  Zim::FS::Buffer:
+    file: lib/Zim/FS.pm
+  Zim::FS::Dir:
+    file: lib/Zim/FS.pm
+  Zim::FS::File:
+    file: lib/Zim/FS.pm
+  Zim::FS::File::CacheOnWrite:
+    file: lib/Zim/FS.pm
+  Zim::FS::File::CheckOnWrite:
+    file: lib/Zim/FS.pm
+  Zim::FS::File::Config:
+    file: lib/Zim/FS.pm
+  Zim::FS::IO:
+    file: lib/Zim/FS.pm
+  Zim::FS::Node:
+    file: lib/Zim/FS.pm
+  Zim::FS::Subversion:
+    file: lib/Zim/FS/Subversion.pm
+    version: 0.27
+  Zim::FS::URI:
+    file: lib/Zim/FS.pm
+  Zim::FS::Unix:
+    file: lib/Zim/FS.pm
+  Zim::FS::Win32:
+    file: lib/Zim/OS/Win32.pm
+  Zim::Formats:
+    file: lib/Zim/Formats.pm
+    version: 0.26
+  Zim::Formats::Html:
+    file: lib/Zim/Formats/Html.pm
+    version: 0.28
+  Zim::Formats::Pod:
+    file: lib/Zim/Formats/Pod.pm
+    version: 0.28
+  Zim::Formats::Txt2tags:
+    file: lib/Zim/Formats/Txt2tags.pm
+    version: 0.24
+  Zim::Formats::Wiki:
+    file: lib/Zim/Formats/Wiki.pm
+    version: 0.28
+  Zim::GUI:
+    file: lib/Zim/GUI.pm
+    version: 0.28
+  Zim::GUI::Automount:
+    file: lib/Zim/GUI/Automount.pm
+    version: 0.27
+  Zim::GUI::Calendar:
+    file: lib/Zim/GUI/Calendar.pm
+    version: 0.26
+  Zim::GUI::Component:
+    file: lib/Zim/GUI/Component.pm
+    version: 0.27
+  Zim::GUI::Daemon:
+    file: lib/Zim/GUI/Daemon.pm
+    version: 0.27
+  Zim::GUI::DiagramEditor:
+    file: lib/Zim/GUI/DiagramEditor.pm
+    version: 0.28
+  Zim::GUI::EquationEditor:
+    file: lib/Zim/GUI/EquationEditor.pm
+    version: 0.28
+  Zim::GUI::ExportDialog:
+    file: lib/Zim/GUI/ExportDialog.pm
+    version: 0.24
+  Zim::GUI::FindReplaceDialog:
+    file: lib/Zim/GUI/FindReplaceDialog.pm
+    version: 0.24
+  Zim::GUI::NotebookDialog:
+    file: lib/Zim/GUI/NotebookDialog.pm
+    version: 0.27
+  Zim::GUI::PageView:
+    file: lib/Zim/GUI/PageView.pm
+    version: 0.27
+  Zim::GUI::PathBar:
+    file: lib/Zim/GUI/PathBar.pm
+    version: 0.27
+  Zim::GUI::PreferencesDialog:
+    file: lib/Zim/GUI/PreferencesDialog.pm
+    version: 0.26
+  Zim::GUI::PropertiesDialog:
+    file: lib/Zim/GUI/PropertiesDialog.pm
+    version: 0.26
+  Zim::GUI::SearchDialog:
+    file: lib/Zim/GUI/SearchDialog.pm
+    version: 0.27
+  Zim::GUI::Spell:
+    file: lib/Zim/GUI/Spell.pm
+    version: 0.24
+  Zim::GUI::TODOListDialog:
+    file: lib/Zim/GUI/TODOListDialog.pm
+    version: 0.27
+  Zim::GUI::TrayIcon:
+    file: lib/Zim/GUI/TrayIcon.pm
+    version: 0.26
+  Zim::GUI::TreeView:
+    file: lib/Zim/GUI/TreeView.pm
+    version: 0.28
+  Zim::GUI::VersionsDialog:
+    file: lib/Zim/GUI/VersionsDialog.pm
+    version: 0.27
+  Zim::History:
+    file: lib/Zim/History.pm
+    version: 0.20
+  Zim::Man::Page:
+    file: lib/Zim/Store/Man.pm
+  Zim::Page:
+    file: lib/Zim/Page.pm
+    version: 0.27
+  Zim::Selection:
+    file: lib/Zim/Selection.pm
+    version: 0.24
+  Zim::Store:
+    file: lib/Zim/Store.pm
+    version: 0.26
+  Zim::Store::Cached:
+    file: lib/Zim/Store/Cached.pm
+    version: 0.24
+  Zim::Store::Files:
+    file: lib/Zim/Store/Files.pm
+    version: 0.28
+  Zim::Store::Gjots:
+    file: lib/Zim/Store/Gjots.pm
+    version: 0.26
+  Zim::Store::Man:
+    file: lib/Zim/Store/Man.pm
+    version: 0.26
+  Zim::Template:
+    file: lib/Zim/Template.pm
+    version: 0.24
+  Zim::Utils:
+    file: lib/Zim/Utils.pm
+    version: 0.26
+  Zim::Utils::Unix:
+    file: lib/Zim/Utils.pm
+  Zim::Utils::Win32:
+    file: lib/Zim/OS/Win32.pm
+    version: 0.24
+resources:
+  license: ~

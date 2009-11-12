@@ -1,0 +1,94 @@
+====== Brainstorm ======
+This page contains a number of suggestions that are //not// on the [[TODO]] list. Maybe they will be on the list for version 2.0, maybe they will be implemented as a plugin - who knows.
+
+See also: http://live.gnome.org/Tomboy/PlaceForNewIdeas they have some good ideas as well.
+	
+
+* Archive plugin
+	* Add "Archive" action next to Delete
+	* Add property to page to hide it from the side pane
+		* needs headers - see [[wiki_format]]
+	* also mark read only ?
+
+* Have a look at a plugin to sync with dokuwiki
+	* get page
+	* check timestamp
+	* upload page
+
+* Have a look at a rsync plugin
+
+* plugin to show a [[ToC]] in the top of the side pane
+	* add "get_headers" or "get_index" to Page.pm
+	* hook to "load page"
+	* put anchors at each header
+	* allow linking to anchors
+
+* tickets
+	* simple forms - doable
+	* backend doesn't matter
+	* reports
+		* table view - doable
+		* hash certain meta propertises - doable
+		* link in entry boxes - further studie needed
+			* or use list view for things that are linkable
+	* attachement - no prob.
+
+* menuitem //tools//->//selection//
+	* pops open dialog with treeview
+	* add pages with drag / drop
+	* "add current page" button
+	* "save selection" button
+		* saves to page
+	* how to re-open the dialog for a certain page ?
+	* short cut to open a certain selection would do away with request for bookmark feature
+	* should history / recent pages be special selection ?
+
+* for list view inspiration see: http://taskcoach.sourceforge.net
+	* in page list view with color coding for page properties
+	* each item links to a page
+
+* it should be possible to use globs in the linking structure. For example if I want to link a birth date to each occance of that day for each year.
+	* add linking type or relation "birthday" to the link
+	* make date pages __implicit backlink searches__
+	* by default namespace dates by year in new installations
+
+* Context menu items for index
+	* "split" split page to namespace (each heading its own page)
+	* "merge" include namespace content in a single page
+
+* Inserting an anchor with ''<ctrl>M''
+	* show a small icon, not unlike a break point in IDEs
+	* offer the possibility to attach a footnote to the anchor
+		* change the icon if a note was attached
+	* give the anchor an ID that can be linked from the outside
+
+* Plugin for VI escape mode
+	* opens up many keys for special editing actions
+	* should not conflict with modeless editing
+	* option to choose module: simple mode or vi-like mode
+		* see opengroup posix spec
+		* see http://www.vim.org/htmldoc/quickref.html 
+	* export a list of textviews somewhere to which the plugin can bind
+
+* Gnome VFS support
+	* use a plugin for this
+
+* A plugin that adds a "publish" action to the menu
+	* state "published" should be shown per page
+	* specify html template and directory for publishing
+	* remove links to unpublished pages ??
+
+* Make folding lists, "in page" outlining
+
+* make it possible to customize the toolbar
+
+* Internal references (images, tables, footnotes, ...)
+	* anonymous links ?
+	* dynamic numbering
+	* each referenced item should have a unique id
+		* map id to table record
+		* map id to new page
+		* let formatter number these ids on export
+	* footnotes could be displayed in seperate pane below normal text
+		* or in seperate window
+

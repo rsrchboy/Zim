@@ -1,0 +1,9 @@
+====== Profiles ======
+
+**Zim** uses "profiles" to let separate configuration sets coexist. This allows for example to have slightly different behavior for the read-only manual. Another use is to keep different sets of plugins for different notebooks. Also you can control the display [[styles|style]] per profile.
+
+There are two profiles installed by default, one called "default" and one called "reader"; "reader" is used for the manual and sets the interface to read-only behavior and doesn't load any plugins. All other notebooks use "default".
+
+To define a new profile the only thing that is needed is a configuration file with the name of the profile. For example for a "debug" profile we should define a configuration file called "debug.conf". See [[config]] for details. Using a a profile that doesn't exist yet will automatically copy the default configuration and write the profile configuration.
+
+You can specify a profile either from the [[commandline]] or in the notebook configuration file.

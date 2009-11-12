@@ -1,0 +1,35 @@
+====== Contributing ======
+
+Also see [[Translations]]
+
+===== Wanted =====
+If you feel like helping out with any of these items, please drop me a [[pardus@cpan.org|mail]]. A complete overview of plans and tasks can be found [[Development:TODO:|here]].
+
+* Somebody to build and maintain a Windows executable
+* Non-programmer to improve the user manual
+* A diagram widget (mindmap like) - Cairo canvas ?
+* A widget to embed tables in the text
+
+===== Documentation =====
+
+The development documentation can be found [[:Development:|here]]. 
+
+( //If these pages do not exist, check out the source distribution - see below - and open the manual included in the source. //)
+
+===== Patches =====
+
+The simple way to create patches is to download the source tar ball for the latest release. After you are done hacking take a diff (use "''diff -rwu''") and mail it to pardus@cpan.org.
+
+If you want the full revision controlled source tree you will need the [[http://bazaar-vcs.org/|Bazaar version control system]]. To check out the current tree from launchpad run:
+
+	$ bzr branch lp:zim
+
+This will give you a local copy to hack on. When working on a large feature please commit changes to your local branch regularly so we have a detailed log of what changed later on. When you are done just run:
+
+	$ bzr send -o some-description.patch
+
+and mail the resulting file to pardus@cpan.org. This file contains the whole patch set and can easily be merged in the upstream repository.
+
+===== Contact =====
+
+To join the zim mailing list you need to join the "[[https://launchpad.net/~zim-wiki|zim-wiki]]" team in launchpad. This mailing list is used for synchronizing releases and the occasional brainstorm session. But feel free to mail all your comments, questions and rants [[pardus@cpan.org|mail to me]] personally.

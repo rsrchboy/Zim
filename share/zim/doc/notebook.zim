@@ -1,0 +1,8 @@
+[Notebook]
+home=:Help
+name=Zim user manual
+#profile=reader
+#read_only=1
+slow_fs=0
+
+# vim: syntax=desktop

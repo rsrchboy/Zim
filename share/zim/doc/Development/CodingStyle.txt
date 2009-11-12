@@ -1,0 +1,32 @@
+====== CodingStyle ======
+
+Some random hinst on the do's and dont's when programming on zim.
+
+=== Try to keep the API close to the GUI ===
+When coding new GUI modules try to keep the API close to how the GUI works. Zim::GUI::Component is the base class for GUI modules and has support to map GUI actions (menu items and toolbar buttons) to like named object methods. The methods will be called without arguments (except for the object reference) when called from the GUI. Add optional arguments to allow other modules to call the same methods. This way the code interface makes sense when you are familiar with the graphical interface.
+
+=== Verbose messages ===
+When debugging you usually include a lot of messages in the code to check if all is working. Normally debug statements are removed or commented out in the code when they are no longer needed.
+You can use "warn" to print messages to inform the user. This should only be done to inform the user of operations that may take some time (causing the ui to hang in extreme cases), like indexing of namespace etc. Zim uses two more levels of verbosity, which normally are filtered out. To use these you can prefix the message given to "warn" with either 1 or 2 "#" charaters  followed by a space. Level 1 verbose messages are for example used to print information about versions and the config file that is used, these are useful when the user needs to do some debugging on his own. Level 2 verbosity is used for debug messages for developers, these should be used for information that is useless for the user, but which is useful in bug reports.
+
+=== Translations ===
+When programming GUI components with translatable strings. Make sure to "''use Zim::Utils''" and wrap these strings with the "''__( )''" method. You can pass arguments like e.g. :
+
+	__('Can not open file: {file}', file => $file)
+
+Do not translate debug output or error messages that go to the terminal.
+
+=== Don't use Encode::decode_utf8() ===
+This method does nothing more than calling "''decode("utf8", ..)''", thus it is redundant. Use "''decode("utf8", ..)''" directly. Older versions of Encode.pm contain a bug where "''decode_utf8()''" dies when used in it's two argument form.
+
+=== Be aware of utf8 in regular expressions ===
+Regular expressions can have a significant performance hit when you construct regexes that contain utf8. The most common cause are constructions like:
+
+	$page =~ /^.*\Q$name\E/;
+
+Where "''$name''" is for example the name of a page and can contain arbitrary utf8. Also the fact that the utf8 string is not anchored but is match anywhere is a factor in these performance hits. Works around using anchored regexes or even "''substr()''" to match e.g. namespaces.
+
+If the program hangs several seconds for unexplained reasons, possibly not reproducible this might be the problem. Try running zim with "''perl -d:DProf''" and use ''dprofdd'' to analyse what is happening. If there is one method sucking up a lot of proc time, see if it contains regexes. (See [[Devel::DProf]] for more info on profiling.)
+
+=== Use File::Spec as little as possible ===
+Try to keep all filenames within zim in unix representation. That is, use "''/''" as path separator symbol. Only just before the file name is needed in it's platform dependend form "''Zim::File->localize()''" should be called.

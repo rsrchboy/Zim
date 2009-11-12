@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Sat, 08 Nov 2008 11:25:55 +0100
+
+====== Preferences ======
+
+This page documents the contents of the "Preferences" dialog. For documentation of the config files look [[config|here]].
+
+You can open the "Preferences" dialog using the "//Edit//->//Preferences//" menu item. There are several tabs within the preferences dialog:
+
+==== General ====
+
+The **User name** is the name of the person using the program. By default this will be your login name but you can set it to your real name and for example add your email address. This name can be used in templates, for example when you export content.
+
+The **Web Browser** is the command used to open external links like ''http://'' urls, the **File browser** is the command used to open files on the local system and the **Email client** is the command used to open ''mailto:'' uris and anything else that looks like an email address. The browser and email client commands should contain a ''%u'' which will be replaced with the url. The file browser command can either contain a ''%f'' to open files or a ''%d'' to open the directory of the files in question.
+
+When you have difficulty getting the right commandline to make your email client open ''mailto:'' uris correctly, please have a look at the ''xdg-email'' util from the ''xdg-utils'' package. This is basically a wrapper script that knows how to handle these uris and how to hand them over to most common clients. Of course you can also write your own wrapper script.
+
+Note that the integration of "open with" items in the context menu for external files does not use the file manager directly. Also when a default application is set for a certain file type that application is executed directly. Only when there is no default application the file manager is called when you try to open a file. 
+
+( For users who use the Rox file manager: you can symlink the "''SendTo''" directory used by Rox in "''~/.local/share/zim/''" and the "SendTo..." menu will show up in the context menu below or instead of the usual "Open with" items. )
+
+The **Text Editor** command is used for the "Edit Source" menu item, as well as to show diffs and annotated source views when using [[VersionControl]]. The **Diff Editor** is used to show differences side by side and is also used by [[VersionControl]]. It should take two files as arguments and highlight the differences. Suggested commands are the application "''meld''" or e.g. "''gvim -d''".
+
+==== Interface ====
+
+The Interface tab contains a number of settings which control the look and the behavior of the program interface.
+
+**Use "Enter" to follow links** controls whether the "Enter" key can be used to follow links. The "Alt-Enter" key combination always follows links. **Follow new link** controls whether you want to directly jump to the new page if you create a link to a non-existing page.
+
+**Use "Ctrl-Space"** controls whether the "Ctrl-Space" key combination is used to switch focus between the side pane and the page contents. The "Alt-Space" combination does the same.
+
+**Show cursor for read-only** set whether or not you want to see a cursor when browsing a read-only page in zim.
+
+**Tearoff menus** sets whether a "tearoff strip" is shown in the menubar menus. Using this tearoff strip the menu can be used as toolboxes.
+
+**Expand sidepane** sets whether or not the index tree in the side pane is expanded or collapsed when you start the application.
+
+When you set **Use custom font** you can choose an alternative font for the display of page contents. Unsetting this option will return the display to the defalut font. Note that the font choosen here is only a setting of the interface, the font it is not part of the page contents.
+
+==== Editing ====
+
+**Auto-link CamelCase**, **Auto-link files** and **Auto-format entities** are settings to toggle the [[autoformat]] behavior.
+
+The option **Auto-increment numbered lists** controls the behavior on newline when it looks like you are in a list of numbered items. When enabled zim tries to insert the item number automatically.
+
+The **Auto-select words** option turns autoselection on. This means that for example when you press ''<ctrl>B'' in the middle of a word, the whole word is made bold.
+
+**Use "Backspace"** controls whether the "Backspace" is used to un-indent, just as the "Shift-Tab" combination.
+
+**Check checkbox lists recursive** is an option controlling the behavior of checkbox lists with child items. See [[checkboxes]] for more details. 
+
+==== Plugins ====
+
+The plugins tab allows you to turn plugins on or off. You need to restart zim for these settings to take effect.
+
+For a description of the standard plugins have a look [[plugins|here]].

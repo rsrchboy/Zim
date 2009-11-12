@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 23 Jul 2008 12:30:35 +0200
+
+====== Tests ======
+
+Look at coverage overview. Some suggestions:
+
+* Add test for links parsing logic in copy media when exporting
+	* loop trough Html to see if paths remain OK
+	* both with and without doc_root
+	* rel path, abs path and uri
+	* both for images and file links
+* Expand test coverage for Zim.pm - copy tests that are now only done for Files
+* Test coverage for Formats/Wiki and Formats/Html
+
+* test initialization of dir and related files for notebook
+	* dir type
+	* VCS
+	* slow_fs
+* test rename case-sensitive from GUI
+	* test in place for backend, just need to make sure GUI doesn't resolve
+* walk through UI actions to see what could be tested
+* test navigation back / forw / prev / next / up / down
+* test filename lookup with utf8 chars in filename
+* test utf8 content in page
+* test list_page with utf8 file names and utf8 content
+* test list_pages with corrupted utf8 names / content
+* test list_links and list_backlinks

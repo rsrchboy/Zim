@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Wed, 20 Aug 2008 19:43:02 +0200
+
+====== Development ======
+
+This part of the manual provides documentation on the internals of zim. It is intended for developers and hackers. By default it is **not** installed as part of the user manual.
+
+See also:
+* [[Contributing]] - How to submit a patch
+* [[Translations]] - How to submit a translation
+* [[Bugs]] - How to submit a bug
+
+===== Index =====
+For planned features etc. see:
+* [[.TODO|TODO]]
+
+The following pages document the structure of zim:
+* [[.Notebook|Notebook]] - The data layer classes
+* [[.UserInterface|UserInterface]] - The user interface classes
+* [[.FileSystem|FileSystem]] - The files system classes
+* [[.Daemon|Daemon]] - IPC framework and background daemon
+* [[.Formats|Formats]] - Extending input/output formats
+* [[.Plugins|Plugins]] - Extending the user interface
+* [[ConfigFiles]] - Overview of what goes where
+* [[.VersionControl|VersionControl]] - Version control framework
+
+Some random tips are collected in:
+* [[.CodingStyle|CodingStyle]]
+
+And some ideas about usage can be found in:
+* [[.UseCases|UseCases]]
+
+===== API =====
+For API documentation of the various classes see the POD or man pages for the various perl modules. These can be accesses using perldoc, e.g. "''perldoc Zim::GUI''" will show the API documentation for the Zim::GUI class.

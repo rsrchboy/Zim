@@ -1,0 +1,60 @@
+====== Installing Zim on Linux or Unix ======
+
+This page describes how to install Zim manually on a Linux or Unix system. A number of Linux distributions have standard packages for Zim now, using these is usually the easiest.
+
+===== Dependencies =====
+
+==== Perl ====
+You need to have perl 5.8.0 or newer installed. This is a standard package in almost any distribution.
+
+==== Gtk+ ====
+This program uses the gtk+ toolkit version 2.4 or newer.
+It is NOT backward compatible with gtk+ 2.0 and 2.2.
+
+==== Gtk-Perl ====
+You can install the Glib and Gtk2 perl modules from [[http://search.cpan.org|CPAN]], however check if your distribution has standard packages for this first, this will usually be much easier.
+
+==== CPAN modules ====
+You will need the perl modules listed below, all of these are available from [[http://search.cpan.org|CPAN]]. Some may already be installed on your system. When you run "''perl Build.pl''" (see below) the build script will tell you what you are missing.
+
+	Module::Build
+	Test::More
+
+	POSIX
+	Encode
+	IO::File
+	File::Spec
+	File::Copy
+
+	File::BaseDir
+	File::MimeInfo
+	File::DesktopEntry
+
+Optional modules used by plugins:
+
+	Gtk2::TrayIcon
+	Gtk2::Spell    (requires gtkspell)
+
+To install a module from CPAN you can run the following command:
+
+	perl -MCPAN -e "install foo::bar"
+
+===== Installing Zim =====
+
+To install using only perl:
+
+	$ perl Build.PL
+	$ ./Build
+	$ ./Build test
+	$ ./Build install
+
+or if you have GNU Make available, you can try:
+
+	$ ./configure
+	$ make
+	$ make test
+	$ make install
+
+For more information about install targets etc. see the
+documentation for the [[http://search.cpan.org/perldoc?Module::Build|Module::Build]] perl module.
+

@@ -1,0 +1,31 @@
+====== PluginInterface ======
+
+**Summary:** document, use signals more extensively and use POD for info.
+
+**short term:**
+* Documentations (See e.g. http://live.gnome.org/Gedit/PythonPluginHowTo)
+	* ~~document adding new actions~~
+	* Document overloading existing actions (see below)
+	* Document using standard methods from Utils.pm and FS.pm - any others ?
+	* Document how to add new formatting modules
+* Keep current structure with plugin scripts to allow various checks before loading module
+	* use "singleton" signal for registering unplug method
+	* idem for registering method to show preferences popup
+	* base class for plugins could automatically connect these signals and map to methods
+	* (maybe have way to register these signals without using array for optimization ?)
+* Turn all action methods for all zim classes into signal handlers
+	* autoload should check for any signal handlers and return after the first that returns TRUE
+	* method in the class as default handler
+	* this allows overloading actions without currying the method
+	* (move AUTOLOAD from Component.pm to Events.pm)
+* Use POD to store meta data in plugin file
+	* two sections to show in tabs in dialog: description and about
+	* machine readable section with requirements
+		* disable the plugin and show message when requirements fail
+
+**Long term:**
+* Installer package that handles plugin file, libs and docs
+	* also do translations
+* Finalize and document how to get alternative views for the pageview
+* Come up with a way to add alternative views to side pane (integrate with search drop down (seperator between views and searches) and optionally have tabs ?)
+* Come up with a way to have a bottom view with alternative views.

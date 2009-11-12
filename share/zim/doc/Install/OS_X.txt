@@ -1,0 +1,159 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Tue, 20 Jan 2009 22:56:55 +0100
+Modification-Date: Tue, 20 Jan 2009 23:12:53 +0100
+
+====== Installing Zim on OS X native ======
+
+//By Jeffrey Liu//
+
+This doc outlines how to install and run Zim on Mac OS X. Please first have a look at the generic [[Unix|install instructions]] for Unix based platforms.
+
+**Disclaimer:**  The following instructions were derived from installing Zim 0.27 on an Intel iMac running Mac OS X Leopard 10.5.6.  For those following these directions on a PPC Mac or older versions of Mac OS X, YMMV.
+
+Zim has three pre-requisites:  an environment consisting of the the Gtk+ interface libraries, Perl interpreter,  and the Gtk2-Perl bindings.
+
+Checking prerequisites...
+
+'''
+ - ERROR: Gtk2 is not installed
+ - ERROR: File::MimeInfo is not installed
+ - ERROR: File::BaseDir is not installed
+ - ERROR: File::DesktopEntry is not installed
+ * Optional prerequisite Gtk2::TrayIcon is not installed
+ * Optional prerequisite Gtk2::Spell is not installed
+'''
+
+
+===== Step 1 - Installing Gtk+ interface libraries. =====
+
+You have two choices:  use DarwinPorts / MacPorts or use the binary build Gtk+ for Mac OS X port from Imendio.
+
+(MacPorts is an updated version of DarwinPorts http://www.mac-forums.com/forums/os-x-applications-games/93987-darwin-ports-vs-macports.html).  Using MacPorts/DarwinPorts requires installing X11 on your Mac.
+* p5-gtk-perl 
+* gtk2  http://gtk2.darwinports.com/   or http://www.macports.org/ports.php?by=category&substr=gtk
+
+I chose Imendio's binary build framework so that you can run Gtk+ applications without X11 on Mac OS X. The port requires Mac OS X 10.4 or newer. You can download it for free from here:  http://www.gtk-osx.org/
+
+On Sep 2008, Imendio released a binary build for the native Gtk+ Mac OS X port. The installed frameworks can be used directly in the Xcode IDE and come with a project template that sets all the necessary flags and variables to build against them.
+
+GTK+2.14  This package contains three frameworks needed for developing GTK+ applications natively on Mac OS X: GLib, Cairo, and GTK+
+
+* GLib: glib 2.18.1, gettext 0.16, intltool 0.40.4
+* Cairo:  cairo 1.7.6, pixman 0.12, libpng 1.2.29
+* GTK+: gtk+2.14.3, pango 1.22.0, atk 1.24.0, ige-mac-integration 0.8.2, gnome-icon-theme 2.24.0, hicolor-icon-theme, 0.10, gtk-engines 2.16.0, etc
+
+Adds ''/Library/Frameworks/Cairo.framework'' , ''GLib.framework'' and ''Gtk.framework'', which all together only occupy about 100MB.
+
+
+===== Step 2 - Perl interpreter and the Gtk2-Perl bindings =====
+
+==== Perl interpreter ====
+
+Mac OS X Leopard already comes with perl 5.8.8.    However, the perl modules required by Zim are not installed, so you'll need to download and compile them. This requires gcc and make.  Unfortunately, the default install of Mac OS X does not provide gcc/make.
+
+For simplicity, I recommend installing Xcode (Mac's Developer kit) from your install DVD, or downloading the package after signing up for free from Apple's Developer Connection website.   http://developer.apple.com/faq/membersite.html#access   Generic instructions: http://www.tech-recipes.com/rx/726/mac-os-x-install-gcc-compiler/
+
+Unfortunately, the Xcode download is 2GB.  If you wish to try just installing gcc and skipping all the other stuff, try these articles on how to install gcc without the 2GB install for Xcode:
+http://forums.macosxhints.com/showthread.php?t=81027
+http://discussions.apple.com/thread.jspa?messageID=5076895
+
+**NOTE**: seems like just installing gcc4.2 didn't work.  You need to install the full Xcode.  Once the perl modules are installed you can safely uninstall Xcode.  See the "About Xcode Tools.pdf" file for directions on how to uninstall Xcode.
+
+==== Perl modules ====
+
+After installing Xcode, the following commands can help you install the needed perl modules.  CPAN should pick up all pre-requisite modules and by default prompts you if you want to ''[follow]'', which you should.  It should then automatically download and build them for you.
+
+'''
+sudo -H cpan -i File::MimeInfo
+cd /var/root/.cpan/build/File-MimeInfo-0.15
+perl Makefile.PL
+make
+make install
+
+sudo -H cpan -i File::BaseDir
+cd /var/root/.cpan/build/File-BaseDir-0.03
+perl Makefile.PL
+make
+make install
+
+sudo -H cpan -i File::DesktopEntry
+cd /var/root/.cpan/build/File-DesktopEntry-0.04
+perl Makefile.PL
+make
+make install
+'''
+
+
+==== Gtk2-Perl Bindings ====
+
+You will need to download Pkgconfig which is required for ExtUtils::PkgConfig perl module, which is one of the pre-requisite perl modules for Gtk2-Perl.
+
+Reference: http://developer.imendio.com/node/275
+
+Pkgconfig - (no X11 install) then use the scripts for Pkgconfig.  
+Download pkg-config-0.23.tar.gz from http://pkg-config.freedesktop.org/wiki/
+
+'''
+./configure 
+make 
+make install
+'''
+
+http://www.nabble.com/Native-Gtk2-Perl-apps-on-Mac-OS-X-td19812109.html
+
+Forgive me if someone's already posted about doing this: having installed the GTK+ package from Imendio (gtk-osx.org) on my Macbook I found installing the Gtk2-Perl mods pretty easy. You pretty much just need to do this: 
+
+'''
+$ export PKG_CONFIG_PATH="/Library/Frameworks/Cairo.framework/Resources/dev/lib/pkgconfig:/Library/Frameworks/GLib.framework/Resources/dev/lib/pkgconfig:/Library/Frameworks/Gtk.framework/Resources/dev/lib/pkgconfig" 
+$ sudo -H cpan -i ExtUtils::Depends 
+$ sudo -H cpan -i ExtUtils::PkgConfig 
+$ sudo -H cpan -i Glib 
+$ sudo -H cpan -i Cairo 
+$ sudo -H cpan -i Gtk2 
+'''
+
+
+===== Step 3 - Installing Zim =====
+
+'''
+cd Zim-0.27
+perl Build.PL 
+'''
+
+
+===== Step 4 - Running Zim =====
+
+You will need to set the GDK_PIXBUF_MODULE_FILE environment variable. 
+
+'''
+export GDK_PIXBUF_MODULE_FILE=/Library/Frameworks/Gtk.framework/Resources/etc/gtk-2.0/gdk-pixbuf.loaders
+'''
+
+You will also need to specify the "--no-daemon" option when running zim:  
+
+'''
+zim --no-daemon
+'''
+
+This forces zim to run in single process mode.
+
+If you don't specify "--no-daemon", zim will crash because Leopard is very picky about how client forks are handled.
+
+'''
+$ /usr/local/bin/zim
+WARNING: You don't seem to have any mimeinfo.cache files.
+Try running the update-desktop-database command. If you
+don't have this command you should install the 
+desktop-file-utils package. This package is available from
+http://freedesktop.org/wiki/Software_2fdesktop_2dfile_2dutils
+
+jeffrey-lius-imac:Zim-0.27 jliu$ The process has forked and you cannot use this CoreFoundation functionality safely. You MUST exec().
+Break on THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
+The process has forked and you cannot use this CoreFoundation functionality safely. You MUST exec().
+Break on THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
+The process has forked and you cannot use this CoreFoundation functionality safely. You MUST exec().
+Break on THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
+'''
+
+

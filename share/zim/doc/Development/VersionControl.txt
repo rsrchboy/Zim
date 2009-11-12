@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.26
+Creation-Date: Unknown
+Modification-Date: Fri, 25 Jul 2008 23:01:40 +0200
+
+====== Version Control ======
+
+By versions we understand file revisions that are stored in a version control system such as Bazaar or Subversion. Typically such a system can deal with concurrent edits of the same document by multiple users on different machines. Some of these systems use a central server to store a master copy (e.g. Subversion)  others have a decentralized structure, tracking copies by unique IDs (e.g. Bazaar) effectively making each copy a self-contained repository. This last model fits zim the best, but both models will be supported. We assume that revisions apply to the whole repository and are not per file. Another assumption is that the top-level notebook dir is under version control, we do not support sub-trees being under different systems. Of course version control does not only apply to files, but to all files store under the version control root including attachments and files under the document root.
+
+Version control is spread over multiple modules. Reason is that the low level functionality like keeping the directory in sync and getting file diffs etc. is done in the [[Notebook|data layer]] while controls are in the [[UserInterface|GUI]]. To make it more complicated we want to support multiple version control systems, so both the data and the GUI classes need to be general enough to support different systems.
+
+The low level support is implemented in a directory class which subclasses ''Zim::FS::Dir'' with the appropriate hooks to keep the directory in sync. This class should also implement ctions like init, diff, annotate and commit. The notebook checks for version control systems and loads an object of this class automatically for the root directory of the repository, this object is stored under the ''{vcs}'' attribute. By ensuring that the notebook directory object and the document root object are nested properly under this ''{vcs}'' dir we ensure that all file transactions going trough these objects are properly tracked. See ''Zim::FS::Bazaar'' for an example of the implementation.
+
+The ''Zim::GUI::VersionsDialog'' class implements the Versions dialog while the "Revert" and "Save Version" actions are defined in ''Zim::GUI''. These GUI parts are built using the functions defined in the low level object. Other GUI actions will be specific per version control system and need to be implemented trough plugins. The general VersionControl plugin will load the appropriate plugin script if possible. Typically such a plugin will add a sub menu to the tools menu with advanced actions, for example to push to and pull from a server.
+
+To add a new version control system the minimum requirement is to implement a directory class to manage the directory structure with this version control system. A plugin with advanced actions is optional.
