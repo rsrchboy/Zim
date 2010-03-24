@@ -14,7 +14,7 @@ use POSIX qw/strftime/;
 use File::BaseDir 0.03 qw/data_home data_dirs/;
 use Zim::Utils;
 
-our $VERSION = '0.26';
+our $VERSION = '0.29';
 
 =head1 NAME
 
@@ -274,7 +274,8 @@ TIME can be given in seconds or as a C<localtime> array.
 sub header_date_string {
 	shift; #class
 	my @time = (@_ == 1) ? (localtime shift) : (@_);
-	return strftime('%a, %d %b %Y %H:%M:%S %z', @time);
+	my $date = strftime('%a, %d %b %Y %H:%M:%S %z', @time);
+	return utf8::decode($date);
 }
 
 1;

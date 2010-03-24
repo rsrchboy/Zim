@@ -8,32 +8,53 @@ msgstr ""
 "Project-Id-Version: zim\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2008-11-11 14:55+0000\n"
-"Last-Translator: fido_max <Unknown>\n"
+"PO-Revision-Date: 2009-11-17 20:35+0000\n"
+"Last-Translator: Eugene Schava <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2008-11-12 17:32+0000\n"
+"X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
+#. Label for setting a name for the index of exported pages
+#: zim/gui/exportdialog.py:138
+msgid "Index page"
+msgstr "Индексная страница"
+
+#. Menu title |
+#. Button label
+#: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
+msgid "_Insert"
+msgstr "_Вставка"
+
+#. Option in template selection to specify another file
+#: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
+#: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
+msgid "Other..."
+msgstr "Другие..."
+
+#. This string needs to be translated with names of the translators for this language
+#: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Andrew Kuzminov https://launchpad.net/~ilobster\n"
+"  Eugene Schava https://launchpad.net/~eschava\n"
 "  Gofer https://launchpad.net/~vovka\n"
+"  Maxim Kochetkov aka fido_max https://launchpad.net/~fido-max\n"
 "  Nikolay A. Fetisov https://launchpad.net/~naf-altlinux\n"
+"  Oleg Maximov https://launchpad.net/~gruz103\n"
 "  Tverd https://launchpad.net/~tverd2005\n"
 "  Vladimir Sharshov https://launchpad.net/~vsharshov\n"
 "  Vyacheslav Kurenyshev https://launchpad.net/~slavic\n"
 "  X-Ander https://launchpad.net/~x-ander\n"
-"  fido_max https://launchpad.net/~fido-max\n"
 "  sanya https://launchpad.net/~sanya-spb"
 
-#. Name for desktop menu
-#: share/applications/zim.desktop:-
+#. tooltip for tray icon
+#: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
 msgstr "Zim Desktop Wiki"
 
@@ -355,9 +376,8 @@ msgstr "Плагин не найден: {name}"
 msgid "Failed to load plugin: {name}"
 msgstr "Сбой загрузки плагина: {name}"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:60
 msgid "File browser"
 msgstr "Обозреватель файлов"
 
@@ -379,8 +399,8 @@ msgstr ""
 msgid "Choose {app_type}"
 msgstr "Выбирете {app_type}"
 
-#. dialog input label
-#: lib/Zim/GUI.pm:1207
+#. Field in 'custom command' dialog
+#: zim/gui/applications.py:378
 msgid "Command"
 msgstr "Команда"
 
@@ -404,15 +424,13 @@ msgstr "Адрес(url) {url} не найден"
 msgid "Not an url: {url}"
 msgstr "{url} не является адресом(url)"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:64
 msgid "Email client"
 msgstr "Почтовый клиент"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
 msgstr "Веб браузер"
 
@@ -477,13 +495,13 @@ msgstr "_Сохранить копию..."
 msgid "Save version"
 msgstr "Сохранить текст"
 
-#. dialog text
-#: lib/Zim/GUI.pm:1550
+#. Dialog text
+#: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
 msgstr "Добавьте комментарий для этого текста"
 
-#. label
-#: lib/Zim/GUI.pm:1558
+#. section for version details in "save version" dialog
+#: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
 msgstr "Подробнее"
 
@@ -542,24 +560,21 @@ msgstr "Исходный текст"
 msgid "{name}_(Copy)"
 msgstr "{name}_(Копировать)"
 
-#. dialog title
-#: lib/Zim/GUI.pm:1692
+#. Dialog title of file save dialog
+#: zim/gui/__init__.py:1812
 msgid "Save Copy"
 msgstr "Сохранить копию"
 
-#. enrty label AND
-#. tab label AND
-#. header search results AND
-#. column TODO list: zim page AND
-#. input label
-#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
-#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
-#: lib/Zim/GUI/VersionsDialog.pm:57
+#. label in word count dialog |
+#. Column header search dialog |
+#. Column header Task List dialog
+#: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
+#: zim/plugins/tasklist.py:237
 msgid "Page"
 msgstr "Страница"
 
-#. save button
-#: lib/Zim/GUI.pm:1694
+#. Button in error dialog
+#: zim/gui/__init__.py:1717
 msgid "_Save Copy"
 msgstr "_Сохранить копию"
 
@@ -646,13 +661,13 @@ msgstr "У этого блокнота нет корневой папки"
 msgid "This page does not have a source"
 msgstr "Эта страница не имеет источника"
 
-#. dialog title
-#: lib/Zim/GUI.pm:2345
+#. Dialog title
+#: zim/gui/__init__.py:1755
 msgid "Jump to"
 msgstr "Быстрый переход к"
 
-#. dialog label
-#: lib/Zim/GUI.pm:2347
+#. Label for page input
+#: zim/gui/__init__.py:1758
 msgid "Jump to Page"
 msgstr "Быстрый переход к странице"
 
@@ -699,8 +714,9 @@ msgstr ""
 "Введите пароль для\n"
 "{path}"
 
+#. plugin name |
 #. dialog title
-#: lib/Zim/GUI/Calendar.pm:52
+#: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
 msgstr "Календарь"
 
@@ -709,8 +725,8 @@ msgstr "Календарь"
 msgid "%a %b %e %Y"
 msgstr "%a %b %e %Y"
 
-#. button
-#: lib/Zim/GUI/Calendar.pm:94
+#. button label
+#: zim/plugins/calendar.py:274
 msgid "_Today"
 msgstr "_Сегодня"
 
@@ -749,13 +765,13 @@ msgstr "Недопустимое имя страницы: {name}"
 msgid "_Browse..."
 msgstr "_Обзор..."
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of folder selection dialog
+#: zim/gui/widgets.py:925
 msgid "Select Folder"
 msgstr "Выбор папки"
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of file selection dialog
+#: zim/gui/widgets.py:909
 msgid "Select File"
 msgstr "Выбор файла"
 
@@ -769,13 +785,13 @@ msgstr "Невозможно найти приложение \"{name}\""
 msgid "Equation Editor"
 msgstr "Редактор формул"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:96
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
 msgstr "_Предварительный просмотр"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:104
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
 msgstr "Просмотреть _журнал"
 
@@ -798,8 +814,8 @@ msgstr "Уравнение составлено неправильно. Сохр
 msgid "Equation Editor Log"
 msgstr "Журнал редактора формул"
 
-#. context menu
-#: lib/Zim/GUI/EquationEditor.pm:326
+#. menu item in context menu
+#: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
 msgstr "_Редактировать формулу"
 
@@ -808,8 +824,8 @@ msgstr "_Редактировать формулу"
 msgid "Export page"
 msgstr "Экспортирование страницы"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:51
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:24
 msgid "Pages"
 msgstr "Страницы"
 
@@ -818,8 +834,8 @@ msgstr "Страницы"
 msgid "_All"
 msgstr "_Все"
 
-#. radio button
-#: lib/Zim/GUI/ExportDialog.pm:69
+#. Option in versions dialog to show version for single page
+#: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
 msgstr "_Страница"
 
@@ -828,18 +844,18 @@ msgstr "_Страница"
 msgid "Recursive"
 msgstr "Рекурсивный"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:90
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:49
 msgid "Output"
 msgstr "Выходные данные"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Input label in the export dialog
+#: zim/gui/exportdialog.py:53
 msgid "Format"
 msgstr "Формат"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for template selection in export dialog
+#: zim/gui/exportdialog.py:90
 msgid "Template"
 msgstr "Шаблон"
 
@@ -847,11 +863,6 @@ msgstr "Шаблон"
 #: lib/Zim/GUI/ExportDialog.pm:102
 msgid "Output dir"
 msgstr "Каталог для результата"
-
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
-msgid "Index page"
-msgstr "Индексная страница"
 
 #. item in dropdown menu
 #: lib/Zim/GUI/ExportDialog.pm:170
@@ -878,45 +889,45 @@ msgstr "Прикрепить внешний файл"
 msgid "Exporting page {number}"
 msgstr "Экспортировать страницу {number}"
 
-#. dialog title
-#: lib/Zim/GUI/FindReplaceDialog.pm:47
+#. Dialog title
+#: zim/gui/pageview.py:3254
 msgid "Find and Replace"
 msgstr "Найти и заменить"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:66
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3264
 msgid "Find what"
 msgstr "Найти что"
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3275
 msgid "Match c_ase"
-msgstr ""
+msgstr "Учитывать регистр"
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3280
 msgid "Whole _word"
 msgstr "Всё _слово"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:78
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3285
 msgid "Replace with"
 msgstr "Заменить на"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
 msgid "_Next"
 msgstr "_Следующее"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
 msgid "_Previous"
 msgstr "_Предыдущее"
 
-#. button
-#: lib/Zim/GUI/FindReplaceDialog.pm:110
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:3306
 msgid "_Replace"
 msgstr "_Заменить"
 
@@ -940,8 +951,8 @@ msgstr "Блокноты"
 msgid "Cha_nge"
 msgstr "Изме_нить"
 
-#. prompt
-#: lib/Zim/GUI/NotebookDialog.pm:210
+#. Input label in 'open notebook' dialog
+#: zim/gui/notebookdialog.py:291
 msgid "Default notebook"
 msgstr "Блокнот по умолчанию"
 
@@ -1058,13 +1069,13 @@ msgstr "_Удалить|Удалить"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
-msgid "Toggle Checkbox 'V'|Toggle checkbox"
-msgstr ""
+msgid "Toggle Chechbox 'V'|Toggle checkbox"
+msgstr "Переключить \"V\"-чекбокс/чекбокс"
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
-msgid "Toggle Checkbox 'X'|Toggle checkbox"
-msgstr ""
+msgid "Toggle Chechbox 'X'|Toggle checkbox"
+msgstr "Переключить `Х` чекбокс/чекбокс"
 
 #. menu label & tooltip for EditObject
 #: lib/Zim/GUI/PageView.pm:83
@@ -1181,18 +1192,18 @@ msgstr "Курсив"
 msgid "Underline"
 msgstr "Подчеркивание"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:197
+#. Menu item
+#: zim/gui/pageview.py:110 zim/gui/pageview.py:119
 msgid "Strike"
 msgstr "Зачеркивание"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:198
+#. Menu item
+#: zim/gui/pageview.py:111
 msgid "Verbatim"
 msgstr "Стенография"
 
-#. query entry label
-#: lib/Zim/GUI/PageView.pm:311
+#. label for input in find bar on bottom of page
+#: zim/gui/pageview.py:2313
 msgid "Find"
 msgstr "Найти"
 
@@ -1201,23 +1212,18 @@ msgstr "Найти"
 msgid "Insert Date"
 msgstr "Вставить дату"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:815
+#. Menu title
+#: zim/gui/__init__.py:56
 msgid "_Edit"
 msgstr "_Правка"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:818
-msgid "_Insert"
-msgstr "_Вставка"
-
-#. check box
-#: lib/Zim/GUI/PageView.pm:828
+#. check box in InsertDate dialog
+#: zim/gui/pageview.py:2962
 msgid "_Link to date"
 msgstr "_Ссылка на дату"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3015
 msgid "Insert Image"
 msgstr "Вставка изображения"
 
@@ -1236,18 +1242,18 @@ msgstr "Нет такого файла: {file}"
 msgid "File is not a text file: {file}"
 msgstr "Файл не является текстовым: {file}"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:1023
+#. Dialog title
+#: zim/gui/pageview.py:3367
 msgid "Word Count"
 msgstr "Статистика"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1035
+#. label in word count dialog
+#: zim/gui/pageview.py:3404
 msgid "Lines"
 msgstr "Строк"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1036
+#. label in word count dialog
+#: zim/gui/pageview.py:3402
 msgid "Words"
 msgstr "Слов"
 
@@ -1261,18 +1267,18 @@ msgstr "Символов"
 msgid "Go to \"{link}\""
 msgstr "Перейти к \"{link}\""
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1200
+#. menu item in context menu
+#: zim/gui/pageview.py:2668
 msgid "_Edit Link"
 msgstr "_Редактировать ссылку"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1212
+#. context menu item
+#: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
 msgstr "Скопировать электронный адрес"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1213
+#. context menu item
+#: zim/gui/pageview.py:2682
 msgid "Copy _Link"
 msgstr "Скопировать _ссылку"
 
@@ -1296,18 +1302,20 @@ msgstr "Настройки"
 msgid "Send To..."
 msgstr "Отправить..."
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Dialog title
+#: zim/gui/pageview.py:3235
 msgid "Edit Link"
 msgstr "Редактировать ссылку"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Menu item |
+#. Dialog title
+#: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
 msgid "Insert Link"
 msgstr "Вставить ссылку"
 
-#. dialog label
-#: lib/Zim/GUI/PageView.pm:2071
+#. Input in 'insert link' dialog |
+#. Input in 'edit link' dialog
+#: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
 msgstr "Текст"
 
@@ -1316,13 +1324,13 @@ msgstr "Текст"
 msgid "Links to"
 msgstr "Сослаться на"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+#. Dialog button
+#: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
 msgstr "_Ссылка"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3034
 msgid "Edit Image"
 msgstr "Редактировать изображение"
 
@@ -1336,13 +1344,13 @@ msgstr "Источник"
 msgid "_Properties"
 msgstr "_Свойства"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2130
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3053
 msgid "Width"
 msgstr "Ширина"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2131
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3054
 msgid "Height"
 msgstr "Высота"
 
@@ -1425,15 +1433,15 @@ msgstr ""
 msgid "Tearoff menus"
 msgstr "Разделенные меню"
 
-#. pref. tooltip
-#: lib/Zim/GUI/PreferencesDialog.pm:76
+#. Option in the preferences dialog
+#: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
 msgstr "Добавить разделители в меню"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:79
 msgid "Auto-link CamelCase"
-msgstr ""
+msgstr "автоматически связывать CamelCase"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:80
@@ -1475,25 +1483,25 @@ msgstr "Автоматически нумеруйте элементы в чис
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:95
 msgid "Check checkbox lists recursive"
-msgstr ""
+msgstr "Проверять выборные списки рекурсивно"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:96
 msgid "Checking a checkbox list item will also check any sub-items"
-msgstr ""
-"Проверка элемента выборного списка также автоматически проверит любой "
-"дочерний элемент"
+msgstr "Выбор элемента списка чекбоксов также выделит все под-элементы"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:99
 msgid "Use \"Backspace\" to un-indent"
-msgstr ""
+msgstr "Используйте \"Backspace\" для уменьшения отступа"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:100
 msgid ""
 "Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
 msgstr ""
+"Используйте клавишу \"Backspace\" для уменьшения отступа маркированного "
+"спика(работает также, ка \"Shift-Tab\")"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:103
@@ -1544,8 +1552,8 @@ msgstr "Растянуть боковую панель"
 msgid "Start the side pane with the whole tree expanded."
 msgstr "Открыть боковую панель с полностью развернутой структурой дерева"
 
-#. dialog title
-#: lib/Zim/GUI/PreferencesDialog.pm:124
+#. Dialog title
+#: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
 msgstr "Настройки"
 
@@ -1569,8 +1577,8 @@ msgstr "Использовать выбранный шрифт"
 msgid "Editing"
 msgstr "Редактирование"
 
-#. tab label
-#: lib/Zim/GUI/PreferencesDialog.pm:266
+#. Heading in preferences dialog
+#: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
 msgstr "Дополнения"
 
@@ -1583,24 +1591,30 @@ msgstr ""
 "Необходимо перезапустить приложение,\n"
 "чтобы изменения, вносимый дополнениями, вступили в силу."
 
-#. header plugin list
-#: lib/Zim/GUI/PreferencesDialog.pm:285
+#. Column in plugin tab
+#: zim/gui/preferencesdialog.py:268
 msgid "Enabled"
 msgstr "Включён"
 
-#. header plugin list AND
-#. input
-#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+#. Field in 'custom command' dialog |
+#. Input label in the 'rename page' dialog for the new name |
+#. input field in 'Add Notebook' dialog |
+#. Heading in plugins tab of preferences dialog |
+#. label for properties dialog
+#: zim/gui/applications.py:377 zim/gui/__init__.py:1923
+#: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
+#: zim/notebook.py:339
 msgid "Name"
 msgstr "Имя"
 
-#. dialog title
-#: lib/Zim/GUI/PropertiesDialog.pm:35
+#. Dialog title
+#: zim/gui/propertiesdialog.py:11
 msgid "Properties"
 msgstr "Свойства"
 
-#. tab label
-#: lib/Zim/GUI/PropertiesDialog.pm:52
+#. Column heading in 'open notebook' dialog |
+#. Field in web server gui
+#: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
 msgstr "Блокнот"
 
@@ -1609,23 +1623,23 @@ msgstr "Блокнот"
 msgid "Directory"
 msgstr "Папка"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:102
+#. label for properties dialog
+#: zim/notebook.py:340
 msgid "Home Page"
 msgstr "Домашняя страница"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:103
+#. label for properties dialog
+#: zim/notebook.py:341
 msgid "Icon"
 msgstr "Иконка"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:104
+#. label for properties dialog
+#: zim/notebook.py:342
 msgid "Document Root"
 msgstr "Корневая папка документа"
 
-#. check box
-#: lib/Zim/GUI/PropertiesDialog.pm:114
+#. label for properties dialog
+#: zim/notebook.py:343
 msgid "Slow file system"
 msgstr "Медленная файловая система"
 
@@ -1649,11 +1663,9 @@ msgstr "Дата создания"
 msgid "Modification Date"
 msgstr "Дата изменения"
 
-#. dialog title AND
-#. input label AND
-#. menu item
-#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
-#: lib/Zim/GUI/TrayIcon.pm:262
+#. Dialog title |
+#. input label
+#: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
 msgstr "Поиск"
 
@@ -1682,29 +1694,29 @@ msgstr "Проверка _орфографии|Проверка орфограф
 msgid "TODO List"
 msgstr "TODO лист"
 
-#. prompt
-#: lib/Zim/GUI/TODOListDialog.pm:69
+#. Input label
+#: zim/plugins/tasklist.py:109
 msgid "Filter"
 msgstr "Фильтр"
 
-#. Button label
-#: lib/Zim/GUI/TODOListDialog.pm:73
+#. Button
+#: zim/plugins/tasklist.py:114
 msgid "_Filter"
 msgstr "_Фильтр"
 
-#. column TODO list: priority
-#: lib/Zim/GUI/TODOListDialog.pm:109
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:257
 msgid "Prio"
 msgstr "Приоритет"
 
-#. column TODO list: task description
-#: lib/Zim/GUI/TODOListDialog.pm:110
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:236
 msgid "Task"
 msgstr "Задача"
 
-#. column TODO list: due date AND
-#. column header for timstamp
-#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+#. Column header Task List dialog |
+#. Column header versions dialog
+#: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
 msgstr "Дата"
 
@@ -1717,21 +1729,19 @@ msgstr "Добавить все непомеченные позиции для �
 #: lib/Zim/GUI/TODOListDialog.pm:284
 msgid "{number} item total"
 msgid_plural "{number} items total"
-msgstr[0] ""
-msgstr[1] ""
-
-#. menu item "Other notebook"
-#: lib/Zim/GUI/TrayIcon.pm:201
-msgid "Other..."
-msgstr "Другие..."
+msgstr[0] "{number} всего"
+msgstr[1] "{number} всего"
+msgstr[2] "{number} всего"
 
 #. status bar info
 #: lib/Zim/GUI/TreeView.pm:363
 msgid "Scanning tree ..."
 msgstr "Просмотр дерева ..."
 
+#. Dialog title |
 #. dialog title
-#: lib/Zim/GUI/VersionsDialog.pm:39
+#: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
+#: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
 msgstr "Тексты"
 
@@ -1755,8 +1765,8 @@ msgstr "Идентификатор"
 msgid "User"
 msgstr "Пользователь"
 
-#. frame label
-#: lib/Zim/GUI/VersionsDialog.pm:101
+#. version details
+#: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
 msgstr "Комментарий"
 

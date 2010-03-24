@@ -1,7 +1,7 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.26
 Creation-Date: Unknown
-Modification-Date: Sat, 08 Nov 2008 11:16:39 +0100
+Modification-Date: Sat, 14 Mar 2009 16:08:51 +0100
 
 ====== Keybindings ======
 
@@ -15,7 +15,7 @@ If there are menu items or features that do not have a key-binding that you thin
 F9			Toggle index visibility
 alt-space		Toggle focus between index and buffer
     		 	opens side pane if index is invisible
-ctrl-space		Same as ctrl-space - optional see preferences
+ctrl-space		Same as alt-space - optional see preferences
 ctrl-tab		Focus next inteface element (gtk default)
 '''
 

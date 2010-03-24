@@ -9,14 +9,14 @@
 # Project-Id-Version: zim-cs
 # Report-Msgid-Bugs-To: 
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2009-01-17 20:53+0000
+# PO-Revision-Date: 2009-11-13 22:10+0000
 # Last-Translator: Vlastimil Ott <linux@e-ott.info>
 # Language-Team: <cs@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -444,9 +444,9 @@ aby se změny v modulech projevily.',
   'other...' => 'jiná...',
   '{name}_(Copy)' => '{name}_(Kopie)',
   '{number} _Back link' => [
-    '_Zpětný odkaz',
-    '_Zpětné odkazy',
-    '_Zpětných odkazů'
+    '{number} _Zpětný odkaz',
+    '{number} _Zpětné odkazy',
+    '{number} _Zpětných odkazů'
   ],
   '{number} item total' => [
     '{number} položka',

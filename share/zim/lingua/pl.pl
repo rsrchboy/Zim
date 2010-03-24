@@ -7,19 +7,20 @@
 # TRANSLATORS:
 # Krzysztof Tataradziński (pl)
 # Lucif (pl)
+# ZZYZX (pl)
 # warlock24 (pl)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-12-12 22:07+0000
-# Last-Translator: Lucif <Unknown>
+# PO-Revision-Date: 2009-11-18 06:31+0000
+# Last-Translator: ZZYZX <Unknown>
 # Language-Team: Polish <pl@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -239,7 +240,7 @@ also automatically creates a new page.' => 'Zauważ że kliknięcie w link prowa
   'Output dir' => 'Katalog wyjściowy',
   'P_athbar type|' => 'P_asek adresu',
   'Page' => 'Strona',
-  'Page Editable|Page editable' => '',
+  'Page Editable|Page editable' => 'Pokaż w przeglądarce|Pokaż w przeglądarce',
   'Page name' => 'Nazwa strony',
   'Pages' => 'Strony',
   'Password' => 'Hasło',
@@ -262,7 +263,7 @@ Np. katalog o nazwie "Notes" w katalogu domowym.',
   'Pr_eferences|Preferences dialog' => 'Ustawi_enia|Ustawienia',
   'Preferences' => 'Ustawienia',
   'Prefix document root' => 'Prefix katalogu głównego',
-  'Print to Browser|Print to browser' => '',
+  'Print to Browser|Print to browser' => 'Pokaż w przeglądarce|Pokaż w przeglądarce',
   'Prio' => 'Ważn',
   'Proper_ties|Properties dialog' => 'Us_tawienia|Okno ustawień',
   'Properties' => 'Właściwości',
@@ -323,7 +324,7 @@ Proszę uaktualnić swoją kopię(Tools -> SVN update).',
   'Use "Backspace" to un-indent' => '',
   'Use "Ctrl-Space" to switch focus' => 'Użyj "Ctr-Spacja" do zmiany paneli',
   'Use "Enter" to follow links' => 'Użyj Entera by podązać za łączami',
-  'Use autoformatting to type special characters' => '',
+  'Use autoformatting to type special characters' => 'Użyj automatycznego formatowania dla znaków specjalnych',
   'Use custom font' => 'Użyj wybranej czcionki',
   'Use the "Backspace" key to un-indent bullet lists (Same as "Shift-Tab")' => '',
   'Use the "Ctrl-Space" key combo to switch focus between text and side pane. If disabled you can still use "Alt-Space".' => 'Użyj kombinacji "Ctrl-Spacja" aby przełączać się między panelami. Jeśli wyłączone wciąż możesz używać kombinacji "Alt-Spacja".',

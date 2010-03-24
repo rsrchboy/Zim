@@ -5,7 +5,7 @@ use File::MimeInfo;
 use Zim::Utils;
 use Zim::Store::Cached;
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 our @ISA = qw/Zim::Store::Cached/;
 
 =head1 NAME
@@ -129,9 +129,11 @@ sub resolve_case {
 sub _template {
 	# FIXME should use Zim::Formats->bootstrap_template()
 	my ($self, $page) = @_;
+	my $isDate = ("$page" =~ /^:Date:/);
+	my $settings = $self->{parent}{history}{GUI}{app}{settings};
 
 	# Name of the template to use
-	my $name = ("$page" =~ /^:Date:/) ? '_Date' : '_New' ;
+	my $name = $isDate ? '_Date' : '_New' ;
 		# FIXME HACK - should use Namespace setting of Calendar
 		#              should not hardcode plugin here !
 
@@ -149,7 +151,9 @@ sub _template {
 
 	# Set template parameter
 	my $title = $page->basename;
-	$title = ucfirst($title) unless $title =~ /[[:upper:]]/;
+	if ($settings->{use_ucfirst_title}){
+		$title = ucfirst($title) unless $title =~ /[[:upper:]]/;
+	}		
 	$title =~ s/_/ /g;
 
 	# Hard coded default when no template is defined

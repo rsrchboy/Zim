@@ -7,18 +7,19 @@
 # 
 # TRANSLATORS:
 # Mikael Mildén (sv)
+# nairobie (sv)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: 
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2007-11-22 17:18+0000
+# PO-Revision-Date: 2009-11-13 22:09+0000
 # Last-Translator: Mikael Mildén <Unknown>
 # Language-Team: Swedish
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2008-11-09 09:04+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -285,8 +286,8 @@ is missing. Can not edit equation.' => '',
   'This page was updated in the repository.
 Please update your working copy (Tools -> SVN update).' => '',
   'To_day|Today' => 'Dagens datum|Infoga dagens datum',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => '',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => '',
   'Underline' => 'Understruken',
   'Updating links' => 'Uppdaterar länkar',
   'Updating links in {name}' => 'Uppdaterar länkar i {name}',

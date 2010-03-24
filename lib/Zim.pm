@@ -15,7 +15,7 @@ use Zim::Store;
 use Zim::History;
 use Zim::Page;
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 
 our @ISA = qw/Zim::Events/;
 
@@ -35,21 +35,31 @@ Please report bugs to pardus\@cpan.org
 EOT
 our $AUTHORS = 'Jaap Karssenberg <pardus@cpan.org>';
 our $TRANSLATORS = q{
-Alexis Tamparopoulos (el)
+Akihiro Nishimura (ja)
 Andrew Kuzminov (ru)
 Andrés Rassol (es)
 Aron Xu (zh_CN)
+BBO (de)
 Balaam's Miracle (nl)
+Bart (nl)
 Bjørn Olav Samdal (nb)
 BobMauchin (fr)
 Cheese Lee (zh_CN)
+Daniel Ribeiro (pt_BR)
 Daniel Stoyanov (fr)
 Davide Truffa (it)
 Etienne Le Belléguy (fr)
+Eugene Schava (ru)
+Fabian Affolter (de)
+Federico Vera (es)
+Frederico Gonçalves Guimarães (pt_BR)
 Frederik 'Freso' S. Olesen (da)
 Frits Salomons (nl)
 Gofer (ru)
+Gökdeniz Karadağ (tr)
+Henry Lee (zh_TW)
 Hokey (de)
+István Papp (hu)
 Jaap Karssenberg (nl)
 Jacopo Moronato (it)
 Javier Rovegno Campos (es)
@@ -60,6 +70,7 @@ João Santos (pt)
 Juhana Uuttu (fi)
 Junnan Wu (zh_CN)
 Jérôme Guelfucci (fr)
+Katz Kawai (ja)
 Klaus Vormweg (de)
 Krzysztof Tataradziński (pl)
 Lucif (pl)
@@ -68,33 +79,45 @@ Mathijs (nl)
 Matteo Ferrabone (it)
 Matthew Gadd (en_GB)
 Matthias Mailänder (de)
+Maxim Kochetkov aka fido_max (ru)
+Miguel Anxo Bouzada (gl)
 Mikael Mildén (sv)
 Nikolaus Klumpp (de)
 Nikolay A. Fetisov (ru)
 Nucleos (fr)
+Oleg Maximov (ru)
 Paco Molinero (es)
 René 'Necoro' Neumann (de)
 Roberto Suarez (gl)
 Rui Nibau (fr)
 Servilio Afre Puentes (es)
+ThiagoSerra (pt_BR)
 Tverd (ru)
+Vinzenz Vietzke (de)
 Vladimir Sharshov (ru)
 Vlastimil Ott (cs)
 Vyacheslav Kurenyshev (ru)
+Wanderson Santiago dos Reis (pt_BR)
 X-Ander (ru)
 Yaron (he)
+ZZYZX (pl)
+atany (uk)
+cumulus007 (nl)
 cyberik (zh_TW)
 dotancohen (he)
-fido_max (ru)
+forget (zh_CN)
 kingu (nb)
 marisma (gl)
+nairobie (sv)
 nanker (da)
-rainofchaos (zh_CN)
+orz.inc (ja)
+paxatouridis (el)
 sanya (ru)
 warlock24 (pl)
+冯超 (zh_CN)
 太和 (zh_CN)
 };
-our $WEBSITE = 'http://www.pardus.nl/projects/zim';
+our $WEBSITE = 'http://zim-wiki.org/';
 
 =head1 NAME
 

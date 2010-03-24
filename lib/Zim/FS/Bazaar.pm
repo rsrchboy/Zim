@@ -4,7 +4,7 @@ use strict;
 use Carp;
 use Zim::Utils qw/buffer/; # be careful not to import file() and dir()
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 our @ISA = qw/Zim::FS::Dir/;
 
 =head1 NAME
@@ -57,9 +57,9 @@ sub new {
 }
 
 sub init {
-	my $class = shift;
+	my ($class, $dir, $args) = @_;
 	_check_bzr();
-	my $self = $class->SUPER::new(@_);
+	my $self = $class->SUPER::new($dir);
 	$self->touch unless $self->exists;
 	$$self{bzr_root} = $$self{path};
 	$self->bzr('init'); # init dir

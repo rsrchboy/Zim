@@ -12,14 +12,14 @@
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-12-13 12:25+0000
+# PO-Revision-Date: 2009-11-18 01:32+0000
 # Last-Translator: nanker <Unknown>
 # Language-Team: Danish <da@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;

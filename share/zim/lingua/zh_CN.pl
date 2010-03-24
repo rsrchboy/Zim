@@ -8,20 +8,21 @@
 # Aron Xu (zh_CN)
 # Cheese Lee (zh_CN)
 # Junnan Wu (zh_CN)
-# rainofchaos (zh_CN)
+# forget (zh_CN)
+# 冯超 (zh_CN)
 # 太和 (zh_CN)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-12-20 05:51+0000
-# Last-Translator: Junnan Wu <Unknown>
+# PO-Revision-Date: 2009-11-18 01:32+0000
+# Last-Translator: forget <Unknown>
 # Language-Team: Simplified Chinese <zh_CN@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=1; plural=0;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;

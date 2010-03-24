@@ -8,23 +8,26 @@ msgstr ""
 "Project-Id-Version: zim\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2008-11-05 14:42+0000\n"
-"Last-Translator: M. Emin Akşehirli <m.emin@aksehirli.name.tr>\n"
+"PO-Revision-Date: 2009-11-18 08:05+0000\n"
+"Last-Translator: Gökdeniz Karadağ <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2008-11-09 09:04+0000\n"
+"X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
+#. This string needs to be translated with names of the translators for this language
+#: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Gökdeniz Karadağ https://launchpad.net/~gokdeniz\n"
 "  M. Emin Akşehirli https://launchpad.net/~memedemin"
 
-#. Name for desktop menu
-#: share/applications/zim.desktop:-
+#. tooltip for tray icon
+#: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
 msgstr "Zim Desktop Wiki"
 
@@ -198,7 +201,7 @@ msgstr "Konumu Kopyala|Konumu kopyala"
 #. menu label & tooltip for Prefs
 #: lib/Zim/GUI.pm:218
 msgid "Pr_eferences|Preferences dialog"
-msgstr "Y_eğlenenler|Yeğlenen ayarlar"
+msgstr "T_ercihler|Tercihleri düzenle"
 
 #. menu label & tooltip for Reload
 #: lib/Zim/GUI.pm:219
@@ -345,9 +348,8 @@ msgstr "{name} adlı eklenti bulunamadı!"
 msgid "Failed to load plugin: {name}"
 msgstr "{name} adlı eklenti yüklenemedi"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:60
 msgid "File browser"
 msgstr "Dosya Tarayıcı"
 
@@ -369,8 +371,8 @@ msgstr ""
 msgid "Choose {app_type}"
 msgstr "{app_type} seçin"
 
-#. dialog input label
-#: lib/Zim/GUI.pm:1207
+#. Field in 'custom command' dialog
+#: zim/gui/applications.py:378
 msgid "Command"
 msgstr "Komut"
 
@@ -394,15 +396,13 @@ msgstr "{url} bulunamıyor."
 msgid "Not an url: {url}"
 msgstr "{url} bir url değil."
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:64
 msgid "Email client"
 msgstr "E-posta istemcisi"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
 msgstr "Web tarayıcı"
 
@@ -465,13 +465,13 @@ msgstr "Bir kop_yasını kaydet..."
 msgid "Save version"
 msgstr "Sürümü kaydet"
 
-#. dialog text
-#: lib/Zim/GUI.pm:1550
+#. Dialog text
+#: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
 msgstr "Bu sürüm için bir açıklama girin"
 
-#. label
-#: lib/Zim/GUI.pm:1558
+#. section for version details in "save version" dialog
+#: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
 msgstr "Ayrıntılar"
 
@@ -530,24 +530,21 @@ msgstr "İlk sürüm"
 msgid "{name}_(Copy)"
 msgstr "{name}_(Kopyası)"
 
-#. dialog title
-#: lib/Zim/GUI.pm:1692
+#. Dialog title of file save dialog
+#: zim/gui/__init__.py:1812
 msgid "Save Copy"
 msgstr "Kopyayı Kaydet"
 
-#. enrty label AND
-#. tab label AND
-#. header search results AND
-#. column TODO list: zim page AND
-#. input label
-#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
-#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
-#: lib/Zim/GUI/VersionsDialog.pm:57
+#. label in word count dialog |
+#. Column header search dialog |
+#. Column header Task List dialog
+#: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
+#: zim/plugins/tasklist.py:237
 msgid "Page"
 msgstr "Sayfa"
 
-#. save button
-#: lib/Zim/GUI.pm:1694
+#. Button in error dialog
+#: zim/gui/__init__.py:1717
 msgid "_Save Copy"
 msgstr "_Kopyayı Kaydet"
 
@@ -634,13 +631,13 @@ msgstr "Bu not defterinin bir belge kök dizini yok."
 msgid "This page does not have a source"
 msgstr "Bu sayfanın kaynak kodu yok"
 
-#. dialog title
-#: lib/Zim/GUI.pm:2345
+#. Dialog title
+#: zim/gui/__init__.py:1755
 msgid "Jump to"
 msgstr "Sayfaya git"
 
-#. dialog label
-#: lib/Zim/GUI.pm:2347
+#. Label for page input
+#: zim/gui/__init__.py:1758
 msgid "Jump to Page"
 msgstr "Sayfaya Git"
 
@@ -685,8 +682,9 @@ msgstr ""
 "{path} \n"
 "için bir parola girin."
 
+#. plugin name |
 #. dialog title
-#: lib/Zim/GUI/Calendar.pm:52
+#: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
 msgstr "Takvim"
 
@@ -695,8 +693,8 @@ msgstr "Takvim"
 msgid "%a %b %e %Y"
 msgstr "%a %b %e %Y"
 
-#. button
-#: lib/Zim/GUI/Calendar.pm:94
+#. button label
+#: zim/plugins/calendar.py:274
 msgid "_Today"
 msgstr "_Bugün"
 
@@ -735,13 +733,13 @@ msgstr "{name}, sayfa adı için uygun değil."
 msgid "_Browse..."
 msgstr "_Gözat..."
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of folder selection dialog
+#: zim/gui/widgets.py:925
 msgid "Select Folder"
 msgstr "Dizini Seç"
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of file selection dialog
+#: zim/gui/widgets.py:909
 msgid "Select File"
 msgstr "Dosya Seç"
 
@@ -755,13 +753,13 @@ msgstr "\"{name}\" adlı uygulama bulunamıyor."
 msgid "Equation Editor"
 msgstr "Denklem Düzenleyici"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:96
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
 msgstr "Ö_nizleme"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:104
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
 msgstr "_Kayıtları Göster"
 
@@ -784,8 +782,8 @@ msgstr "Denklem derlenemedi. Yine de kaydetmek istiyor musunuz?"
 msgid "Equation Editor Log"
 msgstr "Denklem Düzenleyici Kayıtları"
 
-#. context menu
-#: lib/Zim/GUI/EquationEditor.pm:326
+#. menu item in context menu
+#: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
 msgstr "Denklemi D_üzenle"
 
@@ -794,8 +792,8 @@ msgstr "Denklemi D_üzenle"
 msgid "Export page"
 msgstr "Sayfayı dışa aktar"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:51
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:24
 msgid "Pages"
 msgstr "Sayfalar"
 
@@ -804,8 +802,8 @@ msgstr "Sayfalar"
 msgid "_All"
 msgstr "_Tümü"
 
-#. radio button
-#: lib/Zim/GUI/ExportDialog.pm:69
+#. Option in versions dialog to show version for single page
+#: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
 msgstr "_Sayfa"
 
@@ -814,18 +812,18 @@ msgstr "_Sayfa"
 msgid "Recursive"
 msgstr "Özyinelemeli"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:90
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:49
 msgid "Output"
 msgstr "Çıktı"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Input label in the export dialog
+#: zim/gui/exportdialog.py:53
 msgid "Format"
 msgstr "Biçim"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for template selection in export dialog
+#: zim/gui/exportdialog.py:90
 msgid "Template"
 msgstr "Şablon"
 
@@ -834,8 +832,8 @@ msgstr "Şablon"
 msgid "Output dir"
 msgstr "Çıktı dizini"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for setting a name for the index of exported pages
+#: zim/gui/exportdialog.py:138
 msgid "Index page"
 msgstr "Index sayfası"
 
@@ -864,45 +862,45 @@ msgstr "Dışardan dosya ekle"
 msgid "Exporting page {number}"
 msgstr "{number} numaralı sayfa dışa aktarılıyor"
 
-#. dialog title
-#: lib/Zim/GUI/FindReplaceDialog.pm:47
+#. Dialog title
+#: zim/gui/pageview.py:3254
 msgid "Find and Replace"
 msgstr "Bul ve Değiştir"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:66
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3264
 msgid "Find what"
 msgstr "Bul..."
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3275
 msgid "Match c_ase"
 msgstr "BÜYÜK/küçük harf _eşleştir"
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3280
 msgid "Whole _word"
 msgstr "Kelimenin _tamamı"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:78
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3285
 msgid "Replace with"
 msgstr "Yerine bunu koy:"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
 msgid "_Next"
 msgstr "So_nraki"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
 msgid "_Previous"
 msgstr "_Önceki"
 
-#. button
-#: lib/Zim/GUI/FindReplaceDialog.pm:110
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:3306
 msgid "_Replace"
 msgstr "_Değiştir"
 
@@ -926,8 +924,8 @@ msgstr "Not Defterleri"
 msgid "Cha_nge"
 msgstr "_Değiştir"
 
-#. prompt
-#: lib/Zim/GUI/NotebookDialog.pm:210
+#. Input label in 'open notebook' dialog
+#: zim/gui/notebookdialog.py:291
 msgid "Default notebook"
 msgstr "Öntanımlı not defteri"
 
@@ -1044,12 +1042,12 @@ msgstr "S_il|Sil"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
-msgid "Toggle Checkbox 'V'|Toggle checkbox"
+msgid "Toggle Chechbox 'V'|Toggle checkbox"
 msgstr "Onay Kutusunu 'V'le | Onay kutusunu değiştir"
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
-msgid "Toggle Checkbox 'X'|Toggle checkbox"
+msgid "Toggle Chechbox 'X'|Toggle checkbox"
 msgstr "Onay Kutusunu 'X'le | Onay kutusunu değiştir"
 
 #. menu label & tooltip for EditObject
@@ -1167,18 +1165,18 @@ msgstr "İtalik"
 msgid "Underline"
 msgstr "Altı çizili"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:197
+#. Menu item
+#: zim/gui/pageview.py:110 zim/gui/pageview.py:119
 msgid "Strike"
 msgstr "Üstü çizili"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:198
+#. Menu item
+#: zim/gui/pageview.py:111
 msgid "Verbatim"
 msgstr "Sabit"
 
-#. query entry label
-#: lib/Zim/GUI/PageView.pm:311
+#. label for input in find bar on bottom of page
+#: zim/gui/pageview.py:2313
 msgid "Find"
 msgstr "Bul"
 
@@ -1187,23 +1185,24 @@ msgstr "Bul"
 msgid "Insert Date"
 msgstr "Tarih Ekle"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:815
+#. Menu title
+#: zim/gui/__init__.py:56
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:818
+#. Menu title |
+#. Button label
+#: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
 msgid "_Insert"
 msgstr "_Ekle"
 
-#. check box
-#: lib/Zim/GUI/PageView.pm:828
+#. check box in InsertDate dialog
+#: zim/gui/pageview.py:2962
 msgid "_Link to date"
 msgstr "Tari_he bağla"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3015
 msgid "Insert Image"
 msgstr "Görsel Ekle"
 
@@ -1222,18 +1221,18 @@ msgstr "{file} dosyası bulunamadı"
 msgid "File is not a text file: {file}"
 msgstr "{file} dosyası bir metin dosyası değilBaşlık1"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:1023
+#. Dialog title
+#: zim/gui/pageview.py:3367
 msgid "Word Count"
 msgstr "Sözcük Sayımı"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1035
+#. label in word count dialog
+#: zim/gui/pageview.py:3404
 msgid "Lines"
 msgstr "Satır"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1036
+#. label in word count dialog
+#: zim/gui/pageview.py:3402
 msgid "Words"
 msgstr "Sözcük"
 
@@ -1247,18 +1246,18 @@ msgstr "Harf"
 msgid "Go to \"{link}\""
 msgstr "\"{link}\" bağlantısına git"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1200
+#. menu item in context menu
+#: zim/gui/pageview.py:2668
 msgid "_Edit Link"
 msgstr "Bağlantıyı _Düzenle"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1212
+#. context menu item
+#: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
 msgstr "E-posta Adresini Kopyala"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1213
+#. context menu item
+#: zim/gui/pageview.py:2682
 msgid "Copy _Link"
 msgstr "Bağlantıyı _Kopyala"
 
@@ -1282,18 +1281,20 @@ msgstr "Özelleştir"
 msgid "Send To..."
 msgstr "Gönder..."
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Dialog title
+#: zim/gui/pageview.py:3235
 msgid "Edit Link"
 msgstr "Bağlantı Düzenle"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Menu item |
+#. Dialog title
+#: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
 msgid "Insert Link"
 msgstr "Bağlantı Ekle"
 
-#. dialog label
-#: lib/Zim/GUI/PageView.pm:2071
+#. Input in 'insert link' dialog |
+#. Input in 'edit link' dialog
+#: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
 msgstr "Görünecek Metin"
 
@@ -1302,13 +1303,13 @@ msgstr "Görünecek Metin"
 msgid "Links to"
 msgstr "Bağ hedefi:"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+#. Dialog button
+#: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
 msgstr "_Bağlantı"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3034
 msgid "Edit Image"
 msgstr "Görsel Düzenle"
 
@@ -1322,13 +1323,13 @@ msgstr "Kaynak"
 msgid "_Properties"
 msgstr "Ö_zellikler"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2130
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3053
 msgid "Width"
 msgstr "Genişlik"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2131
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3054
 msgid "Height"
 msgstr "Yükseklik"
 
@@ -1411,8 +1412,8 @@ msgstr ""
 msgid "Tearoff menus"
 msgstr "Kopan menüler"
 
-#. pref. tooltip
-#: lib/Zim/GUI/PreferencesDialog.pm:76
+#. Option in the preferences dialog
+#: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
 msgstr "Menülere koparma öğesi ekler"
 
@@ -1529,8 +1530,8 @@ msgstr "Yan paneli genişlet"
 msgid "Start the side pane with the whole tree expanded."
 msgstr "Yan paneli bütün ağaçlar genişletilmiş biçimde başlatır"
 
-#. dialog title
-#: lib/Zim/GUI/PreferencesDialog.pm:124
+#. Dialog title
+#: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
 msgstr "Yeğlenenler"
 
@@ -1554,8 +1555,8 @@ msgstr "Özel yazı-yüzü kullan"
 msgid "Editing"
 msgstr "Düzenleme"
 
-#. tab label
-#: lib/Zim/GUI/PreferencesDialog.pm:266
+#. Heading in preferences dialog
+#: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
 msgstr "Eklentiler"
 
@@ -1568,24 +1569,30 @@ msgstr ""
 "Eklentilerin etkin olabilmesi için\n"
 "uygulamayı yeniden başlatmalısınız."
 
-#. header plugin list
-#: lib/Zim/GUI/PreferencesDialog.pm:285
+#. Column in plugin tab
+#: zim/gui/preferencesdialog.py:268
 msgid "Enabled"
 msgstr "Etkin"
 
-#. header plugin list AND
-#. input
-#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+#. Field in 'custom command' dialog |
+#. Input label in the 'rename page' dialog for the new name |
+#. input field in 'Add Notebook' dialog |
+#. Heading in plugins tab of preferences dialog |
+#. label for properties dialog
+#: zim/gui/applications.py:377 zim/gui/__init__.py:1923
+#: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
+#: zim/notebook.py:339
 msgid "Name"
 msgstr "Ad"
 
-#. dialog title
-#: lib/Zim/GUI/PropertiesDialog.pm:35
+#. Dialog title
+#: zim/gui/propertiesdialog.py:11
 msgid "Properties"
 msgstr "Özellikler"
 
-#. tab label
-#: lib/Zim/GUI/PropertiesDialog.pm:52
+#. Column heading in 'open notebook' dialog |
+#. Field in web server gui
+#: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
 msgstr "Not defteri"
 
@@ -1594,23 +1601,23 @@ msgstr "Not defteri"
 msgid "Directory"
 msgstr "Dizin"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:102
+#. label for properties dialog
+#: zim/notebook.py:340
 msgid "Home Page"
 msgstr "Başlangıç Sayfası"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:103
+#. label for properties dialog
+#: zim/notebook.py:341
 msgid "Icon"
 msgstr "Simge"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:104
+#. label for properties dialog
+#: zim/notebook.py:342
 msgid "Document Root"
 msgstr "Belge Kök Dizini"
 
-#. check box
-#: lib/Zim/GUI/PropertiesDialog.pm:114
+#. label for properties dialog
+#: zim/notebook.py:343
 msgid "Slow file system"
 msgstr "Yavaş dosya sistemi"
 
@@ -1634,11 +1641,9 @@ msgstr "Oluşturulma Tarihi"
 msgid "Modification Date"
 msgstr "Değiştirilme Tarihi"
 
-#. dialog title AND
-#. input label AND
-#. menu item
-#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
-#: lib/Zim/GUI/TrayIcon.pm:262
+#. Dialog title |
+#. input label
+#: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
 msgstr "Ara"
 
@@ -1667,29 +1672,29 @@ msgstr "Yazımı De_netle|Yazım denetimi"
 msgid "TODO List"
 msgstr "TODO listesi"
 
-#. prompt
-#: lib/Zim/GUI/TODOListDialog.pm:69
+#. Input label
+#: zim/plugins/tasklist.py:109
 msgid "Filter"
 msgstr "Süzgeç"
 
-#. Button label
-#: lib/Zim/GUI/TODOListDialog.pm:73
+#. Button
+#: zim/plugins/tasklist.py:114
 msgid "_Filter"
 msgstr "_Süz"
 
-#. column TODO list: priority
-#: lib/Zim/GUI/TODOListDialog.pm:109
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:257
 msgid "Prio"
 msgstr "Önc"
 
-#. column TODO list: task description
-#: lib/Zim/GUI/TODOListDialog.pm:110
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:236
 msgid "Task"
 msgstr "Görev"
 
-#. column TODO list: due date AND
-#. column header for timstamp
-#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+#. Column header Task List dialog |
+#. Column header versions dialog
+#: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
 msgstr "Tarih"
 
@@ -1704,8 +1709,9 @@ msgid "{number} item total"
 msgid_plural "{number} items total"
 msgstr[0] "Toplam {number} öğe"
 
-#. menu item "Other notebook"
-#: lib/Zim/GUI/TrayIcon.pm:201
+#. Option in template selection to specify another file
+#: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
+#: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
 msgid "Other..."
 msgstr "Diğer..."
 
@@ -1714,8 +1720,10 @@ msgstr "Diğer..."
 msgid "Scanning tree ..."
 msgstr "Ağaç taranıyor..."
 
+#. Dialog title |
 #. dialog title
-#: lib/Zim/GUI/VersionsDialog.pm:39
+#: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
+#: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
 msgstr "Sürümler"
 
@@ -1739,8 +1747,8 @@ msgstr "ID"
 msgid "User"
 msgstr "Kullanıcı"
 
-#. frame label
-#: lib/Zim/GUI/VersionsDialog.pm:101
+#. version details
+#: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
 msgstr "Açıklama"
 

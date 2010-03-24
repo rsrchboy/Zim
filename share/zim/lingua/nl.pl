@@ -8,21 +8,23 @@
 # 
 # TRANSLATORS:
 # Balaam's Miracle (nl)
+# Bart (nl)
 # Frits Salomons (nl)
 # Jaap Karssenberg (nl)
 # Mathijs (nl)
+# cumulus007 (nl)
 # 
 # Project-Id-Version: Zim 0.23
 # Report-Msgid-Bugs-To: 
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-10-29 08:23+0000
-# Last-Translator: Jaap Karssenberg <pardus@cpan.org>
+# PO-Revision-Date: 2009-08-14 10:09+0000
+# Last-Translator: Bart <Unknown>
 # Language-Team: 
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2008-11-09 09:05+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -38,7 +40,7 @@ sub {my $n = shift; $n != 1},
 Are you sure you want to delete
 page \'{name}\' ?' => '<b>Pagina verwijderen</b>
 
-Weet u zeker dat de pagina
+Weet u zeker dat u de pagina
 \'{name}\' wilt verwijderen ?',
   '<b>Enable Version Control</b>
 
@@ -88,7 +90,7 @@ dit resulteert in een aparte hierarchie per maand.
 
 Wilt u dit notitieboek omzetten naar het nieuwe formaat ?
 ',
-  'Add \'tearoff\' strips to the menus' => 'Zet afscheur strips boven de menus',
+  'Add \'tearoff\' strips to the menus' => 'Zet afscheurstrips boven de menus',
   'Application show two text files side by side' => 'Applicatie om twee tekst files te vergelijken',
   'Application to compose email' => 'Programma om email te versturen',
   'Application to edit text files' => 'Programma om tekst files te bewerken',
@@ -108,7 +110,7 @@ Wilt u dit notitieboek omzetten naar het nieuwe formaat ?
   'Automaticly select the current word when you toggle the format' => 'Woorden automatisch selecteren wanneer een ander formaat wordt gebruikt',
   'Bold' => 'Vet',
   'Calen_dar|Show calendar' => 'Kalen_der|Kalender tonen',
-  'Calendar' => 'Kalender',
+  'Calendar' => 'Calender',
   'Can not find application "bzr"' => 'Kan applicatie "bzr" niet vinden',
   'Can not find application "{name}"' => 'Kan applicatie "{name}" niet vinden',
   'Can not save a version without comment' => 'Kan geen versie opslaan zonder omschrijving',
@@ -141,7 +143,7 @@ Wilt u dit notitieboek omzetten naar het nieuwe formaat ?
   'Creating a new link directly opens the page' => 'Open de nieuwe pagina direct na het creeëren van de link',
   'Creation Date' => 'Aanmaakdatum',
   'Cu_t|Cut' => '_Knippen|Knippen',
-  'Current' => 'Huidig',
+  'Current' => 'Huidige',
   'Customise' => 'Wijzigen',
   'Date' => 'Datum',
   'Default notebook' => 'Standaard notitieboek',
@@ -156,7 +158,7 @@ Wilt u dit notitieboek omzetten naar het nieuwe formaat ?
   'Edit Image' => 'Afbeelding Bewerken',
   'Edit Link' => 'Link Bewerken',
   'Edit Query' => 'Zoekterm bewerken',
-  'Edit _Source|Open source' => 'Brontext Bewerken|Brontext bewerken',
+  'Edit _Source|Open source' => 'Brontekst Bewerken|Brontekst bewerken',
   'Edit notebook' => 'Notitieboek wijzigen',
   'Edit text files "wiki style"' => 'Bewerk tekstbestanden ""wiki style"\'',
   'Editing' => 'Bewerken',
@@ -167,7 +169,7 @@ Wilt u dit notitieboek omzetten naar het nieuwe formaat ?
   'Expand side pane' => 'Zij-paneel uitklappen',
   'Export page' => 'Pagina Exporteren',
   'Exporting page {number}' => 'Pagina {number} aan het exporteren',
-  'Failed to cleanup SVN working copy.' => 'Cleanup van kopie mislukt',
+  'Failed to cleanup SVN working copy.' => 'Opschonen van SVN copie mislukt.',
   'Failed to load SVN plugin,
 do you have subversion utils installed?' => 'Laden van de SVN plugin mislukt,
 heeft u de subversion applicatie geinstalleerd?',
@@ -199,7 +201,7 @@ heeft u de subversion applicatie geinstalleerd?',
   'Head5' => 'Kop5',
   'Height' => 'Hoogte',
   'Home Page' => 'Start Pagina',
-  'Icon' => 'Icoon',
+  'Icon' => 'Pictogram',
   'Id' => 'Id',
   'Include all open checkboxes' => 'Laat alle open checkboxes zien',
   'Index page' => 'Index pagina',
@@ -231,8 +233,8 @@ heeft u de subversion applicatie geinstalleerd?',
   'Not a valid page name: {name}' => 'Ongeldige pagina naam: {name}',
   'Not an url: {url}' => 'Geen geldige web locatie: {url}',
   'Note that linking to a non-existing page
-also automatically creates a new page.' => 'Door te linken naar een niet bestaande pagina
-kan u ook een nieuwe pagina aanmaken.',
+also automatically creates a new page.' => 'Door te linken naar een niet-bestaande pagina
+kunt u ook een nieuwe pagina aanmaken.',
   'Notebook' => 'Notitieboek',
   'Notebooks' => 'Notitieboeken',
   'Open Document _Folder|Open document folder' => 'Open Documenten _Folder|Open documenten folder',
@@ -246,7 +248,7 @@ kan u ook een nieuwe pagina aanmaken.',
   'Page' => 'Pagina',
   'Page Editable|Page editable' => 'Pagina te wijzigen|Pagina te wijzigen',
   'Page name' => 'Pagina naam',
-  'Pages' => 'Paginas',
+  'Pages' => 'Pagina\'s',
   'Password' => 'Wachtwoord',
   'Please enter a comment for this version' => 'Geef een korte omschrijving voor deze versie',
   'Please enter a name to save a copy of page: {page}' => 'Geef een naam op om een kopie op te slaan van: {page}',
@@ -277,7 +279,7 @@ Bijvoorbeeld een map "Notes" in uw persoonlijke map.',
   'Rename page' => 'Pagina hernoemen',
   'Rename to' => 'Hernoemen naar',
   'Replace _all' => '_Alles vervangen',
-  'Replace with' => 'Vervangen door',
+  'Replace with' => 'Vervang door',
   'SVN cleanup|Cleanup SVN working copy' => 'SVN cleanup|Cleanup SVN archief kopie',
   'SVN commit|Commit notebook to SVN repository' => 'SVN commit|Commit notitieboek naar het SVN archief',
   'SVN update|Update notebook from SVN repository' => 'SVN update|Update notitieboek uit het SVN archief',
@@ -303,7 +305,7 @@ Bijvoorbeeld een map "Notes" in uw persoonlijke map.',
   'Tearoff menus' => 'Afscheurbare menus',
   'Template' => 'Template',
   'Text' => 'Tekst',
-  'Text Editor' => 'Tekst Verwerker',
+  'Text Editor' => 'Tekst Editor',
   'Text _From File...|Insert text from file' => 'Tekst Uit _Bestand|Tekst uit bestand invoegen',
   'Text editor' => 'Tekst verwerker',
   'The equation failed to compile. Do you want to save anyway?' => 'De formule kan niet worden weergegeven. Wilt u toch opslaan?',
@@ -315,13 +317,13 @@ mist. Kan de formule niet wijzigen.',
 404' => 'Deze pagina bestaat niet
 404',
   'This page does not have a document folder' => 'Deze pagina heeft geen documenten folder',
-  'This page does not have a source' => 'Deze pagina heeft geen bron text',
+  'This page does not have a source' => 'Deze pagina heeft geen bron tekst',
   'This page was updated in the repository.
 Please update your working copy (Tools -> SVN update).' => 'Deze pagina is veranderd in het archief.
 U dient uw kopie to updaten (Tools -> SVN update).',
   'To_day|Today' => 'Van_daag|Vandaag',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => 'Markeer checkbox "V"|Markeer checkbox "V"',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => 'Markeer checkbox "V"|Markeer checkbox "V"',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => 'Markeer checkbox "V"|Markeer checkbox "V"',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => 'Markeer checkbox "V"|Markeer checkbox "V"',
   'Underline' => 'Onderstreept',
   'Updating links' => 'Links aanpassen',
   'Updating links in {name}' => 'Links aan het aanpassen in {name}',
@@ -331,8 +333,8 @@ U dient uw kopie to updaten (Tools -> SVN update).',
   'Use "Enter" to follow links' => 'Gebruik "Enter" om links te volgen',
   'Use autoformatting to type special characters' => 'Zet HTML entiteiten automatisch om in utf8 karakters',
   'Use custom font' => 'Wijzig lettertype',
-  'Use the "Backspace" key to un-indent bullet lists (Same as "Shift-Tab")' => 'Gebruik de "Backspace" toets om het inspringen van een aantal regelsongedaan te maken. (Gelijk aan "Shift-Tab")',
-  'Use the "Ctrl-Space" key combo to switch focus between text and side pane. If disabled you can still use "Alt-Space".' => 'Gebruik de "Ctrl-Spatie" toetsen combinatie om focus te switchen tusse detekst en het zij-paneel. Als deze optie uitstaat kunt u nog steeds"Alt-Spatie" gebruiken.',
+  'Use the "Backspace" key to un-indent bullet lists (Same as "Shift-Tab")' => 'Gebruik de "Backspace" toets om het inspringen van een aantal regels ongedaan te maken. (Gelijk aan "Shift-Tab")',
+  'Use the "Ctrl-Space" key combo to switch focus between text and side pane. If disabled you can still use "Alt-Space".' => 'Gebruik de "Ctrl-Spatie" toetscombinatie om de focus te verspringen tussen de tekst en het zij-paneel. Als deze optie uitstaat, kunt u nog steeds"Alt-Spatie" gebruiken.',
   'Use the "Enter" key to follow links. If disabled you still can use "Alt-Enter"' => 'Gebruik de "Enter" toets om links te volgen. Wanneer deze optie uit staatkunt u nog steeds "Alt-Enter" gebruiken voor navigatie"',
   'User' => 'Gebruiker',
   'User name' => 'Gebruiker naam',
@@ -349,7 +351,7 @@ U dient uw kopie to updaten (Tools -> SVN update).',
   'You can choose using either the <b>Bazaar</b> or the <b>Subversion</b> Version Control System.
 Please click \'help\' to read about the system requirements.' => 'U kunt kiezen tussen de <b>Bazaar</b> en <b>Subversion</b> Versie Beheer Systemen.
 Klik op \'hulp\' voor meer informatie over de systeem eisen.',
-  'You have no {app_type} configured' => 'Geen {app_type} geconfigureerd',
+  'You have no {app_type} configured' => 'Geen {app_type} ingesteld',
   'You need to restart the application
 for plugin changes to take effect.' => 'U dient dit programma opnieuw te starten
 voordat nieuwe plugins geladen worden.',
@@ -362,7 +364,7 @@ voordat nieuwe plugins geladen worden.',
   '_Browse...' => '_Bladeren...',
   '_Bugs|Bugs' => '_Bugs|Bugs',
   '_Child|Go to child page' => 'Om_laag|Ga pagina omlaag',
-  '_Close|Close window' => 'Sl_uiten|Window sluiten',
+  '_Close|Close window' => 'Sl_uiten|Venster sluiten',
   '_Contents|Help contents' => 'I_nhoud|Hulp inhoud',
   '_Copy Page...|Copy page' => 'Pagina _Kopiëren|Pagina kopiëren',
   '_Copy|Copy' => 'K_opiëren|Kopiëren',
@@ -434,7 +436,7 @@ voordat nieuwe plugins geladen worden.',
   '_Today' => '_Vandaag',
   '_Toolbar|Show toolbar' => '_Werkbalk|Werkbalk tonen',
   '_Tools|' => 'E_xtra',
-  '_Underline|Underline' => '_Oderstrepen|Onderstrepen',
+  '_Underline|Underline' => '_Onderstrepen|Onderstrepen',
   '_Undo|Undo' => '_Ongedaan maken|Ongedaan maken',
   '_Update links in this page' => 'Links in deze pagina _aanpassen',
   '_Update {number} page linking here' => [

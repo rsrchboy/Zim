@@ -6,26 +6,28 @@
 # 
 # TRANSLATORS:
 # Andrew Kuzminov (ru)
+# Eugene Schava (ru)
 # Gofer (ru)
+# Maxim Kochetkov aka fido_max (ru)
 # Nikolay A. Fetisov (ru)
+# Oleg Maximov (ru)
 # Tverd (ru)
 # Vladimir Sharshov (ru)
 # Vyacheslav Kurenyshev (ru)
 # X-Ander (ru)
-# fido_max (ru)
 # sanya (ru)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-11-11 14:55+0000
-# Last-Translator: fido_max <Unknown>
+# PO-Revision-Date: 2009-11-17 20:35+0000
+# Last-Translator: Eugene Schava <Unknown>
 # Language-Team: Russian <ru@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;
-# X-Launchpad-Export-Date: 2008-11-12 17:32+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -102,7 +104,7 @@ Do you want to upgrade this notebook to the new layout?
   'Attach external files' => 'Прикрепить внешний файл',
   'Auto-format entities' => 'Автоматически форматировать объекты',
   'Auto-increment numbered lists' => 'Автоматическая нумерация числовых списков',
-  'Auto-link CamelCase' => '',
+  'Auto-link CamelCase' => 'автоматически связывать CamelCase',
   'Auto-link files' => 'Автоматически создавать ссылку на файлы',
   'Auto-save version on close' => 'Автосохранение текста при закрытии',
   'Auto-select words' => 'Автоматический выбор слов',
@@ -121,8 +123,8 @@ Do you want to upgrade this notebook to the new layout?
   'Cha_nge' => 'Изме_нить',
   'Chars' => 'Символов',
   'Check _spelling|Spell check' => 'Проверка _орфографии|Проверка орфографии',
-  'Check checkbox lists recursive' => '',
-  'Checking a checkbox list item will also check any sub-items' => 'Проверка элемента выборного списка также автоматически проверит любой дочерний элемент',
+  'Check checkbox lists recursive' => 'Проверять выборные списки рекурсивно',
+  'Checking a checkbox list item will also check any sub-items' => 'Выбор элемента списка чекбоксов также выделит все под-элементы',
   'Choose {app_type}' => 'Выбирете {app_type}',
   'Co_mpare Page...' => 'Страница ср_авнения',
   'Command' => 'Команда',
@@ -218,7 +220,7 @@ do you have subversion utils installed?' => 'Не удалось загрузи�
   'Jump to Page' => 'Быстрый переход к странице',
   'Lines' => 'Строк',
   'Links to' => 'Сослаться на',
-  'Match c_ase' => '',
+  'Match c_ase' => 'Учитывать регистр',
   'Media' => 'Медиа',
   'Modification Date' => 'Дата изменения',
   'Name' => 'Имя',
@@ -324,18 +326,18 @@ is missing. Can not edit equation.' => 'Уравнение для изображ
 Please update your working copy (Tools -> SVN update).' => 'Эта страница была обновлена в репозитории.
 Пожалуйста обновите рабочую копию (Tools -> SVN update).',
   'To_day|Today' => 'Се_годня|Сегодня',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => '',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => 'Переключить "V"-чекбокс/чекбокс',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => 'Переключить `Х` чекбокс/чекбокс',
   'Underline' => 'Подчеркивание',
   'Updating links' => 'Обновить ссылки',
   'Updating links in {name}' => 'Обновить ссылки в {name}',
   'Updating..' => 'Обновление...',
-  'Use "Backspace" to un-indent' => '',
+  'Use "Backspace" to un-indent' => 'Используйте "Backspace" для уменьшения отступа',
   'Use "Ctrl-Space" to switch focus' => 'Использовать "Ctrl-Пробел" для переключения фокуса',
   'Use "Enter" to follow links' => 'Использование "Enter" для перехода по ссылкам',
   'Use autoformatting to type special characters' => 'Используйте автоформатирование для ввода специальных символов',
   'Use custom font' => 'Использовать выбранный шрифт',
-  'Use the "Backspace" key to un-indent bullet lists (Same as "Shift-Tab")' => '',
+  'Use the "Backspace" key to un-indent bullet lists (Same as "Shift-Tab")' => 'Используйте клавишу "Backspace" для уменьшения отступа маркированного спика(работает также, ка "Shift-Tab")',
   'Use the "Ctrl-Space" key combo to switch focus between text and side pane. If disabled you can still use "Alt-Space".' => 'Используйте сочетание клавиш "Ctrl-Пробел" для переключения фокуса между текстом и боковой панелью. Если эта опция отключена, вы можете использовать сочетание "Alt-Пробел".',
   'Use the "Enter" key to follow links. If disabled you still can use "Alt-Enter"' => 'Использование "Enter" для перехода по ссылкам. Если запрещено, все равно можно использовать "Alt-Enter"',
   'User' => 'Пользователь',
@@ -458,7 +460,8 @@ for plugin changes to take effect.' => 'Необходимо перезапус�
     '{number} _Обратные ссылки'
   ],
   '{number} item total' => [
-    '',
-    ''
+    '{number} всего',
+    '{number} всего',
+    '{number} всего'
   ]
 };

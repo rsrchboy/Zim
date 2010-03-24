@@ -20,7 +20,7 @@ my $has_mimeapplications = $@ ? 0 : 1;
 warn "WARNING: Could not use 'File::MimeInfo::Applications', disabling application bindings\n"
 	unless $has_mimeapplications;
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 our @ISA = qw/Zim::GUI::Component/;
 
 =head1 NAME
@@ -155,6 +155,7 @@ follow_new_link	0
 backsp_unindent	1
 plugins		Calendar,TODOList,PrintToBrowser
 use_camelcase	1
+use_ucfirst_title	1
 use_utf8_ent	1
 use_linkfiles	1
 use_autolink	0

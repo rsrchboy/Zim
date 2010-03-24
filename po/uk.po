@@ -1,43 +1,40 @@
-# Finnish translation for zim
-# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# Ukrainian translation for zim
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
 # This file is distributed under the same license as the zim package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# Yevgen Gorshkov <ye.gorshkov@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zim\n"
-"Report-Msgid-Bugs-To: pardus@cpan.org\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2009-11-18 06:49+0000\n"
-"Last-Translator: Juhana Uuttu <Unknown>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2009-10-10 23:11+0000\n"
+"Last-Translator: atany <Unknown>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
-"X-Poedit-Country: FINLAND\n"
-"X-Poedit-Language: Finnish\n"
-"X-Poedit-Basepath: /home/cthulhu/paketointi/zim/Zim-0.26\n"
-"X-Poedit-Bookmarks: 29,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. This string needs to be translated with names of the translators for this language
 #: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Juhana Uuttu https://launchpad.net/~rexroom"
+"  atany https://launchpad.net/~ye-gorshkov"
 
 #. tooltip for tray icon
 #: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
-msgstr "Zim työpöytä-wiki"
+msgstr "Вікі для робочого стола"
 
 #. Comment for desktop menu
 #: share/applications/zim.desktop:-
 msgid "Edit text files \"wiki style\""
-msgstr "Muokkaa tekstitiedostoja \"wiki-tyylillä\""
+msgstr "Редагування текстових файлів в „стилі вікі“"
 
 #. GenericName for desktop menu AND
 #. application type AND
@@ -45,22 +42,22 @@ msgstr "Muokkaa tekstitiedostoja \"wiki-tyylillä\""
 #: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
 #: lib/Zim/GUI/VersionsDialog.pm:402
 msgid "Text Editor"
-msgstr "Tekstieditori"
+msgstr "Текстовий редактор"
 
 #. error
 #: bin/zim:373
 msgid "No such file or directory: {name}"
-msgstr "Tiedosto/hakemisto ei olemassa: {name}"
+msgstr "Немає такого файлу чи теки: {name}"
 
 #. error
 #: bin/zim:374
 msgid "No such notebook: {name}"
-msgstr "Vihko ei olemassa: {name}"
+msgstr "Немає такого зашита: {name}"
 
 #. Error SVN not installed
 #: lib/Zim/FS/Bazaar.pm:74
 msgid "Can not find application \"bzr\""
-msgstr "En löydä ohjelmaa \"bzr\""
+msgstr "Не вдається запустити програму „bzr“"
 
 #. error SVN not installed
 #: lib/Zim/FS/Subversion.pm:89
@@ -68,293 +65,293 @@ msgid ""
 "Failed to load SVN plugin,\n"
 "do you have subversion utils installed?"
 msgstr ""
-"SVN-lisäosan lataus epäonnistui.\n"
-"Onko sinulla subversion-työkalut asennettuna?"
+"Не вдалося завантажити модуль SVN,\n"
+"переконайтеся, що subversion встановлено."
 
 #. menu label & tooltip for FileMenu
 #: lib/Zim/GUI.pm:183
 msgid "_File|"
-msgstr "_Tiedosto|"
+msgstr "_Файл|"
 
 #. menu label & tooltip for EditMenu
 #: lib/Zim/GUI.pm:184
 msgid "_Edit|"
-msgstr "_Muokkaa|"
+msgstr "_Правка|"
 
 #. menu label & tooltip for ViewMenu
 #: lib/Zim/GUI.pm:185
 msgid "_View|"
-msgstr "_Näytä|"
+msgstr "_Вигляд|"
 
 #. menu label & tooltip for InsertMenu
 #: lib/Zim/GUI.pm:186
 msgid "_Insert|"
-msgstr "_Lisää|"
+msgstr "Вст_авити|"
 
 #. menu label & tooltip for SearchMenu
 #: lib/Zim/GUI.pm:187
 msgid "_Search|"
-msgstr "Et_si|"
+msgstr "З_найти|"
 
 #. menu label & tooltip for FormatMenu
 #: lib/Zim/GUI.pm:188
 msgid "For_mat|"
-msgstr "M_uoto|"
+msgstr "Фор_мат|"
 
 #. menu label & tooltip for ToolsMenu
 #: lib/Zim/GUI.pm:189
 msgid "_Tools|"
-msgstr "Työ_kalut|"
+msgstr "С_ервіс|"
 
 #. menu label & tooltip for GoMenu
 #: lib/Zim/GUI.pm:190
 msgid "_Go|"
-msgstr "M_ene|"
+msgstr "Пере_йти|"
 
 #. menu label & tooltip for HelpMenu
 #: lib/Zim/GUI.pm:191
 msgid "_Help|"
-msgstr "_Ohje|"
+msgstr "_Довідка|"
 
 #. menu label & tooltip for PathBarMenu
 #: lib/Zim/GUI.pm:192
 msgid "P_athbar type|"
-msgstr "_Polkupalkin tyyppi|"
+msgstr "Р_ядок шляху|"
 
 #. menu label & tooltip for NewPage
 #: lib/Zim/GUI.pm:198
 msgid "_New Page|New page"
-msgstr "_Uusi sivu|Uusi sivu"
+msgstr "_Створити сторінку|Створити сторінку"
 
 #. menu label & tooltip for OpenNotebook
 #: lib/Zim/GUI.pm:200
 msgid "_Open Another Notebook...|Open notebook"
-msgstr "_Avaa toinen vihko...|Avaa vihko"
+msgstr "_Відкрити інший зошит…|Відкрити зошит"
 
 #. menu label & tooltip for Save
 #: lib/Zim/GUI.pm:201
 msgid "_Save|Save page"
-msgstr "_Tallenna|Tallenna sivu"
+msgstr "З_берегти|Зберегти сторінку"
 
 #. menu label & tooltip for SaveVersion
 #: lib/Zim/GUI.pm:202
 msgid "S_ave Version...|Save Version"
-msgstr "Tallenna ve_rsio...|Tallenna versio"
+msgstr "Зберегти _версію…|Зберегти версію"
 
 #. menu label & tooltip for Versions
 #: lib/Zim/GUI.pm:203
 msgid "_Versions...|Versions"
-msgstr "_Versiot...|Versiot"
+msgstr "Ве_рсії…|Версії"
 
 #. menu label & tooltip for Export
 #: lib/Zim/GUI.pm:204
 msgid "E_xport...|Export"
-msgstr "Vi_e...|Vie"
+msgstr "_Експортувати…|Експортувати"
 
 #. menu label & tooltip for EmailPage
 #: lib/Zim/GUI.pm:205
 msgid "_Send To...|Mail page"
-msgstr "_Lähetä...|Lähetä sivu"
+msgstr "Надіслати _до…|Надіслати сторінку поштою"
 
 #. menu label & tooltip for CopyPage
 #: lib/Zim/GUI.pm:206
 msgid "_Copy Page...|Copy page"
-msgstr "_Kopioi sivu...|Kopioi sivu"
+msgstr "_Копіювати сторінку…|Копіювати сторінку"
 
 #. menu label & tooltip for RenamePage
 #: lib/Zim/GUI.pm:208
 msgid "_Rename Page...|Rename page"
-msgstr "_Uudelleennimeä sivu...|Uudelleennimeä sivu"
+msgstr "Пере_йменувати сторінку…|Перейменувати сторінку"
 
 #. menu label & tooltip for DeletePage
 #: lib/Zim/GUI.pm:210
 msgid "_Delete Page|Delete page"
-msgstr "_Poista sivu|Poista sivu"
+msgstr "В_идалити сторінку|Видалити сторінку"
 
 #. menu label & tooltip for Props
 #: lib/Zim/GUI.pm:212
 msgid "Proper_ties|Properties dialog"
-msgstr "_Ominaisuudet|Ominaisuudet"
+msgstr "_Параметри зошита|Налаштувати параметри зошита"
 
 #. menu label & tooltip for Close
 #: lib/Zim/GUI.pm:213
 msgid "_Close|Close window"
-msgstr "_Sulje|Sulje ikkuna"
+msgstr "_Закрити|Закрити вікно"
 
 #. menu label & tooltip for Quit
 #: lib/Zim/GUI.pm:214
 msgid "_Quit|Quit"
-msgstr "_Lopeta|Lopeta"
+msgstr "Ви_йти|Вийти"
 
 #. menu label & tooltip for Search
 #: lib/Zim/GUI.pm:215
 msgid "_Search...|Search"
-msgstr "_Etsi...|Etsi"
+msgstr "З_найти…|Знайти"
 
 #. menu label & tooltip for SearchBL
 #: lib/Zim/GUI.pm:216
 msgid "Search _Backlinks...|Search Back links"
-msgstr "Etsi _viitelinkkejä...|Etsi viitelinkkejä"
+msgstr "Знайти з_воротні посилання…|Знайти зворотні посилання"
 
 #. menu label & tooltip for CopyLocation
 #: lib/Zim/GUI.pm:217
 msgid "Copy Location|Copy location"
-msgstr "Kopioi sijainti|Kopioi sijainti"
+msgstr "Копіювати адресу|Копіювати адресу сторінки"
 
 #. menu label & tooltip for Prefs
 #: lib/Zim/GUI.pm:218
 msgid "Pr_eferences|Preferences dialog"
-msgstr "Asetukset|Asetukset"
+msgstr "_Параметри|Налаштувати програму"
 
 #. menu label & tooltip for Reload
 #: lib/Zim/GUI.pm:219
 msgid "_Reload|Reload page"
-msgstr "_Päivitä|Päivitä sivu"
+msgstr "Пере_завантажити|Перезавантажити сторінку"
 
 #. menu label & tooltip for OpenFolder
 #: lib/Zim/GUI.pm:220
 msgid "Open Document _Folder|Open document folder"
-msgstr "Avaa sivun _kansio|Avaa sivun kansion"
+msgstr "Відкрити теку _документів|Відкрити теку документів поточної сторінки"
 
 #. menu label & tooltip for OpenRootFolder
 #: lib/Zim/GUI.pm:221
 msgid "Open Document _Root|Open document root"
-msgstr "Avaa _juurihakemisto|Avaa juurihakemisto"
+msgstr "Відкрити _кореневу теку документів|Відкрити кореневу теку документів"
 
 #. menu label & tooltip for AttachFile
 #: lib/Zim/GUI.pm:222
 msgid "Attach _File|Attach external file"
-msgstr "Liitä _tiedosto|Liitä ulkoinen tiedosto"
+msgstr "Прикріпити _файл|Прикріпити зовнішній файл"
 
 #. menu label & tooltip for EditSource
 #: lib/Zim/GUI.pm:223
 msgid "Edit _Source|Open source"
-msgstr "Muokkaa _lähdettä|Avaa lähde"
+msgstr "Редагувати д_жерело|Відкрити джерело сторінки в текстовому редакторі"
 
 #. menu label & tooltip for RBIndex
 #: lib/Zim/GUI.pm:224
 msgid "Re-build Index|Rebuild index"
-msgstr "Uudista indeksi|Uudelleenrakenna indeksi"
+msgstr "Перебудувати _індекс|Перебудувати індекс"
 
 #. menu label & tooltip for GoBack
 #: lib/Zim/GUI.pm:225
 msgid "_Back|Go page back"
-msgstr "_Takaisin|Mene sivun taakse"
+msgstr "_Назад|На сторінку назад"
 
 #. menu label & tooltip for GoForward
 #: lib/Zim/GUI.pm:226
 msgid "_Forward|Go page forward"
-msgstr "_Eteenpäin|Mene sivun eteenpäin"
+msgstr "_Вперед|На сторінку вперед"
 
 #. menu label & tooltip for GoParent
 #: lib/Zim/GUI.pm:227
 msgid "_Parent|Go to parent page"
-msgstr "_Ylä|Mene yläsivulle"
+msgstr "В_гору|На сторінку вгору"
 
 #. menu label & tooltip for GoChild
 #: lib/Zim/GUI.pm:228
 msgid "_Child|Go to child page"
-msgstr "_Ala|Mene alasivulle"
+msgstr "Вни_з|На сторінку вниз"
 
 #. menu label & tooltip for GoPrev
 #: lib/Zim/GUI.pm:229
 msgid "_Previous in index|Go to previous page"
-msgstr "E_dellinen indeksissä|Mene edelliseen sivuun"
+msgstr "П_опередня в індексі|На попередню сторінку"
 
 #. menu label & tooltip for GoNext
 #: lib/Zim/GUI.pm:230
 msgid "_Next in index|Go to next page"
-msgstr "_Seuraava indeksissä|Mene seuraavaan sivuun"
+msgstr "Н_аступна в індексі|На наступну сторінку"
 
 #. menu label & tooltip for GoHome
 #: lib/Zim/GUI.pm:231
 msgid "_Home|Go home"
-msgstr "_Koti|Mene kotiin"
+msgstr "Го_ловна|На головну"
 
 #. menu label & tooltip for JumpTo
 #: lib/Zim/GUI.pm:232
 msgid "_Jump To...|Jump to page"
-msgstr "_Hyppää...|Hyppää sivulle"
+msgstr "Перейти _до…|Перейти до сторінки"
 
 #. menu label & tooltip for ShowHelp
 #: lib/Zim/GUI.pm:233
 msgid "_Contents|Help contents"
-msgstr "_Sisältö|Ohjesisällöt"
+msgstr "_Зміст|Відкрити посібник з Zim"
 
 #. menu label & tooltip for ShowHelpFAQ
 #: lib/Zim/GUI.pm:234
 msgid "_FAQ|FAQ"
-msgstr "_UKK|Usein Kysytyt Kysymykset"
+msgstr "_Часті питання|Часті питання Zim"
 
 #. menu label & tooltip for ShowHelpKeys
 #: lib/Zim/GUI.pm:235
 msgid "_Keybindings|Key bindings"
-msgstr "_Näppäinyhdistelmät|Näppäinyhdistelmät"
+msgstr "_Комбінації клавіш|Комбінації клавіш Zim"
 
 #. menu label & tooltip for ShowHelpBugs
 #: lib/Zim/GUI.pm:236
 msgid "_Bugs|Bugs"
-msgstr "_Bugit|Bugit"
+msgstr "П_омилки|Як сповістити про помилку"
 
 #. menu label & tooltip for About
 #: lib/Zim/GUI.pm:237
 msgid "_About|About"
-msgstr "_Tietoja|Tietoja"
+msgstr "_Про програму|Про програму"
 
 #. menu label & tooltip for TToolBar
 #: lib/Zim/GUI.pm:243
 msgid "_Toolbar|Show toolbar"
-msgstr "_Työpalkki|Näytä työpalkki"
+msgstr "Панель _інструментів|Відобразити чи сховати панель інструментів"
 
 #. menu label & tooltip for TStatusBar
 #: lib/Zim/GUI.pm:244
 msgid "_Statusbar|Show statusbar"
-msgstr "Ti_lannepalkki|Näytä tilannepalkki"
+msgstr "_Рядок стану|Відобразити чи сховати рядок стану"
 
 #. menu label & tooltip for TPane
 #: lib/Zim/GUI.pm:245
 msgid "_Index|Show index"
-msgstr "_Indeksi|Näytä indeksi"
+msgstr "_Бічна панель|Відобразити чи сховати панель індексу"
 
 #. menu label & tooltip for PBRecent
 #: lib/Zim/GUI.pm:251
 msgid "_Recent pages|."
-msgstr "_Äskeiset sivut|."
+msgstr "_Недавні сторінки"
 
 #. menu label & tooltip for PBHistory
 #: lib/Zim/GUI.pm:252
 msgid "_History|."
-msgstr "_Historia|."
+msgstr "_Історія|"
 
 #. menu label & tooltip for PBNamespace
 #: lib/Zim/GUI.pm:253
 msgid "_Namespace|."
-msgstr "_Nimiavaruus|."
+msgstr "_Простір імен|"
 
 #. menu label & tooltip for PBHidden
 #: lib/Zim/GUI.pm:254
 msgid "H_idden|."
-msgstr "Piilotettu|."
+msgstr "_Сховати|"
 
 #. ...
 #: lib/Zim/GUI.pm:944
 msgid "Plugin already loaded: {name}"
-msgstr "Lisäosa jo ladattu: {name}"
+msgstr "Модуль вже завантажено: {name}"
 
 #. ...
 #: lib/Zim/GUI.pm:951
 msgid "No such plugin: {name}"
-msgstr "Ei löytynyt lisäosaa: {name}"
+msgstr "Немає такого модуля: {name}"
 
 #. error
 #: lib/Zim/GUI.pm:961 share/zim/plugins/VersionControl.pl:20
 msgid "Failed to load plugin: {name}"
-msgstr "Lisäosan lataus epäonnistui: {name}"
+msgstr "Не вдається завантажити модуль: {name}"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:60
 msgid "File browser"
-msgstr "Tiedostoselain"
+msgstr "Переглядач файлів"
 
 #. Dialog question, answers are 'yes' or 'no'
 #: lib/Zim/GUI.pm:1176
@@ -364,55 +361,55 @@ msgid ""
 "The folder: {path}\n"
 "does not exist, do you want to create it now?"
 msgstr ""
-"<b>Kansiota ei ole olemassa.</b>\n"
+"<b>Тека не існує </b>\n"
 "\n"
-"Kansio: {path}\n"
-"ei ole olemassa, haluatko luoda sen nyt?"
+"Тека: {path}\n"
+"ще не існує. Створити її зараз?"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1206
 msgid "Choose {app_type}"
-msgstr "Valitse {app_type}"
+msgstr "Виберіть {app_type}"
 
 #. Field in 'custom command' dialog
 #: zim/gui/applications.py:378
 msgid "Command"
-msgstr "Komento"
+msgstr "Команда"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1209
 msgid "Please enter a {app_type}"
-msgstr "Valitse {app_type}"
+msgstr "Будь ласка, введіть {app_type}"
 
 #. error
 #: lib/Zim/GUI.pm:1213
 msgid "You have no {app_type} configured"
-msgstr "Sinulla ei ole {app_type} valittuna"
+msgstr "{app_type} не налаштовано"
 
 #. ...
 #: lib/Zim/GUI.pm:1234
 msgid "Can't find {url}"
-msgstr "En löydä {url}"
+msgstr "Не вдається знайти {url}"
 
 #. ...
 #: lib/Zim/GUI.pm:1236
 msgid "Not an url: {url}"
-msgstr "Ei ole url: {url}"
+msgstr "Неприпустима адреса: {url}"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:64
 msgid "Email client"
-msgstr "Sähköposti-ohjelma"
+msgstr "Клієнт електронної пошти"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
-msgstr "Nettiselain"
+msgstr "Веб-переглядач"
 
 #. ...
 #: lib/Zim/GUI.pm:1285 lib/Zim/GUI.pm:1312
 msgid "Could not load page: {name}"
-msgstr "En pysty lataamaan sivua: {name}"
+msgstr "Неможливо зберегти сторінку: {name}"
 
 #. error: 404 - page not found
 #: lib/Zim/GUI.pm:1291
@@ -420,25 +417,26 @@ msgid ""
 "This page does not exist\n"
 "404"
 msgstr ""
-"Tämä sivu ei olemassa\n"
+"Ця сторінка не існує\n"
 "404"
 
 #. ...
 #: lib/Zim/GUI.pm:1328
 msgid "{number} _Back link"
 msgid_plural "{number} _Back links"
-msgstr[0] "{number} _viitelinkki"
-msgstr[1] "{number} _viitelinkkiä"
+msgstr[0] "{number} зв_оротнє посиланя"
+msgstr[1] "{number} зв_оротних посиланя"
+msgstr[2] "{number} зв_оротних посилань"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1382
 msgid "New page"
-msgstr "Uusi sivu"
+msgstr "Створити сторінку"
 
 #. input
 #: lib/Zim/GUI.pm:1383
 msgid "Page name"
-msgstr "Sivun nimi"
+msgstr "Назва сторінки"
 
 #. ...
 #: lib/Zim/GUI.pm:1385
@@ -446,54 +444,54 @@ msgid ""
 "Note that linking to a non-existing page\n"
 "also automatically creates a new page."
 msgstr ""
-"Huomaa että olemattomaan sivuun viittaaminen\n"
-"automaattisesti luo uuden sivun"
+"Зауважте, що посилання на неіснуючу сторінку\n"
+"автоматично створює нову сторінку."
 
 #. ...
 #: lib/Zim/GUI.pm:1476
 msgid "Could not save page"
-msgstr "En pysty tallentamaan sivua"
+msgstr "Не вдається зберегти сторінку"
 
 #. dialog button
 #: lib/Zim/GUI.pm:1478
 msgid "_Discard changes"
-msgstr "_Hylkää muutokset"
+msgstr "_Відкинути зміни"
 
 #. dialog button
 #: lib/Zim/GUI.pm:1479
 msgid "_Save a copy..."
-msgstr "_Tallenna kopio..."
+msgstr "Зберегти _копію…"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1532
 msgid "Save version"
-msgstr "Tallenna versio"
+msgstr "Зберегти версію"
 
 #. Dialog text
 #: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
-msgstr "Lisää kommentti versioon"
+msgstr "Будь ласка, введіть коментар для цієї версії"
 
 #. section for version details in "save version" dialog
 #: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
-msgstr "Yksityiskohdat"
+msgstr "Деталі"
 
 #. button AND
 #. button label
 #: lib/Zim/GUI.pm:1568 lib/Zim/GUI/VersionsDialog.pm:129
 msgid "_Notebook Changes..."
-msgstr "Vihko_n muutokset..."
+msgstr "_Зміни зошита…"
 
 #. error
 #: lib/Zim/GUI.pm:1588
 msgid "Can not save a version without comment"
-msgstr "En pysty tallentamaan versiota ilman kommenttia"
+msgstr "Для збереження версії потрібний коментар"
 
 #. error
 #: lib/Zim/GUI.pm:1592
 msgid "Could not save version"
-msgstr "En pysty tallentamaan versiota"
+msgstr "Не вдається зберегти версію"
 
 #. question dialog, options are 'help', 'cancel' and 'ok'
 #: lib/Zim/GUI.pm:1605
@@ -503,10 +501,10 @@ msgid ""
 "Version control is currently not enabled for this notebook.\n"
 "Do you want to enable it ?"
 msgstr ""
-"<b>Käynnistä versionhallinta?</b>\n"
+"<b>Увімкнути контроль версій</b>\n"
 "\n"
-"Versionhallintaa ei ole tälle vihkolle.\n"
-"Haluatko käynnistää sen ?"
+"Контроль версій наразі не увімкнено для цього зошита.\n"
+"Увімкнути?"
 
 #. detailed notice in prompt to enable version control
 #: lib/Zim/GUI.pm:1607
@@ -515,29 +513,29 @@ msgid ""
 "Version Control System.\n"
 "Please click 'help' to read about the system requirements."
 msgstr ""
-"Voit joko valita <b>Bazaar</b> tai <b>Subversion</b> "
-"versionhallintajärjestelmän.\n"
-"Valitse 'Ohje' lukeaksesi järjestelmävaatimuksista."
+"Ви можете обрати систему контролю версій <b>Bazaar</b> або "
+"<b>Subversion</b>.\n"
+"Натисніть кнопку 'Допомога', щоб переглянути інформацію про системні вимоги."
 
 #. error dialog
 #: lib/Zim/GUI.pm:1645
 msgid "Could not initialize version control"
-msgstr "En pysty käynnistämään versionhallintaa"
+msgstr "Не вдається ініціалізувати систему контролю версій"
 
 #. default comment for first version after initializing version control
 #: lib/Zim/GUI.pm:1648
 msgid "Initial version"
-msgstr "Ensiversio"
+msgstr "Початкова версія"
 
 #. default name for new page in save copy action
 #: lib/Zim/GUI.pm:1690
 msgid "{name}_(Copy)"
-msgstr "{name}_(Kopio)"
+msgstr "{name}_(Копія)"
 
 #. Dialog title of file save dialog
 #: zim/gui/__init__.py:1812
 msgid "Save Copy"
-msgstr "Tallenna kopio"
+msgstr "Зберегти копію"
 
 #. label in word count dialog |
 #. Column header search dialog |
@@ -545,22 +543,22 @@ msgstr "Tallenna kopio"
 #: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
 #: zim/plugins/tasklist.py:237
 msgid "Page"
-msgstr "Sivu"
+msgstr "Сторінка"
 
 #. Button in error dialog
 #: zim/gui/__init__.py:1717
 msgid "_Save Copy"
-msgstr "_Tallenna kopio"
+msgstr "Зберегти _копію"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1695
 msgid "Please enter a name to save a copy of page: {page}"
-msgstr "Anna nimi tallentaaksesi kopion sivusta: {page}"
+msgstr "Введіть ім’я для копії сторінки: {page}"
 
 #. ...
 #: lib/Zim/GUI.pm:1703
 msgid "Can not save to page: {name}"
-msgstr "En pysty tallentamaan sivulle: {name}"
+msgstr "Не вдається зберегти в сторінку: {name}"
 
 #. warning dialog, answers are 'cancel' or 'ovewrite'
 #: lib/Zim/GUI.pm:1709
@@ -571,36 +569,36 @@ msgid ""
 "already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"<b>Sivu on jo olemassa</b>\n"
+"<b>Сторінка вже існує</b>\n"
 "\n"
-"Sivu '{name}'\n"
-"on jo olemassa.\n"
-"Haluatko kirjoittaa sen yli?"
+"Сторінка '{name}'\n"
+"вже існує.\n"
+"Перезаписати її?"
 
 #. save button
 #: lib/Zim/GUI.pm:1711
 msgid "_Overwrite"
-msgstr "_Ylikirjoita"
+msgstr "_Перезаписати"
 
 #. error message
 #: lib/Zim/GUI.pm:1768
 msgid "Could not rename {from} to {to}"
-msgstr "En pysty nimeämään {from} muotoon {to}"
+msgstr "Не вдається перейменувати {from} у {to}"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1773
 msgid "Updating links"
-msgstr "Päivitetään linkit"
+msgstr "Оновлення посилань"
 
 #. progress bar label
 #: lib/Zim/GUI.pm:1774
 msgid "Updating.."
-msgstr "Päivitetään..."
+msgstr "Оновлення…"
 
 #. progress bar label
 #: lib/Zim/GUI.pm:1782
 msgid "Updating links in {name}"
-msgstr "Päivitetään linkit kohteesta {name}"
+msgstr "Оновити посилання в {name}"
 
 #. warning dialog, answers are 'cancel' or 'delete'
 #: lib/Zim/GUI.pm:1837
@@ -610,73 +608,74 @@ msgid ""
 "Are you sure you want to delete\n"
 "page '{name}' ?"
 msgstr ""
-"<b>Poista sivu</b>\n"
+"<b>Видалити сторінку</b>\n"
 "\n"
-"Oletko varma että haluat poistaa\n"
-"sivun '{name}' ?"
+"Ви справді хочете видалити\n"
+"сторінку '{name}' ?"
 
 #. error message
 #: lib/Zim/GUI.pm:1846
 msgid "Could not delete page: {name}"
-msgstr "En pysty poistamaan sivua: {name}"
+msgstr "Неможливо видалити сторінку: {name}"
 
 #. error
 #: lib/Zim/GUI.pm:2145
 msgid "This page does not have a document folder"
-msgstr "Tällä sivulla ei ole asiakirjakansiota"
+msgstr "Ця сторінка не має теки для прикріплень"
 
 #. error
 #: lib/Zim/GUI.pm:2162
 msgid "This notebook does not have a document root"
-msgstr "Tällä vihkolla ei ole juurihakemistoa"
+msgstr "Цей зошит не має кореневої теки для прикріплень"
 
 #. ...
 #: lib/Zim/GUI.pm:2184
 msgid "This page does not have a source"
-msgstr "Tällä sivulla ei ole lähdettä"
+msgstr "Ця сторінка не має джерела"
 
 #. Dialog title
 #: zim/gui/__init__.py:1755
 msgid "Jump to"
-msgstr "Hyppää"
+msgstr "Перейти до"
 
 #. Label for page input
 #: zim/gui/__init__.py:1758
 msgid "Jump to Page"
-msgstr "Hyppää sivulle"
+msgstr "Перейти до сторінки"
 
 #. dialog title
 #: lib/Zim/GUI.pm:2505
 msgid "Rename page"
-msgstr "Muuta sivun nimeä"
+msgstr "Перейменувати сторінку"
 
 #. dialog label
 #: lib/Zim/GUI.pm:2507
 msgid "Rename to"
-msgstr "Nimeä muotoon"
+msgstr "Перейменувати в"
 
 #. save button
 #: lib/Zim/GUI.pm:2509
 msgid "_Rename"
-msgstr "_Uusi nimi"
+msgstr "Перей_менувати"
 
 #. ...
 #: lib/Zim/GUI.pm:2517
 msgid "_Update links in this page"
-msgstr "_Päivitä sivun linkit"
+msgstr "Оновити _посилання до цієї сторінки"
 
 #. ...
 #: lib/Zim/GUI.pm:2519
 msgid "_Update {number} page linking here"
 msgid_plural "_Update {number} pages linking here"
-msgstr[0] "_Päivitä {number} sivun linkkaus"
-msgstr[1] "_Päivitä {number} sivun linkkaukset"
+msgstr[0] "_Оновити {number} сторінку, що посилається сюди"
+msgstr[1] "_Оновити {number} сторінки, що посилаються сюди"
+msgstr[2] "_Оновити {number} сторінок, що посилаються сюди"
 
 #. dialog title AND
 #. dialog prompt
 #: lib/Zim/GUI/Automount.pm:55 lib/Zim/GUI/Automount.pm:56
 msgid "Password"
-msgstr "Salasana"
+msgstr "Пароль"
 
 #. dialog text
 #: lib/Zim/GUI/Automount.pm:58
@@ -684,24 +683,24 @@ msgid ""
 "Please provide the password for\n"
 "{path}"
 msgstr ""
-"Anna salasana hakemistolle:\n"
+"Вкажіть пароль для\n"
 "{path}"
 
 #. plugin name |
 #. dialog title
 #: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
-msgstr "Kalenteri"
+msgstr "Календар"
 
 #. strftime format for current date - default suggested in perldoc localtime
 #: lib/Zim/GUI/Calendar.pm:63
 msgid "%a %b %e %Y"
-msgstr "%a %e %b %Y"
+msgstr "%A, %e %b %Y"
 
 #. button label
 #: zim/plugins/calendar.py:274
 msgid "_Today"
-msgstr "_Tänään"
+msgstr "_Сьогодні"
 
 #. question dialog, answers are 'yes', 'no' or 'not now'
 #: lib/Zim/GUI/Calendar.pm:281
@@ -714,60 +713,59 @@ msgid ""
 "\n"
 "Do you want to upgrade this notebook to the new layout?\n"
 msgstr ""
-"<b>Päivitä kalenterisivut 0.24-formaattiin?</b>\n"
+"<b>Перетворити сторінки календаря до формату 0.24?</b>\n"
 "\n"
-"Tämä vihko sisältää sivuja päivämääriin jotka käyttävät formaattia "
-"vvvv_kk_pp.\n"
-"Zim 0.24 lähtien formaatti on vvvv:kk:dd, luoden nimiavaruuksia joka "
-"kuukausi.\n"
+"Цей зошит містить сторінки для дат в форматі рррр_мм_дд.\n"
+"З версії Zim 0.24 типовий формат сторінок: рррр:мм:дд,\n"
+"та сторінки об’єднані в простори імен за місяцями.\n"
 "\n"
-"Haluatko päivittää muistivihkoosi käyttämään uutta pohjaa?\n"
+"Чи ви бажаєте перетворити цей зошит до нового розміщення?\n"
 
 #. button
 #: lib/Zim/GUI/Calendar.pm:282
 msgid "Not Now"
-msgstr "Ei nyt"
+msgstr "Не зараз"
 
 #. ...
 #: lib/Zim/GUI/Component.pm:414
 msgid "Not a valid page name: {name}"
-msgstr "Ei laillinen sivun nimi: {name}"
+msgstr "Неправильна назва сторінки {name}"
 
 #. button
 #: lib/Zim/GUI/Component.pm:681 lib/Zim/GUI/ExportDialog.pm:137
 #: lib/Zim/GUI/ExportDialog.pm:148
 msgid "_Browse..."
-msgstr "_Selaa"
+msgstr "О_гляд…"
 
 #. Title of folder selection dialog
 #: zim/gui/widgets.py:925
 msgid "Select Folder"
-msgstr "Valitse kansio"
+msgstr "Вибрати теку"
 
 #. Title of file selection dialog
 #: zim/gui/widgets.py:909
 msgid "Select File"
-msgstr "Valitse tiedosto"
+msgstr "Вибрати файл"
 
 #. error when external application is not found
 #: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
 msgid "Can not find application \"{name}\""
-msgstr "En löydä sovellusta \"{name}\""
+msgstr "Не вдається знайти програму „{name}“"
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:63
 msgid "Equation Editor"
-msgstr "Yhtälöeditori"
+msgstr "Редактор формул"
 
 #. button in e.g. equation editor dialog
 #: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
-msgstr "_Esikatsele"
+msgstr "_Попередній перегляд"
 
 #. button in e.g. equation editor dialog
 #: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
-msgstr "Näytä _loki"
+msgstr "Переглянути _журнал"
 
 #. error when no .tex file exists
 #: lib/Zim/GUI/EquationEditor.pm:121
@@ -775,185 +773,185 @@ msgid ""
 "The equation for image: {path}\n"
 "is missing. Can not edit equation."
 msgstr ""
-"Yhtälö kuvalle: {path}\n"
-"puuttuu. Ei voi muokata yhtälöä."
+"Відсутня формула для зображення: {path}.\n"
+"Редагування формули неможливе."
 
 #. warning dialog, answers are 'save' or 'cancel'
 #: lib/Zim/GUI/EquationEditor.pm:178
 msgid "The equation failed to compile. Do you want to save anyway?"
-msgstr "Yhtälö epäonnistui. Haluatko kuitenkin tallentaa?"
+msgstr "Не вдається скомпілювати формулу. Все одно зберегти?"
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:293
 msgid "Equation Editor Log"
-msgstr "Yhtälöeditorin loki"
+msgstr "Журнал редактора формул"
 
 #. menu item in context menu
 #: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
-msgstr "_Muokkaa yhtälöä"
+msgstr "Редагувати _формулу"
 
 #. dialog title
 #: lib/Zim/GUI/ExportDialog.pm:40 lib/Zim/GUI/ExportDialog.pm:275
 msgid "Export page"
-msgstr "Vie sivu"
+msgstr "Експортувати сторінку"
 
 #. Section heading in export dialog
 #: zim/gui/exportdialog.py:24
 msgid "Pages"
-msgstr "Sivut"
+msgstr "Сторінки"
 
 #. radio button
 #: lib/Zim/GUI/ExportDialog.pm:61
 msgid "_All"
-msgstr "K_aikki"
+msgstr "_Усе"
 
 #. Option in versions dialog to show version for single page
 #: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
-msgstr "_Sivu"
+msgstr "_Сторінка"
 
 #. check box
 #: lib/Zim/GUI/ExportDialog.pm:77
 msgid "Recursive"
-msgstr "Rekursiivinen"
+msgstr "Рекурсивно"
 
 #. Section heading in export dialog
 #: zim/gui/exportdialog.py:49
 msgid "Output"
-msgstr "Ulostulo"
+msgstr "Вивід"
 
 #. Input label in the export dialog
 #: zim/gui/exportdialog.py:53
 msgid "Format"
-msgstr "Formaatti"
+msgstr "Формат"
 
 #. Label for template selection in export dialog
 #: zim/gui/exportdialog.py:90
 msgid "Template"
-msgstr "Malli"
+msgstr "Шаблон"
 
 #. label input field
 #: lib/Zim/GUI/ExportDialog.pm:102
 msgid "Output dir"
-msgstr "Tulostuskansio"
+msgstr "Вихідна тека"
 
 #. Label for setting a name for the index of exported pages
 #: zim/gui/exportdialog.py:138
 msgid "Index page"
-msgstr "Indeksisivu"
+msgstr "Назва початкової сторінки"
 
 #. item in dropdown menu
 #: lib/Zim/GUI/ExportDialog.pm:170
 msgid "other..."
-msgstr "muu..."
+msgstr "інший…"
 
 #. group label
 #: lib/Zim/GUI/ExportDialog.pm:196
 msgid "Media"
-msgstr "Media"
+msgstr "Носії"
 
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:209
 msgid "Prefix document root"
-msgstr "Juurihakemiston etuliite"
+msgstr "Відкрити теку документів"
 
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:218
 msgid "Attach external files"
-msgstr "Liitä ulkoisia tiedostoja"
+msgstr "Прикріпити зовнішній файл"
 
 #. progress bar label
 #: lib/Zim/GUI/ExportDialog.pm:276 lib/Zim/GUI/ExportDialog.pm:282
 msgid "Exporting page {number}"
-msgstr "Viedään sivua {number}"
+msgstr "Експортування сторінки {number}"
 
 #. Dialog title
 #: zim/gui/pageview.py:3254
 msgid "Find and Replace"
-msgstr "Etsi ja korvaa"
+msgstr "Знайти та замінити"
 
 #. input label in find & replace dialog
 #: zim/gui/pageview.py:3264
 msgid "Find what"
-msgstr "Etsi mitä"
+msgstr "Знайти"
 
 #. checkbox option in find & replace dialog
 #: zim/gui/pageview.py:3275
 msgid "Match c_ase"
-msgstr "Sama _kirjainkoko"
+msgstr "Збігається _регістр"
 
 #. checkbox option in find & replace dialog
 #: zim/gui/pageview.py:3280
 msgid "Whole _word"
-msgstr "K_oko sana"
+msgstr "Збігається _ціле слово"
 
 #. input label in find & replace dialog
 #: zim/gui/pageview.py:3285
 msgid "Replace with"
-msgstr "Korvaa"
+msgstr "Замінити на"
 
 #. button in find bar on bottom of page |
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
 msgid "_Next"
-msgstr "Seur_aava"
+msgstr "Нас_тупний"
 
 #. button in find bar on bottom of page |
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
 msgid "_Previous"
-msgstr "E_dellinen"
+msgstr "П_опередій"
 
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:3306
 msgid "_Replace"
-msgstr "_Korvaa"
+msgstr "За_мінити"
 
 #. button
 #: lib/Zim/GUI/FindReplaceDialog.pm:120
 msgid "Replace _all"
-msgstr "Korvaa ka_ikki"
+msgstr "Замінити _все"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:86
 msgid "Open notebook"
-msgstr "Avaa vihko"
+msgstr "Відкрити зошит"
 
 #. list header
 #: lib/Zim/GUI/NotebookDialog.pm:116
 msgid "Notebooks"
-msgstr "Muistivihkot"
+msgstr "Зошити"
 
 #. button
 #: lib/Zim/GUI/NotebookDialog.pm:174
 msgid "Cha_nge"
-msgstr "M_uuta"
+msgstr "За_мінити"
 
 #. Input label in 'open notebook' dialog
 #: zim/gui/notebookdialog.py:291
 msgid "Default notebook"
-msgstr "Vakiovihko"
+msgstr "Типовий зошит"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:334
 msgid "Please select a notebook first"
-msgstr "Valitse muistivihko ensin"
+msgstr "Спочатку виберіть зошит"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:342
 msgid "No such directory: {name}"
-msgstr "Hakemisto ei olemassa: {name}"
+msgstr "Немає такої теки: {name}"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:371
 msgid "New notebook"
-msgstr "Uusi muistivihko"
+msgstr "Створити зошит"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:372
 msgid "Edit notebook"
-msgstr "Muokkaa vihkoa"
+msgstr "Редагувати зошит"
 
 #. ...
 #: lib/Zim/GUI/NotebookDialog.pm:374
@@ -962,447 +960,447 @@ msgid ""
 "For a new notebook this should be an empty directory.\n"
 "For example a \"Notes\" directory in your home dir."
 msgstr ""
-"Anna vähintään yksi hakemisto sivujen tallentamiseen.\n"
-"Uudelle muistivihkolle sen pitäisi olla tyhjä hakemisto.\n"
-"Esimerkiksi \"Ruokareseptit\"-kansio kotihakemistossasi."
+"Вкажіть принаймні теку для збереження ваших документів.\n"
+"Для нового зошита це повинна бути пуста тека.\n"
+"Наприклад, тека „Замітки“ в вашій домашній теці."
 
 #. menu label & tooltip for Head1
 #: lib/Zim/GUI/PageView.pm:54
 msgid "Head _1|Heading 1"
-msgstr "Otsikko _1|Otsikko 1"
+msgstr "Заголовок _1|Заголовок 1"
 
 #. menu label & tooltip for Head2
 #: lib/Zim/GUI/PageView.pm:55
 msgid "Head _2|Heading 2"
-msgstr "Otsikko _2|Otsikko 2"
+msgstr "Заголовок _2|Заголовок 2"
 
 #. menu label & tooltip for Head3
 #: lib/Zim/GUI/PageView.pm:56
 msgid "Head _3|Heading 3"
-msgstr "Otsikko _3|Otsikko 3"
+msgstr "Заголовок _3|Заголовок 3"
 
 #. menu label & tooltip for Head4
 #: lib/Zim/GUI/PageView.pm:57
 msgid "Head _4|Heading 4"
-msgstr "Otsikko _4|Otsikko 4"
+msgstr "Заголовок _4|Заголовок 4"
 
 #. menu label & tooltip for Head5
 #: lib/Zim/GUI/PageView.pm:58
 msgid "Head _5|Heading 5"
-msgstr "Otsikko _5|Otsikko 5"
+msgstr "Заголовок _5|Заголовок 5"
 
 #. menu label & tooltip for Normal
 #: lib/Zim/GUI/PageView.pm:59
 msgid "_Normal|Normal"
-msgstr "_Normaali|Normaali"
+msgstr "_Звичайний|Звичайний"
 
 #. menu label & tooltip for Bold AND
 #. menu label & tooltip for TBold
 #: lib/Zim/GUI/PageView.pm:60 lib/Zim/GUI/PageView.pm:70
 msgid "_Bold|Bold"
-msgstr "Li_havoitus|Lihavoitus"
+msgstr "_Жирний|Жирний"
 
 #. menu label & tooltip for Italic AND
 #. menu label & tooltip for TItalic
 #: lib/Zim/GUI/PageView.pm:61 lib/Zim/GUI/PageView.pm:71
 msgid "_Italic|Italic"
-msgstr "_Kursiivi|Kursiivi"
+msgstr "_Курсив|Курсив"
 
 #. menu label & tooltip for Underline AND
 #. menu label & tooltip for TUnderline
 #: lib/Zim/GUI/PageView.pm:62 lib/Zim/GUI/PageView.pm:72
 msgid "_Underline|Underline"
-msgstr "_Alleviivaus|Alleviivaus"
+msgstr "_Підкреслений|Підкреслений"
 
 #. menu label & tooltip for Strike AND
 #. menu label & tooltip for TStrike
 #: lib/Zim/GUI/PageView.pm:63 lib/Zim/GUI/PageView.pm:73
 msgid "Stri_ke|Strike"
-msgstr "_Yliviivaus|Yliviivaus"
+msgstr "_Закреслений|Закреслений"
 
 #. menu label & tooltip for Verbatim
 #: lib/Zim/GUI/PageView.pm:64
 msgid "_Verbatim|Verbatim"
-msgstr "_Tasavälinen|Tasavälinen"
+msgstr "_Дослівний блок|Дослівний блок"
 
 #. menu label & tooltip for TLink AND
 #. menu label & tooltip for Link
 #: lib/Zim/GUI/PageView.pm:69 lib/Zim/GUI/PageView.pm:101
 msgid "_Link|Link"
-msgstr "_Linkki|Linkki"
+msgstr "Створити _посилання|Створити посилання"
 
 #. menu label & tooltip for Undo
 #: lib/Zim/GUI/PageView.pm:78
 msgid "_Undo|Undo"
-msgstr "K_umoa|Kumoa"
+msgstr "В_ернути|Вернути"
 
 #. menu label & tooltip for Redo
 #: lib/Zim/GUI/PageView.pm:79
 msgid "_Redo|Redo"
-msgstr "Tee uu_delleen|Tee uudelleen"
+msgstr "Пов_торити|Повторити"
 
 #. menu label & tooltip for Delete
 #: lib/Zim/GUI/PageView.pm:80
 msgid "_Delete|Delete"
-msgstr "_Poista|Poista"
+msgstr "В_идалити|Видалити"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
 msgid "Toggle Chechbox 'V'|Toggle checkbox"
-msgstr "Vaihda rastiruutuun 'V'|Vaihda rasti"
+msgstr "Встановити прапорець|Встановити прапорець"
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
 msgid "Toggle Chechbox 'X'|Toggle checkbox"
-msgstr "Vaihda rastiruutuun 'X'|Vaihda rasti"
+msgstr "Зняти прапорець|Зняти прапорець"
 
 #. menu label & tooltip for EditObject
 #: lib/Zim/GUI/PageView.pm:83
 msgid "_Edit Link...|Edit link"
-msgstr "_Muokkaa linkki...|Muokkaa linkkiä"
+msgstr "_Редагувати посилання…|Редагувати посилання"
 
 #. menu label & tooltip for InsertDate
 #: lib/Zim/GUI/PageView.pm:84
 msgid "_Date and Time...|Insert date"
-msgstr "_Päivämäärä...|Lisää päivämäärä"
+msgstr "_Дата й час…|Вставити дату й час"
 
 #. menu label & tooltip for InsertLink
 #: lib/Zim/GUI/PageView.pm:85
 msgid "_Link...|Insert link"
-msgstr "_Linkki...|Lisää linkki"
+msgstr "_Посилання…|Вставити посилання"
 
 #. menu label & tooltip for InsertExtLink
 #: lib/Zim/GUI/PageView.pm:86
 msgid "E_xternal Link...|Insert external link"
-msgstr "_Ulkoinen linkki...|Lisää ulkoinen linkki"
+msgstr "_Зовнішнє посилання…|Вставити зовнішнє посилання"
 
 #. menu label & tooltip for InsertImage
 #: lib/Zim/GUI/PageView.pm:87
 msgid "_Image...|Insert image"
-msgstr "_Kuva|Lisää kuva"
+msgstr "_Зображення…|Вставити зображення"
 
 #. menu label & tooltip for InsertFromFile
 #: lib/Zim/GUI/PageView.pm:88
 msgid "Text _From File...|Insert text from file"
-msgstr "_Teksti tiedostosta...|Lisää tekstiä tiedostosta"
+msgstr "_Текст із файлу…|Вставити текст із файлу"
 
 #. menu label & tooltip for FindReplace
 #: lib/Zim/GUI/PageView.pm:89
 msgid "_Replace...|Find and Replace"
-msgstr "_Korvaa...|Etsi ja korvaa"
+msgstr "Знайти та за_мінити…|Знайти та замінити"
 
 #. menu label & tooltip for Cut
 #: lib/Zim/GUI/PageView.pm:94
 msgid "Cu_t|Cut"
-msgstr "Le_ikkaa|Leikkaa"
+msgstr "_Вирізати|Вирізати"
 
 #. menu label & tooltip for Copy
 #: lib/Zim/GUI/PageView.pm:95
 msgid "_Copy|Copy"
-msgstr "_Kopioi|Kopioi"
+msgstr "_Копіювати|Копіювати"
 
 #. menu label & tooltip for Paste
 #: lib/Zim/GUI/PageView.pm:96
 msgid "_Paste|Paste"
-msgstr "_Liitä|Liitä"
+msgstr "Вст_авити|Вставити"
 
 #. menu label & tooltip for Find
 #: lib/Zim/GUI/PageView.pm:102
 msgid "_Find...|Find"
-msgstr "Etsi _sivusta...|Etsi sivusta"
+msgstr "З_найти…|Знайти"
 
 #. menu label & tooltip for FindNext
 #: lib/Zim/GUI/PageView.pm:103
 msgid "Find Ne_xt|Find next"
-msgstr "Etsi seuraava|Etsi seuraava"
+msgstr "Зна_йти далі|Знайти далі"
 
 #. menu label & tooltip for FindPrev
 #: lib/Zim/GUI/PageView.pm:104
 msgid "Find Pre_vious|Find previous"
-msgstr "Etsi edellinen|Etsi edellinen"
+msgstr "Знайти _попередній|Знайти попередній"
 
 #. menu label & tooltip for WordCount
 #: lib/Zim/GUI/PageView.pm:105
 msgid "_Word Count|Word count"
-msgstr "_Sanamäärä|Sanamäärä"
+msgstr "Кількість _слів|Кількість слів"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:188
 msgid "Head1"
-msgstr "Otsikko1"
+msgstr "Заголовок1"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:189
 msgid "Head2"
-msgstr "Otsikko2"
+msgstr "Заголовок2"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:190
 msgid "Head3"
-msgstr "Otsikko3"
+msgstr "Заголовок3"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:191
 msgid "Head4"
-msgstr "Otsikko4"
+msgstr "Заголовок4"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:192
 msgid "Head5"
-msgstr "Otsikko5"
+msgstr "Заголовок5"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:193
 msgid "Normal"
-msgstr "Normaali"
+msgstr "Звичайний"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:194
 msgid "Bold"
-msgstr "Lihavoitus"
+msgstr "Жирний"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:195
 msgid "Italic"
-msgstr "Kursiivi"
+msgstr "Курсив"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:196
 msgid "Underline"
-msgstr "Alleviivaus"
+msgstr "Підкреслений"
 
 #. Menu item
 #: zim/gui/pageview.py:110 zim/gui/pageview.py:119
 msgid "Strike"
-msgstr "Yliviivaus"
+msgstr "Викреслений"
 
 #. Menu item
 #: zim/gui/pageview.py:111
 msgid "Verbatim"
-msgstr "Tasavälinen"
+msgstr "Дослівний режим"
 
 #. label for input in find bar on bottom of page
 #: zim/gui/pageview.py:2313
 msgid "Find"
-msgstr "Etsi"
+msgstr "Знайти"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:810
 msgid "Insert Date"
-msgstr "Lisää päivämäärä"
+msgstr "Вставити дату й час"
 
 #. Menu title
 #: zim/gui/__init__.py:56
 msgid "_Edit"
-msgstr "_Muokkaa"
+msgstr "_Правка"
 
 #. Menu title |
 #. Button label
 #: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
 msgid "_Insert"
-msgstr "L_isää"
+msgstr "Вст_авити"
 
 #. check box in InsertDate dialog
 #: zim/gui/pageview.py:2962
 msgid "_Link to date"
-msgstr "_Linkki päivämäärään"
+msgstr "Посилання _на дату"
 
 #. Dialog title
 #: zim/gui/pageview.py:3015
 msgid "Insert Image"
-msgstr "Lisää kuva"
+msgstr "Вставити зображення"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:972
 msgid "Insert from file"
-msgstr "Lisää tiedostosta"
+msgstr "Вставити з файлу"
 
 #. ...
 #: lib/Zim/GUI/PageView.pm:976
 msgid "No such file: {file}"
-msgstr "Tiedosto ei olemassa: {file}"
+msgstr "Немає такого файлу: {file}"
 
 #. error
 #: lib/Zim/GUI/PageView.pm:980
 msgid "File is not a text file: {file}"
-msgstr "Tiedosto ei sisällä tekstiä: {file}"
+msgstr "Файл не є текстовим: {file}"
 
 #. Dialog title
 #: zim/gui/pageview.py:3367
 msgid "Word Count"
-msgstr "Sanamäärä"
+msgstr "Статистика"
 
 #. label in word count dialog
 #: zim/gui/pageview.py:3404
 msgid "Lines"
-msgstr "Rivejä"
+msgstr "Рядків"
 
 #. label in word count dialog
 #: zim/gui/pageview.py:3402
 msgid "Words"
-msgstr "Sanoja"
+msgstr "Слів"
 
 #. label
 #: lib/Zim/GUI/PageView.pm:1037
 msgid "Chars"
-msgstr "Kirjaimia"
+msgstr "Символів"
 
 #. status bar info
 #: lib/Zim/GUI/PageView.pm:1089
 msgid "Go to \"{link}\""
-msgstr "Mene sivulle \"{link}\""
+msgstr "Перейти на „{link}“"
 
 #. menu item in context menu
 #: zim/gui/pageview.py:2668
 msgid "_Edit Link"
-msgstr "_Muokkaa linkkiä"
+msgstr "_Редагувати посилання"
 
 #. context menu item
 #: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
-msgstr "Kopioi sähköpostiosoite"
+msgstr "Копіювати адресу електронної пошти"
 
 #. context menu item
 #: zim/gui/pageview.py:2682
 msgid "Copy _Link"
-msgstr "Kopioi _linkki"
+msgstr "_Копіювати посилання"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1232
 msgid "Open _Directory"
-msgstr "Avaa _hakemisto"
+msgstr "Відкрити _теку"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1263
 msgid "_Open link"
-msgstr "_Avaa linkki"
+msgstr "Відкрити _посилання"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1305
 msgid "Customise"
-msgstr "Muokkaa"
+msgstr "Налаштувати"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1310
 msgid "Send To..."
-msgstr "Lähetä..."
+msgstr "Надіслати до…"
 
 #. Dialog title
 #: zim/gui/pageview.py:3235
 msgid "Edit Link"
-msgstr "Muokkaa linkkiä"
+msgstr "Редагувати посилання"
 
 #. Menu item |
 #. Dialog title
 #: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
 msgid "Insert Link"
-msgstr "Lisää linkki"
+msgstr "Вставити посилання"
 
 #. Input in 'insert link' dialog |
 #. Input in 'edit link' dialog
 #: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
-msgstr "Teksti"
+msgstr "Текст"
 
 #. dialog label
 #: lib/Zim/GUI/PageView.pm:2072
 msgid "Links to"
-msgstr "Liittää"
+msgstr "Посилання на"
 
 #. Dialog button
 #: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
-msgstr "_Linkki"
+msgstr "_Гаразд"
 
 #. Dialog title
 #: zim/gui/pageview.py:3034
 msgid "Edit Image"
-msgstr "Muokkaa kuva"
+msgstr "Редагувати зображення"
 
 #. dialog label
 #: lib/Zim/GUI/PageView.pm:2102
 msgid "Source"
-msgstr "Lähde"
+msgstr "Джерело"
 
 #. expander label
 #: lib/Zim/GUI/PageView.pm:2113
 msgid "_Properties"
-msgstr "_Ominaisuudet"
+msgstr "В_ластивості"
 
 #. Input in 'edit image' dialog
 #: zim/gui/pageview.py:3053
 msgid "Width"
-msgstr "Laajuus"
+msgstr "Ширина"
 
 #. Input in 'edit image' dialog
 #: zim/gui/pageview.py:3054
 msgid "Height"
-msgstr "Korkeus"
+msgstr "Висота"
 
 #. button
 #: lib/Zim/GUI/PageView.pm:2166
 msgid "_Reset"
-msgstr "_Resetoi"
+msgstr "_Скинути"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:44
 msgid "Application to open urls"
-msgstr "Sovellus URL-osoitteille"
+msgstr "Програма для відкриття інтернет адрес"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:48
 msgid "Application to open directories"
-msgstr "Sovellus hakemistoille"
+msgstr "Програма для перегляду тек"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:52
 msgid "Application to compose email"
-msgstr "Sovellus sähköpostin kirjoittamiseen"
+msgstr "Програма для складання електронних листів"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:55
 msgid "Text editor"
-msgstr "Tekstieditori"
+msgstr "Текстовий редактор"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:56
 msgid "Application to edit text files"
-msgstr "Sovellus tekstitiedostojen muokkaamiseen"
+msgstr "Програма для редагування текстових файлів"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:59
 msgid "Diff editor"
-msgstr "Diff-editori"
+msgstr "Програма порівняння файлів"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:60
 msgid "Application show two text files side by side"
-msgstr "Sovellus näyttää kaksi tekstitiedostoa vierekkäin"
+msgstr "Програма, що показує різницю між двома файлами"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:63
 msgid "User name"
-msgstr "Käyttäjänimi"
+msgstr "Ім'я користувача"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:64
 msgid "Your name; this can be used in export templates"
-msgstr "Sinun nimesi; tätä voidaan käyttää mallien viennissä"
+msgstr "Ваше ім’я; може використовуватись в шаблонах для експорту"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:67
 msgid "Follow new link"
-msgstr "Seuraa luotua linkkiä"
+msgstr "Відкривати нове посилання при створенні"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:68
 msgid "Creating a new link directly opens the page"
-msgstr "Uuden linkin luominen avaa uuden sivun"
+msgstr "Одразу відкривати сторінку при створенні нового посилання"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:71
 msgid "Show cursor for read-only"
-msgstr "Näytä kohdistin kirjoitussuojassa"
+msgstr "Показувати курсор для сторінок в режимі тільки для читання"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:72
@@ -1410,96 +1408,100 @@ msgid ""
 "Show the cursor even when you can not edit the page. This is useful for "
 "keyboard based browsing."
 msgstr ""
-"Näytä kohdistin vaikka et pystyisi kirjoittamaan sivulle. Hyödyllinen "
-"näppäimistö-pohjaisille selailuille."
+"Показувати курсор навіть коли редагування сторінки заборонено. Корисно для "
+"перегляду та переміщення за допомогою клавіатури."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:75
 msgid "Tearoff menus"
-msgstr "Irrotettavat valikot"
+msgstr "Меню можна від'єднувати"
 
 #. Option in the preferences dialog
 #: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
-msgstr "Lisää 'leikkausraidat' valikkoihin"
+msgstr "Додати смужки „відриву“ до меню"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:79
 msgid "Auto-link CamelCase"
-msgstr "Liitä KyttyräKirjoitus"
+msgstr "Авто-перетворення „CamelCase“ в посилання"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:80
 msgid "Automaticly link CamelCase words when you type"
-msgstr "Automaattisesti liitä kamelityylillä varustetut sanat"
+msgstr ""
+"Автоматично перетворювати „CamelCase“ слова в посилання під час написання"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:83
 msgid "Auto-link files"
-msgstr "Liitä tiedostot"
+msgstr "Авто-перетворення адрес (файлів) в посилання"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:84
 msgid "Automatically link file names when you type"
-msgstr "Automaattisesti liittää tiedostoihin kirjoittaessasi"
+msgstr ""
+"Автоматично перетворювати адреси файлів в посилання під час написання"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:87
 msgid "Auto-format entities"
-msgstr "Muotoile erikoismerkit"
+msgstr "Авто-перетворення HTML кодів в символи"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:88
 msgid "Use autoformatting to type special characters"
-msgstr "Käytä automaattista muotoilua erikoismerkkien luomisessa"
+msgstr ""
+"Автоматично перетворювати HTML коди (entity) в відповідні символи під час "
+"написання"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:91
 msgid "Auto-increment numbered lists"
-msgstr "Nosta numeroiduissa listoissa"
+msgstr "Авто-приріст для нумерованих списків"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:92
 msgid "Automatically increment items in a numbered list"
-msgstr "Nosta numeroa jatkaessasi numeroitua listaa"
+msgstr "Автоматично перетворювати послідовні числа в нумеровані списки."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:95
 msgid "Check checkbox lists recursive"
-msgstr "Vaihda rastiruutulista rekursiivisesti"
+msgstr "Відмічати прапорці рекурсивно"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:96
 msgid "Checking a checkbox list item will also check any sub-items"
-msgstr "Rastiruudun muokkaus muuttaa myös sen alla olevat rastit"
+msgstr "Встановлення прапорця змінює стан прапорців для всіх нащадків."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:99
 msgid "Use \"Backspace\" to un-indent"
-msgstr "Käytä askelpalautinta epä-sisennykseen"
+msgstr "Клавіша „Backspace“ змінює відступ за табуляцією"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:100
 msgid ""
 "Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
 msgstr ""
-"Käytä askelpalautinta poistaaksesi sisennyksen listasta (Sama kuin \"Shift-"
-"Tab\")"
+"Клавіша „Backspace“ змінює відступ списків за табуляцією (те саме, що „Shift-"
+"Tab“)."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:103
 msgid "Auto-select words"
-msgstr "Valitse sanat"
+msgstr "Автоматично виділяти слова"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:104
 msgid "Automaticly select the current word when you toggle the format"
-msgstr "Automaattisesti valitse nykyinen sana kun vaihdat formaattia"
+msgstr "Автоматично виділяти поточне слово при застосуванні форматування."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:107
 msgid "Use \"Enter\" to follow links"
-msgstr "Käytä \"Enter\"iä seurataksesi linkkejä"
+msgstr "Перехід за посиланням клавішею „Enter“"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:108
@@ -1507,13 +1509,13 @@ msgid ""
 "Use the \"Enter\" key to follow links. If disabled you still can use \"Alt-"
 "Enter\""
 msgstr ""
-"Käytä \"Enter\"-näppäintä seurataksesi linkkejä. Vaihtoehtoisesti voit "
-"käyttää \"Alt-Enter\"iä"
+"Переходити за посиланнями при натисканні клавіші „Enter“. Якщо вимкнено, "
+"використовуйте „Alt-Enter“."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:111
 msgid "Use \"Ctrl-Space\" to switch focus"
-msgstr "Käytä \"Ctrl-Space\" vaihtaakseen fokusta"
+msgstr "Зміна фокусу за допомогою „Ctrl-Space“"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:112
@@ -1521,48 +1523,48 @@ msgid ""
 "Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
 "If disabled you can still use \"Alt-Space\"."
 msgstr ""
-"Käytä \"Ctrl-Space\" näppäinyhdistelmää vaihtaakseen fokusta tekstin ja "
-"sivupaneelin välillä. Voit käyttää myös yhdistelmää \"Alt-Space\"."
+"Комбінація клавіш „Ctrl-Пробіл“ перемикає фокус до бічної панелі і навпаки. "
+"Якщо деактивовано, використовуйте „Alt-Пробіл“."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:115
 msgid "Expand side pane"
-msgstr "Avaa sivupaneeli"
+msgstr "Розкрити дерево в бічній панелі"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:116
 msgid "Start the side pane with the whole tree expanded."
-msgstr "Avaa sivupaneeli koko hakemistopuu avattuna."
+msgstr "Починати зі розвиненого дерева сторінок в бічній панелі."
 
 #. Dialog title
 #: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
-msgstr "Asetukset"
+msgstr "Параметри"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:170
 msgid "General"
-msgstr "Yleinen"
+msgstr "Загальні"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:194
 msgid "Interface"
-msgstr "Käyttöliittymä"
+msgstr "Інтерфейс"
 
 #. check box
 #: lib/Zim/GUI/PreferencesDialog.pm:216
 msgid "Use custom font"
-msgstr "Käytä omaa fonttia"
+msgstr "Використовувати інший шрифт"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:244
 msgid "Editing"
-msgstr "Muokkaus"
+msgstr "Редагування"
 
 #. Heading in preferences dialog
 #: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
-msgstr "Lisäosat"
+msgstr "Модулі"
 
 #. ...
 #: lib/Zim/GUI/PreferencesDialog.pm:270
@@ -1570,13 +1572,13 @@ msgid ""
 "You need to restart the application\n"
 "for plugin changes to take effect."
 msgstr ""
-"Sinun on käynnistettävä ohjelma\n"
-"uudestaan että lisäosat vaikuttaisivat."
+"потрібно перезапустити програму,\n"
+"щоб зміни модулів набрали чинності."
 
 #. Column in plugin tab
 #: zim/gui/preferencesdialog.py:268
 msgid "Enabled"
-msgstr "Päällä"
+msgstr "Увімкнено"
 
 #. Field in 'custom command' dialog |
 #. Input label in the 'rename page' dialog for the new name |
@@ -1587,240 +1589,241 @@ msgstr "Päällä"
 #: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
 #: zim/notebook.py:339
 msgid "Name"
-msgstr "Nimi"
+msgstr "Назва"
 
 #. Dialog title
 #: zim/gui/propertiesdialog.py:11
 msgid "Properties"
-msgstr "Ominaisuudet"
+msgstr "Параметри"
 
 #. Column heading in 'open notebook' dialog |
 #. Field in web server gui
 #: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
-msgstr "Muistivihko"
+msgstr "Зошит"
 
 #. input
 #: lib/Zim/GUI/PropertiesDialog.pm:100
 msgid "Directory"
-msgstr "Hakemisto"
+msgstr "Тека"
 
 #. label for properties dialog
 #: zim/notebook.py:340
 msgid "Home Page"
-msgstr "Kotisivu"
+msgstr "Головна сторінка"
 
 #. label for properties dialog
 #: zim/notebook.py:341
 msgid "Icon"
-msgstr "Ikoni"
+msgstr "Значок"
 
 #. label for properties dialog
 #: zim/notebook.py:342
 msgid "Document Root"
-msgstr "Juurihakemisto"
+msgstr "Тека документів"
 
 #. label for properties dialog
 #: zim/notebook.py:343
 msgid "Slow file system"
-msgstr "Hidas tiedostojärjestelmä"
+msgstr "Повільна файлова система"
 
 #. check box
 #: lib/Zim/GUI/PropertiesDialog.pm:120
 msgid "Auto-save version on close"
-msgstr "Tallenna versio suljettaessa"
+msgstr "Авто-збереження версії при закритті"
 
 #. label for page property Content-Type
 #: lib/Zim/GUI/PropertiesDialog.pm:189
 msgid "Source Format"
-msgstr "Lähdemuoto"
+msgstr "Формат джерела"
 
 #. label for page property Creation-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:190
 msgid "Creation Date"
-msgstr "Luotu"
+msgstr "Дата створення"
 
 #. label for page property Modification-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:191
 msgid "Modification Date"
-msgstr "Muokkauspäivämäärän"
+msgstr "Дата зміни"
 
 #. Dialog title |
 #. input label
 #: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
-msgstr "Etsi"
+msgstr "Знайти"
 
 #. header search results
 #: lib/Zim/GUI/SearchDialog.pm:75
 msgid "Rank"
-msgstr "Arvo"
+msgstr "Ранг"
 
 #. dialog title
 #: lib/Zim/GUI/SearchDialog.pm:177
 msgid "Edit Query"
-msgstr "Muokkaa tiedustelua"
+msgstr "Редагувати запит"
 
 #. dialog text
 #: lib/Zim/GUI/SearchDialog.pm:189
 msgid "You can add rules to your search query below"
-msgstr "Voit lisätä alapuolelle omia sääntöjä tiedusteluusi"
+msgstr "Ви можете додавати правила до пошукового запиту"
 
 #. menu label & tooltip for TSpell
 #: lib/Zim/GUI/Spell.pm:31
 msgid "Check _spelling|Spell check"
-msgstr "Oikolue|Oikoluku"
+msgstr "Перевірка _орфографії|Перевірка орфографії"
 
 #. dialog title
 #: lib/Zim/GUI/TODOListDialog.pm:46
 msgid "TODO List"
-msgstr "TODO-lista"
+msgstr "Список завдань"
 
 #. Input label
 #: zim/plugins/tasklist.py:109
 msgid "Filter"
-msgstr "Suodatin"
+msgstr "Фільтр"
 
 #. Button
 #: zim/plugins/tasklist.py:114
 msgid "_Filter"
-msgstr "_Suodata"
+msgstr "_Фільтрувати"
 
 #. Column header Task List dialog
 #: zim/plugins/tasklist.py:257
 msgid "Prio"
-msgstr "Prio"
+msgstr "Пріоритет"
 
 #. Column header Task List dialog
 #: zim/plugins/tasklist.py:236
 msgid "Task"
-msgstr "Tehtävä"
+msgstr "Завдання"
 
 #. Column header Task List dialog |
 #. Column header versions dialog
 #: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
-msgstr "Päivämäärä"
+msgstr "Дата"
 
 #. ...
 #: lib/Zim/GUI/TODOListDialog.pm:139
 msgid "Include all open checkboxes"
-msgstr "Lisää mukaan kaikki avoimet valintaruudut"
+msgstr "Включати всі відкриті прапорці"
 
 #. number of tasks in TODO list
 #: lib/Zim/GUI/TODOListDialog.pm:284
 msgid "{number} item total"
 msgid_plural "{number} items total"
-msgstr[0] "{number} tehtävä"
-msgstr[1] "{number} tehtävää"
+msgstr[0] "усього {number} елемент"
+msgstr[1] "усього {number} елемента"
+msgstr[2] "усього {number} елементів"
 
 #. Option in template selection to specify another file
 #: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
 #: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
 msgid "Other..."
-msgstr "Muu..."
+msgstr "Інший…"
 
 #. status bar info
 #: lib/Zim/GUI/TreeView.pm:363
 msgid "Scanning tree ..."
-msgstr "Luetaan puuta..."
+msgstr "Сканування дерева…"
 
 #. Dialog title |
 #. dialog title
 #: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
 #: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
-msgstr "Versiot"
+msgstr "Версії"
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:76
 msgid "View _Annotated..."
-msgstr "Katso lisä_huomautetut..."
+msgstr "Переглянути _анотовані…"
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:79
 msgid "_Restore Version..."
-msgstr "_Palauta versio"
+msgstr "Від_новити версію…"
 
 #. column header for version id
 #: lib/Zim/GUI/VersionsDialog.pm:86
 msgid "Id"
-msgstr "Id"
+msgstr "Ідентифікатор"
 
 #. column header for committer
 #: lib/Zim/GUI/VersionsDialog.pm:88
 msgid "User"
-msgstr "Käyttäjä"
+msgstr "Користувач"
 
 #. version details
 #: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
-msgstr "Kommentti"
+msgstr "Коментар"
 
 #. label for version entry
 #: lib/Zim/GUI/VersionsDialog.pm:118
 msgid "Compare this version with"
-msgstr "Vertaa tämä versio toiseen"
+msgstr "Порівняти цю версію з"
 
 #. special name for current version
 #: lib/Zim/GUI/VersionsDialog.pm:120 lib/Zim/GUI/VersionsDialog.pm:412
 msgid "Current"
-msgstr "Nykyinen"
+msgstr "Поточний"
 
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:131
 msgid "_Page Changes..."
-msgstr "Sivumuutokset..."
+msgstr "_Зміни сторінки…"
 
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:133
 msgid "Co_mpare Page..."
-msgstr "Vertaa sivu..."
+msgstr "_Порівняти сторінку…"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:229
 msgid "No such page: {page}"
-msgstr "Sivu ei olemassa: {page}"
+msgstr "Немає такої сторінки: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:230
 msgid "Please give a page first"
-msgstr "Valitse sivu ensiksi"
+msgstr "Спочатку виберіть сторінку"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:240
 msgid "Please select a version first"
-msgstr "Valitse versio ensiksi"
+msgstr "Спочатку виберіть версію"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:316
 msgid "Could not get file for page: {page}"
-msgstr "En saanut tiedostoa sivulle: {page}"
+msgstr "Не вдається знайти файл для сторінки: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:346
 msgid "Could not get changes for page: {page}"
-msgstr "En pysty hakemaan muutoksia sivulle: {page}"
+msgstr "Не вдається знайти зміни для сторінки: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:347
 msgid "Could not get changes for this notebook"
-msgstr "En pysty hakemaan muutoksia tälle vihkolle"
+msgstr "Не вдається знайти зміни для зошита"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:365
 msgid "Could not get versions to compare"
-msgstr "En saanut versioita verrattaviksi"
+msgstr "Не вдається отримати версії для порівняння"
 
 #. application type
 #: lib/Zim/GUI/VersionsDialog.pm:375
 msgid "Diff Editor"
-msgstr "Diff-editori"
+msgstr "Редактор змін"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:389
 msgid "Could not get annotated source for page {page}"
-msgstr "En saanut lisähuomautettua lähdettä sivulle {page}"
+msgstr "Не вдається отримати анотоване джерело для сторінки {page}"
 
 #. confirmation for restore version, answers are 'cancel' or 'ok'
 #: lib/Zim/GUI/VersionsDialog.pm:415
@@ -1832,62 +1835,63 @@ msgid ""
 "\n"
 "All changes since the last saved version will be lost !"
 msgstr ""
-"<b>Palauta sivu tallennettuun versioon?</b>\n"
+"<b>Відновити сторінку до збереженої версії?</b>\n"
 "\n"
-"Haluatko palauttaa sivun: {page}\n"
-"versioon: {version} ?\n"
+"Чи ви бажаєте відновити сторінку: {page}\n"
+"до збереженої версії: {version} ?\n"
 "\n"
-"Kaikki viime tallenuksesta lähtien tehdyt muutokset menetetään!"
+"Всі зміни після останньої збереженої версії буде втрачено!"
 
 #. menu label & tooltip for GoToday
 #: share/zim/plugins/Calendar.pl:7
 msgid "To_day|Today"
-msgstr "Tänään|Tänään"
+msgstr "С_ьогодні|Сьогодні"
 
 #. menu label & tooltip for TCalendar
 #: share/zim/plugins/Calendar.pl:11
 msgid "Calen_dar|Show calendar"
-msgstr "Kalenteri|Näytä kalenteri"
+msgstr "_Календар|Відобразити чи сховати календар"
 
 #. menu label & tooltip for InsertEquation
 #: share/zim/plugins/EquationEditor.pl:14
 msgid "E_quation...|Insert equation"
-msgstr "_Yhtälö|Lisää yhtälö"
+msgstr "_Формула…|Вставити формулу"
 
 #. menu label & tooltip for InsertScreenshot
 #: share/zim/plugins/InsertScreenshot.pl:20
 msgid "_Screenshot...|Insert screenshot"
-msgstr "Kuvakaappaus...|Lisää kuvakaappaus"
+msgstr "_Знімок екрану…|Вставити знімок екрану"
 
 #. menu label & tooltip for TmpPrint
 #: share/zim/plugins/PrintToBrowser.pl:32
 msgid "Print to Browser|Print to browser"
-msgstr "Tulosta selaimelle|Tulosta selaimelle"
+msgstr "Друкувати до веб-переглядача|Друкувати до веб-переглядача"
 
 #. menu label & tooltip for TTODOList
 #: share/zim/plugins/TODOList.pl:7
 msgid "_TODO List...|Open TODO List"
-msgstr "TO_DO-lista...|Avaa TODO-lista"
+msgstr "Список _завдань…|Відкрити список завдань"
 
 #. menu label & tooltip for TEditMode
 #: share/zim/plugins/ToggleReadOnly.pl:13
 msgid "Page Editable|Page editable"
-msgstr "Sivu muokattavissa|Sivu muokattavissa"
+msgstr "Сторінка може редагуватися|Сторінка може редагуватися"
 
 #. menu label & tooltip for SvnCommit
 #: share/zim/plugins/VersionControl/Subversion.pl:30
 msgid "SVN commit|Commit notebook to SVN repository"
-msgstr "SVN-merkintä|Merkitse vihko SVN-varastoon"
+msgstr ""
+"Фіксування змін в SVN|Зафіксувати зміни зошита в репозиторій SVN (commit)"
 
 #. menu label & tooltip for SvnUpdate
 #: share/zim/plugins/VersionControl/Subversion.pl:31
 msgid "SVN update|Update notebook from SVN repository"
-msgstr "SVN-päivitys|Päivitä vihko SVN-varastosta"
+msgstr "Оновлення з SVN|Оновити зошит з репозиторія SVN (update)"
 
 #. menu label & tooltip for SvnCleanup
 #: share/zim/plugins/VersionControl/Subversion.pl:32
 msgid "SVN cleanup|Cleanup SVN working copy"
-msgstr "SVN siivous|Siivoa SVN-työkopio"
+msgstr "Очищення SVN|Очистити робочої копії SVN"
 
 #. SVN warning
 #: share/zim/plugins/VersionControl/Subversion.pl:90
@@ -1895,15 +1899,15 @@ msgid ""
 "This page was updated in the repository.\n"
 "Please update your working copy (Tools -> SVN update)."
 msgstr ""
-"Tästä sivusta on päivitys varastossa.\n"
-"Ole hyvä ja päivitä kopiosi (Työkalut -> SVN päivitys)."
+"Ця сторінка була оновлена в репозиторії.\n"
+"Оновіть вашу робочу копію (Сервіс -> Оновлення SVN)"
 
 #. Error in SVN update
 #: share/zim/plugins/VersionControl/Subversion.pl:104
 msgid "Failed update working copy."
-msgstr "Kopion päivitys epäonnistui."
+msgstr "Не вдається оновити робочу копію SVN."
 
 #. ...
 #: share/zim/plugins/VersionControl/Subversion.pl:117
 msgid "Failed to cleanup SVN working copy."
-msgstr "En onnistunut siivoamaan SVN-työkopiota."
+msgstr "Не вдається очистити робочу копію SVN."

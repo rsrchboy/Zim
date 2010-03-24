@@ -1,6 +1,14 @@
 ===== Changes for zim =====
 Jaap Karssenberg pardus@cpan.org
 
+=== 0.29 - Sun Jan 10 2010 ===
+* Suport tags in the TODOList
+* Improve date parsing for TODOList
+* Add option for upper-case formatting for page titles in new pages
+* Punctuation triggers end-of-word for auto-formatting links
+* Updated website in About dialog
+* Added translation for Hungarian, Japanese, Brazilian Portuguese & Ukrainian
+
 === 0.28 - Tue Feb 17 2009 ===
 * Reversed behavior of html export to use <br> elements - lp #311292
 * Fixed install script for Module::Build version 0.3x - lp #319964

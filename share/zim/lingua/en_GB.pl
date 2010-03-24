@@ -10,14 +10,14 @@
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-08-21 21:50+0000
+# PO-Revision-Date: 2009-11-23 11:31+0000
 # Last-Translator: Matthew Gadd <Unknown>
 # Language-Team: English (United Kingdom) <en_GB@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2008-11-09 09:04+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -63,7 +63,12 @@ Do you want to overwrite it?',
 Do you want to restore page: {page}
 to saved version: {version} ?
 
-All changes since the last saved version will be lost !' => '',
+All changes since the last saved version will be lost !' => '<b>Restore page to saved version?</b>
+
+Do you want to restore page: {page}
+to saved version: {version} ?
+
+All changes since the last saved version will be lost !',
   '<b>Upgrade calendar pages to 0.24 format?</b>
 
 This notebook contains pages for dates using the format yyyy_mm_dd.
@@ -100,20 +105,20 @@ Do you want to upgrade this notebook to the new layout?
   'Bold' => 'Bold',
   'Calen_dar|Show calendar' => 'Calen_dar|Show calendar',
   'Calendar' => 'Calendar',
-  'Can not find application "bzr"' => '',
-  'Can not find application "{name}"' => '',
+  'Can not find application "bzr"' => 'Cannot find application "bzr"',
+  'Can not find application "{name}"' => 'Cannot find application "{name}"',
   'Can not save a version without comment' => 'Cannot save a version without comment',
   'Can not save to page: {name}' => 'Can not save to page: {name}',
   'Can\'t find {url}' => 'Can\'t find {url}',
   'Cha_nge' => 'Cha_nge',
   'Chars' => 'Chars',
   'Check _spelling|Spell check' => 'Check _spelling|Spell check',
-  'Check checkbox lists recursive' => '',
-  'Checking a checkbox list item will also check any sub-items' => '',
+  'Check checkbox lists recursive' => 'Check checkbox lists recursive',
+  'Checking a checkbox list item will also check any sub-items' => 'Checking a checkbox list item will also check any sub-items',
   'Choose {app_type}' => 'Choose {app_type}',
   'Co_mpare Page...' => 'Co_mpare Page...',
   'Command' => 'Command',
-  'Comment' => '',
+  'Comment' => 'Comment',
   'Compare this version with' => 'Compare this version with',
   'Copy Email Address' => 'Copy E-mail Address',
   'Copy Location|Copy location' => 'Copy Location|Copy location',
@@ -121,7 +126,7 @@ Do you want to upgrade this notebook to the new layout?
   'Could not delete page: {name}' => 'Could not delete page: {name}',
   'Could not get annotated source for page {page}' => 'Could not get annotated source for page {page}',
   'Could not get changes for page: {page}' => 'Could not get changes for page: {page}',
-  'Could not get changes for this notebook' => '',
+  'Could not get changes for this notebook' => 'Could not get changes for this notebook',
   'Could not get file for page: {page}' => 'Could not get file for page: {page}',
   'Could not get versions to compare' => 'Could not get versions to compare',
   'Could not initialize version control' => 'Could not initialize version control',
@@ -158,11 +163,12 @@ Do you want to upgrade this notebook to the new layout?
   'Expand side pane' => 'Expand side pane',
   'Export page' => 'Export page',
   'Exporting page {number}' => 'Exporting page {number}',
-  'Failed to cleanup SVN working copy.' => '',
+  'Failed to cleanup SVN working copy.' => 'Failed to cleanup SVN working copy.',
   'Failed to load SVN plugin,
-do you have subversion utils installed?' => '',
+do you have subversion utils installed?' => 'Failed to load SVN plugin,
+do you have subversion utils installed?',
   'Failed to load plugin: {name}' => 'Failed to load plugin: {name}',
-  'Failed update working copy.' => '',
+  'Failed update working copy.' => 'Failed update working copy.',
   'File browser' => 'File browser',
   'File is not a text file: {file}' => 'File is not a text file: {file}',
   'Filter' => 'Filter',
@@ -191,7 +197,7 @@ do you have subversion utils installed?' => '',
   'Home Page' => 'Home Page',
   'Icon' => 'Icon',
   'Id' => 'Id',
-  'Include all open checkboxes' => '',
+  'Include all open checkboxes' => 'Include all open checkboxes',
   'Index page' => 'Index page',
   'Initial version' => 'Initial version',
   'Insert Date' => 'Insert Date',
@@ -211,7 +217,7 @@ do you have subversion utils installed?' => '',
   'New notebook' => 'New notebook',
   'New page' => 'New page',
   'No such directory: {name}' => 'No such directory: {name}',
-  'No such file or directory: {name}' => '',
+  'No such file or directory: {name}' => 'No such file or directory: {name}',
   'No such file: {file}' => 'No such file: {file}',
   'No such notebook: {name}' => 'No such notebook: {name}',
   'No such page: {page}' => 'No such page: {page}',
@@ -237,7 +243,7 @@ also automatically creates a new page.',
   'Page Editable|Page editable' => 'Page Editable|Page editable',
   'Page name' => 'Page name',
   'Pages' => 'Pages',
-  'Password' => '',
+  'Password' => 'Password',
   'Please enter a comment for this version' => 'Please enter a comment for this version',
   'Please enter a name to save a copy of page: {page}' => 'Please enter a name to save a copy of page: {page}',
   'Please enter a {app_type}' => 'Please enter a {app_type}',
@@ -248,7 +254,8 @@ For example a "Notes" directory in your home dir.' => 'Please give at least a di
 For a new notebook this should be an empty directory.
 For example a "Notes" directory in your home dir.',
   'Please provide the password for
-{path}' => '',
+{path}' => 'Please provide the password for
+{path}',
   'Please select a notebook first' => 'Please select a notebook first',
   'Please select a version first' => 'Please select a version first',
   'Plugin already loaded: {name}' => 'Plugin already loaded: {name}',
@@ -261,15 +268,15 @@ For example a "Notes" directory in your home dir.',
   'Proper_ties|Properties dialog' => 'Proper_ties|Properties dialog',
   'Properties' => 'Properties',
   'Rank' => 'Rank',
-  'Re-build Index|Rebuild index' => '',
+  'Re-build Index|Rebuild index' => 'Re-build Index|Rebuild index',
   'Recursive' => 'Recursive',
   'Rename page' => 'Rename page',
   'Rename to' => 'Rename to',
   'Replace _all' => 'Replace _all',
   'Replace with' => 'Replace with',
-  'SVN cleanup|Cleanup SVN working copy' => '',
-  'SVN commit|Commit notebook to SVN repository' => '',
-  'SVN update|Update notebook from SVN repository' => '',
+  'SVN cleanup|Cleanup SVN working copy' => 'SVN cleanup|Cleanup SVN working copy',
+  'SVN commit|Commit notebook to SVN repository' => 'SVN commit|Commit notebook to SVN repository',
+  'SVN update|Update notebook from SVN repository' => 'SVN update|Update notebook from SVN repository',
   'S_ave Version...|Save Version' => 'S_ave Version...|Save Version',
   'Save Copy' => 'Save Copy',
   'Save version' => 'Save version',
@@ -306,10 +313,11 @@ is missing. Can not edit equation.',
   'This page does not have a document folder' => 'This page does not have a document folder',
   'This page does not have a source' => 'This page does not have a source',
   'This page was updated in the repository.
-Please update your working copy (Tools -> SVN update).' => '',
+Please update your working copy (Tools -> SVN update).' => 'This page was updated in the repository.
+Please update your working copy (Tools -> SVN update).',
   'To_day|Today' => 'To_day|Today',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => '',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => 'Toggle Checkbox \'V\'|Toggle checkbox',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => 'Toggle Checkbox \'X\'|Toggle checkbox',
   'Underline' => 'Underline',
   'Updating links' => 'Updating links',
   'Updating links in {name}' => 'Updating links in {name}',
@@ -335,7 +343,8 @@ Please update your working copy (Tools -> SVN update).' => '',
   'Words' => 'Words',
   'You can add rules to your search query below' => 'You can add rules to your search query below',
   'You can choose using either the <b>Bazaar</b> or the <b>Subversion</b> Version Control System.
-Please click \'help\' to read about the system requirements.' => '',
+Please click \'help\' to read about the system requirements.' => 'You can choose using either the <b>Bazaar</b> or the <b>Subversion</b> version control system.
+Please click \'help\' to read about the system requirements.',
   'You have no {app_type} configured' => 'You have no {app_type} configured',
   'You need to restart the application
 for plugin changes to take effect.' => 'You need to restart the application
@@ -357,7 +366,7 @@ for plugin changes to take effect.',
   '_Delete Page|Delete page' => '_Delete Page|Delete page',
   '_Delete|Delete' => '_Delete|Delete',
   '_Discard changes' => '_Discard changes',
-  '_Edit' => '',
+  '_Edit' => '_Edit',
   '_Edit Equation' => '_Edit Equation',
   '_Edit Link' => '_Edit Link',
   '_Edit Link...|Edit link' => '_Edit Link...|Edit link',
@@ -377,7 +386,7 @@ for plugin changes to take effect.',
   '_Insert|' => '_Insert|',
   '_Italic|Italic' => '_Italic|Italic',
   '_Jump To...|Jump to page' => '_Jump To...|Jump to page',
-  '_Keybindings|Key bindings' => '',
+  '_Keybindings|Key bindings' => '_Keybindings|Key bindings',
   '_Link' => '_Link',
   '_Link to date' => '_Link to date',
   '_Link...|Insert link' => '_Link...|Insert link',

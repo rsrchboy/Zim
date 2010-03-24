@@ -7,7 +7,7 @@ use Zim::Utils;
 use Zim::GUI::Component;
 use Zim::GUI::PropertiesDialog;
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 our @ISA = qw/Zim::GUI::Component/;
 
 use constant {
@@ -408,7 +408,7 @@ sub prompt_notebook {
 			$file->write($config, 'Notebook')
 				if defined $file;
 			
-			$dir =~ s/$ENV{HOME}\/*/~\//;
+			$dir =~ s/\Q$ENV{HOME}\E\/*/~\//;
 			unless ($name =~ /\S/) {
 				$name = $dir;
 				$name =~ s/.*[\/\\]//;

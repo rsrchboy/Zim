@@ -10,14 +10,14 @@
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-11-05 21:59+0000
-# Last-Translator: João Santos <twocool.pt@gmail.com>
+# PO-Revision-Date: 2009-11-13 22:10+0000
+# Last-Translator: João Santos <jmcs@jsantos.eu>
 # Language-Team: Portuguese <pt@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2008-11-09 09:04+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -311,8 +311,8 @@ não existe. Não é possível editar a equação.',
 Please update your working copy (Tools -> SVN update).' => 'Esta página foi actualizada no repositório,
 Por favor actualize a sua cópia de trabalho (Ferramentas -> Actualização SVN).',
   'To_day|Today' => 'Ho_je|Hoje',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => '',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => '',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => '',
   'Underline' => 'Sublinhar',
   'Updating links' => 'Actualizando ligações',
   'Updating links in {name}' => 'Actualizando ligações em {name}',

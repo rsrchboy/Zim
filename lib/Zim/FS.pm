@@ -7,7 +7,7 @@ use File::Copy ();
 use File::BaseDir 0.03 ();
 	# takes care of $HOME among other stuff
 
-our $VERSION = '0.26';
+our $VERSION = '0.29';
 
 eval 'use Zim::OS::Win32' if $^O eq 'MSWin32';
 die $@ if $@;
@@ -741,12 +741,26 @@ sub new {
 		#warn "DIR class: ".ref($dir)."\n";
 	}
 	else { # orphaned file
+		if ($^O eq 'MSWin32') {
+			# for Win32 we need relative to volume ...
+			$path = Zim::FS->abs_path($path);
+			my ($vol, undef, undef) = File::Spec->splitpath($path);
+			$dir = Zim::FS::Dir->new($vol.'\\');
+			$$file{relpath} = $path;
+			$$file{relpath} =~ s/^\Q$vol\E\/*//;
+			$$file{path} = $path;
+		}
+		else {
+			# Code below was used to also accomadate win32, but
+			# that was buggy, see new code in block above. Now
+			# probably we could call abs_path directly here and use
+			# a regex to remove "/". Not changing this now because
+			# lack of testing for such a change.
 		$dir = Zim::FS::Dir->new('/');
 		$$file{relpath} = Zim::FS->rel_path($path, $dir);
-		$$file{relpath} =~ s#^\./##;
-			# rel_path call abs_path
-			# for Win32 we need relative to volume ...
+			$$file{relpath} =~ s#^\./##; # rel_path call abs_path
 		$$file{path} = $dir.$$file{relpath};
+		}
 	}
 	$$file{path}  =~ s#/+#/#g;
 	$$file{dir}   = $dir;

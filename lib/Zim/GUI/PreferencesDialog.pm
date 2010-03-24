@@ -6,7 +6,7 @@ use Gtk2;
 use Gtk2::SimpleList;
 use Zim::Utils;
 
-our $VERSION = '0.26';
+our $VERSION = '0.29';
 
 =head1 NAME
 
@@ -114,6 +114,10 @@ my %Labels = ( # setting => [label, tooltip]
 	expand_tree => [
 		__('Expand side pane'), #. pref. label
 		__("Start the side pane with the whole tree expanded."), #. pref. tooltip
+	],
+	use_ucfirst_title => [
+		__('Uppercase Title'), #. pref. label
+		__("Set first character to uppercase if title contains no uppercase character."), #. pref. tooltip
 	],
 );
 
@@ -250,6 +254,7 @@ sub show {
 		use_autoselect
 		backsp_unindent
 		use_recurscheck
+		use_ucfirst_title
 	/;
 	$table = Gtk2::Table->new(scalar(@settings), 1);
 	$table->set_row_spacings(5);

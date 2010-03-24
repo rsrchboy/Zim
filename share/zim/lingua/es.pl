@@ -6,6 +6,7 @@
 # 
 # TRANSLATORS:
 # Andrés Rassol (es)
+# Federico Vera (es)
 # Javier Rovegno Campos (es)
 # Paco Molinero (es)
 # Servilio Afre Puentes (es)
@@ -13,14 +14,14 @@
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2009-01-04 01:23+0000
-# Last-Translator: Takmadeus <takmadeus@gmail.com>
+# PO-Revision-Date: 2009-11-14 11:36+0000
+# Last-Translator: Juan Sebastián Marulanda <juanchito2006@gmail.com>
 # Language-Team: Spanish <es@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -124,7 +125,7 @@ espacios de nombres por mes.
   'Comment' => 'Comentario',
   'Compare this version with' => 'Comparar esta versión con',
   'Copy Email Address' => 'Copiar dirección de correo electrónico',
-  'Copy Location|Copy location' => 'Copiar enlace|Copiar enlace',
+  'Copy Location|Copy location' => 'Copiar Enlace|Copiar enlace',
   'Copy _Link' => 'Copiar víncu _lo',
   'Could not delete page: {name}' => 'No se puede borrar la página: {name}',
   'Could not get annotated source for page {page}' => 'No se pudo obtener la fuente anotada para la página {page}',
@@ -155,7 +156,7 @@ espacios de nombres por mes.
   'Edit Image' => 'Editar imagen',
   'Edit Link' => 'Editar enlace',
   'Edit Query' => 'Editar Consulta',
-  'Edit _Source|Open source' => 'Editar _fuente|Abrir fuente',
+  'Edit _Source|Open source' => 'Editar _Fuente|Abrir fuente',
   'Edit notebook' => 'Editar cuaderno de notas',
   'Edit text files "wiki style"' => 'Editar archivos de texto "estilo wiki"',
   'Editing' => 'Editando',
@@ -366,7 +367,7 @@ para que los cambios en los complementos tengan efecto.',
   '_Copy Page...|Copy page' => '_Copiar Página...|Copiar Página',
   '_Copy|Copy' => '_Copiar|Copiar',
   '_Date and Time...|Insert date' => '_Fecha y hora...|Insertar fecha',
-  '_Delete Page|Delete page' => '_Borrar página|Borrar página',
+  '_Delete Page|Delete page' => '_Borrar Página|Borrar página',
   '_Delete|Delete' => '_Borrar|Borrar',
   '_Discard changes' => '_Descartar los cambios',
   '_Edit' => '_Editar',
@@ -416,7 +417,7 @@ para que los cambios en los complementos tengan efecto.',
   '_Redo|Redo' => '_Rehacer|Rehacer',
   '_Reload|Reload page' => '_Recargar|Recargar página',
   '_Rename' => '_Renombrar',
-  '_Rename Page...|Rename page' => '_Renombrar página...|Renombrar página',
+  '_Rename Page...|Rename page' => '_Renombrar Página...|Renombrar página',
   '_Replace' => '_Reemplazar',
   '_Replace...|Find and Replace' => '_Remplazar...|Encontrar y remplazar',
   '_Reset' => '_Restablecer',
@@ -428,7 +429,7 @@ para que los cambios en los complementos tengan efecto.',
   '_Search...|Search' => '_Buscar...|Buscar',
   '_Search|' => '_Buscar|',
   '_Send To...|Mail page' => '_Eviar a...|Enviar página',
-  '_Statusbar|Show statusbar' => '_Barra de estatus|Mostrar barra de estatus',
+  '_Statusbar|Show statusbar' => '_Barra de estado|Mostrar barra de estado',
   '_TODO List...|Open TODO List' => '_TODO List...|Abrir TODO List',
   '_Today' => '_Hoy',
   '_Toolbar|Show toolbar' => '_Barra de herramientas|Mostras barra de herramientas',

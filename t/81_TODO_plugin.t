@@ -80,9 +80,11 @@ is_deeply(
 		[1,1,'foo','',':TODOList:bar'],
 		[1,1,'bar','',':TODOList:bar'],
 		[1,0,'baz','',':TODOList:bar'],
+		[1,3,'yep','2009-07-30',':TODOList:bar'],
 		[1,3,'fix 1','',':TODOList:foo'],
-		[1,2,'fix 2','2008 3 24',':TODOList:foo'],
-		[1,1,'fix 3','',':TODOList:foo']
+		[1,2,'fix 2','2008-03-24',':TODOList:foo'],
+		[1,1,'fix 3','',':TODOList:foo'],
+		[1,1,'another fix  reported 24.3.09','2009-07-30',':TODOList:foo'],
 	],
 	'Real list contents correct'
 );
@@ -103,9 +105,10 @@ is_deeply(
 	\@data,
 	[
 		[1,3,'fix 1','',':TODOList:foo'],
-		[1,2,'fix 2','2008 3 24',':TODOList:foo'],
+		[1,2,'fix 2','2008-03-24',':TODOList:foo'],
 		[1,1,'foo','',':TODOList:bar'],
-		[1,1,'fix 3','',':TODOList:foo']
+		[1,1,'fix 3','',':TODOList:foo'],
+		[1,1,'another fix  reported 24.3.09','2009-07-30',':TODOList:foo']
 	],
 	'Real list contents correct with filter'
 );

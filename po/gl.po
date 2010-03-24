@@ -8,26 +8,29 @@ msgstr ""
 "Project-Id-Version: zim\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2008-08-28 16:49+0000\n"
-"Last-Translator: Roberto Suarez <robe@allenta.com>\n"
+"PO-Revision-Date: 2009-11-18 01:39+0000\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2008-11-09 09:04+0000\n"
+"X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
+#. This string needs to be translated with names of the translators for this language
+#: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Miguel Anxo Bouzada https://launchpad.net/~mbouzada\n"
 "  Roberto Suarez https://launchpad.net/~robe-allenta\n"
 "  marisma https://launchpad.net/~mariamarcp"
 
-#. Name for desktop menu
-#: share/applications/zim.desktop:-
+#. tooltip for tray icon
+#: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
-msgstr "Wiki Personal Zim"
+msgstr "Wiki persoal Zim"
 
 #. Comment for desktop menu
 #: share/applications/zim.desktop:-
@@ -40,22 +43,22 @@ msgstr "Editor de texto \"ó xeito Wiki\""
 #: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
 #: lib/Zim/GUI/VersionsDialog.pm:402
 msgid "Text Editor"
-msgstr "Editor de textos"
+msgstr "Editor de texto"
 
 #. error
 #: bin/zim:373
 msgid "No such file or directory: {name}"
-msgstr ""
+msgstr "Non hai tal ficheiro ou directorio: {name}"
 
 #. error
 #: bin/zim:374
 msgid "No such notebook: {name}"
-msgstr "Non hai tal caderno: {name}"
+msgstr "Non hai tal caderno de notas: {name}"
 
 #. Error SVN not installed
 #: lib/Zim/FS/Bazaar.pm:74
 msgid "Can not find application \"bzr\""
-msgstr ""
+msgstr "Non se atopa o aplicativo \"bzr\""
 
 #. error SVN not installed
 #: lib/Zim/FS/Subversion.pm:89
@@ -63,6 +66,8 @@ msgid ""
 "Failed to load SVN plugin,\n"
 "do you have subversion utils installed?"
 msgstr ""
+"Fallou ao cargar o engadido SVN,\n"
+"ten instaladas as utilidades de subversión?"
 
 #. menu label & tooltip for FileMenu
 #: lib/Zim/GUI.pm:183
@@ -87,7 +92,7 @@ msgstr "_Inserir|"
 #. menu label & tooltip for SearchMenu
 #: lib/Zim/GUI.pm:187
 msgid "_Search|"
-msgstr "_Procurar|"
+msgstr "_Buscar|"
 
 #. menu label & tooltip for FormatMenu
 #: lib/Zim/GUI.pm:188
@@ -107,7 +112,7 @@ msgstr "I_r|"
 #. menu label & tooltip for HelpMenu
 #: lib/Zim/GUI.pm:191
 msgid "_Help|"
-msgstr "A_xuda|"
+msgstr "_Axuda|"
 
 #. menu label & tooltip for PathBarMenu
 #: lib/Zim/GUI.pm:192
@@ -122,17 +127,17 @@ msgstr "_Nova páxina|Nova páxina"
 #. menu label & tooltip for OpenNotebook
 #: lib/Zim/GUI.pm:200
 msgid "_Open Another Notebook...|Open notebook"
-msgstr "Abrir _outro caderno...|Abrir caderno"
+msgstr "Abrir _outro caderno de notas...|Abrir un caderno de notas"
 
 #. menu label & tooltip for Save
 #: lib/Zim/GUI.pm:201
 msgid "_Save|Save page"
-msgstr "_Gardar|Gardar páxina"
+msgstr "_Gardar|Gardar a páxina"
 
 #. menu label & tooltip for SaveVersion
 #: lib/Zim/GUI.pm:202
 msgid "S_ave Version...|Save Version"
-msgstr "_Gardar Versión...|Gardar Versión"
+msgstr "_Gardar a versión...|Gardar a versión"
 
 #. menu label & tooltip for Versions
 #: lib/Zim/GUI.pm:203
@@ -152,17 +157,17 @@ msgstr "En_viar a...|Enviar a páxina por correo electrónico"
 #. menu label & tooltip for CopyPage
 #: lib/Zim/GUI.pm:206
 msgid "_Copy Page...|Copy page"
-msgstr "_Copiar Páxina...|Copiar páxina"
+msgstr "_Copiar a páxina...|Copiar a páxina"
 
 #. menu label & tooltip for RenamePage
 #: lib/Zim/GUI.pm:208
 msgid "_Rename Page...|Rename page"
-msgstr "_Renomear páxina...|Renomear páxina"
+msgstr "_Renomear a páxina...|Renomear a páxina"
 
 #. menu label & tooltip for DeletePage
 #: lib/Zim/GUI.pm:210
 msgid "_Delete Page|Delete page"
-msgstr "E_liminar páxina|Eliminar páxina"
+msgstr "E_liminar a páxina|Eliminar a páxina"
 
 #. menu label & tooltip for Props
 #: lib/Zim/GUI.pm:212
@@ -172,7 +177,7 @@ msgstr "Propie_dades|Propiedades"
 #. menu label & tooltip for Close
 #: lib/Zim/GUI.pm:213
 msgid "_Close|Close window"
-msgstr "Pe_char|Pechar ventá"
+msgstr "Pe_char|Pechar a ventá"
 
 #. menu label & tooltip for Quit
 #: lib/Zim/GUI.pm:214
@@ -182,17 +187,17 @@ msgstr "_Saír|Saír"
 #. menu label & tooltip for Search
 #: lib/Zim/GUI.pm:215
 msgid "_Search...|Search"
-msgstr "Pro_curar...|Procurar"
+msgstr "Bu_scar...|Buscar"
 
 #. menu label & tooltip for SearchBL
 #: lib/Zim/GUI.pm:216
 msgid "Search _Backlinks...|Search Back links"
-msgstr "Buscar ligazón_s de inversas...|Buscar ligazóns inversas"
+msgstr "_Buscar ligazóns cara atrás...|Buscar ligazóns cvara atrás"
 
 #. menu label & tooltip for CopyLocation
 #: lib/Zim/GUI.pm:217
 msgid "Copy Location|Copy location"
-msgstr "Copiar ubicación|Copiar ubicación"
+msgstr "Copiar a ligazón|Copiar a ligazón"
 
 #. menu label & tooltip for Prefs
 #: lib/Zim/GUI.pm:218
@@ -202,17 +207,17 @@ msgstr "Pre_ferencias|Preferencias"
 #. menu label & tooltip for Reload
 #: lib/Zim/GUI.pm:219
 msgid "_Reload|Reload page"
-msgstr "_Recargar|Recargar páxina"
+msgstr "Actualiza_r|Actualizar a páxina"
 
 #. menu label & tooltip for OpenFolder
 #: lib/Zim/GUI.pm:220
 msgid "Open Document _Folder|Open document folder"
-msgstr "Abrir _Carpeta de Documentos|Abrir Carpeta de Documentos"
+msgstr "Abrir o _cartafol de documentos|Abrir o cartafol de documentos"
 
 #. menu label & tooltip for OpenRootFolder
 #: lib/Zim/GUI.pm:221
 msgid "Open Document _Root|Open document root"
-msgstr "Abrir _Raíz de Documentos|Abrir Raíz de Documentos"
+msgstr "Ab_rir o documento pai|Abrir o documento pai"
 
 #. menu label & tooltip for AttachFile
 #: lib/Zim/GUI.pm:222
@@ -222,22 +227,22 @@ msgstr "Anexar _ficheiro|Anexar un ficheiro externo"
 #. menu label & tooltip for EditSource
 #: lib/Zim/GUI.pm:223
 msgid "Edit _Source|Open source"
-msgstr "Ed_itar o código|Abrir o código"
+msgstr "Ed_itar a orixe|Abrir a orixe"
 
 #. menu label & tooltip for RBIndex
 #: lib/Zim/GUI.pm:224
 msgid "Re-build Index|Rebuild index"
-msgstr "Reconstruir Índice|Reconstruir Índice"
+msgstr "Reconstruir o índice|Reconstruir o índice"
 
 #. menu label & tooltip for GoBack
 #: lib/Zim/GUI.pm:225
 msgid "_Back|Go page back"
-msgstr "Rec_uar|Ir á páxina anterior"
+msgstr "A_trás|Ir á páxina anterior"
 
 #. menu label & tooltip for GoForward
 #: lib/Zim/GUI.pm:226
 msgid "_Forward|Go page forward"
-msgstr "A_diante|Ir á vindeira páxina"
+msgstr "A_diante|Ir á páxina seguinte"
 
 #. menu label & tooltip for GoParent
 #: lib/Zim/GUI.pm:227
@@ -257,7 +262,7 @@ msgstr "_Anterior no índice|Ir á páxina anterior"
 #. menu label & tooltip for GoNext
 #: lib/Zim/GUI.pm:230
 msgid "_Next in index|Go to next page"
-msgstr "_Vindeira no índice|Ir á vindeira páxina"
+msgstr "_Seguinte no índice|Ir á seguinte páxina"
 
 #. menu label & tooltip for GoHome
 #: lib/Zim/GUI.pm:231
@@ -277,7 +282,7 @@ msgstr "_Contidos|Contidos da axuda"
 #. menu label & tooltip for ShowHelpFAQ
 #: lib/Zim/GUI.pm:234
 msgid "_FAQ|FAQ"
-msgstr "_FAQ|Preguntas Máis Frecuentes"
+msgstr "_FAQ|Preguntas máis frecuentes"
 
 #. menu label & tooltip for ShowHelpKeys
 #: lib/Zim/GUI.pm:235
@@ -287,17 +292,17 @@ msgstr "Ata_llos de teclado|Atallos de teclado"
 #. menu label & tooltip for ShowHelpBugs
 #: lib/Zim/GUI.pm:236
 msgid "_Bugs|Bugs"
-msgstr "_Bugs|Erros de programación"
+msgstr "_Erros|Erros do aplicativo"
 
 #. menu label & tooltip for About
 #: lib/Zim/GUI.pm:237
 msgid "_About|About"
-msgstr "_Acerca de|Acerca do programa"
+msgstr "_Acerca de|Acerca do aplicativo"
 
 #. menu label & tooltip for TToolBar
 #: lib/Zim/GUI.pm:243
 msgid "_Toolbar|Show toolbar"
-msgstr "Barra de Ferramen_tas|Amosar a barra de ferramentas"
+msgstr "Barra de ferramen_tas|Amosar a barra de ferramentas"
 
 #. menu label & tooltip for TStatusBar
 #: lib/Zim/GUI.pm:244
@@ -317,36 +322,35 @@ msgstr "Páxinas recentes|."
 #. menu label & tooltip for PBHistory
 #: lib/Zim/GUI.pm:252
 msgid "_History|."
-msgstr "_Histórico|."
+msgstr "_Historial|."
 
 #. menu label & tooltip for PBNamespace
 #: lib/Zim/GUI.pm:253
 msgid "_Namespace|."
-msgstr "Espacio de _Nomes|."
+msgstr "Espazo de _nomes|."
 
 #. menu label & tooltip for PBHidden
 #: lib/Zim/GUI.pm:254
 msgid "H_idden|."
-msgstr "_Oculto|."
+msgstr "A_gochado|."
 
 #. ...
 #: lib/Zim/GUI.pm:944
 msgid "Plugin already loaded: {name}"
-msgstr "Plugin xa cargado: {name}"
+msgstr "Engadido xa cargado: {name}"
 
 #. ...
 #: lib/Zim/GUI.pm:951
 msgid "No such plugin: {name}"
-msgstr "Non hai tal plugin: {name}"
+msgstr "Non hai tal engadido: {name}"
 
 #. error
 #: lib/Zim/GUI.pm:961 share/zim/plugins/VersionControl.pl:20
 msgid "Failed to load plugin: {name}"
-msgstr "Fallou a carga do plugin: {name}"
+msgstr "Fallou a carga do engadido: {name}"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:60
 msgid "File browser"
 msgstr "Navegador de ficheiros"
 
@@ -358,20 +362,20 @@ msgid ""
 "The folder: {path}\n"
 "does not exist, do you want to create it now?"
 msgstr ""
-"<b>A carpeta non existe.</b>\n"
+"<b>O cartafol non existe.</b>\n"
 "\n"
-"A carpeta {path}\n"
-"non existe, ¿quere que se cree agora?"
+"O cartafol {path}\n"
+"non existe, quere crealo agora?"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1206
 msgid "Choose {app_type}"
 msgstr "Escolla {app_type}"
 
-#. dialog input label
-#: lib/Zim/GUI.pm:1207
+#. Field in 'custom command' dialog
+#: zim/gui/applications.py:378
 msgid "Command"
-msgstr "Comando"
+msgstr "Orde"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1209
@@ -391,17 +395,15 @@ msgstr "Non se pode atopar {url}"
 #. ...
 #: lib/Zim/GUI.pm:1236
 msgid "Not an url: {url}"
-msgstr "Non é un url válido: {url}"
+msgstr "Non é un url correcto: {url}"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:64
 msgid "Email client"
-msgstr "Programa de correo electrónico"
+msgstr "Programa de correo-e"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
 msgstr "Navegador web"
 
@@ -423,8 +425,8 @@ msgstr ""
 #: lib/Zim/GUI.pm:1328
 msgid "{number} _Back link"
 msgid_plural "{number} _Back links"
-msgstr[0] "{number} ligazón _inversa"
-msgstr[1] "{number} ligazóns _inversas"
+msgstr[0] "{number} ligazón _cara atrás"
+msgstr[1] "{number} ligazóns _cara atrás"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1382
@@ -453,7 +455,7 @@ msgstr "Non foi posible gardar a páxina"
 #. dialog button
 #: lib/Zim/GUI.pm:1478
 msgid "_Discard changes"
-msgstr "_Descartar cambios"
+msgstr "_Desbotar os cambios"
 
 #. dialog button
 #: lib/Zim/GUI.pm:1479
@@ -463,15 +465,15 @@ msgstr "_Gardar unha copia..."
 #. dialog title
 #: lib/Zim/GUI.pm:1532
 msgid "Save version"
-msgstr "Gardar versión"
+msgstr "Gardar a versión"
 
-#. dialog text
-#: lib/Zim/GUI.pm:1550
+#. Dialog text
+#: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
 msgstr "Por favor, introduza un comentario para esta versión"
 
-#. label
-#: lib/Zim/GUI.pm:1558
+#. section for version details in "save version" dialog
+#: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
 msgstr "Detalles"
 
@@ -479,12 +481,12 @@ msgstr "Detalles"
 #. button label
 #: lib/Zim/GUI.pm:1568 lib/Zim/GUI/VersionsDialog.pm:129
 msgid "_Notebook Changes..."
-msgstr "Cambios no _caderno ..."
+msgstr "Cambios no _caderno de notas..."
 
 #. error
 #: lib/Zim/GUI.pm:1588
 msgid "Can not save a version without comment"
-msgstr "Non está permitido gardar unha versión sin comentario"
+msgstr "Non está permitido gardar unha versión sen comentario"
 
 #. error
 #: lib/Zim/GUI.pm:1592
@@ -498,7 +500,11 @@ msgid ""
 "\n"
 "Version control is currently not enabled for this notebook.\n"
 "Do you want to enable it ?"
-msgstr "<b>Activar o Control de Versións</b>"
+msgstr ""
+"<b>Activar o control de versións</b>\n"
+"\n"
+"O control de versións non está activado para este caderno de notas\n"
+"Quere activalo?"
 
 #. detailed notice in prompt to enable version control
 #: lib/Zim/GUI.pm:1607
@@ -507,6 +513,9 @@ msgid ""
 "Version Control System.\n"
 "Please click 'help' to read about the system requirements."
 msgstr ""
+"Para o control de versións pode elexir entre <b>Bazaar</b> ou "
+"<b>Subversion</b>,\n"
+"Faga clic en «Axuda» para ler sobre os requisitos do sistema."
 
 #. error dialog
 #: lib/Zim/GUI.pm:1645
@@ -523,26 +532,23 @@ msgstr "Versión inicial"
 msgid "{name}_(Copy)"
 msgstr "{name}_(Copia)"
 
-#. dialog title
-#: lib/Zim/GUI.pm:1692
+#. Dialog title of file save dialog
+#: zim/gui/__init__.py:1812
 msgid "Save Copy"
-msgstr "Gardar copia"
+msgstr "Gardar unha copia"
 
-#. enrty label AND
-#. tab label AND
-#. header search results AND
-#. column TODO list: zim page AND
-#. input label
-#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
-#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
-#: lib/Zim/GUI/VersionsDialog.pm:57
+#. label in word count dialog |
+#. Column header search dialog |
+#. Column header Task List dialog
+#: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
+#: zim/plugins/tasklist.py:237
 msgid "Page"
 msgstr "Páxina"
 
-#. save button
-#: lib/Zim/GUI.pm:1694
+#. Button in error dialog
+#: zim/gui/__init__.py:1717
 msgid "_Save Copy"
-msgstr "_Gardar copia"
+msgstr "_Gardar unha copia"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1695
@@ -565,9 +571,9 @@ msgid ""
 msgstr ""
 "<b>A páxina xa existe</b>\n"
 "\n"
-"A páxina '{name}'\n"
+"A páxina «{name}»\n"
 "xa existe.\n"
-"¿Desexa escribir por encima?"
+"Desexa sobrescribila?"
 
 #. save button
 #: lib/Zim/GUI.pm:1711
@@ -582,7 +588,7 @@ msgstr "Non foi posible cambiar o nome de {from} a {to}"
 #. dialog title
 #: lib/Zim/GUI.pm:1773
 msgid "Updating links"
-msgstr "Actualizando enlaces"
+msgstr "Actualizando ligazóns"
 
 #. progress bar label
 #: lib/Zim/GUI.pm:1774
@@ -592,7 +598,7 @@ msgstr "Actualizando ..."
 #. progress bar label
 #: lib/Zim/GUI.pm:1782
 msgid "Updating links in {name}"
-msgstr "Actualizando enlaces en {name}"
+msgstr "Actualizando ligazóns en {name}"
 
 #. warning dialog, answers are 'cancel' or 'delete'
 #: lib/Zim/GUI.pm:1837
@@ -602,10 +608,10 @@ msgid ""
 "Are you sure you want to delete\n"
 "page '{name}' ?"
 msgstr ""
-"<b>Borrar páxina</b>\n"
+"<b>Borrar a páxina</b>\n"
 "\n"
-"¿Está seguro de querer borrar\n"
-"a páxina '{name}'?"
+"Está seguro de querer borrar\n"
+"a páxina «{name}»?"
 
 #. error message
 #: lib/Zim/GUI.pm:1846
@@ -615,32 +621,32 @@ msgstr "Non foi posible borrar a páxina: {name}"
 #. error
 #: lib/Zim/GUI.pm:2145
 msgid "This page does not have a document folder"
-msgstr "Esta páxina non ten unha carpeta de documentos"
+msgstr "Esta páxina non ten un cartafol de documentos"
 
 #. error
 #: lib/Zim/GUI.pm:2162
 msgid "This notebook does not have a document root"
-msgstr "Este caderno non ten un documento raíz"
+msgstr "Este caderno de notas non ten un documento pai"
 
 #. ...
 #: lib/Zim/GUI.pm:2184
 msgid "This page does not have a source"
-msgstr "Esta páxina non ten fonte"
+msgstr "Esta páxina non ten orixe"
 
-#. dialog title
-#: lib/Zim/GUI.pm:2345
+#. Dialog title
+#: zim/gui/__init__.py:1755
 msgid "Jump to"
-msgstr "Saltar a"
+msgstr "Ir a"
 
-#. dialog label
-#: lib/Zim/GUI.pm:2347
+#. Label for page input
+#: zim/gui/__init__.py:1758
 msgid "Jump to Page"
-msgstr "Saltar a Páxina"
+msgstr "Ir a Páxina"
 
 #. dialog title
 #: lib/Zim/GUI.pm:2505
 msgid "Rename page"
-msgstr "Renomear páxina"
+msgstr "Renomear a páxina"
 
 #. dialog label
 #: lib/Zim/GUI.pm:2507
@@ -655,7 +661,7 @@ msgstr "_Renomear"
 #. ...
 #: lib/Zim/GUI.pm:2517
 msgid "_Update links in this page"
-msgstr "Actualizar _enlaces nesta páxina"
+msgstr "Actualizar _ligazóns nesta páxina"
 
 #. ...
 #: lib/Zim/GUI.pm:2519
@@ -668,7 +674,7 @@ msgstr[1] "_Actualizar {number} páxinas que ligan aquí"
 #. dialog prompt
 #: lib/Zim/GUI/Automount.pm:55 lib/Zim/GUI/Automount.pm:56
 msgid "Password"
-msgstr ""
+msgstr "Contrasinal"
 
 #. dialog text
 #: lib/Zim/GUI/Automount.pm:58
@@ -676,9 +682,12 @@ msgid ""
 "Please provide the password for\n"
 "{path}"
 msgstr ""
+"Precisa introducir o contrasinal para\n"
+"{path}"
 
+#. plugin name |
 #. dialog title
-#: lib/Zim/GUI/Calendar.pm:52
+#: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
 msgstr "Calendario"
 
@@ -687,8 +696,8 @@ msgstr "Calendario"
 msgid "%a %b %e %Y"
 msgstr "%a %b %e %Y"
 
-#. button
-#: lib/Zim/GUI/Calendar.pm:94
+#. button label
+#: zim/plugins/calendar.py:274
 msgid "_Today"
 msgstr "_Hoxe"
 
@@ -703,13 +712,13 @@ msgid ""
 "\n"
 "Do you want to upgrade this notebook to the new layout?\n"
 msgstr ""
-"<b>¿Actualizar as páxinas ó formato da versión 0.24?</b>\n"
+"<b>Actualizar as páxinas do calendario ao formato da versión 0.24?</b>\n"
 "\n"
-"Este caderno contén páxinas para dataas que usan o formato aaaa_mm_dd.\n"
-"Dende Zim 0.24 úsase o formato aaaa:mm:dd por defecto, creando\n"
-"espacios por mes.\n"
+"Este caderno contén páxinas para datas que usan o formato aaaa_mm_dd.\n"
+"Dende Zim 0.24 úsase o formato aaaa:mm:dd como predefinido, creando\n"
+"nomes de espazo por mes.\n"
 "\n"
-"¿Desexa actualizar este caderno ó novo esquema?\n"
+"Desexa actualizar este caderno ao novo esquema?\n"
 
 #. button
 #: lib/Zim/GUI/Calendar.pm:282
@@ -719,7 +728,7 @@ msgstr "Agora non"
 #. ...
 #: lib/Zim/GUI/Component.pm:414
 msgid "Not a valid page name: {name}"
-msgstr "Non é un nome válido de páxina: {name}"
+msgstr "Non é un nome correcto de páxina: {name}"
 
 #. button
 #: lib/Zim/GUI/Component.pm:681 lib/Zim/GUI/ExportDialog.pm:137
@@ -727,33 +736,33 @@ msgstr "Non é un nome válido de páxina: {name}"
 msgid "_Browse..."
 msgstr "E_xaminar..."
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of folder selection dialog
+#: zim/gui/widgets.py:925
 msgid "Select Folder"
-msgstr "Seleccionar Cartafol"
+msgstr "Escoller un cartafol"
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
+#. Title of file selection dialog
+#: zim/gui/widgets.py:909
 msgid "Select File"
-msgstr "Escoller Ficheiro"
+msgstr "Escoller un ficheiro"
 
 #. error when external application is not found
 #: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
 msgid "Can not find application \"{name}\""
-msgstr ""
+msgstr "Non se atopa o aplicativo \"{name}\""
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:63
 msgid "Equation Editor"
 msgstr "Editor de ecuacións"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:96
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
 msgstr "Vista _previa"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:104
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
 msgstr "Ver _rexistro"
 
@@ -769,25 +778,25 @@ msgstr ""
 #. warning dialog, answers are 'save' or 'cancel'
 #: lib/Zim/GUI/EquationEditor.pm:178
 msgid "The equation failed to compile. Do you want to save anyway?"
-msgstr "Fallou a compilación da ecuación. ¿Desexa gardar aínda así?"
+msgstr "Fallou a compilación da ecuación. Desexa gardar aínda así?"
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:293
 msgid "Equation Editor Log"
-msgstr "Rexistro do Editor de Ecuacións"
+msgstr "Rexistro do Editor de ecuacións"
 
-#. context menu
-#: lib/Zim/GUI/EquationEditor.pm:326
+#. menu item in context menu
+#: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
-msgstr "_Editar Ecuación"
+msgstr "_Editar ecuación"
 
 #. dialog title
 #: lib/Zim/GUI/ExportDialog.pm:40 lib/Zim/GUI/ExportDialog.pm:275
 msgid "Export page"
 msgstr "Exportar páxina"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:51
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:24
 msgid "Pages"
 msgstr "Páxinas"
 
@@ -796,8 +805,8 @@ msgstr "Páxinas"
 msgid "_All"
 msgstr "_Todo"
 
-#. radio button
-#: lib/Zim/GUI/ExportDialog.pm:69
+#. Option in versions dialog to show version for single page
+#: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
 msgstr "_Páxina"
 
@@ -806,18 +815,18 @@ msgstr "_Páxina"
 msgid "Recursive"
 msgstr "Recursivo"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:90
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:49
 msgid "Output"
 msgstr "Saída"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Input label in the export dialog
+#: zim/gui/exportdialog.py:53
 msgid "Format"
 msgstr "Formato"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for template selection in export dialog
+#: zim/gui/exportdialog.py:90
 msgid "Template"
 msgstr "Modelo"
 
@@ -826,15 +835,15 @@ msgstr "Modelo"
 msgid "Output dir"
 msgstr "Directorio de saída"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for setting a name for the index of exported pages
+#: zim/gui/exportdialog.py:138
 msgid "Index page"
-msgstr "Páxina de Índice"
+msgstr "Páxina de índice"
 
 #. item in dropdown menu
 #: lib/Zim/GUI/ExportDialog.pm:170
 msgid "other..."
-msgstr "Outro..."
+msgstr "outro..."
 
 #. group label
 #: lib/Zim/GUI/ExportDialog.pm:196
@@ -844,7 +853,7 @@ msgstr "Medio"
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:209
 msgid "Prefix document root"
-msgstr "Prefixo do raíz de documentos"
+msgstr "Prefixo do documento pai"
 
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:218
@@ -854,47 +863,47 @@ msgstr "Adxuntar ficheiros externos"
 #. progress bar label
 #: lib/Zim/GUI/ExportDialog.pm:276 lib/Zim/GUI/ExportDialog.pm:282
 msgid "Exporting page {number}"
-msgstr "Exportando páxina {number}"
+msgstr "Exportando a páxina {number}"
 
-#. dialog title
-#: lib/Zim/GUI/FindReplaceDialog.pm:47
+#. Dialog title
+#: zim/gui/pageview.py:3254
 msgid "Find and Replace"
-msgstr "Buscar e Substituír"
+msgstr "Buscar e substituír"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:66
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3264
 msgid "Find what"
 msgstr "Palabras a atopar"
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3275
 msgid "Match c_ase"
 msgstr "_Distinguir maiúsculas e minúsculas"
 
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3280
 msgid "Whole _word"
 msgstr "Palabras _enteiras"
 
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:78
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3285
 msgid "Replace with"
 msgstr "Substituír por"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
 msgid "_Next"
 msgstr "_Seguinte"
 
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
 msgid "_Previous"
 msgstr "_Anterior"
 
-#. button
-#: lib/Zim/GUI/FindReplaceDialog.pm:110
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:3306
 msgid "_Replace"
 msgstr "_Substituír"
 
@@ -906,27 +915,27 @@ msgstr "Substituír _todo"
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:86
 msgid "Open notebook"
-msgstr "Abrir caderno"
+msgstr "Abrir caderno de notas"
 
 #. list header
 #: lib/Zim/GUI/NotebookDialog.pm:116
 msgid "Notebooks"
-msgstr "Cadernos"
+msgstr "Cadernos de notas"
 
 #. button
 #: lib/Zim/GUI/NotebookDialog.pm:174
 msgid "Cha_nge"
 msgstr "Ca_mbiar"
 
-#. prompt
-#: lib/Zim/GUI/NotebookDialog.pm:210
+#. Input label in 'open notebook' dialog
+#: zim/gui/notebookdialog.py:291
 msgid "Default notebook"
-msgstr "Caderno por defecto"
+msgstr "Caderno de notas predeterminado"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:334
 msgid "Please select a notebook first"
-msgstr "Por favor, seleccione un caderno primeiro"
+msgstr "Por favor, seleccione un caderno de notas primeiro"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:342
@@ -936,12 +945,12 @@ msgstr "Non hai tal directorio: {name}"
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:371
 msgid "New notebook"
-msgstr "Novo caderno"
+msgstr "Novo caderno de notas"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:372
 msgid "Edit notebook"
-msgstr "Editar caderno"
+msgstr "Editar o caderno de notas"
 
 #. ...
 #: lib/Zim/GUI/NotebookDialog.pm:374
@@ -950,11 +959,9 @@ msgid ""
 "For a new notebook this should be an empty directory.\n"
 "For example a \"Notes\" directory in your home dir."
 msgstr ""
-"Por favor, indique como mínimo un directorio\n"
-"onde gardar as súas páxinas. Para un novo caderno\n"
-"isto debería ser un directorio baleiro. Por exemplo,\n"
-"un directorio chamado \"Notas\" no seu directorio\n"
-"de inicio."
+"Indique como mínimo un directorio onde gardar as súas páxinas.\n"
+"Para un novo caderno de notas isto debería ser un directorio baleiro.\n"
+"Por exemplo, un directorio chamado «Notas» no seu directorio persoal."
 
 #. menu label & tooltip for Head1
 #: lib/Zim/GUI/PageView.pm:54
@@ -990,7 +997,7 @@ msgstr "_Normal|Normal"
 #. menu label & tooltip for TBold
 #: lib/Zim/GUI/PageView.pm:60 lib/Zim/GUI/PageView.pm:70
 msgid "_Bold|Bold"
-msgstr "N_egrita|Negrita"
+msgstr "N_egriña|Negriña"
 
 #. menu label & tooltip for Italic AND
 #. menu label & tooltip for TItalic
@@ -1013,7 +1020,7 @@ msgstr "_Tachado|Tachado"
 #. menu label & tooltip for Verbatim
 #: lib/Zim/GUI/PageView.pm:64
 msgid "_Verbatim|Verbatim"
-msgstr "_Verbatim|Verbatim"
+msgstr "_Literal|Literal"
 
 #. menu label & tooltip for TLink AND
 #. menu label & tooltip for Link
@@ -1038,13 +1045,13 @@ msgstr "_Borrar|Borrar"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
-msgid "Toggle Checkbox 'V'|Toggle checkbox"
-msgstr ""
+msgid "Toggle Chechbox 'V'|Toggle checkbox"
+msgstr "Alternar Chechbox «V»|Alternar checkbox"
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
-msgid "Toggle Checkbox 'X'|Toggle checkbox"
-msgstr ""
+msgid "Toggle Chechbox 'X'|Toggle checkbox"
+msgstr "Alternar Chechbox «X»|Alternar checkbox"
 
 #. menu label & tooltip for EditObject
 #: lib/Zim/GUI/PageView.pm:83
@@ -1064,17 +1071,17 @@ msgstr "_Ligazón...|Inserir ligazón"
 #. menu label & tooltip for InsertExtLink
 #: lib/Zim/GUI/PageView.pm:86
 msgid "E_xternal Link...|Insert external link"
-msgstr "Enlace e_xterno...|Insertar enlace externo"
+msgstr "Ligazón e_xterno...|Inserir unha ligazón externa"
 
 #. menu label & tooltip for InsertImage
 #: lib/Zim/GUI/PageView.pm:87
 msgid "_Image...|Insert image"
-msgstr "_Imaxe...|Insertar imaxe"
+msgstr "_Imaxe...|Inserir imaxe"
 
 #. menu label & tooltip for InsertFromFile
 #: lib/Zim/GUI/PageView.pm:88
 msgid "Text _From File...|Insert text from file"
-msgstr "Texto desde _ficheiro...|Insertar texto desde un ficheiro"
+msgstr "Texto desde _ficheiro...|Inserir texto desde un ficheiro"
 
 #. menu label & tooltip for FindReplace
 #: lib/Zim/GUI/PageView.pm:89
@@ -1099,17 +1106,17 @@ msgstr "_Pegar|Pegar"
 #. menu label & tooltip for Find
 #: lib/Zim/GUI/PageView.pm:102
 msgid "_Find...|Find"
-msgstr "_Procurar...|Procurar"
+msgstr "_Buscar...|Buscar"
 
 #. menu label & tooltip for FindNext
 #: lib/Zim/GUI/PageView.pm:103
 msgid "Find Ne_xt|Find next"
-msgstr "Procurar pró_ximo|Procurar próximo"
+msgstr "Buscar _seguinte|Buscar seguinte"
 
 #. menu label & tooltip for FindPrev
 #: lib/Zim/GUI/PageView.pm:104
 msgid "Find Pre_vious|Find previous"
-msgstr "Procurar _anterior|Procurar anterior"
+msgstr "Buscar _anterior|Buscar anterior"
 
 #. menu label & tooltip for WordCount
 #: lib/Zim/GUI/PageView.pm:105
@@ -1161,45 +1168,46 @@ msgstr "Cursiva"
 msgid "Underline"
 msgstr "Subliñado"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:197
+#. Menu item
+#: zim/gui/pageview.py:110 zim/gui/pageview.py:119
 msgid "Strike"
 msgstr "Tachado"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:198
+#. Menu item
+#: zim/gui/pageview.py:111
 msgid "Verbatim"
-msgstr "Verbatim"
+msgstr "Literal"
 
-#. query entry label
-#: lib/Zim/GUI/PageView.pm:311
+#. label for input in find bar on bottom of page
+#: zim/gui/pageview.py:2313
 msgid "Find"
-msgstr "Procurar"
+msgstr "Buscar"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:810
 msgid "Insert Date"
 msgstr "Inserir data"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:815
+#. Menu title
+#: zim/gui/__init__.py:56
 msgid "_Edit"
-msgstr ""
+msgstr "_Editar"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:818
+#. Menu title |
+#. Button label
+#: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
 msgid "_Insert"
 msgstr "_Inserir"
 
-#. check box
-#: lib/Zim/GUI/PageView.pm:828
+#. check box in InsertDate dialog
+#: zim/gui/pageview.py:2962
 msgid "_Link to date"
-msgstr "_Enlazar á data"
+msgstr "_Ligar á data"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3015
 msgid "Insert Image"
-msgstr "Inserir unha Imaxe"
+msgstr "Inserir unha imaxe"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:972
@@ -1216,18 +1224,18 @@ msgstr "Non hai tal ficheiro: {file}"
 msgid "File is not a text file: {file}"
 msgstr "O ficheiro non é un ficheiro de texto: {file}"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:1023
+#. Dialog title
+#: zim/gui/pageview.py:3367
 msgid "Word Count"
-msgstr "Cantidade de palabras"
+msgstr "Contador de palabras"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1035
+#. label in word count dialog
+#: zim/gui/pageview.py:3404
 msgid "Lines"
 msgstr "Liñas"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1036
+#. label in word count dialog
+#: zim/gui/pageview.py:3402
 msgid "Words"
 msgstr "Palabras"
 
@@ -1241,30 +1249,30 @@ msgstr "Caracteres"
 msgid "Go to \"{link}\""
 msgstr "Ir a \"{link}\""
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1200
+#. menu item in context menu
+#: zim/gui/pageview.py:2668
 msgid "_Edit Link"
 msgstr "_Editar ligazón"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1212
+#. context menu item
+#: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
-msgstr "Copiar Enderezo de Correo-e"
+msgstr "Copiar o enderezo de correo-e"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1213
+#. context menu item
+#: zim/gui/pageview.py:2682
 msgid "Copy _Link"
-msgstr "Copiar _Ligazón"
+msgstr "Copiar a _ligazón"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1232
 msgid "Open _Directory"
-msgstr "Abrir _directorio"
+msgstr "Abrir o _directorio"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1263
 msgid "_Open link"
-msgstr "Abrir _ligazón"
+msgstr "Abrir a _ligazón"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1305
@@ -1276,33 +1284,35 @@ msgstr "Personalizar"
 msgid "Send To..."
 msgstr "Enviar a..."
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Dialog title
+#: zim/gui/pageview.py:3235
 msgid "Edit Link"
-msgstr "Editar Ligazón"
+msgstr "Editar a ligazón"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Menu item |
+#. Dialog title
+#: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
 msgid "Insert Link"
 msgstr "Inserir unha ligazón"
 
-#. dialog label
-#: lib/Zim/GUI/PageView.pm:2071
+#. Input in 'insert link' dialog |
+#. Input in 'edit link' dialog
+#: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
 msgstr "Texto"
 
 #. dialog label
 #: lib/Zim/GUI/PageView.pm:2072
 msgid "Links to"
-msgstr "Ligazóns con"
+msgstr "Ligazóns a"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+#. Dialog button
+#: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
 msgstr "_Ligazón"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3034
 msgid "Edit Image"
 msgstr "Editar imaxe"
 
@@ -1316,15 +1326,15 @@ msgstr "Orixe"
 msgid "_Properties"
 msgstr "_Propiedades"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2130
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3053
 msgid "Width"
-msgstr "Ancho"
+msgstr "Anchura"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2131
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3054
 msgid "Height"
-msgstr "Alto"
+msgstr "Altura"
 
 #. button
 #: lib/Zim/GUI/PageView.pm:2166
@@ -1334,17 +1344,17 @@ msgstr "_Restablecer"
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:44
 msgid "Application to open urls"
-msgstr "Aplicación para abrir urls"
+msgstr "Aplicativo para abrir urls"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:48
 msgid "Application to open directories"
-msgstr "Aplicación para abrir directorios"
+msgstr "Aplicativo para abrir directorios"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:52
 msgid "Application to compose email"
-msgstr "Aplicación de correo electrónico"
+msgstr "Aplicativo de correo-e"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:55
@@ -1354,7 +1364,7 @@ msgstr "Editor de textos"
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:56
 msgid "Application to edit text files"
-msgstr "Aplicación para editar ficheiros de texto"
+msgstr "Aplicativo para editar ficheiros de texto"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:59
@@ -1364,7 +1374,7 @@ msgstr "Editor de diferencias"
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:60
 msgid "Application show two text files side by side"
-msgstr "Aplicación para amosar dous ficheiros de texto simultaneamente"
+msgstr "Aplicativo para amosar dous ficheiros de texto simultaneamente"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:63
@@ -1374,7 +1384,7 @@ msgstr "Nome de usuario"
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:64
 msgid "Your name; this can be used in export templates"
-msgstr "O seu nome; esto pode ser usado nos patróns de exportación"
+msgstr "O seu nome; isto pode ser usado nos patróns de exportación"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:67
@@ -1397,18 +1407,18 @@ msgid ""
 "Show the cursor even when you can not edit the page. This is useful for "
 "keyboard based browsing."
 msgstr ""
-"Amosar o cursor aínda que non se poda editar a páxina.\n"
-"Esto é útil para navegar usando o teclado."
+"Amosar o cursor aínda que non se poida editar a páxina.\r\n"
+"Isto é útil para navegar usando o teclado."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:75
 msgid "Tearoff menus"
-msgstr "Menúes desprendibles"
+msgstr "Menús desprendibles"
 
-#. pref. tooltip
-#: lib/Zim/GUI/PreferencesDialog.pm:76
+#. Option in the preferences dialog
+#: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
-msgstr "Engadir barras para desprender os menúes"
+msgstr "Engadir barras para desprender os menús"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:79
@@ -1453,25 +1463,27 @@ msgstr "Incrementar automáticamente os artigos nunha lista enumerada"
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:95
 msgid "Check checkbox lists recursive"
-msgstr ""
+msgstr "Revisa a lista \"Caixa de verificación\" recursiva"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:96
 msgid "Checking a checkbox list item will also check any sub-items"
 msgstr ""
+"Revisando un elemento da lista \"Caixa de verificación\", tamén revisará "
+"calquera sub-elemento"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:99
 msgid "Use \"Backspace\" to un-indent"
-msgstr "Usar \"Borrar\" para quitar a sangría"
+msgstr "Usar \"Espazo atrás\" para quitar a sangría"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:100
 msgid ""
 "Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
 msgstr ""
-"Usar a tecla de \"Borrar\" (en inglés, \"Backspace\") para quitar\n"
-"a sangría dos elementos de listas de puntos (o mesmo que \"Shift-Tab\")"
+"Usar a tecla de \"Espazo atrás\" para quitar a sangría das listas de puntos "
+"(o mesmo que \"Shift-Tab\")"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:103
@@ -1494,13 +1506,13 @@ msgid ""
 "Use the \"Enter\" key to follow links. If disabled you still can use \"Alt-"
 "Enter\""
 msgstr ""
-"Use a tecla \"Enter\" para seguir ligazóns. Se non se activa esta opción,\n"
+"Use a tecla \"Enter\" para seguir ligazóns. Se non se activa esta opción,\r\n"
 "sempre pode usar \"Alt-Enter\"."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:111
 msgid "Use \"Ctrl-Space\" to switch focus"
-msgstr "Usar \"Control-Espacio\" para cambiar o enfoque"
+msgstr "Usar \"Ctrl-Espazo\" para cambiar o enfoque"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:112
@@ -1508,9 +1520,9 @@ msgid ""
 "Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
 "If disabled you can still use \"Alt-Space\"."
 msgstr ""
-"Use a combinación \"Control-Espacio\" para cambiar o enfoque entre o texto e "
-"o panel lateral.\n"
-"Se non se activa esta opción, sempre pode usar \"Alt-Espacio\"."
+"Use a combinación \"Ctrl-Espazo\" para cambiar o enfoque entre o texto e o "
+"panel lateral.\r\n"
+"Se non se activa esta opción, sempre pode usar \"Alt-Espazo\"."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:115
@@ -1522,8 +1534,8 @@ msgstr "Expandir panel lateral"
 msgid "Start the side pane with the whole tree expanded."
 msgstr "Comezar coa árbore do panel lateral expandida"
 
-#. dialog title
-#: lib/Zim/GUI/PreferencesDialog.pm:124
+#. Dialog title
+#: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -1545,12 +1557,12 @@ msgstr "Usar un tipo de letra personalizado"
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:244
 msgid "Editing"
-msgstr "Edición"
+msgstr "Editando"
 
-#. tab label
-#: lib/Zim/GUI/PreferencesDialog.pm:266
+#. Heading in preferences dialog
+#: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
-msgstr "Extensións"
+msgstr "Engadidos"
 
 #. ...
 #: lib/Zim/GUI/PreferencesDialog.pm:270
@@ -1558,60 +1570,66 @@ msgid ""
 "You need to restart the application\n"
 "for plugin changes to take effect."
 msgstr ""
-"Necesita reiniciar a aplicación\n"
-"para que os cambios das extensións\n"
-"fagan efecto."
+"Necesita reiniciar o aplicativo\n"
+"para que os cambios dos engadidos\n"
+"teñan efecto."
 
-#. header plugin list
-#: lib/Zim/GUI/PreferencesDialog.pm:285
+#. Column in plugin tab
+#: zim/gui/preferencesdialog.py:268
 msgid "Enabled"
 msgstr "Activado"
 
-#. header plugin list AND
-#. input
-#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+#. Field in 'custom command' dialog |
+#. Input label in the 'rename page' dialog for the new name |
+#. input field in 'Add Notebook' dialog |
+#. Heading in plugins tab of preferences dialog |
+#. label for properties dialog
+#: zim/gui/applications.py:377 zim/gui/__init__.py:1923
+#: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
+#: zim/notebook.py:339
 msgid "Name"
 msgstr "Nome"
 
-#. dialog title
-#: lib/Zim/GUI/PropertiesDialog.pm:35
+#. Dialog title
+#: zim/gui/propertiesdialog.py:11
 msgid "Properties"
 msgstr "Propiedades"
 
-#. tab label
-#: lib/Zim/GUI/PropertiesDialog.pm:52
+#. Column heading in 'open notebook' dialog |
+#. Field in web server gui
+#: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
-msgstr "Caderno"
+msgstr "Caderno de Notas"
 
 #. input
 #: lib/Zim/GUI/PropertiesDialog.pm:100
 msgid "Directory"
 msgstr "Directorio"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:102
+#. label for properties dialog
+#: zim/notebook.py:340
 msgid "Home Page"
 msgstr "Páxina de inicio"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:103
+#. label for properties dialog
+#: zim/notebook.py:341
 msgid "Icon"
-msgstr "Icono"
+msgstr "Icona"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:104
+#. label for properties dialog
+#: zim/notebook.py:342
 msgid "Document Root"
-msgstr "Raíz dos documentos"
+msgstr "Documento pai"
 
-#. check box
-#: lib/Zim/GUI/PropertiesDialog.pm:114
+#. label for properties dialog
+#: zim/notebook.py:343
 msgid "Slow file system"
 msgstr "Sistema de ficheiros lento"
 
 #. check box
 #: lib/Zim/GUI/PropertiesDialog.pm:120
 msgid "Auto-save version on close"
-msgstr "Gardar versión automáticamente ó saír"
+msgstr "Gardar a versión automáticamente ao saír"
 
 #. label for page property Content-Type
 #: lib/Zim/GUI/PropertiesDialog.pm:189
@@ -1621,20 +1639,18 @@ msgstr "Formato orixinal"
 #. label for page property Creation-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:190
 msgid "Creation Date"
-msgstr "Data de Creación"
+msgstr "Data de creación"
 
 #. label for page property Modification-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:191
 msgid "Modification Date"
-msgstr "Data de Modificación"
+msgstr "Data de modificación"
 
-#. dialog title AND
-#. input label AND
-#. menu item
-#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
-#: lib/Zim/GUI/TrayIcon.pm:262
+#. Dialog title |
+#. input label
+#: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
-msgstr "Procurar"
+msgstr "Buscar"
 
 #. header search results
 #: lib/Zim/GUI/SearchDialog.pm:75
@@ -1659,48 +1675,49 @@ msgstr "Comprobar _ortografía|Comprobación da ortografía"
 #. dialog title
 #: lib/Zim/GUI/TODOListDialog.pm:46
 msgid "TODO List"
-msgstr "Lista de tarefas (\"TODO\")"
+msgstr "Lista de tarefas"
 
-#. prompt
-#: lib/Zim/GUI/TODOListDialog.pm:69
+#. Input label
+#: zim/plugins/tasklist.py:109
 msgid "Filter"
 msgstr "Filtrar"
 
-#. Button label
-#: lib/Zim/GUI/TODOListDialog.pm:73
+#. Button
+#: zim/plugins/tasklist.py:114
 msgid "_Filter"
 msgstr "_Filtrar"
 
-#. column TODO list: priority
-#: lib/Zim/GUI/TODOListDialog.pm:109
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:257
 msgid "Prio"
 msgstr "Prioridade"
 
-#. column TODO list: task description
-#: lib/Zim/GUI/TODOListDialog.pm:110
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:236
 msgid "Task"
 msgstr "Tarefa"
 
-#. column TODO list: due date AND
-#. column header for timstamp
-#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+#. Column header Task List dialog |
+#. Column header versions dialog
+#: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
 msgstr "Data"
 
 #. ...
 #: lib/Zim/GUI/TODOListDialog.pm:139
 msgid "Include all open checkboxes"
-msgstr ""
+msgstr "Incluir todas as \"Caixas de verificación\" abertas"
 
 #. number of tasks in TODO list
 #: lib/Zim/GUI/TODOListDialog.pm:284
 msgid "{number} item total"
 msgid_plural "{number} items total"
-msgstr[0] "{number} artigo en total"
-msgstr[1] "{number} artigos en total"
+msgstr[0] "{number} elemento en total"
+msgstr[1] "{number} elementos en total"
 
-#. menu item "Other notebook"
-#: lib/Zim/GUI/TrayIcon.pm:201
+#. Option in template selection to specify another file
+#: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
+#: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
 msgid "Other..."
 msgstr "Outro..."
 
@@ -1709,20 +1726,22 @@ msgstr "Outro..."
 msgid "Scanning tree ..."
 msgstr "Buscando na árbore..."
 
+#. Dialog title |
 #. dialog title
-#: lib/Zim/GUI/VersionsDialog.pm:39
+#: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
+#: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
 msgstr "Versións"
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:76
 msgid "View _Annotated..."
-msgstr "Ver _Anotacións..."
+msgstr "Ver _anotacións..."
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:79
 msgid "_Restore Version..."
-msgstr "_Restaurar Versión..."
+msgstr "_Restablecer a versión..."
 
 #. column header for version id
 #: lib/Zim/GUI/VersionsDialog.pm:86
@@ -1734,10 +1753,10 @@ msgstr "Id"
 msgid "User"
 msgstr "Usuario"
 
-#. frame label
-#: lib/Zim/GUI/VersionsDialog.pm:101
+#. version details
+#: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
-msgstr ""
+msgstr "Comentario"
 
 #. label for version entry
 #: lib/Zim/GUI/VersionsDialog.pm:118
@@ -1757,7 +1776,7 @@ msgstr "Cambios na _páxina"
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:133
 msgid "Co_mpare Page..."
-msgstr "Co_mparar Páxina..."
+msgstr "Co_mparar a páxina..."
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:229
@@ -1787,7 +1806,7 @@ msgstr "Non foi posible recuperar os cambios para a páxina: {page}"
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:347
 msgid "Could not get changes for this notebook"
-msgstr ""
+msgstr "Non se puideron obter cambios para este caderno de notas"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:365
@@ -1802,7 +1821,7 @@ msgstr "Editor de diferencias"
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:389
 msgid "Could not get annotated source for page {page}"
-msgstr "Non foi posible recuperar a fonte anotada para a páxina {page}"
+msgstr "Non foi posible recuperar a orixe anotada para a páxina {page}"
 
 #. confirmation for restore version, answers are 'cancel' or 'ok'
 #: lib/Zim/GUI/VersionsDialog.pm:415
@@ -1814,6 +1833,12 @@ msgid ""
 "\n"
 "All changes since the last saved version will be lost !"
 msgstr ""
+"<b>Restaurar a páxina á versión gardada?</b>\n"
+"\n"
+"Quere restaurar a páxina: {page}\n"
+"á versión gardada: {version}?\n"
+"\n"
+"Todos os cambios desde a última versión gardada hanse perder!"
 
 #. menu label & tooltip for GoToday
 #: share/zim/plugins/Calendar.pl:7
@@ -1838,7 +1863,7 @@ msgstr "Captura de _pantalla...|Inserir captura de pantalla"
 #. menu label & tooltip for TmpPrint
 #: share/zim/plugins/PrintToBrowser.pl:32
 msgid "Print to Browser|Print to browser"
-msgstr "Imprimir ó navegador|Imprimir ó navegador"
+msgstr "Imprimir ao navegador|Imprimir ao navegador"
 
 #. menu label & tooltip for TTODOList
 #: share/zim/plugins/TODOList.pl:7
@@ -1853,17 +1878,17 @@ msgstr "Páxina editable|Páxina editable"
 #. menu label & tooltip for SvnCommit
 #: share/zim/plugins/VersionControl/Subversion.pl:30
 msgid "SVN commit|Commit notebook to SVN repository"
-msgstr ""
+msgstr "Enviar a SVN|Enviar o caderno de notas ao repositorio SVN"
 
 #. menu label & tooltip for SvnUpdate
 #: share/zim/plugins/VersionControl/Subversion.pl:31
 msgid "SVN update|Update notebook from SVN repository"
-msgstr ""
+msgstr "Actualizar SVN|Actualizar o caderno de notas desde o repositorio SVN"
 
 #. menu label & tooltip for SvnCleanup
 #: share/zim/plugins/VersionControl/Subversion.pl:32
 msgid "SVN cleanup|Cleanup SVN working copy"
-msgstr ""
+msgstr "Limpar o SVN|Limpar as copias de traballo do SVN"
 
 #. SVN warning
 #: share/zim/plugins/VersionControl/Subversion.pl:90
@@ -1871,13 +1896,15 @@ msgid ""
 "This page was updated in the repository.\n"
 "Please update your working copy (Tools -> SVN update)."
 msgstr ""
+"Esta páxina foie actualizada no repositorio\n"
+"Por favor actualice a súa copia de traballo (Ferramentas -> Actualizar SVN)."
 
 #. Error in SVN update
 #: share/zim/plugins/VersionControl/Subversion.pl:104
 msgid "Failed update working copy."
-msgstr ""
+msgstr "Fallou ao actualizar a copia de traballo."
 
 #. ...
 #: share/zim/plugins/VersionControl/Subversion.pl:117
 msgid "Failed to cleanup SVN working copy."
-msgstr ""
+msgstr "Fallou ao limpar a copia de traballo  no SVN."

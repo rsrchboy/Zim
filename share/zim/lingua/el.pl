@@ -5,19 +5,19 @@
 # 
 # 
 # TRANSLATORS:
-# Alexis Tamparopoulos (el)
+# paxatouridis (el)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2009-02-02 12:52+0000
-# Last-Translator: Alexis Tamparopoulos <Unknown>
+# PO-Revision-Date: 2009-12-02 17:02+0000
+# Last-Translator: paxatouridis <Unknown>
 # Language-Team: Greek <el@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -81,7 +81,7 @@ Do you want to upgrade this notebook to the new layout?
   'Calen_dar|Show calendar' => '',
   'Calendar' => 'Ημερολόγιο',
   'Can not find application "bzr"' => 'Δεν βρέθηκε η εφαρμογή "brz"',
-  'Can not find application "{name}"' => '',
+  'Can not find application "{name}"' => 'Δεν βρέθηκε η εφαρμογή "{name}"',
   'Can not save a version without comment' => '',
   'Can not save to page: {name}' => 'Δεν κατέστη δυνατή η αποθήκευση στη σελίδα: {name}',
   'Can\'t find {url}' => 'Δεν βρέθηκε η {url}',
@@ -127,7 +127,7 @@ Do you want to upgrade this notebook to the new layout?
   'Edit Image' => 'Επεξεργασία Εικόνας',
   'Edit Link' => '',
   'Edit Query' => '',
-  'Edit _Source|Open source' => '',
+  'Edit _Source|Open source' => 'Επεξεργα_σία Πηγαίου Κώδικα|Επεξεργασία πηγαίου κώδικα',
   'Edit notebook' => 'Επεξεργασία σημειωματάριου',
   'Edit text files "wiki style"' => 'Επεξεργασία αρχείων κειμένου σε μορφή "wiki"',
   'Editing' => 'Επεξεργασία',
@@ -174,7 +174,7 @@ do you have subversion utils installed?' => 'Αποτυχία φόρτωσης �
   'Id' => '',
   'Include all open checkboxes' => '',
   'Index page' => '',
-  'Initial version' => '',
+  'Initial version' => 'Αρχική έκδοση',
   'Insert Date' => 'Εισαγωγή Ημερομηνίας',
   'Insert Image' => 'Εισαγωγή Εικόνας',
   'Insert Link' => '',
@@ -199,7 +199,7 @@ do you have subversion utils installed?' => 'Αποτυχία φόρτωσης �
   'No such plugin: {name}' => 'Δεν υπάρχει τέτοιο πρόσθετο: {name}',
   'Normal' => '',
   'Not Now' => 'Όχι Τώρα',
-  'Not a valid page name: {name}' => '',
+  'Not a valid page name: {name}' => 'Δεν είναι έγκυρο το όνομα σελίδας: {name}',
   'Not an url: {url}' => '',
   'Note that linking to a non-existing page
 also automatically creates a new page.' => '',
@@ -338,7 +338,7 @@ for plugin changes to take effect.' => '',
   '_Edit Link' => '',
   '_Edit Link...|Edit link' => '',
   '_Edit|' => '_Επεξεργασία|',
-  '_FAQ|FAQ' => '',
+  '_FAQ|FAQ' => '_FAQ|FAQ',
   '_File|' => '_Αρχείο|',
   '_Filter' => '_Φίλτρο',
   '_Find...|Find' => '_Εύρεση|Εύρεση',

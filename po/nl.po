@@ -10,26 +10,124 @@ msgstr ""
 "Project-Id-Version: Zim 0.23\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2008-10-29 08:23+0000\n"
-"Last-Translator: Jaap Karssenberg <pardus@cpan.org>\n"
+"PO-Revision-Date: 2009-08-14 10:09+0000\n"
+"Last-Translator: Bart <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2008-11-09 09:05+0000\n"
+"X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
+#. Field in 'custom command' dialog
+#: zim/gui/applications.py:378
+msgid "Command"
+msgstr "Programma"
+
+#. Title of folder selection dialog
+#: zim/gui/widgets.py:925
+msgid "Select Folder"
+msgstr "Selecteer Map"
+
+#. Title of file selection dialog
+#: zim/gui/widgets.py:909
+msgid "Select File"
+msgstr "Bestand selecteren"
+
+#. Dialog title
+#: zim/gui/pageview.py:3254
+msgid "Find and Replace"
+msgstr "Zoeken en vervange"
+
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3264
+msgid "Find what"
+msgstr "Zoek deze"
+
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3275
+msgid "Match c_ase"
+msgstr "Hoofdletter gevoelig"
+
+#. checkbox option in find & replace dialog
+#: zim/gui/pageview.py:3280
+msgid "Whole _word"
+msgstr "Hele woord"
+
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
+msgid "_Next"
+msgstr "V_olgende"
+
+#. button in find bar on bottom of page |
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
+msgid "_Previous"
+msgstr "Vor_ige"
+
+#. Button in search & replace dialog
+#: zim/gui/pageview.py:3306
+msgid "_Replace"
+msgstr "_Vervangen"
+
+#. Input label in 'open notebook' dialog
+#: zim/gui/notebookdialog.py:291
+msgid "Default notebook"
+msgstr "Standaard notitieboek"
+
+#. Menu item
+#: zim/gui/pageview.py:110 zim/gui/pageview.py:119
+msgid "Strike"
+msgstr "Doorgehaald"
+
+#. label for input in find bar on bottom of page
+#: zim/gui/pageview.py:2313
+msgid "Find"
+msgstr "Zoek"
+
+#. Menu title
+#: zim/gui/__init__.py:56
+msgid "_Edit"
+msgstr "_Bewerken"
+
+#. Dialog title
+#: zim/gui/pageview.py:3015
+msgid "Insert Image"
+msgstr "Afbeelding invoegen"
+
+#. Menu item |
+#. Dialog title
+#: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
+msgid "Insert Link"
+msgstr "Link invoegen"
+
+#. Column in plugin tab
+#: zim/gui/preferencesdialog.py:268
+msgid "Enabled"
+msgstr "In gebruik"
+
+#. Option in template selection to specify another file
+#: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
+#: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
+msgid "Other..."
+msgstr "Overige..."
+
+#. This string needs to be translated with names of the translators for this language
+#: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Balaam's Miracle https://launchpad.net/~balaam-balaamsmiracle\n"
+"  Bart https://launchpad.net/~bartvanherck\n"
 "  Frits Salomons https://launchpad.net/~salomons\n"
 "  Jaap Karssenberg https://launchpad.net/~pardus-cpan\n"
-"  Mathijs https://launchpad.net/~mathijssch"
+"  Mathijs https://launchpad.net/~mathijssch\n"
+"  cumulus007 https://launchpad.net/~cumulus-007"
 
-#. Name for desktop menu
-#: share/applications/zim.desktop:-
+#. tooltip for tray icon
+#: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
 msgstr "Zim Desktop Wiki"
 
@@ -44,7 +142,7 @@ msgstr "Bewerk tekstbestanden \"\"wiki style\"'"
 #: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
 #: lib/Zim/GUI/VersionsDialog.pm:402
 msgid "Text Editor"
-msgstr "Tekst Verwerker"
+msgstr "Tekst Editor"
 
 #. error
 #: bin/zim:373
@@ -178,7 +276,7 @@ msgstr "Ei_genschappen...|Eigenschappen"
 #. menu label & tooltip for Close
 #: lib/Zim/GUI.pm:213
 msgid "_Close|Close window"
-msgstr "Sl_uiten|Window sluiten"
+msgstr "Sl_uiten|Venster sluiten"
 
 #. menu label & tooltip for Quit
 #: lib/Zim/GUI.pm:214
@@ -228,7 +326,7 @@ msgstr "Bestand _Aanhechten|Bestand aanhechten"
 #. menu label & tooltip for EditSource
 #: lib/Zim/GUI.pm:223
 msgid "Edit _Source|Open source"
-msgstr "Brontext Bewerken|Brontext bewerken"
+msgstr "Brontekst Bewerken|Brontekst bewerken"
 
 #. menu label & tooltip for RBIndex
 #: lib/Zim/GUI.pm:224
@@ -350,9 +448,8 @@ msgstr "Plugin niet gevonden: {name}"
 msgid "Failed to load plugin: {name}"
 msgstr "Kan plugin niet laden: {name}"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1162 lib/Zim/GUI/PreferencesDialog.pm:47
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:60
 msgid "File browser"
 msgstr "Bestandsbrowser"
 
@@ -374,11 +471,6 @@ msgstr ""
 msgid "Choose {app_type}"
 msgstr "Kies {app_type}"
 
-#. dialog input label
-#: lib/Zim/GUI.pm:1207
-msgid "Command"
-msgstr "Programma"
-
 #. dialog text
 #: lib/Zim/GUI.pm:1209
 msgid "Please enter a {app_type}"
@@ -387,7 +479,7 @@ msgstr "Geef een commando om een {app_type} te starten"
 #. error
 #: lib/Zim/GUI.pm:1213
 msgid "You have no {app_type} configured"
-msgstr "Geen {app_type} geconfigureerd"
+msgstr "Geen {app_type} ingesteld"
 
 #. ...
 #: lib/Zim/GUI.pm:1234
@@ -399,15 +491,13 @@ msgstr "Kan {url} niet vinden"
 msgid "Not an url: {url}"
 msgstr "Geen geldige web locatie: {url}"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1240 lib/Zim/GUI/PreferencesDialog.pm:51
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:64
 msgid "Email client"
 msgstr "Email programma"
 
-#. application type AND
-#. pref. label
-#: lib/Zim/GUI.pm:1241 lib/Zim/GUI/PreferencesDialog.pm:43
+#. Input for application type in preferences dialog
+#: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
 msgstr "Webbrowser"
 
@@ -448,8 +538,8 @@ msgid ""
 "Note that linking to a non-existing page\n"
 "also automatically creates a new page."
 msgstr ""
-"Door te linken naar een niet bestaande pagina\n"
-"kan u ook een nieuwe pagina aanmaken."
+"Door te linken naar een niet-bestaande pagina\n"
+"kunt u ook een nieuwe pagina aanmaken."
 
 #. ...
 #: lib/Zim/GUI.pm:1476
@@ -471,13 +561,13 @@ msgstr "_Kopie opslaan..."
 msgid "Save version"
 msgstr "Versie opslaan"
 
-#. dialog text
-#: lib/Zim/GUI.pm:1550
+#. Dialog text
+#: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
 msgstr "Geef een korte omschrijving voor deze versie"
 
-#. label
-#: lib/Zim/GUI.pm:1558
+#. section for version details in "save version" dialog
+#: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
 msgstr "Details"
 
@@ -536,24 +626,21 @@ msgstr "Eerste versie"
 msgid "{name}_(Copy)"
 msgstr "{name}_(Kopie)"
 
-#. dialog title
-#: lib/Zim/GUI.pm:1692
+#. Dialog title of file save dialog
+#: zim/gui/__init__.py:1812
 msgid "Save Copy"
 msgstr "Kopie Opslaan"
 
-#. enrty label AND
-#. tab label AND
-#. header search results AND
-#. column TODO list: zim page AND
-#. input label
-#: lib/Zim/GUI.pm:1693 lib/Zim/GUI/PropertiesDialog.pm:54
-#: lib/Zim/GUI/SearchDialog.pm:74 lib/Zim/GUI/TODOListDialog.pm:112
-#: lib/Zim/GUI/VersionsDialog.pm:57
+#. label in word count dialog |
+#. Column header search dialog |
+#. Column header Task List dialog
+#: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
+#: zim/plugins/tasklist.py:237
 msgid "Page"
 msgstr "Pagina"
 
-#. save button
-#: lib/Zim/GUI.pm:1694
+#. Button in error dialog
+#: zim/gui/__init__.py:1717
 msgid "_Save Copy"
 msgstr "Kopie _Opslaan"
 
@@ -616,7 +703,7 @@ msgid ""
 msgstr ""
 "<b>Pagina verwijderen</b>\n"
 "\n"
-"Weet u zeker dat de pagina\n"
+"Weet u zeker dat u de pagina\n"
 "'{name}' wilt verwijderen ?"
 
 #. error message
@@ -637,15 +724,15 @@ msgstr "Dit notitieboek heeft geen documentenroot."
 #. ...
 #: lib/Zim/GUI.pm:2184
 msgid "This page does not have a source"
-msgstr "Deze pagina heeft geen bron text"
+msgstr "Deze pagina heeft geen bron tekst"
 
-#. dialog title
-#: lib/Zim/GUI.pm:2345
+#. Dialog title
+#: zim/gui/__init__.py:1755
 msgid "Jump to"
 msgstr "Ga naar"
 
-#. dialog label
-#: lib/Zim/GUI.pm:2347
+#. Label for page input
+#: zim/gui/__init__.py:1758
 msgid "Jump to Page"
 msgstr "Ga naar pagina"
 
@@ -691,18 +778,19 @@ msgstr ""
 "Geef wachtwoord voor:\n"
 "{path}"
 
+#. plugin name |
 #. dialog title
-#: lib/Zim/GUI/Calendar.pm:52
+#: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
-msgstr "Kalender"
+msgstr "Calender"
 
 #. strftime format for current date - default suggested in perldoc localtime
 #: lib/Zim/GUI/Calendar.pm:63
 msgid "%a %b %e %Y"
 msgstr "%a %e %b %Y"
 
-#. button
-#: lib/Zim/GUI/Calendar.pm:94
+#. button label
+#: zim/plugins/calendar.py:274
 msgid "_Today"
 msgstr "_Vandaag"
 
@@ -741,16 +829,6 @@ msgstr "Ongeldige pagina naam: {name}"
 msgid "_Browse..."
 msgstr "_Bladeren..."
 
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
-msgid "Select Folder"
-msgstr "Selecteer Map"
-
-#. dialog title
-#: lib/Zim/GUI/Component.pm:970
-msgid "Select File"
-msgstr "Bestand selecteren"
-
 #. error when external application is not found
 #: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
 msgid "Can not find application \"{name}\""
@@ -761,13 +839,13 @@ msgstr "Kan applicatie \"{name}\" niet vinden"
 msgid "Equation Editor"
 msgstr "Formule Bewerken"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:96
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
 msgstr "_Tonen"
 
-#. button
-#: lib/Zim/GUI/EquationEditor.pm:104
+#. button in e.g. equation editor dialog
+#: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
 msgstr "Bekijk _Log"
 
@@ -790,8 +868,8 @@ msgstr "De formule kan niet worden weergegeven. Wilt u toch opslaan?"
 msgid "Equation Editor Log"
 msgstr "Formule Log"
 
-#. context menu
-#: lib/Zim/GUI/EquationEditor.pm:326
+#. menu item in context menu
+#: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
 msgstr "Formule Be_werken"
 
@@ -800,18 +878,18 @@ msgstr "Formule Be_werken"
 msgid "Export page"
 msgstr "Pagina Exporteren"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:51
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:24
 msgid "Pages"
-msgstr "Paginas"
+msgstr "Pagina's"
 
 #. radio button
 #: lib/Zim/GUI/ExportDialog.pm:61
 msgid "_All"
 msgstr "_Alle"
 
-#. radio button
-#: lib/Zim/GUI/ExportDialog.pm:69
+#. Option in versions dialog to show version for single page
+#: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
 msgstr "_Pagina"
 
@@ -820,18 +898,18 @@ msgstr "_Pagina"
 msgid "Recursive"
 msgstr "Recursief"
 
-#. group label
-#: lib/Zim/GUI/ExportDialog.pm:90
+#. Section heading in export dialog
+#: zim/gui/exportdialog.py:49
 msgid "Output"
 msgstr "Formaat"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Input label in the export dialog
+#: zim/gui/exportdialog.py:53
 msgid "Format"
 msgstr "Opmaak"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for template selection in export dialog
+#: zim/gui/exportdialog.py:90
 msgid "Template"
 msgstr "Template"
 
@@ -840,8 +918,8 @@ msgstr "Template"
 msgid "Output dir"
 msgstr "Map"
 
-#. label input field
-#: lib/Zim/GUI/ExportDialog.pm:102
+#. Label for setting a name for the index of exported pages
+#: zim/gui/exportdialog.py:138
 msgid "Index page"
 msgstr "Index pagina"
 
@@ -870,47 +948,10 @@ msgstr "Externe bestanden mee kopiëren"
 msgid "Exporting page {number}"
 msgstr "Pagina {number} aan het exporteren"
 
-#. dialog title
-#: lib/Zim/GUI/FindReplaceDialog.pm:47
-msgid "Find and Replace"
-msgstr "Zoeken en vervange"
-
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:66
-msgid "Find what"
-msgstr "Zoek deze"
-
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:71 lib/Zim/GUI/SearchDialog.pm:62
-msgid "Match c_ase"
-msgstr "Hoofdletter gevoelig"
-
-#. check box
-#: lib/Zim/GUI/FindReplaceDialog.pm:73 lib/Zim/GUI/SearchDialog.pm:65
-msgid "Whole _word"
-msgstr "Hele woord"
-
-#. input label
-#: lib/Zim/GUI/FindReplaceDialog.pm:78
+#. input label in find & replace dialog
+#: zim/gui/pageview.py:3285
 msgid "Replace with"
-msgstr "Vervangen door"
-
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:89 lib/Zim/GUI/PageView.pm:325
-msgid "_Next"
-msgstr "V_olgende"
-
-#. button AND
-#. search button
-#: lib/Zim/GUI/FindReplaceDialog.pm:100 lib/Zim/GUI/PageView.pm:319
-msgid "_Previous"
-msgstr "Vor_ige"
-
-#. button
-#: lib/Zim/GUI/FindReplaceDialog.pm:110
-msgid "_Replace"
-msgstr "_Vervangen"
+msgstr "Vervang door"
 
 #. button
 #: lib/Zim/GUI/FindReplaceDialog.pm:120
@@ -931,11 +972,6 @@ msgstr "Notitieboeken"
 #: lib/Zim/GUI/NotebookDialog.pm:174
 msgid "Cha_nge"
 msgstr "_Wijzigen"
-
-#. prompt
-#: lib/Zim/GUI/NotebookDialog.pm:210
-msgid "Default notebook"
-msgstr "Standaard notitieboek"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:334
@@ -1014,7 +1050,7 @@ msgstr "_Schuingedrukt|Schuingedrukt"
 #. menu label & tooltip for TUnderline
 #: lib/Zim/GUI/PageView.pm:62 lib/Zim/GUI/PageView.pm:72
 msgid "_Underline|Underline"
-msgstr "_Oderstrepen|Onderstrepen"
+msgstr "_Onderstrepen|Onderstrepen"
 
 #. menu label & tooltip for Strike AND
 #. menu label & tooltip for TStrike
@@ -1050,12 +1086,12 @@ msgstr "_Wissen|Wissen"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
-msgid "Toggle Checkbox 'V'|Toggle checkbox"
+msgid "Toggle Chechbox 'V'|Toggle checkbox"
 msgstr "Markeer checkbox \"V\"|Markeer checkbox \"V\""
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
-msgid "Toggle Checkbox 'X'|Toggle checkbox"
+msgid "Toggle Chechbox 'X'|Toggle checkbox"
 msgstr "Markeer checkbox \"V\"|Markeer checkbox \"V\""
 
 #. menu label & tooltip for EditObject
@@ -1173,45 +1209,26 @@ msgstr "Schuingedrukt"
 msgid "Underline"
 msgstr "Onderstreept"
 
-#. Text style
-#: lib/Zim/GUI/PageView.pm:197
-msgid "Strike"
-msgstr "Doorgehaald"
-
-#. Text style
-#: lib/Zim/GUI/PageView.pm:198
+#. Menu item
+#: zim/gui/pageview.py:111
 msgid "Verbatim"
 msgstr "Letterlijk"
-
-#. query entry label
-#: lib/Zim/GUI/PageView.pm:311
-msgid "Find"
-msgstr "Zoek"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:810
 msgid "Insert Date"
 msgstr "Datum invoegen"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:815
-msgid "_Edit"
-msgstr "_Bewerken"
-
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:818
+#. Menu title |
+#. Button label
+#: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
 msgid "_Insert"
 msgstr "_Invoegen"
 
-#. check box
-#: lib/Zim/GUI/PageView.pm:828
+#. check box in InsertDate dialog
+#: zim/gui/pageview.py:2962
 msgid "_Link to date"
 msgstr "_Link datum"
-
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:948 lib/Zim/GUI/PageView.pm:2101
-msgid "Insert Image"
-msgstr "Afbeelding invoegen"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:972
@@ -1228,18 +1245,18 @@ msgstr "Bestand niet gevonden: {file}"
 msgid "File is not a text file: {file}"
 msgstr "Bestand is geen tekst bestand: {file}"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:1023
+#. Dialog title
+#: zim/gui/pageview.py:3367
 msgid "Word Count"
 msgstr "Woorden Tellen"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1035
+#. label in word count dialog
+#: zim/gui/pageview.py:3404
 msgid "Lines"
 msgstr "Regels"
 
-#. label
-#: lib/Zim/GUI/PageView.pm:1036
+#. label in word count dialog
+#: zim/gui/pageview.py:3402
 msgid "Words"
 msgstr "Woorden"
 
@@ -1253,18 +1270,18 @@ msgstr "Letters"
 msgid "Go to \"{link}\""
 msgstr "Ga naar \"{link}\""
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1200
+#. menu item in context menu
+#: zim/gui/pageview.py:2668
 msgid "_Edit Link"
 msgstr "Link be_werken"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1212
+#. context menu item
+#: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
 msgstr "Email Adres Kopiëren"
 
-#. context menu
-#: lib/Zim/GUI/PageView.pm:1213
+#. context menu item
+#: zim/gui/pageview.py:2682
 msgid "Copy _Link"
 msgstr "_Link Kopiëren"
 
@@ -1288,18 +1305,14 @@ msgstr "Wijzigen"
 msgid "Send To..."
 msgstr "Zenden naar..."
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
+#. Dialog title
+#: zim/gui/pageview.py:3235
 msgid "Edit Link"
 msgstr "Link Bewerken"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2069
-msgid "Insert Link"
-msgstr "Link invoegen"
-
-#. dialog label
-#: lib/Zim/GUI/PageView.pm:2071
+#. Input in 'insert link' dialog |
+#. Input in 'edit link' dialog
+#: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
 msgstr "Tekst"
 
@@ -1308,13 +1321,13 @@ msgstr "Tekst"
 msgid "Links to"
 msgstr "Link naar"
 
-#. dialog button
-#: lib/Zim/GUI/PageView.pm:2074 lib/Zim/GUI/PageView.pm:2103
+#. Dialog button
+#: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
 msgstr "_Link"
 
-#. dialog title
-#: lib/Zim/GUI/PageView.pm:2101
+#. Dialog title
+#: zim/gui/pageview.py:3034
 msgid "Edit Image"
 msgstr "Afbeelding Bewerken"
 
@@ -1328,13 +1341,13 @@ msgstr "Bron"
 msgid "_Properties"
 msgstr "_Eigenschappen"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2130
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3053
 msgid "Width"
 msgstr "Breedte"
 
-#. input label
-#: lib/Zim/GUI/PageView.pm:2131
+#. Input in 'edit image' dialog
+#: zim/gui/pageview.py:3054
 msgid "Height"
 msgstr "Hoogte"
 
@@ -1417,10 +1430,10 @@ msgstr ""
 msgid "Tearoff menus"
 msgstr "Afscheurbare menus"
 
-#. pref. tooltip
-#: lib/Zim/GUI/PreferencesDialog.pm:76
+#. Option in the preferences dialog
+#: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
-msgstr "Zet afscheur strips boven de menus"
+msgstr "Zet afscheurstrips boven de menus"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:79
@@ -1483,8 +1496,8 @@ msgstr "Gebruik \"Backspace\" om inspringen ongedaan te maken"
 msgid ""
 "Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
 msgstr ""
-"Gebruik de \"Backspace\" toets om het inspringen van een aantal "
-"regelsongedaan te maken. (Gelijk aan \"Shift-Tab\")"
+"Gebruik de \"Backspace\" toets om het inspringen van een aantal regels "
+"ongedaan te maken. (Gelijk aan \"Shift-Tab\")"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:103
@@ -1522,8 +1535,8 @@ msgid ""
 "Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
 "If disabled you can still use \"Alt-Space\"."
 msgstr ""
-"Gebruik de \"Ctrl-Spatie\" toetsen combinatie om focus te switchen tusse "
-"detekst en het zij-paneel. Als deze optie uitstaat kunt u nog steeds\"Alt-"
+"Gebruik de \"Ctrl-Spatie\" toetscombinatie om de focus te verspringen tussen "
+"de tekst en het zij-paneel. Als deze optie uitstaat, kunt u nog steeds\"Alt-"
 "Spatie\" gebruiken."
 
 #. pref. label
@@ -1536,8 +1549,8 @@ msgstr "Zij-paneel uitklappen"
 msgid "Start the side pane with the whole tree expanded."
 msgstr "Start met alle items in het zij-paneel uitgeklapt."
 
-#. dialog title
-#: lib/Zim/GUI/PreferencesDialog.pm:124
+#. Dialog title
+#: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
 msgstr "Voorkeuren"
 
@@ -1561,8 +1574,8 @@ msgstr "Wijzig lettertype"
 msgid "Editing"
 msgstr "Bewerken"
 
-#. tab label
-#: lib/Zim/GUI/PreferencesDialog.pm:266
+#. Heading in preferences dialog
+#: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
 msgstr "Plugins"
 
@@ -1575,24 +1588,25 @@ msgstr ""
 "U dient dit programma opnieuw te starten\n"
 "voordat nieuwe plugins geladen worden."
 
-#. header plugin list
-#: lib/Zim/GUI/PreferencesDialog.pm:285
-msgid "Enabled"
-msgstr "In gebruik"
-
-#. header plugin list AND
-#. input
-#: lib/Zim/GUI/PreferencesDialog.pm:286 lib/Zim/GUI/PropertiesDialog.pm:101
+#. Field in 'custom command' dialog |
+#. Input label in the 'rename page' dialog for the new name |
+#. input field in 'Add Notebook' dialog |
+#. Heading in plugins tab of preferences dialog |
+#. label for properties dialog
+#: zim/gui/applications.py:377 zim/gui/__init__.py:1923
+#: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
+#: zim/notebook.py:339
 msgid "Name"
 msgstr "Naam"
 
-#. dialog title
-#: lib/Zim/GUI/PropertiesDialog.pm:35
+#. Dialog title
+#: zim/gui/propertiesdialog.py:11
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#. tab label
-#: lib/Zim/GUI/PropertiesDialog.pm:52
+#. Column heading in 'open notebook' dialog |
+#. Field in web server gui
+#: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
 msgstr "Notitieboek"
 
@@ -1601,23 +1615,23 @@ msgstr "Notitieboek"
 msgid "Directory"
 msgstr "Map"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:102
+#. label for properties dialog
+#: zim/notebook.py:340
 msgid "Home Page"
 msgstr "Start Pagina"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:103
+#. label for properties dialog
+#: zim/notebook.py:341
 msgid "Icon"
-msgstr "Icoon"
+msgstr "Pictogram"
 
-#. input
-#: lib/Zim/GUI/PropertiesDialog.pm:104
+#. label for properties dialog
+#: zim/notebook.py:342
 msgid "Document Root"
 msgstr "Bestanden map"
 
-#. check box
-#: lib/Zim/GUI/PropertiesDialog.pm:114
+#. label for properties dialog
+#: zim/notebook.py:343
 msgid "Slow file system"
 msgstr "Langzaam bestands systeen"
 
@@ -1641,11 +1655,9 @@ msgstr "Aanmaakdatum"
 msgid "Modification Date"
 msgstr "Wijzigingsdatum"
 
-#. dialog title AND
-#. input label AND
-#. menu item
-#: lib/Zim/GUI/SearchDialog.pm:33 lib/Zim/GUI/SearchDialog.pm:50
-#: lib/Zim/GUI/TrayIcon.pm:262
+#. Dialog title |
+#. input label
+#: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
 msgstr "Zoeken"
 
@@ -1674,29 +1686,29 @@ msgstr "_Spelling controlleren|Spelling controlleren"
 msgid "TODO List"
 msgstr "Taken lijst"
 
-#. prompt
-#: lib/Zim/GUI/TODOListDialog.pm:69
+#. Input label
+#: zim/plugins/tasklist.py:109
 msgid "Filter"
 msgstr "Filter"
 
-#. Button label
-#: lib/Zim/GUI/TODOListDialog.pm:73
+#. Button
+#: zim/plugins/tasklist.py:114
 msgid "_Filter"
 msgstr "_Filteren"
 
-#. column TODO list: priority
-#: lib/Zim/GUI/TODOListDialog.pm:109
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:257
 msgid "Prio"
 msgstr "Prio"
 
-#. column TODO list: task description
-#: lib/Zim/GUI/TODOListDialog.pm:110
+#. Column header Task List dialog
+#: zim/plugins/tasklist.py:236
 msgid "Task"
 msgstr "Taak"
 
-#. column TODO list: due date AND
-#. column header for timstamp
-#: lib/Zim/GUI/TODOListDialog.pm:111 lib/Zim/GUI/VersionsDialog.pm:87
+#. Column header Task List dialog |
+#. Column header versions dialog
+#: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
 msgstr "Datum"
 
@@ -1712,18 +1724,15 @@ msgid_plural "{number} items total"
 msgstr[0] "{number} taak"
 msgstr[1] "{number} taken"
 
-#. menu item "Other notebook"
-#: lib/Zim/GUI/TrayIcon.pm:201
-msgid "Other..."
-msgstr "Overige..."
-
 #. status bar info
 #: lib/Zim/GUI/TreeView.pm:363
 msgid "Scanning tree ..."
 msgstr "Index aan het opbouwen ..."
 
+#. Dialog title |
 #. dialog title
-#: lib/Zim/GUI/VersionsDialog.pm:39
+#: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
+#: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
 msgstr "Versies"
 
@@ -1747,8 +1756,8 @@ msgstr "Id"
 msgid "User"
 msgstr "Gebruiker"
 
-#. frame label
-#: lib/Zim/GUI/VersionsDialog.pm:101
+#. version details
+#: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
 msgstr "Beschrijving"
 
@@ -1760,7 +1769,7 @@ msgstr "Deze versie vergelijken met"
 #. special name for current version
 #: lib/Zim/GUI/VersionsDialog.pm:120 lib/Zim/GUI/VersionsDialog.pm:412
 msgid "Current"
-msgstr "Huidig"
+msgstr "Huidige"
 
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:131
@@ -1901,105 +1910,4 @@ msgstr "Update uit archief mislukt"
 #. ...
 #: share/zim/plugins/VersionControl/Subversion.pl:117
 msgid "Failed to cleanup SVN working copy."
-msgstr "Cleanup van kopie mislukt"
-
-#~ msgid "_Open Notebook...|Open notebook"
-#~ msgstr "Notitieboek _Openen...|Notitieboek openen"
-
-#~ msgid "S_ave A Copy...|Save a copy"
-#~ msgstr "Ko_pie Opslaan...|Kopie opslaan"
-
-#~ msgid "Open _Folder|Open folder"
-#~ msgstr "_Map Openen|Map openen"
-
-#~ msgid "_Previous|Go to previous page"
-#~ msgstr "Vor_ige|Ga naar vorige pagina"
-
-#~ msgid "_Next|Go to next page"
-#~ msgstr "Vo_lgende|Ga naar volgende pagina"
-
-#~ msgid "Toolbar|Show toolbar"
-#~ msgstr "_Werkbalk|Werkbalk tonen"
-
-#~ msgid "Side _Pane|Show side pane"
-#~ msgstr "Zij-paneel|Zij-paneel tonen"
-
-#~ msgid "Page does not exist: {name}"
-#~ msgstr "Pagina bestaat niet: {name}"
-
-#~ msgid "{number} _Back links"
-#~ msgstr "{number} _Referenties"
-
-#~ msgid "Could not save"
-#~ msgstr "Opslaan mislukt"
-
-#~ msgid "Page exists"
-#~ msgstr "Pagina bestaat"
-
-#~ msgid ""
-#~ "Page '{name}'\n"
-#~ "already exists."
-#~ msgstr ""
-#~ "Pagina '{name}'\n"
-#~ "bestaat al."
-
-#~ msgid "Delete page"
-#~ msgstr "Pagina verwijderen"
-
-#~ msgid ""
-#~ "Are you sure you want to\n"
-#~ "delete '{name}' ?"
-#~ msgstr ""
-#~ "Weet u zeker dat u pagina\n"
-#~ "'{name}' wilt verwijderen ?"
-
-#~ msgid "_Update {number} pages linking here"
-#~ msgstr "{number} links naar deze pagina _aanpassen"
-
-#~ msgid "Equation invalid"
-#~ msgstr "Formule ongeldig"
-
-#~ msgid "_Relative linked"
-#~ msgstr "Link _relatief"
-
-#~ msgid "_Absolute linked"
-#~ msgstr "Link _absoluut"
-
-#~ msgid "_Copy files"
-#~ msgstr "Bestanden _kopieren"
-
-#~ msgid "Please choose a notebook"
-#~ msgstr "Kies een notitieboek"
-
-#~ msgid "Set _Default"
-#~ msgstr "Standaard instellen"
-
-#~ msgid "Please select a notebook first."
-#~ msgstr "Kiest u eerst een notitieboek"
-
-#~ msgid ""
-#~ "Please give a directory to store your pages.\n"
-#~ "For a new notebook this should be an empty directory.\n"
-#~ "For example a \"Notes\" directory in your home dir."
-#~ msgstr ""
-#~ "U dient een map aan te geven om uw paginas op te slaan.\n"
-#~ "Voor een nieuw notitieboek zou dit een lege map moeten zijn.\n"
-#~ "Bijvoorbeeld een map \"Notities\" in uw persoonlijke map."
-
-#~ msgid "Set default notebook"
-#~ msgstr "Standaard notitieboek instellen"
-
-#~ msgid "Please select a default notebook here"
-#~ msgstr "Selecteer uw standaard notitieboek"
-
-#~ msgid "_From File...|Insert from file"
-#~ msgstr "Uit _Bestand|Uit bestand invoegen"
-
-#~ msgid "File"
-#~ msgstr "Bestand"
-
-#~ msgid "Home"
-#~ msgstr "Start"
-
-#~ msgid "Today"
-#~ msgstr "Vandaag"
+msgstr "Opschonen van SVN copie mislukt."

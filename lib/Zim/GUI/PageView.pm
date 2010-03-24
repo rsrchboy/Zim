@@ -19,7 +19,7 @@ use Zim::GUI::Component;
 eval "use Gtk2::Ex::DesktopEntryMenu";
 my $has_mimeapplications = $@ ? 0 : 1;
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 
 our @ISA = qw/Zim::GUI::Component/;
 
@@ -215,6 +215,8 @@ Simple constructor.
 my ($k_tab, $k_l_tab, $k_return, $k_kp_enter, $k_backspace, $k_escape, $k_multiply, $k_home, $k_F3) =
 	@Gtk2::Gdk::Keysyms{qw/Tab ISO_Left_Tab Return KP_Enter BackSpace Escape KP_Multiply Home F3/};
 #my @k_parse_word = ($k_tab, map ord($_), ' ', qw/. ; , ' "/);
+
+my $punctuation = qr/[\.\!\?]*/;
 
 sub init { # called by new()
 	my $self = shift;
@@ -1847,24 +1849,26 @@ sub parse_word {
 		or $line =~ qr{ (?<!\S)(
 		        [\w\.\-\(\)]*(?: :[\w\.\-\(\)]{2,} )+:?
 		      | \.\w[\w\.\-\(\)]+(?: :[\w\.\-\(\)]{2,} )*:?
-		            )$  }x # page (ns:page .subpage)
+		            )($punctuation)$  }x # page (ns:page .subpage)
 		or $line =~ qr{(?<!\S)(
 		      \w[\w\+\-\.]+\?\w\S+
-		            )$}x # interwiki (name?page)
+		            )($punctuation)$}x # interwiki (name?page)
 		or ( $self->{app}{settings}{use_linkfiles}
 		  and $line =~ qr{ (?<!\S)( (?:
 	  	      ~/[^/\s] | ~[^/\s]*/ | \.\.?/ | /[^/\s]
-		               ) \S* )$  }x ) # file (~/ ~name/ ../ ./ /)
+		               ) \S* )($punctuation)$  }x ) # file (~/ ~name/ ../ ./ /)
 		or ( $self->{app}{settings}{use_camelcase}
 		  and $line =~ qr{(?<!\S)(
-	  	      [[:upper:]]+[[:lower:]]+[[:upper:]]+\w*
-		               )$}x  ) # CamelCase
+	  	      [[:upper:]]*[[:lower:]]+[[:upper:]]+\w*
+		               )($punctuation)$}x  ) # CamelCase
 	) { # any kind of link
 		my $word = $1;
+		my $punct = $2;
 		return 0 if $word !~ /[[:alpha:]]{2}/; # at least two letters in there
 		return 0 if $word =~ /^\d+:/; # do not link "10:20h", "10:20PM" etc.
 		my ($start, $end) = ($iter->copy, $iter->copy);
-		$start->backward_chars(length $word);
+		$start->backward_chars(length $word.$punct );
+		$end->backward_chars(length $punct);
 		return 0 if grep {$_->get_property('name') !~ /spell/}
 			$start->get_tags, $end->get_tags;
 		if (defined $char) {

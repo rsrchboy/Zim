@@ -5,19 +5,20 @@
 # 
 # 
 # TRANSLATORS:
+# Henry Lee (zh_TW)
 # cyberik (zh_TW)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-11-02 07:11+0000
-# Last-Translator: cyberik <cyberikee@gmail.com>
+# PO-Revision-Date: 2009-11-17 23:43+0000
+# Last-Translator: Henry Lee <Unknown>
 # Language-Team: Traditional Chinese <zh_TW@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=1; plural=0;
-# X-Launchpad-Export-Date: 2008-11-09 09:05+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -316,8 +317,8 @@ is missing. Can not edit equation.' => '欠缺此圖像: {path} 的方程式
 Please update your working copy (Tools -> SVN update).' => '儲庫已更新此書頁.
 請更新工作副本 (工具 -> 更新 SVN).',
   'To_day|Today' => '今天(_d)|今天',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => '切換勾選框 \'V\'|切換勾選框',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => '切換勾選框 \'V\'|切換勾選框',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => '切換勾選框 \'V\'|切換勾選框',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => '切換勾選框 \'V\'|切換勾選框',
   'Underline' => '底線字',
   'Updating links' => '更新連結',
   'Updating links in {name}' => '更新 {name} 內的連結',

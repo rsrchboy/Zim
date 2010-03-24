@@ -7,18 +7,6 @@
 # 
 # TRANSLATORS:
 # Jean Demartini (fr)
-# Daniel Stoyanov (fr)
-# Etienne Le Belléguy (fr)
-# Jaap Karssenberg (fr)
-# Jérôme Guelfucci (fr)
-# Nucleos (fr)
-# Rui Nibau (fr)
-# Daniel Stoyanov (fr)
-# Etienne Le Belléguy (fr)
-# Jaap Karssenberg (fr)
-# Jérôme Guelfucci (fr)
-# Nucleos (fr)
-# Rui Nibau (fr)
 # BobMauchin (fr)
 # Daniel Stoyanov (fr)
 # Etienne Le Belléguy (fr)
@@ -38,7 +26,7 @@
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n > 1;
-# X-Launchpad-Export-Date: 2008-11-09 09:04+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -333,8 +321,8 @@ est manquante. Elle ne peut pas être modifiée.',
 Please update your working copy (Tools -> SVN update).' => 'Cette page a été modifiée dans le dépôt.
 Mettez à jour votre copie de travail (Outils -> SVN update).',
   'To_day|Today' => '_Aujourd\'hui|Aujourd\'hui',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => 'Cocher la case \'V\'|Cocher la case',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => 'Cocher la case \'X\'|Cocher la case',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => 'Cocher la case \'V\'|Cocher la case',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => 'Cocher la case \'X\'|Cocher la case',
   'Underline' => 'Souligné',
   'Updating links' => 'Mise à jour des liens',
   'Updating links in {name}' => 'Mise à jour des liens dans {name}',

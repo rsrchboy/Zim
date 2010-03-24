@@ -1,7 +1,7 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.26
 Creation-Date: Unknown
-Modification-Date: Sat, 08 Nov 2008 11:42:25 +0100
+Modification-Date: Di, 07 Apr 2009 22:59:28 +0200
 
 ====== TODO List ======
 
@@ -49,16 +49,36 @@ To set a priority for items you add one or more exclamation marks:
 The number of exclamation marks is the priority given for each item in the list.	
 
 ===== Due date =====
-You can also add a due date for TODO items. Two formats are supported: "''dd/mm/yy''" or "''dd/mm''". This date is matched anywhere in the description. For example each of the following sets a high priority item for 24 December:
+You can also add a due date for TODO items. The following formats are supported: 
+'''
+• dd/mm/yy 
+• dd/mm 
+• dd.mm.yyyy 
+• dd.mm.
+• yyyy-mm-dd
+• yyyy_mm_dd
+• yyyy mm dd (with a space as delimiter)
+• yyyy:mm:dd
+'''
 
-	TODO: buy christmas presents 24/12 !!
-	TODO: 24/12 buy christmas presents !!
-	[ ] buy christmas presents 24/12 !!
+You can use also the short forms like yy-m-d or d/m.
+To distinguish the due date from other dates you may use prefix and postfix identificators. 
+The default settings are ''['' as the prefix and '']'' as the postfix. See the Configuration paragraph below for more details.
+'''
+'''
+
+This date is matched anywhere in the description. For example each of the following sets a high priority item for 24th of December (2009):
+
+	TODO: buy christmas presents [24/12] !!
+	TODO: don't forget christmas [  24.12.  ] presents !!
+	TODO: [24/12] buy christmas presents !!
+	[ ] buy christmas presents [24/12] !!
 
 	TODO:
-	!! Buy christmas presents before 24/12
+	!! Buy christmas presents before [24/12]
+	!! [2009-12-24] yep, christmas is coming. Buy presents.
 
-	* Buy christmas presents - TODO 24/12 !!
+	* Buy christmas presents - TODO [24/12] !!
 
 ===== Checking items =====
 To mark items as done you can either remove them, use strike-trough formatting or put the tag "DONE" on the same line. For example:
@@ -79,3 +99,13 @@ Of course when using [[checkboxes]] any item that is checked will be considered 
 
 ===== Configuration =====
 By default the TODOList plugin looks for the tags "TODO" and "FIXME". If you want to disable these (e.g. to only use checkboxes) or want to use different tags you can change them in the [[config|config file]]. The section for this plugin has an option "tags" which takes a comma seperated list of tags to look for.
+
+* tags			default: 	TODO, FIXME
+
+To control the due date match you can use the following options:
+
+* due_date_prefix 	default: 	''[''
+-> Used to match the due date. This string must be found before a date. Space between this string and the date is also allowed. Can be set to empty string which means that no prefix is necessary.
+
+* due_date_postfix	default: 	'']''
+-> Used to match the due date. This string must be found after a date. Space between the date and this string is also allowed. Can be set to empty string which means that no postfix is necessary.

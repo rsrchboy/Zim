@@ -4,7 +4,7 @@ use strict;
 use File::BaseDir 0.03 qw/data_files/;
 use Zim::FS;
 
-our $VERSION = '0.26';
+our $VERSION = '0.29';
 
 eval 'use Zim::OS::Win32' if $^O eq 'MSWin32';
 die $@ if $@;
@@ -199,6 +199,11 @@ Supported formats:
 	yyyy mm dd	yy m d ...
 	yyyy:mm:dd	yy:m:d ...
 
+	yyyy-mm-dd  yy-m-d ...       (ISO format)
+	
+	dd.mm.      d.mm. d.m. dd.m. (second dot is NOT optional)
+	dd.mm.yyyy  ... 
+
 TODO: Add other common date formats ?
 
 =item C<parse_date_l(STRING)>
@@ -211,8 +216,10 @@ If STRING is an integer it calls C<localtime()> directly.
 sub parse_date {
 	my $s = shift;
 	#warn "Parse date: >>$s<<\n";
-	$s =~ s/^\D*|\D*$//g; # remove any prefix / postfix
+	$s =~ s/^\s*|\s*$//g; # remove any space before and after
 	my @date = ($s =~ m/^\d+\/\d+(\/\d+)?$/) ? reverse(split '/', $s) :
+	           ($s =~ m/^\d+\.\d+\.(\d+)?$/) ? reverse(split /\./, $s):
+	           ($s =~ m/^\d+-\d+-\d+$/)      ? split( '-', $s)        :
 	           ($s =~ m/^\d+_\d+_\d+$/)      ? split( '_', $s)        :
 	           ($s =~ m/^\d+ \d+ \d+$/)      ? split( ' ', $s)        :
 	           ($s =~ m/^\d+:\d+:\d+$/)      ? split( ':', $s)        : () ;
@@ -231,7 +238,8 @@ sub parse_date {
 		$date[0] += ($date[0] >= 50) ? 1900 : 2000;
 		#$date[0] += ($year - $date[0] >= 50) ? 1900 : 2000; # FIXME
 	}
-	return @date;
+	return @date if date_is_valid(@date);
+	return undef;
 }
 
 sub parse_date_l {
@@ -251,6 +259,84 @@ sub parse_date_l {
 
 sub strftime { goto \&{"$ISA[0]::strftime"} }
 	# FIXME: this feels like a HACK
+	
+=item C<iso_date(year month day)>
+
+Returns a date in ISO 8601 Calendar Date format YYYY-MM-DD. 
+See also http://tinyurl.com/2f4o5s
+
+=cut
+
+sub iso_date {
+	return '' if ! $_[0];
+	my $iso = sprintf( "%04u-%02u-%02u", @_ );
+	return $iso eq '0000-00-00' ? '' : $iso;
+}	
+
+=item C<date_is_valid(year month day)>
+
+Returns true in case that the date is valid, which means 
+that the year is between 1990 and 2199 and that month is
+between 1 and 12 and that the date is between 1 and 28|29|30|31
+considering the month and the (leap)year
+
+=cut
+
+sub date_is_valid {
+	my $max_days;
+	my ( $year, $month, $day ) = @_;
+	#warn "$year $month $day\n";
+        if ( $year < 1990 || $year > 2199 ) {
+		return 0;
+        }
+        else {
+		if ( $month < 1 || $month > 12 ) {
+			return 0;
+		}
+		else {
+			if (   ( $month == 1 )
+			    || ( $month == 3 )
+			    || ( $month == 5 )
+			    || ( $month == 7 )
+			    || ( $month == 8 )
+			    || ( $month == 10 )
+			    || ( $month == 12 ) ) 
+			{
+				$max_days = 31;
+			}
+			elsif (( $month == 4 )
+			    || ( $month == 6 )
+			    || ( $month == 9 )
+			    || ( $month == 11 ) )
+			{
+				$max_days = 30;
+			}
+			else {
+				$max_days = 28 + leapyear($year);
+			}
+			if ( $day < 1 || $day > $max_days ) {
+				return 0;
+			}
+		}
+        }
+        return 1; #date is valid
+}
+
+=item C<leapyear(year)>
+
+Returns 1 (true) if the year is a leapyear.
+See also http://en.wikipedia.org/wiki/Leap_year
+
+=cut
+
+sub leapyear {
+	my $year = shift || 0;
+	if (   ( ( $year % 4 == 0 ) && ( $year % 100 != 0 ) ) 
+	    || ( $year % 400 == 0 ) ) {
+		return 1;
+	}
+	return 0;
+}
 
 package Zim::Utils::Unix;
 

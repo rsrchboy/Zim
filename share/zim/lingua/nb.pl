@@ -11,14 +11,14 @@
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2009-02-16 18:31+0000
+# PO-Revision-Date: 2009-11-18 06:02+0000
 # Last-Translator: Bjørn Olav Samdal <bjornsam@ulrik.uio.no>
 # Language-Team: Norwegian Bokmal <nb@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=2; plural=n != 1;
-# X-Launchpad-Export-Date: 2009-02-17 18:56+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -289,7 +289,7 @@ For eksempel "Notater" katalogen i din hjemmemappe.',
   'Source Format' => '',
   'Start the side pane with the whole tree expanded.' => '',
   'Stri_ke|Strike' => 'Gjennomstre_ket|Gjennomstreket',
-  'Strike' => 'Gjennomstreket',
+  'Strike' => '',
   'TODO List' => '',
   'Task' => '',
   'Tearoff menus' => '',

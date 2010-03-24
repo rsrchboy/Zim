@@ -1,7 +1,7 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.26
 Creation-Date: Unknown
-Modification-Date: Sat, 08 Nov 2008 11:25:55 +0100
+Modification-Date: Mo, 06 Apr 2009 21:48:35 +0200
 
 ====== Preferences ======
 
@@ -50,6 +50,8 @@ The **Auto-select words** option turns autoselection on. This means that for exa
 **Use "Backspace"** controls whether the "Backspace" is used to un-indent, just as the "Shift-Tab" combination.
 
 **Check checkbox lists recursive** is an option controlling the behavior of checkbox lists with child items. See [[checkboxes]] for more details. 
+
+With **Uppercase Title** you decide if the title of a new page should get the first character in uppercase if there's no uppercase character at all in the page name.
 
 ==== Plugins ====
 

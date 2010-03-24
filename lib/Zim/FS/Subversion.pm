@@ -2,9 +2,9 @@ package Zim::FS::Subversion;
 
 use strict;
 use Carp;
-use Zim::Utils qw/buffer/; # be careful not to import file() and dir()
+use Zim::Utils qw/buffer __/; # be careful not to import file() and dir()
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 our @ISA = qw/Zim::FS::Dir/;
 
 =head1 NAME

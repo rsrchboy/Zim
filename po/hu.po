@@ -1,43 +1,39 @@
-# Finnish translation for zim
-# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# Hungarian translation for zim
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
 # This file is distributed under the same license as the zim package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zim\n"
-"Report-Msgid-Bugs-To: pardus@cpan.org\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-10-27 21:09+0100\n"
-"PO-Revision-Date: 2009-11-18 06:49+0000\n"
-"Last-Translator: Juhana Uuttu <Unknown>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2009-12-02 23:09+0000\n"
+"Last-Translator: István Papp <Unknown>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2010-01-10 10:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
-"X-Poedit-Country: FINLAND\n"
-"X-Poedit-Language: Finnish\n"
-"X-Poedit-Basepath: /home/cthulhu/paketointi/zim/Zim-0.26\n"
-"X-Poedit-Bookmarks: 29,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. This string needs to be translated with names of the translators for this language
 #: zim/gui/__init__.py:1072
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Juhana Uuttu https://launchpad.net/~rexroom"
+"  István Papp https://launchpad.net/~istpapp"
 
 #. tooltip for tray icon
 #: zim/plugins/trayicon.py:67
 msgid "Zim Desktop Wiki"
-msgstr "Zim työpöytä-wiki"
+msgstr "Zim asztali Wiki"
 
 #. Comment for desktop menu
 #: share/applications/zim.desktop:-
 msgid "Edit text files \"wiki style\""
-msgstr "Muokkaa tekstitiedostoja \"wiki-tyylillä\""
+msgstr "Szövegfájlok szerkesztése „wiki” stílusban"
 
 #. GenericName for desktop menu AND
 #. application type AND
@@ -45,22 +41,22 @@ msgstr "Muokkaa tekstitiedostoja \"wiki-tyylillä\""
 #: share/applications/zim.desktop:- lib/Zim/GUI.pm:2193
 #: lib/Zim/GUI/VersionsDialog.pm:402
 msgid "Text Editor"
-msgstr "Tekstieditori"
+msgstr "Szövegszerkesztő"
 
 #. error
 #: bin/zim:373
 msgid "No such file or directory: {name}"
-msgstr "Tiedosto/hakemisto ei olemassa: {name}"
+msgstr "Nincs ilyen fájl vagy könyvtár: {name}"
 
 #. error
 #: bin/zim:374
 msgid "No such notebook: {name}"
-msgstr "Vihko ei olemassa: {name}"
+msgstr "Nincs ilyen jegyzetfüzet: {name}"
 
 #. Error SVN not installed
 #: lib/Zim/FS/Bazaar.pm:74
 msgid "Can not find application \"bzr\""
-msgstr "En löydä ohjelmaa \"bzr\""
+msgstr "A \"bzr\" alkalmazás nem található"
 
 #. error SVN not installed
 #: lib/Zim/FS/Subversion.pm:89
@@ -68,293 +64,294 @@ msgid ""
 "Failed to load SVN plugin,\n"
 "do you have subversion utils installed?"
 msgstr ""
-"SVN-lisäosan lataus epäonnistui.\n"
-"Onko sinulla subversion-työkalut asennettuna?"
+"Az SVN bővítmény betöltése sikertelen,\n"
+"telepítve van a subversion alkalmazás?"
 
 #. menu label & tooltip for FileMenu
 #: lib/Zim/GUI.pm:183
 msgid "_File|"
-msgstr "_Tiedosto|"
+msgstr "_Fájl|"
 
 #. menu label & tooltip for EditMenu
 #: lib/Zim/GUI.pm:184
 msgid "_Edit|"
-msgstr "_Muokkaa|"
+msgstr "Sz_erkesztés|"
 
 #. menu label & tooltip for ViewMenu
 #: lib/Zim/GUI.pm:185
 msgid "_View|"
-msgstr "_Näytä|"
+msgstr "_Nézet|"
 
 #. menu label & tooltip for InsertMenu
 #: lib/Zim/GUI.pm:186
 msgid "_Insert|"
-msgstr "_Lisää|"
+msgstr "_Beszúrás|"
 
 #. menu label & tooltip for SearchMenu
 #: lib/Zim/GUI.pm:187
 msgid "_Search|"
-msgstr "Et_si|"
+msgstr "_Keresés|"
 
 #. menu label & tooltip for FormatMenu
 #: lib/Zim/GUI.pm:188
 msgid "For_mat|"
-msgstr "M_uoto|"
+msgstr "For_mátum|"
 
 #. menu label & tooltip for ToolsMenu
 #: lib/Zim/GUI.pm:189
 msgid "_Tools|"
-msgstr "Työ_kalut|"
+msgstr "Es_zközök|"
 
 #. menu label & tooltip for GoMenu
 #: lib/Zim/GUI.pm:190
 msgid "_Go|"
-msgstr "M_ene|"
+msgstr "_Ugrás|"
 
 #. menu label & tooltip for HelpMenu
 #: lib/Zim/GUI.pm:191
 msgid "_Help|"
-msgstr "_Ohje|"
+msgstr "_Súgó|"
 
 #. menu label & tooltip for PathBarMenu
 #: lib/Zim/GUI.pm:192
 msgid "P_athbar type|"
-msgstr "_Polkupalkin tyyppi|"
+msgstr "Útvonalsáv típusa|"
 
 #. menu label & tooltip for NewPage
 #: lib/Zim/GUI.pm:198
 msgid "_New Page|New page"
-msgstr "_Uusi sivu|Uusi sivu"
+msgstr "_Új oldal|Új oldal"
 
 #. menu label & tooltip for OpenNotebook
 #: lib/Zim/GUI.pm:200
 msgid "_Open Another Notebook...|Open notebook"
-msgstr "_Avaa toinen vihko...|Avaa vihko"
+msgstr "Másik _jegyzetfüzet megnyitása...|Jegyzetfüzet megnyitása"
 
 #. menu label & tooltip for Save
 #: lib/Zim/GUI.pm:201
 msgid "_Save|Save page"
-msgstr "_Tallenna|Tallenna sivu"
+msgstr "Menté_s|Oldal mentése"
 
 #. menu label & tooltip for SaveVersion
 #: lib/Zim/GUI.pm:202
 msgid "S_ave Version...|Save Version"
-msgstr "Tallenna ve_rsio...|Tallenna versio"
+msgstr "Verzió mentése...|Verzió mentése"
 
 #. menu label & tooltip for Versions
 #: lib/Zim/GUI.pm:203
 msgid "_Versions...|Versions"
-msgstr "_Versiot...|Versiot"
+msgstr "_Verziók...|Verziók"
 
 #. menu label & tooltip for Export
 #: lib/Zim/GUI.pm:204
 msgid "E_xport...|Export"
-msgstr "Vi_e...|Vie"
+msgstr "E_xportálás...|Exportálás"
 
 #. menu label & tooltip for EmailPage
 #: lib/Zim/GUI.pm:205
 msgid "_Send To...|Mail page"
-msgstr "_Lähetä...|Lähetä sivu"
+msgstr "_Küldés...|Küldés levélben"
 
 #. menu label & tooltip for CopyPage
 #: lib/Zim/GUI.pm:206
 msgid "_Copy Page...|Copy page"
-msgstr "_Kopioi sivu...|Kopioi sivu"
+msgstr "Oldal _másolása...|Oldal másolása"
 
 #. menu label & tooltip for RenamePage
 #: lib/Zim/GUI.pm:208
 msgid "_Rename Page...|Rename page"
-msgstr "_Uudelleennimeä sivu...|Uudelleennimeä sivu"
+msgstr "Oldal át_nevezése...|Oldal átnevezése"
 
 #. menu label & tooltip for DeletePage
 #: lib/Zim/GUI.pm:210
 msgid "_Delete Page|Delete page"
-msgstr "_Poista sivu|Poista sivu"
+msgstr "Ol_dal törlése...|Oldal törlése"
 
 #. menu label & tooltip for Props
 #: lib/Zim/GUI.pm:212
 msgid "Proper_ties|Properties dialog"
-msgstr "_Ominaisuudet|Ominaisuudet"
+msgstr "_Tulajdonságok|Tulajdonságok"
 
 #. menu label & tooltip for Close
 #: lib/Zim/GUI.pm:213
 msgid "_Close|Close window"
-msgstr "_Sulje|Sulje ikkuna"
+msgstr "A_blak bezárása|Ablak bezárása"
 
 #. menu label & tooltip for Quit
 #: lib/Zim/GUI.pm:214
 msgid "_Quit|Quit"
-msgstr "_Lopeta|Lopeta"
+msgstr "_Kilépés|Kilépés"
 
 #. menu label & tooltip for Search
 #: lib/Zim/GUI.pm:215
 msgid "_Search...|Search"
-msgstr "_Etsi...|Etsi"
+msgstr "Kere_sés...|Keresés"
 
 #. menu label & tooltip for SearchBL
 #: lib/Zim/GUI.pm:216
 msgid "Search _Backlinks...|Search Back links"
-msgstr "Etsi _viitelinkkejä...|Etsi viitelinkkejä"
+msgstr "_Hivatkozó oldal keresése|Hivatkozó oldal keresése"
 
 #. menu label & tooltip for CopyLocation
 #: lib/Zim/GUI.pm:217
 msgid "Copy Location|Copy location"
-msgstr "Kopioi sijainti|Kopioi sijainti"
+msgstr "_Hivatkozás másolása|Hivatkozás másolása"
 
 #. menu label & tooltip for Prefs
 #: lib/Zim/GUI.pm:218
 msgid "Pr_eferences|Preferences dialog"
-msgstr "Asetukset|Asetukset"
+msgstr "B_eállítások|Beállítások"
 
 #. menu label & tooltip for Reload
 #: lib/Zim/GUI.pm:219
 msgid "_Reload|Reload page"
-msgstr "_Päivitä|Päivitä sivu"
+msgstr "Új_raolvasás|Oldal újraolvasása"
 
 #. menu label & tooltip for OpenFolder
 #: lib/Zim/GUI.pm:220
 msgid "Open Document _Folder|Open document folder"
-msgstr "Avaa sivun _kansio|Avaa sivun kansion"
+msgstr "Dokumentum _könyvtár megnyitása| Dokumentum könyvtár megnyitása"
 
 #. menu label & tooltip for OpenRootFolder
 #: lib/Zim/GUI.pm:221
 msgid "Open Document _Root|Open document root"
-msgstr "Avaa _juurihakemisto|Avaa juurihakemisto"
+msgstr ""
+"Dokumentum gyöké_rkönyvtár megnyitása|Dokumentum gyökérkönyvtár megnyitása"
 
 #. menu label & tooltip for AttachFile
 #: lib/Zim/GUI.pm:222
 msgid "Attach _File|Attach external file"
-msgstr "Liitä _tiedosto|Liitä ulkoinen tiedosto"
+msgstr "_Fájl csatolása|Külső fájl csatolása"
 
 #. menu label & tooltip for EditSource
 #: lib/Zim/GUI.pm:223
 msgid "Edit _Source|Open source"
-msgstr "Muokkaa _lähdettä|Avaa lähde"
+msgstr "Forrá_s szerkesztése|Forrás megnyitása"
 
 #. menu label & tooltip for RBIndex
 #: lib/Zim/GUI.pm:224
 msgid "Re-build Index|Rebuild index"
-msgstr "Uudista indeksi|Uudelleenrakenna indeksi"
+msgstr "Index újraépítése|Index újraépítése"
 
 #. menu label & tooltip for GoBack
 #: lib/Zim/GUI.pm:225
 msgid "_Back|Go page back"
-msgstr "_Takaisin|Mene sivun taakse"
+msgstr "_Vissza|Ugrás az előző oldalra"
 
 #. menu label & tooltip for GoForward
 #: lib/Zim/GUI.pm:226
 msgid "_Forward|Go page forward"
-msgstr "_Eteenpäin|Mene sivun eteenpäin"
+msgstr "_Előre|Ugrás a következő oldalra"
 
 #. menu label & tooltip for GoParent
 #: lib/Zim/GUI.pm:227
 msgid "_Parent|Go to parent page"
-msgstr "_Ylä|Mene yläsivulle"
+msgstr "_Szülő|Ugrás a szülő oldalhoz"
 
 #. menu label & tooltip for GoChild
 #: lib/Zim/GUI.pm:228
 msgid "_Child|Go to child page"
-msgstr "_Ala|Mene alasivulle"
+msgstr "_Gyermek|Ugrás a gyermek oldalhoz"
 
 #. menu label & tooltip for GoPrev
 #: lib/Zim/GUI.pm:229
 msgid "_Previous in index|Go to previous page"
-msgstr "E_dellinen indeksissä|Mene edelliseen sivuun"
+msgstr "E_lőző index|Ugrás az előző oldalra"
 
 #. menu label & tooltip for GoNext
 #: lib/Zim/GUI.pm:230
 msgid "_Next in index|Go to next page"
-msgstr "_Seuraava indeksissä|Mene seuraavaan sivuun"
+msgstr "_Következő index|Ugrás a következő oldalra"
 
 #. menu label & tooltip for GoHome
 #: lib/Zim/GUI.pm:231
 msgid "_Home|Go home"
-msgstr "_Koti|Mene kotiin"
+msgstr "S_tart|Ugrás a kezdő lapra"
 
 #. menu label & tooltip for JumpTo
 #: lib/Zim/GUI.pm:232
 msgid "_Jump To...|Jump to page"
-msgstr "_Hyppää...|Hyppää sivulle"
+msgstr "_Ugrás...|Adott oldalra ugrás"
 
 #. menu label & tooltip for ShowHelp
 #: lib/Zim/GUI.pm:233
 msgid "_Contents|Help contents"
-msgstr "_Sisältö|Ohjesisällöt"
+msgstr "_Tartalom|Súgó tartalma"
 
 #. menu label & tooltip for ShowHelpFAQ
 #: lib/Zim/GUI.pm:234
 msgid "_FAQ|FAQ"
-msgstr "_UKK|Usein Kysytyt Kysymykset"
+msgstr "_GYIK|GYIK"
 
 #. menu label & tooltip for ShowHelpKeys
 #: lib/Zim/GUI.pm:235
 msgid "_Keybindings|Key bindings"
-msgstr "_Näppäinyhdistelmät|Näppäinyhdistelmät"
+msgstr "Gyors_billentyűk|Gyorsbillentyűk"
 
 #. menu label & tooltip for ShowHelpBugs
 #: lib/Zim/GUI.pm:236
 msgid "_Bugs|Bugs"
-msgstr "_Bugit|Bugit"
+msgstr "_Hibák|Hibák"
 
 #. menu label & tooltip for About
 #: lib/Zim/GUI.pm:237
 msgid "_About|About"
-msgstr "_Tietoja|Tietoja"
+msgstr "_Névjegy|Névjegy"
 
 #. menu label & tooltip for TToolBar
 #: lib/Zim/GUI.pm:243
 msgid "_Toolbar|Show toolbar"
-msgstr "_Työpalkki|Näytä työpalkki"
+msgstr "_Eszköztár|Eszköztár megjelenítése"
 
 #. menu label & tooltip for TStatusBar
 #: lib/Zim/GUI.pm:244
 msgid "_Statusbar|Show statusbar"
-msgstr "Ti_lannepalkki|Näytä tilannepalkki"
+msgstr "Á_llapotsor|Állapotsor megjelenítése"
 
 #. menu label & tooltip for TPane
 #: lib/Zim/GUI.pm:245
 msgid "_Index|Show index"
-msgstr "_Indeksi|Näytä indeksi"
+msgstr "_Index|Index megjelenítése"
 
 #. menu label & tooltip for PBRecent
 #: lib/Zim/GUI.pm:251
 msgid "_Recent pages|."
-msgstr "_Äskeiset sivut|."
+msgstr "_Utóbbi oldalak|."
 
 #. menu label & tooltip for PBHistory
 #: lib/Zim/GUI.pm:252
 msgid "_History|."
-msgstr "_Historia|."
+msgstr "_Előzmények"
 
 #. menu label & tooltip for PBNamespace
 #: lib/Zim/GUI.pm:253
 msgid "_Namespace|."
-msgstr "_Nimiavaruus|."
+msgstr "_Névtér"
 
 #. menu label & tooltip for PBHidden
 #: lib/Zim/GUI.pm:254
 msgid "H_idden|."
-msgstr "Piilotettu|."
+msgstr "E_lrejtés|."
 
 #. ...
 #: lib/Zim/GUI.pm:944
 msgid "Plugin already loaded: {name}"
-msgstr "Lisäosa jo ladattu: {name}"
+msgstr "A bővítmény már be van töltve: {name}"
 
 #. ...
 #: lib/Zim/GUI.pm:951
 msgid "No such plugin: {name}"
-msgstr "Ei löytynyt lisäosaa: {name}"
+msgstr "Nincs ilyen bővítmény: {name}"
 
 #. error
 #: lib/Zim/GUI.pm:961 share/zim/plugins/VersionControl.pl:20
 msgid "Failed to load plugin: {name}"
-msgstr "Lisäosan lataus epäonnistui: {name}"
+msgstr "A bővítménye betöltése sikertelen: {name}"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:60
 msgid "File browser"
-msgstr "Tiedostoselain"
+msgstr "Fájlböngésző"
 
 #. Dialog question, answers are 'yes' or 'no'
 #: lib/Zim/GUI.pm:1176
@@ -364,55 +361,55 @@ msgid ""
 "The folder: {path}\n"
 "does not exist, do you want to create it now?"
 msgstr ""
-"<b>Kansiota ei ole olemassa.</b>\n"
+"<b>A mappa nem létezik.</b>\n"
 "\n"
-"Kansio: {path}\n"
-"ei ole olemassa, haluatko luoda sen nyt?"
+"A {path} mappa \n"
+"nem létezik, létre akarja hozni?"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1206
 msgid "Choose {app_type}"
-msgstr "Valitse {app_type}"
+msgstr "Válasszon {app_type} alkalmazást"
 
 #. Field in 'custom command' dialog
 #: zim/gui/applications.py:378
 msgid "Command"
-msgstr "Komento"
+msgstr "Parancs"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1209
 msgid "Please enter a {app_type}"
-msgstr "Valitse {app_type}"
+msgstr "Adja meg a {app_type} alkalmazást"
 
 #. error
 #: lib/Zim/GUI.pm:1213
 msgid "You have no {app_type} configured"
-msgstr "Sinulla ei ole {app_type} valittuna"
+msgstr "Nincs beállítva a(z) {app_type} alkalmazás"
 
 #. ...
 #: lib/Zim/GUI.pm:1234
 msgid "Can't find {url}"
-msgstr "En löydä {url}"
+msgstr "Nem található az oldal: {url}"
 
 #. ...
 #: lib/Zim/GUI.pm:1236
 msgid "Not an url: {url}"
-msgstr "Ei ole url: {url}"
+msgstr "Nem érvényes url: {url}"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:64
 msgid "Email client"
-msgstr "Sähköposti-ohjelma"
+msgstr "E-mail-kliens"
 
 #. Input for application type in preferences dialog
 #: zim/gui/preferencesdialog.py:62
 msgid "Web browser"
-msgstr "Nettiselain"
+msgstr "Web böngésző"
 
 #. ...
 #: lib/Zim/GUI.pm:1285 lib/Zim/GUI.pm:1312
 msgid "Could not load page: {name}"
-msgstr "En pysty lataamaan sivua: {name}"
+msgstr "Az oldal nem tölthető be: {name}"
 
 #. error: 404 - page not found
 #: lib/Zim/GUI.pm:1291
@@ -420,25 +417,25 @@ msgid ""
 "This page does not exist\n"
 "404"
 msgstr ""
-"Tämä sivu ei olemassa\n"
+"Az oldal nem létezik\n"
 "404"
 
 #. ...
 #: lib/Zim/GUI.pm:1328
 msgid "{number} _Back link"
 msgid_plural "{number} _Back links"
-msgstr[0] "{number} _viitelinkki"
-msgstr[1] "{number} _viitelinkkiä"
+msgstr[0] "{number} _Hivatkozó oldal"
+msgstr[1] "{number} _Hivatkozó oldal"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1382
 msgid "New page"
-msgstr "Uusi sivu"
+msgstr "Új oldal"
 
 #. input
 #: lib/Zim/GUI.pm:1383
 msgid "Page name"
-msgstr "Sivun nimi"
+msgstr "Oldalnév"
 
 #. ...
 #: lib/Zim/GUI.pm:1385
@@ -446,54 +443,54 @@ msgid ""
 "Note that linking to a non-existing page\n"
 "also automatically creates a new page."
 msgstr ""
-"Huomaa että olemattomaan sivuun viittaaminen\n"
-"automaattisesti luo uuden sivun"
+"A hivatkozás készítés egy nem létező oldalra\n"
+"automatikusan létrehoz egy új oldalt."
 
 #. ...
 #: lib/Zim/GUI.pm:1476
 msgid "Could not save page"
-msgstr "En pysty tallentamaan sivua"
+msgstr "Az oldalt nem lehet menteni"
 
 #. dialog button
 #: lib/Zim/GUI.pm:1478
 msgid "_Discard changes"
-msgstr "_Hylkää muutokset"
+msgstr "_Változtatások eldobása"
 
 #. dialog button
 #: lib/Zim/GUI.pm:1479
 msgid "_Save a copy..."
-msgstr "_Tallenna kopio..."
+msgstr "_Másolat mentése..."
 
 #. dialog title
 #: lib/Zim/GUI.pm:1532
 msgid "Save version"
-msgstr "Tallenna versio"
+msgstr "Verzió mentése"
 
 #. Dialog text
 #: zim/plugins/versioncontrol/__init__.py:175
 msgid "Please enter a comment for this version"
-msgstr "Lisää kommentti versioon"
+msgstr "Adjon meg egy megjegyzést ehhez a verzióhoz"
 
 #. section for version details in "save version" dialog
 #: zim/plugins/versioncontrol/__init__.py:188
 msgid "Details"
-msgstr "Yksityiskohdat"
+msgstr "Részletek"
 
 #. button AND
 #. button label
 #: lib/Zim/GUI.pm:1568 lib/Zim/GUI/VersionsDialog.pm:129
 msgid "_Notebook Changes..."
-msgstr "Vihko_n muutokset..."
+msgstr "_Jegyzetfüzet változásai..."
 
 #. error
 #: lib/Zim/GUI.pm:1588
 msgid "Can not save a version without comment"
-msgstr "En pysty tallentamaan versiota ilman kommenttia"
+msgstr "A verzió megjegyzés nélkül nem menthető"
 
 #. error
 #: lib/Zim/GUI.pm:1592
 msgid "Could not save version"
-msgstr "En pysty tallentamaan versiota"
+msgstr "Nem menthető a verzió"
 
 #. question dialog, options are 'help', 'cancel' and 'ok'
 #: lib/Zim/GUI.pm:1605
@@ -503,10 +500,9 @@ msgid ""
 "Version control is currently not enabled for this notebook.\n"
 "Do you want to enable it ?"
 msgstr ""
-"<b>Käynnistä versionhallinta?</b>\n"
-"\n"
-"Versionhallintaa ei ole tälle vihkolle.\n"
-"Haluatko käynnistää sen ?"
+"<b>Verziókövetés engedélyezése</b>\n"
+"A verziókövetés jelenleg nincs engedélyezve erre a jegyzetfüzetre.\n"
+"Engedélyezni akarja?"
 
 #. detailed notice in prompt to enable version control
 #: lib/Zim/GUI.pm:1607
@@ -515,29 +511,29 @@ msgid ""
 "Version Control System.\n"
 "Please click 'help' to read about the system requirements."
 msgstr ""
-"Voit joko valita <b>Bazaar</b> tai <b>Subversion</b> "
-"versionhallintajärjestelmän.\n"
-"Valitse 'Ohje' lukeaksesi järjestelmävaatimuksista."
+"Választhat a <b>Bazaar</b> és <b>Subversion</b> verziókövető rendszerek "
+"közül.\n"
+"Kattintson a 'Sugó'-ra, ha a rendszerkövetelményekre kíváncsi."
 
 #. error dialog
 #: lib/Zim/GUI.pm:1645
 msgid "Could not initialize version control"
-msgstr "En pysty käynnistämään versionhallintaa"
+msgstr "A verziókövetés nem inicializálható"
 
 #. default comment for first version after initializing version control
 #: lib/Zim/GUI.pm:1648
 msgid "Initial version"
-msgstr "Ensiversio"
+msgstr "Első verzió"
 
 #. default name for new page in save copy action
 #: lib/Zim/GUI.pm:1690
 msgid "{name}_(Copy)"
-msgstr "{name}_(Kopio)"
+msgstr "{name} _(Másolat)"
 
 #. Dialog title of file save dialog
 #: zim/gui/__init__.py:1812
 msgid "Save Copy"
-msgstr "Tallenna kopio"
+msgstr "Másolat mentése"
 
 #. label in word count dialog |
 #. Column header search dialog |
@@ -545,22 +541,22 @@ msgstr "Tallenna kopio"
 #: zim/gui/pageview.py:3399 zim/gui/searchdialog.py:67
 #: zim/plugins/tasklist.py:237
 msgid "Page"
-msgstr "Sivu"
+msgstr "Oldal"
 
 #. Button in error dialog
 #: zim/gui/__init__.py:1717
 msgid "_Save Copy"
-msgstr "_Tallenna kopio"
+msgstr "Másolat mentése"
 
 #. dialog text
 #: lib/Zim/GUI.pm:1695
 msgid "Please enter a name to save a copy of page: {page}"
-msgstr "Anna nimi tallentaaksesi kopion sivusta: {page}"
+msgstr "Írjon be egy nevet az oldal másolatának mentéséhez: {page}"
 
 #. ...
 #: lib/Zim/GUI.pm:1703
 msgid "Can not save to page: {name}"
-msgstr "En pysty tallentamaan sivulle: {name}"
+msgstr "Nem lehet menteni az oldalt: {name}"
 
 #. warning dialog, answers are 'cancel' or 'ovewrite'
 #: lib/Zim/GUI.pm:1709
@@ -571,36 +567,36 @@ msgid ""
 "already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"<b>Sivu on jo olemassa</b>\n"
+"<b>Az oldal már létezik</b>\n"
 "\n"
-"Sivu '{name}'\n"
-"on jo olemassa.\n"
-"Haluatko kirjoittaa sen yli?"
+"'{name}' oldal\n"
+"már létezik.\n"
+"Felül kívánja írni?"
 
 #. save button
 #: lib/Zim/GUI.pm:1711
 msgid "_Overwrite"
-msgstr "_Ylikirjoita"
+msgstr "_Felülírás"
 
 #. error message
 #: lib/Zim/GUI.pm:1768
 msgid "Could not rename {from} to {to}"
-msgstr "En pysty nimeämään {from} muotoon {to}"
+msgstr "A {from} nem nevezhető át erre: {to}"
 
 #. dialog title
 #: lib/Zim/GUI.pm:1773
 msgid "Updating links"
-msgstr "Päivitetään linkit"
+msgstr "Hivatkozások frissítése"
 
 #. progress bar label
 #: lib/Zim/GUI.pm:1774
 msgid "Updating.."
-msgstr "Päivitetään..."
+msgstr "Frissítés…"
 
 #. progress bar label
 #: lib/Zim/GUI.pm:1782
 msgid "Updating links in {name}"
-msgstr "Päivitetään linkit kohteesta {name}"
+msgstr "{name} hivatkozásainak frissítése"
 
 #. warning dialog, answers are 'cancel' or 'delete'
 #: lib/Zim/GUI.pm:1837
@@ -610,73 +606,73 @@ msgid ""
 "Are you sure you want to delete\n"
 "page '{name}' ?"
 msgstr ""
-"<b>Poista sivu</b>\n"
+"<b>Oldal törlése</b>\n"
 "\n"
-"Oletko varma että haluat poistaa\n"
-"sivun '{name}' ?"
+"Biztos hogy törölni akarja\n"
+"az oldalt: '{name}'?"
 
 #. error message
 #: lib/Zim/GUI.pm:1846
 msgid "Could not delete page: {name}"
-msgstr "En pysty poistamaan sivua: {name}"
+msgstr "Az {name} oldal nem törölhető."
 
 #. error
 #: lib/Zim/GUI.pm:2145
 msgid "This page does not have a document folder"
-msgstr "Tällä sivulla ei ole asiakirjakansiota"
+msgstr "Ehhez az oldalhoz nem tartozik mappa"
 
 #. error
 #: lib/Zim/GUI.pm:2162
 msgid "This notebook does not have a document root"
-msgstr "Tällä vihkolla ei ole juurihakemistoa"
+msgstr "Ehhez a jegyzetfüzethez nem tartozik dokumentum gyökérkönyvtár"
 
 #. ...
 #: lib/Zim/GUI.pm:2184
 msgid "This page does not have a source"
-msgstr "Tällä sivulla ei ole lähdettä"
+msgstr "Az oldalnak nincs forrása"
 
 #. Dialog title
 #: zim/gui/__init__.py:1755
 msgid "Jump to"
-msgstr "Hyppää"
+msgstr "_Ugrás"
 
 #. Label for page input
 #: zim/gui/__init__.py:1758
 msgid "Jump to Page"
-msgstr "Hyppää sivulle"
+msgstr "Ugrás erre az oldalra"
 
 #. dialog title
 #: lib/Zim/GUI.pm:2505
 msgid "Rename page"
-msgstr "Muuta sivun nimeä"
+msgstr "Oldal átnevezése"
 
 #. dialog label
 #: lib/Zim/GUI.pm:2507
 msgid "Rename to"
-msgstr "Nimeä muotoon"
+msgstr "Átnevezés erre:"
 
 #. save button
 #: lib/Zim/GUI.pm:2509
 msgid "_Rename"
-msgstr "_Uusi nimi"
+msgstr "Á_tnevezés"
 
 #. ...
 #: lib/Zim/GUI.pm:2517
 msgid "_Update links in this page"
-msgstr "_Päivitä sivun linkit"
+msgstr "_Hivatkozások frissítése ezen az oldalon"
 
 #. ...
 #: lib/Zim/GUI.pm:2519
 msgid "_Update {number} page linking here"
 msgid_plural "_Update {number} pages linking here"
-msgstr[0] "_Päivitä {number} sivun linkkaus"
-msgstr[1] "_Päivitä {number} sivun linkkaukset"
+msgstr[0] "A hivatkozott {number}. oldal _frissítése"
+msgstr[1] "A hivatkozott {number}. oldal _frissítése"
 
 #. dialog title AND
 #. dialog prompt
 #: lib/Zim/GUI/Automount.pm:55 lib/Zim/GUI/Automount.pm:56
 msgid "Password"
-msgstr "Salasana"
+msgstr "Jelszó"
 
 #. dialog text
 #: lib/Zim/GUI/Automount.pm:58
@@ -684,24 +680,24 @@ msgid ""
 "Please provide the password for\n"
 "{path}"
 msgstr ""
-"Anna salasana hakemistolle:\n"
-"{path}"
+"Adja meg a jelszót a\n"
+"{path} eléréséhez"
 
 #. plugin name |
 #. dialog title
 #: zim/plugins/calendar.py:67 zim/plugins/calendar.py:265
 msgid "Calendar"
-msgstr "Kalenteri"
+msgstr "Naptár"
 
 #. strftime format for current date - default suggested in perldoc localtime
 #: lib/Zim/GUI/Calendar.pm:63
 msgid "%a %b %e %Y"
-msgstr "%a %e %b %Y"
+msgstr "%Y. %b. %e., %a"
 
 #. button label
 #: zim/plugins/calendar.py:274
 msgid "_Today"
-msgstr "_Tänään"
+msgstr "_Ma"
 
 #. question dialog, answers are 'yes', 'no' or 'not now'
 #: lib/Zim/GUI/Calendar.pm:281
@@ -714,60 +710,59 @@ msgid ""
 "\n"
 "Do you want to upgrade this notebook to the new layout?\n"
 msgstr ""
-"<b>Päivitä kalenterisivut 0.24-formaattiin?</b>\n"
+"<b>A naptár oldalakat frissíteni akarja a 0.24-es formátumra?</b>\n"
 "\n"
-"Tämä vihko sisältää sivuja päivämääriin jotka käyttävät formaattia "
-"vvvv_kk_pp.\n"
-"Zim 0.24 lähtien formaatti on vvvv:kk:dd, luoden nimiavaruuksia joka "
-"kuukausi.\n"
+"Ez a jegyzetfüzet oldal éééé_hh_nn formátumú dátumokat tartalmaz.\n"
+"A Zim 0.24-es verzió óta az éééé:hh:nn az alapértelmezett formátum\n"
+"havi névtér készítésekor.\n"
 "\n"
-"Haluatko päivittää muistivihkoosi käyttämään uutta pohjaa?\n"
+"Módosítani akarja ezt a jegyzetfüzetet erre az új formátumra?\n"
 
 #. button
 #: lib/Zim/GUI/Calendar.pm:282
 msgid "Not Now"
-msgstr "Ei nyt"
+msgstr "Most nem"
 
 #. ...
 #: lib/Zim/GUI/Component.pm:414
 msgid "Not a valid page name: {name}"
-msgstr "Ei laillinen sivun nimi: {name}"
+msgstr "{name} nem érvényes oldalnév"
 
 #. button
 #: lib/Zim/GUI/Component.pm:681 lib/Zim/GUI/ExportDialog.pm:137
 #: lib/Zim/GUI/ExportDialog.pm:148
 msgid "_Browse..."
-msgstr "_Selaa"
+msgstr "_Tallózás…"
 
 #. Title of folder selection dialog
 #: zim/gui/widgets.py:925
 msgid "Select Folder"
-msgstr "Valitse kansio"
+msgstr "Mappa választása"
 
 #. Title of file selection dialog
 #: zim/gui/widgets.py:909
 msgid "Select File"
-msgstr "Valitse tiedosto"
+msgstr "Fájlválasztás"
 
 #. error when external application is not found
 #: lib/Zim/GUI/EquationEditor.pm:52 share/zim/plugins/InsertScreenshot.pl:13
 msgid "Can not find application \"{name}\""
-msgstr "En löydä sovellusta \"{name}\""
+msgstr "Nem található az alkalmazás: \"{name}\""
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:63
 msgid "Equation Editor"
-msgstr "Yhtälöeditori"
+msgstr "Egyenletszerkesztő"
 
 #. button in e.g. equation editor dialog
 #: zim/gui/imagegeneratordialog.py:50
 msgid "_Preview"
-msgstr "_Esikatsele"
+msgstr "Elő_nézet"
 
 #. button in e.g. equation editor dialog
 #: zim/gui/imagegeneratordialog.py:60
 msgid "View _Log"
-msgstr "Näytä _loki"
+msgstr "Nap_ló megtekintése"
 
 #. error when no .tex file exists
 #: lib/Zim/GUI/EquationEditor.pm:121
@@ -775,185 +770,185 @@ msgid ""
 "The equation for image: {path}\n"
 "is missing. Can not edit equation."
 msgstr ""
-"Yhtälö kuvalle: {path}\n"
-"puuttuu. Ei voi muokata yhtälöä."
+"A kép tartozó képlet: {path}\n"
+"hiányzik. A képletet nem lehet szerkeszteni."
 
 #. warning dialog, answers are 'save' or 'cancel'
 #: lib/Zim/GUI/EquationEditor.pm:178
 msgid "The equation failed to compile. Do you want to save anyway?"
-msgstr "Yhtälö epäonnistui. Haluatko kuitenkin tallentaa?"
+msgstr "Sikertelen a képlet értelmezése. Mindenképpen menteni akarja?"
 
 #. dialog title
 #: lib/Zim/GUI/EquationEditor.pm:293
 msgid "Equation Editor Log"
-msgstr "Yhtälöeditorin loki"
+msgstr "Egyenletszerkesztő napló"
 
 #. menu item in context menu
 #: zim/plugins/equationeditor.py:78
 msgid "_Edit Equation"
-msgstr "_Muokkaa yhtälöä"
+msgstr "_Egyenlet szerkesztése"
 
 #. dialog title
 #: lib/Zim/GUI/ExportDialog.pm:40 lib/Zim/GUI/ExportDialog.pm:275
 msgid "Export page"
-msgstr "Vie sivu"
+msgstr "Oldal exportálása"
 
 #. Section heading in export dialog
 #: zim/gui/exportdialog.py:24
 msgid "Pages"
-msgstr "Sivut"
+msgstr "Oldalak"
 
 #. radio button
 #: lib/Zim/GUI/ExportDialog.pm:61
 msgid "_All"
-msgstr "K_aikki"
+msgstr "_Mind"
 
 #. Option in versions dialog to show version for single page
 #: zim/plugins/versioncontrol/__init__.py:237
 msgid "_Page"
-msgstr "_Sivu"
+msgstr "_Oldal"
 
 #. check box
 #: lib/Zim/GUI/ExportDialog.pm:77
 msgid "Recursive"
-msgstr "Rekursiivinen"
+msgstr "Rekurzív"
 
 #. Section heading in export dialog
 #: zim/gui/exportdialog.py:49
 msgid "Output"
-msgstr "Ulostulo"
+msgstr "Kimenet"
 
 #. Input label in the export dialog
 #: zim/gui/exportdialog.py:53
 msgid "Format"
-msgstr "Formaatti"
+msgstr "Formázás"
 
 #. Label for template selection in export dialog
 #: zim/gui/exportdialog.py:90
 msgid "Template"
-msgstr "Malli"
+msgstr "Sablon"
 
 #. label input field
 #: lib/Zim/GUI/ExportDialog.pm:102
 msgid "Output dir"
-msgstr "Tulostuskansio"
+msgstr "Kimeneti mappa"
 
 #. Label for setting a name for the index of exported pages
 #: zim/gui/exportdialog.py:138
 msgid "Index page"
-msgstr "Indeksisivu"
+msgstr "Indexoldal"
 
 #. item in dropdown menu
 #: lib/Zim/GUI/ExportDialog.pm:170
 msgid "other..."
-msgstr "muu..."
+msgstr "más..."
 
 #. group label
 #: lib/Zim/GUI/ExportDialog.pm:196
 msgid "Media"
-msgstr "Media"
+msgstr "Média"
 
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:209
 msgid "Prefix document root"
-msgstr "Juurihakemiston etuliite"
+msgstr "Dokumentum gyökérkönyvtár prefixe"
 
 #. ...
 #: lib/Zim/GUI/ExportDialog.pm:218
 msgid "Attach external files"
-msgstr "Liitä ulkoisia tiedostoja"
+msgstr "Külső fájlok csatolása"
 
 #. progress bar label
 #: lib/Zim/GUI/ExportDialog.pm:276 lib/Zim/GUI/ExportDialog.pm:282
 msgid "Exporting page {number}"
-msgstr "Viedään sivua {number}"
+msgstr "{number}. oldal exportálása"
 
 #. Dialog title
 #: zim/gui/pageview.py:3254
 msgid "Find and Replace"
-msgstr "Etsi ja korvaa"
+msgstr "Keresés és csere"
 
 #. input label in find & replace dialog
 #: zim/gui/pageview.py:3264
 msgid "Find what"
-msgstr "Etsi mitä"
+msgstr "Ezt keresse"
 
 #. checkbox option in find & replace dialog
 #: zim/gui/pageview.py:3275
 msgid "Match c_ase"
-msgstr "Sama _kirjainkoko"
+msgstr "Na_gybetűérzékeny"
 
 #. checkbox option in find & replace dialog
 #: zim/gui/pageview.py:3280
 msgid "Whole _word"
-msgstr "K_oko sana"
+msgstr "_Teljes szó"
 
 #. input label in find & replace dialog
 #: zim/gui/pageview.py:3285
 msgid "Replace with"
-msgstr "Korvaa"
+msgstr "Csere erre"
 
 #. button in find bar on bottom of page |
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:2326 zim/gui/pageview.py:3296
 msgid "_Next"
-msgstr "Seur_aava"
+msgstr "_Következő"
 
 #. button in find bar on bottom of page |
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:2320 zim/gui/pageview.py:3301
 msgid "_Previous"
-msgstr "E_dellinen"
+msgstr "_Előző"
 
 #. Button in search & replace dialog
 #: zim/gui/pageview.py:3306
 msgid "_Replace"
-msgstr "_Korvaa"
+msgstr "_Csere"
 
 #. button
 #: lib/Zim/GUI/FindReplaceDialog.pm:120
 msgid "Replace _all"
-msgstr "Korvaa ka_ikki"
+msgstr "Ö_sszes cseréje"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:86
 msgid "Open notebook"
-msgstr "Avaa vihko"
+msgstr "Jegyzetfüzet megnyitása"
 
 #. list header
 #: lib/Zim/GUI/NotebookDialog.pm:116
 msgid "Notebooks"
-msgstr "Muistivihkot"
+msgstr "Jegyzetfüzetek"
 
 #. button
 #: lib/Zim/GUI/NotebookDialog.pm:174
 msgid "Cha_nge"
-msgstr "M_uuta"
+msgstr "Mó_dosítás"
 
 #. Input label in 'open notebook' dialog
 #: zim/gui/notebookdialog.py:291
 msgid "Default notebook"
-msgstr "Vakiovihko"
+msgstr "Alapértelmezett jegyzetfüzet"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:334
 msgid "Please select a notebook first"
-msgstr "Valitse muistivihko ensin"
+msgstr "Először válasszon ki egy jegyzetfüzetet"
 
 #. error
 #: lib/Zim/GUI/NotebookDialog.pm:342
 msgid "No such directory: {name}"
-msgstr "Hakemisto ei olemassa: {name}"
+msgstr "Nincs ilyen mappa: {name}"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:371
 msgid "New notebook"
-msgstr "Uusi muistivihko"
+msgstr "Új jegyzetfüzet"
 
 #. dialog title
 #: lib/Zim/GUI/NotebookDialog.pm:372
 msgid "Edit notebook"
-msgstr "Muokkaa vihkoa"
+msgstr "Jegyzetfüzet szerkesztése"
 
 #. ...
 #: lib/Zim/GUI/NotebookDialog.pm:374
@@ -962,447 +957,447 @@ msgid ""
 "For a new notebook this should be an empty directory.\n"
 "For example a \"Notes\" directory in your home dir."
 msgstr ""
-"Anna vähintään yksi hakemisto sivujen tallentamiseen.\n"
-"Uudelle muistivihkolle sen pitäisi olla tyhjä hakemisto.\n"
-"Esimerkiksi \"Ruokareseptit\"-kansio kotihakemistossasi."
+"Legalább az oldalakat tároló könyvtára adja meg.\n"
+"Egy új jegyzetfüzethez ennek egy üres könyvtárnak kell lennie.\n"
+"Például a \"Notes\" könyvtár az ön könyvtárában."
 
 #. menu label & tooltip for Head1
 #: lib/Zim/GUI/PageView.pm:54
 msgid "Head _1|Heading 1"
-msgstr "Otsikko _1|Otsikko 1"
+msgstr "Fejléc _1|Fejléc 1"
 
 #. menu label & tooltip for Head2
 #: lib/Zim/GUI/PageView.pm:55
 msgid "Head _2|Heading 2"
-msgstr "Otsikko _2|Otsikko 2"
+msgstr "Fejléc _2|Fejléc 2"
 
 #. menu label & tooltip for Head3
 #: lib/Zim/GUI/PageView.pm:56
 msgid "Head _3|Heading 3"
-msgstr "Otsikko _3|Otsikko 3"
+msgstr "Fejléc _3|Fejléc 3"
 
 #. menu label & tooltip for Head4
 #: lib/Zim/GUI/PageView.pm:57
 msgid "Head _4|Heading 4"
-msgstr "Otsikko _4|Otsikko 4"
+msgstr "Fejléc _4|Fejléc 4"
 
 #. menu label & tooltip for Head5
 #: lib/Zim/GUI/PageView.pm:58
 msgid "Head _5|Heading 5"
-msgstr "Otsikko _5|Otsikko 5"
+msgstr "Fejléc _5|Fejléc 5"
 
 #. menu label & tooltip for Normal
 #: lib/Zim/GUI/PageView.pm:59
 msgid "_Normal|Normal"
-msgstr "_Normaali|Normaali"
+msgstr "_Normál|Normál"
 
 #. menu label & tooltip for Bold AND
 #. menu label & tooltip for TBold
 #: lib/Zim/GUI/PageView.pm:60 lib/Zim/GUI/PageView.pm:70
 msgid "_Bold|Bold"
-msgstr "Li_havoitus|Lihavoitus"
+msgstr "_Félkövér|Félkövér"
 
 #. menu label & tooltip for Italic AND
 #. menu label & tooltip for TItalic
 #: lib/Zim/GUI/PageView.pm:61 lib/Zim/GUI/PageView.pm:71
 msgid "_Italic|Italic"
-msgstr "_Kursiivi|Kursiivi"
+msgstr "_Dőlt|Dőlt"
 
 #. menu label & tooltip for Underline AND
 #. menu label & tooltip for TUnderline
 #: lib/Zim/GUI/PageView.pm:62 lib/Zim/GUI/PageView.pm:72
 msgid "_Underline|Underline"
-msgstr "_Alleviivaus|Alleviivaus"
+msgstr "_Aláhúzott|Aláhúzott"
 
 #. menu label & tooltip for Strike AND
 #. menu label & tooltip for TStrike
 #: lib/Zim/GUI/PageView.pm:63 lib/Zim/GUI/PageView.pm:73
 msgid "Stri_ke|Strike"
-msgstr "_Yliviivaus|Yliviivaus"
+msgstr "Á_thúzott|Áthúzott"
 
 #. menu label & tooltip for Verbatim
 #: lib/Zim/GUI/PageView.pm:64
 msgid "_Verbatim|Verbatim"
-msgstr "_Tasavälinen|Tasavälinen"
+msgstr "_Változatlan|Változatlan"
 
 #. menu label & tooltip for TLink AND
 #. menu label & tooltip for Link
 #: lib/Zim/GUI/PageView.pm:69 lib/Zim/GUI/PageView.pm:101
 msgid "_Link|Link"
-msgstr "_Linkki|Linkki"
+msgstr "_Hivatkozás|Hivatkozás"
 
 #. menu label & tooltip for Undo
 #: lib/Zim/GUI/PageView.pm:78
 msgid "_Undo|Undo"
-msgstr "K_umoa|Kumoa"
+msgstr "_Visszavonás|Visszavonás"
 
 #. menu label & tooltip for Redo
 #: lib/Zim/GUI/PageView.pm:79
 msgid "_Redo|Redo"
-msgstr "Tee uu_delleen|Tee uudelleen"
+msgstr "Ú_jra|Újra"
 
 #. menu label & tooltip for Delete
 #: lib/Zim/GUI/PageView.pm:80
 msgid "_Delete|Delete"
-msgstr "_Poista|Poista"
+msgstr "_Törlés|Törlés"
 
 #. menu label & tooltip for ToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:81
 msgid "Toggle Chechbox 'V'|Toggle checkbox"
-msgstr "Vaihda rastiruutuun 'V'|Vaihda rasti"
+msgstr "'V' checkbox módosítása|Checkbox módosítása"
 
 #. menu label & tooltip for XToggleCheckbox
 #: lib/Zim/GUI/PageView.pm:82
 msgid "Toggle Chechbox 'X'|Toggle checkbox"
-msgstr "Vaihda rastiruutuun 'X'|Vaihda rasti"
+msgstr "'X' checkbox módosítása|Checkbox módosítása"
 
 #. menu label & tooltip for EditObject
 #: lib/Zim/GUI/PageView.pm:83
 msgid "_Edit Link...|Edit link"
-msgstr "_Muokkaa linkki...|Muokkaa linkkiä"
+msgstr "_Hivatkozás szerkesztése...|Hivatkozás szerkesztése"
 
 #. menu label & tooltip for InsertDate
 #: lib/Zim/GUI/PageView.pm:84
 msgid "_Date and Time...|Insert date"
-msgstr "_Päivämäärä...|Lisää päivämäärä"
+msgstr "_Dátum és idő...|Dátum és idő beszúrása"
 
 #. menu label & tooltip for InsertLink
 #: lib/Zim/GUI/PageView.pm:85
 msgid "_Link...|Insert link"
-msgstr "_Linkki...|Lisää linkki"
+msgstr "_Hivatkozás...|Hivatkozás beszúrása"
 
 #. menu label & tooltip for InsertExtLink
 #: lib/Zim/GUI/PageView.pm:86
 msgid "E_xternal Link...|Insert external link"
-msgstr "_Ulkoinen linkki...|Lisää ulkoinen linkki"
+msgstr "Kü_lső hivatkozás...|Külső hivatkozás"
 
 #. menu label & tooltip for InsertImage
 #: lib/Zim/GUI/PageView.pm:87
 msgid "_Image...|Insert image"
-msgstr "_Kuva|Lisää kuva"
+msgstr "_Kép...|Kép beszúrása"
 
 #. menu label & tooltip for InsertFromFile
 #: lib/Zim/GUI/PageView.pm:88
 msgid "Text _From File...|Insert text from file"
-msgstr "_Teksti tiedostosta...|Lisää tekstiä tiedostosta"
+msgstr "Beszúrás _fájlból...|Beszúrás fájlból"
 
 #. menu label & tooltip for FindReplace
 #: lib/Zim/GUI/PageView.pm:89
 msgid "_Replace...|Find and Replace"
-msgstr "_Korvaa...|Etsi ja korvaa"
+msgstr "_Csere...|Keresés és csere"
 
 #. menu label & tooltip for Cut
 #: lib/Zim/GUI/PageView.pm:94
 msgid "Cu_t|Cut"
-msgstr "Le_ikkaa|Leikkaa"
+msgstr "_Kivágás|Kivágás"
 
 #. menu label & tooltip for Copy
 #: lib/Zim/GUI/PageView.pm:95
 msgid "_Copy|Copy"
-msgstr "_Kopioi|Kopioi"
+msgstr "_Másolás|Másolás"
 
 #. menu label & tooltip for Paste
 #: lib/Zim/GUI/PageView.pm:96
 msgid "_Paste|Paste"
-msgstr "_Liitä|Liitä"
+msgstr "_Beillesztés|Beillesztés"
 
 #. menu label & tooltip for Find
 #: lib/Zim/GUI/PageView.pm:102
 msgid "_Find...|Find"
-msgstr "Etsi _sivusta...|Etsi sivusta"
+msgstr "_Keresés...|Keresés"
 
 #. menu label & tooltip for FindNext
 #: lib/Zim/GUI/PageView.pm:103
 msgid "Find Ne_xt|Find next"
-msgstr "Etsi seuraava|Etsi seuraava"
+msgstr "Kö_vetkező keresése|Következő keresése"
 
 #. menu label & tooltip for FindPrev
 #: lib/Zim/GUI/PageView.pm:104
 msgid "Find Pre_vious|Find previous"
-msgstr "Etsi edellinen|Etsi edellinen"
+msgstr "Elő_ző keresése|Előző keresése"
 
 #. menu label & tooltip for WordCount
 #: lib/Zim/GUI/PageView.pm:105
 msgid "_Word Count|Word count"
-msgstr "_Sanamäärä|Sanamäärä"
+msgstr "Sza_vak száma|Szavak száma"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:188
 msgid "Head1"
-msgstr "Otsikko1"
+msgstr "Fejléc 1"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:189
 msgid "Head2"
-msgstr "Otsikko2"
+msgstr "Fejléc 2"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:190
 msgid "Head3"
-msgstr "Otsikko3"
+msgstr "Fejléc 3"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:191
 msgid "Head4"
-msgstr "Otsikko4"
+msgstr "Fejléc 4"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:192
 msgid "Head5"
-msgstr "Otsikko5"
+msgstr "Fejléc 5"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:193
 msgid "Normal"
-msgstr "Normaali"
+msgstr "Normál"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:194
 msgid "Bold"
-msgstr "Lihavoitus"
+msgstr "Félkövér"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:195
 msgid "Italic"
-msgstr "Kursiivi"
+msgstr "Dőlt"
 
 #. Text style
 #: lib/Zim/GUI/PageView.pm:196
 msgid "Underline"
-msgstr "Alleviivaus"
+msgstr "Aláhúzott"
 
 #. Menu item
 #: zim/gui/pageview.py:110 zim/gui/pageview.py:119
 msgid "Strike"
-msgstr "Yliviivaus"
+msgstr "Áthúzott"
 
 #. Menu item
 #: zim/gui/pageview.py:111
 msgid "Verbatim"
-msgstr "Tasavälinen"
+msgstr "Változatlan"
 
 #. label for input in find bar on bottom of page
 #: zim/gui/pageview.py:2313
 msgid "Find"
-msgstr "Etsi"
+msgstr "Keresés"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:810
 msgid "Insert Date"
-msgstr "Lisää päivämäärä"
+msgstr "Dátum beszúrása"
 
 #. Menu title
 #: zim/gui/__init__.py:56
 msgid "_Edit"
-msgstr "_Muokkaa"
+msgstr "S_zerkesztés"
 
 #. Menu title |
 #. Button label
 #: zim/gui/__init__.py:58 zim/gui/pageview.py:2947
 msgid "_Insert"
-msgstr "L_isää"
+msgstr "_Beszúrás"
 
 #. check box in InsertDate dialog
 #: zim/gui/pageview.py:2962
 msgid "_Link to date"
-msgstr "_Linkki päivämäärään"
+msgstr "_Dátum hivatkozás"
 
 #. Dialog title
 #: zim/gui/pageview.py:3015
 msgid "Insert Image"
-msgstr "Lisää kuva"
+msgstr "Kép beszúrása"
 
 #. dialog title
 #: lib/Zim/GUI/PageView.pm:972
 msgid "Insert from file"
-msgstr "Lisää tiedostosta"
+msgstr "Beszúrás fájlból"
 
 #. ...
 #: lib/Zim/GUI/PageView.pm:976
 msgid "No such file: {file}"
-msgstr "Tiedosto ei olemassa: {file}"
+msgstr "Nincs ilyen fájl: {file}"
 
 #. error
 #: lib/Zim/GUI/PageView.pm:980
 msgid "File is not a text file: {file}"
-msgstr "Tiedosto ei sisällä tekstiä: {file}"
+msgstr "Nem szövegfájl: {file}"
 
 #. Dialog title
 #: zim/gui/pageview.py:3367
 msgid "Word Count"
-msgstr "Sanamäärä"
+msgstr "Szavak száma"
 
 #. label in word count dialog
 #: zim/gui/pageview.py:3404
 msgid "Lines"
-msgstr "Rivejä"
+msgstr "Sor"
 
 #. label in word count dialog
 #: zim/gui/pageview.py:3402
 msgid "Words"
-msgstr "Sanoja"
+msgstr "Szó"
 
 #. label
 #: lib/Zim/GUI/PageView.pm:1037
 msgid "Chars"
-msgstr "Kirjaimia"
+msgstr "Karakter"
 
 #. status bar info
 #: lib/Zim/GUI/PageView.pm:1089
 msgid "Go to \"{link}\""
-msgstr "Mene sivulle \"{link}\""
+msgstr "Ugrás: \"{link}\""
 
 #. menu item in context menu
 #: zim/gui/pageview.py:2668
 msgid "_Edit Link"
-msgstr "_Muokkaa linkkiä"
+msgstr "_Hivatkozás szerkesztése"
 
 #. context menu item
 #: zim/gui/pageview.py:2680
 msgid "Copy Email Address"
-msgstr "Kopioi sähköpostiosoite"
+msgstr "E-mail cím _másolása"
 
 #. context menu item
 #: zim/gui/pageview.py:2682
 msgid "Copy _Link"
-msgstr "Kopioi _linkki"
+msgstr "Hivatkozás _másolása"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1232
 msgid "Open _Directory"
-msgstr "Avaa _hakemisto"
+msgstr "Mappa megnyitása..."
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1263
 msgid "_Open link"
-msgstr "_Avaa linkki"
+msgstr "Hi_vatkozás megnyitása"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1305
 msgid "Customise"
-msgstr "Muokkaa"
+msgstr "Testreszabás"
 
 #. context menu
 #: lib/Zim/GUI/PageView.pm:1310
 msgid "Send To..."
-msgstr "Lähetä..."
+msgstr "Küldés…"
 
 #. Dialog title
 #: zim/gui/pageview.py:3235
 msgid "Edit Link"
-msgstr "Muokkaa linkkiä"
+msgstr "Hivatkozás szerkesztése"
 
 #. Menu item |
 #. Dialog title
 #: zim/gui/pageview.py:91 zim/gui/pageview.py:3155
 msgid "Insert Link"
-msgstr "Lisää linkki"
+msgstr "Hivatkozás beszúrása"
 
 #. Input in 'insert link' dialog |
 #. Input in 'edit link' dialog
 #: zim/gui/pageview.py:3163 zim/gui/pageview.py:3228 zim/gui/pageview.py:3246
 msgid "Text"
-msgstr "Teksti"
+msgstr "Szöveg"
 
 #. dialog label
 #: lib/Zim/GUI/PageView.pm:2072
 msgid "Links to"
-msgstr "Liittää"
+msgstr "Hivatkozás erre"
 
 #. Dialog button
 #: zim/gui/pageview.py:3157 zim/gui/pageview.py:3222 zim/gui/pageview.py:3237
 msgid "_Link"
-msgstr "_Linkki"
+msgstr "_Hivatkozás"
 
 #. Dialog title
 #: zim/gui/pageview.py:3034
 msgid "Edit Image"
-msgstr "Muokkaa kuva"
+msgstr "Kép szerkesztése"
 
 #. dialog label
 #: lib/Zim/GUI/PageView.pm:2102
 msgid "Source"
-msgstr "Lähde"
+msgstr "Forrás"
 
 #. expander label
 #: lib/Zim/GUI/PageView.pm:2113
 msgid "_Properties"
-msgstr "_Ominaisuudet"
+msgstr "Tul_ajdonságok"
 
 #. Input in 'edit image' dialog
 #: zim/gui/pageview.py:3053
 msgid "Width"
-msgstr "Laajuus"
+msgstr "Szélesség"
 
 #. Input in 'edit image' dialog
 #: zim/gui/pageview.py:3054
 msgid "Height"
-msgstr "Korkeus"
+msgstr "Magasság"
 
 #. button
 #: lib/Zim/GUI/PageView.pm:2166
 msgid "_Reset"
-msgstr "_Resetoi"
+msgstr "_Visszaállítás"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:44
 msgid "Application to open urls"
-msgstr "Sovellus URL-osoitteille"
+msgstr "Böngésző alkalmazás"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:48
 msgid "Application to open directories"
-msgstr "Sovellus hakemistoille"
+msgstr "Fájlböngésző alkalmazás"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:52
 msgid "Application to compose email"
-msgstr "Sovellus sähköpostin kirjoittamiseen"
+msgstr "Levelező program"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:55
 msgid "Text editor"
-msgstr "Tekstieditori"
+msgstr "Szövegszerkesztő"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:56
 msgid "Application to edit text files"
-msgstr "Sovellus tekstitiedostojen muokkaamiseen"
+msgstr "Szövegszerkesztő alkalmazás"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:59
 msgid "Diff editor"
-msgstr "Diff-editori"
+msgstr "Diff szerkesztő"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:60
 msgid "Application show two text files side by side"
-msgstr "Sovellus näyttää kaksi tekstitiedostoa vierekkäin"
+msgstr "Az alkalmazás oldalról oldalra mutatja a két szövegfájlt"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:63
 msgid "User name"
-msgstr "Käyttäjänimi"
+msgstr "Felhasználói név"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:64
 msgid "Your name; this can be used in export templates"
-msgstr "Sinun nimesi; tätä voidaan käyttää mallien viennissä"
+msgstr "A neve; ez az export sablonban lesz használva"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:67
 msgid "Follow new link"
-msgstr "Seuraa luotua linkkiä"
+msgstr "Ugrás az új hivatkozásra"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:68
 msgid "Creating a new link directly opens the page"
-msgstr "Uuden linkin luominen avaa uuden sivun"
+msgstr "Az új hivatkozás készítése automatikusan megnyitja az oldalt"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:71
 msgid "Show cursor for read-only"
-msgstr "Näytä kohdistin kirjoitussuojassa"
+msgstr "Kurzor mutatása csak olvasható módban"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:72
@@ -1410,96 +1405,96 @@ msgid ""
 "Show the cursor even when you can not edit the page. This is useful for "
 "keyboard based browsing."
 msgstr ""
-"Näytä kohdistin vaikka et pystyisi kirjoittamaan sivulle. Hyödyllinen "
-"näppäimistö-pohjaisille selailuille."
+"Kurzor mutatása akkor is, ha nem lehet szerkeszteni az oldalt. Billentyű "
+"alapú böngészés közben használható."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:75
 msgid "Tearoff menus"
-msgstr "Irrotettavat valikot"
+msgstr "Leválasztható menü"
 
 #. Option in the preferences dialog
 #: zim/gui/__init__.py:157
 msgid "Add 'tearoff' strips to the menus"
-msgstr "Lisää 'leikkausraidat' valikkoihin"
+msgstr "Leválasztó vonal hozzáadása a menükhöz"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:79
 msgid "Auto-link CamelCase"
-msgstr "Liitä KyttyräKirjoitus"
+msgstr "Automatikus hivatkozás a WikiLink-re"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:80
 msgid "Automaticly link CamelCase words when you type"
-msgstr "Automaattisesti liitä kamelityylillä varustetut sanat"
+msgstr "Automatikus hivatkozás a WikiLink szavak beírásakor"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:83
 msgid "Auto-link files"
-msgstr "Liitä tiedostot"
+msgstr "Automatikus hivatkozás fájlokra"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:84
 msgid "Automatically link file names when you type"
-msgstr "Automaattisesti liittää tiedostoihin kirjoittaessasi"
+msgstr "Automatikus hivatkozása fájlnév beírásakor"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:87
 msgid "Auto-format entities"
-msgstr "Muotoile erikoismerkit"
+msgstr "Bejegyzés automatikus formázása"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:88
 msgid "Use autoformatting to type special characters"
-msgstr "Käytä automaattista muotoilua erikoismerkkien luomisessa"
+msgstr "Speciális karakterek gépelésekor automatikus formázás"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:91
 msgid "Auto-increment numbered lists"
-msgstr "Nosta numeroiduissa listoissa"
+msgstr "Automatikus számozott lista"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:92
 msgid "Automatically increment items in a numbered list"
-msgstr "Nosta numeroa jatkaessasi numeroitua listaa"
+msgstr "A tételek automatikusan növekvő számozása egy számozott listában"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:95
 msgid "Check checkbox lists recursive"
-msgstr "Vaihda rastiruutulista rekursiivisesti"
+msgstr "Rekurzív checkbox bejelölés"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:96
 msgid "Checking a checkbox list item will also check any sub-items"
-msgstr "Rastiruudun muokkaus muuttaa myös sen alla olevat rastit"
+msgstr "Egy checkbox lista elem bejelölése az alelemeket is bejelöli"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:99
 msgid "Use \"Backspace\" to un-indent"
-msgstr "Käytä askelpalautinta epä-sisennykseen"
+msgstr "Behúzás törlése \"Backspace\"-szel"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:100
 msgid ""
 "Use the \"Backspace\" key to un-indent bullet lists (Same as \"Shift-Tab\")"
 msgstr ""
-"Käytä askelpalautinta poistaaksesi sisennyksen listasta (Sama kuin \"Shift-"
-"Tab\")"
+"A \"Backspace\" billentyű használata egy felsorolt lista behúzásának "
+"megszüntetésére. (Ugyanaz mint a \"Shift-Tab\")"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:103
 msgid "Auto-select words"
-msgstr "Valitse sanat"
+msgstr "Szavak automatikus kiválasztása"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:104
 msgid "Automaticly select the current word when you toggle the format"
-msgstr "Automaattisesti valitse nykyinen sana kun vaihdat formaattia"
+msgstr "Az aktuális szó automatikus kijelölése a formátum váltásakor."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:107
 msgid "Use \"Enter\" to follow links"
-msgstr "Käytä \"Enter\"iä seurataksesi linkkejä"
+msgstr "\"Enter\" használata a hivatkozáshoz ugráshoz"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:108
@@ -1507,13 +1502,13 @@ msgid ""
 "Use the \"Enter\" key to follow links. If disabled you still can use \"Alt-"
 "Enter\""
 msgstr ""
-"Käytä \"Enter\"-näppäintä seurataksesi linkkejä. Vaihtoehtoisesti voit "
-"käyttää \"Alt-Enter\"iä"
+"\"Enter\" billentyű használata a hivatkozáshoz ugrásra. Ha tiltott, "
+"használhatja az \"Alt-Enter\"-t"
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:111
 msgid "Use \"Ctrl-Space\" to switch focus"
-msgstr "Käytä \"Ctrl-Space\" vaihtaakseen fokusta"
+msgstr "\"Ctrl-Space\" használat a fókusz váltására"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:112
@@ -1521,48 +1516,48 @@ msgid ""
 "Use the \"Ctrl-Space\" key combo to switch focus between text and side pane. "
 "If disabled you can still use \"Alt-Space\"."
 msgstr ""
-"Käytä \"Ctrl-Space\" näppäinyhdistelmää vaihtaakseen fokusta tekstin ja "
-"sivupaneelin välillä. Voit käyttää myös yhdistelmää \"Alt-Space\"."
+"A \"Ctrl-Space\" billentyűk használata a fókusz váltására a szöveg és az "
+"oldalpanel között. Ha tiltott, akkor használhatja az \"Alt-Space\"-t."
 
 #. pref. label
 #: lib/Zim/GUI/PreferencesDialog.pm:115
 msgid "Expand side pane"
-msgstr "Avaa sivupaneeli"
+msgstr "Oldalpanel megnyitása"
 
 #. pref. tooltip
 #: lib/Zim/GUI/PreferencesDialog.pm:116
 msgid "Start the side pane with the whole tree expanded."
-msgstr "Avaa sivupaneeli koko hakemistopuu avattuna."
+msgstr "Az oldalpanel indítása nyitott faszerkezettel."
 
 #. Dialog title
 #: zim/gui/preferencesdialog.py:25
 msgid "Preferences"
-msgstr "Asetukset"
+msgstr "Beállítások"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:170
 msgid "General"
-msgstr "Yleinen"
+msgstr "Általános"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:194
 msgid "Interface"
-msgstr "Käyttöliittymä"
+msgstr "Felhasználói felület"
 
 #. check box
 #: lib/Zim/GUI/PreferencesDialog.pm:216
 msgid "Use custom font"
-msgstr "Käytä omaa fonttia"
+msgstr "Egyéni betűtípus használata"
 
 #. tab label
 #: lib/Zim/GUI/PreferencesDialog.pm:244
 msgid "Editing"
-msgstr "Muokkaus"
+msgstr "Szerkesztés"
 
 #. Heading in preferences dialog
 #: zim/gui/preferencesdialog.py:75
 msgid "Plugins"
-msgstr "Lisäosat"
+msgstr "Bővítmények"
 
 #. ...
 #: lib/Zim/GUI/PreferencesDialog.pm:270
@@ -1570,13 +1565,13 @@ msgid ""
 "You need to restart the application\n"
 "for plugin changes to take effect."
 msgstr ""
-"Sinun on käynnistettävä ohjelma\n"
-"uudestaan että lisäosat vaikuttaisivat."
+"Az alkalmazást újra kell indítani\n"
+"a bővítmény változtatás érvényesítéséhez."
 
 #. Column in plugin tab
 #: zim/gui/preferencesdialog.py:268
 msgid "Enabled"
-msgstr "Päällä"
+msgstr "Engedélyezve"
 
 #. Field in 'custom command' dialog |
 #. Input label in the 'rename page' dialog for the new name |
@@ -1587,104 +1582,104 @@ msgstr "Päällä"
 #: zim/gui/notebookdialog.py:361 zim/gui/preferencesdialog.py:183
 #: zim/notebook.py:339
 msgid "Name"
-msgstr "Nimi"
+msgstr "Név"
 
 #. Dialog title
 #: zim/gui/propertiesdialog.py:11
 msgid "Properties"
-msgstr "Ominaisuudet"
+msgstr "Tulajdonságok"
 
 #. Column heading in 'open notebook' dialog |
 #. Field in web server gui
 #: zim/gui/notebookdialog.py:144 zim/gui/server.py:85
 msgid "Notebook"
-msgstr "Muistivihko"
+msgstr "Jegyzetfüzet"
 
 #. input
 #: lib/Zim/GUI/PropertiesDialog.pm:100
 msgid "Directory"
-msgstr "Hakemisto"
+msgstr "Könyvtár"
 
 #. label for properties dialog
 #: zim/notebook.py:340
 msgid "Home Page"
-msgstr "Kotisivu"
+msgstr "Honlap"
 
 #. label for properties dialog
 #: zim/notebook.py:341
 msgid "Icon"
-msgstr "Ikoni"
+msgstr "Ikon"
 
 #. label for properties dialog
 #: zim/notebook.py:342
 msgid "Document Root"
-msgstr "Juurihakemisto"
+msgstr "Dokumentum gyökérkönyvtára"
 
 #. label for properties dialog
 #: zim/notebook.py:343
 msgid "Slow file system"
-msgstr "Hidas tiedostojärjestelmä"
+msgstr "Lassú fájlrendszer"
 
 #. check box
 #: lib/Zim/GUI/PropertiesDialog.pm:120
 msgid "Auto-save version on close"
-msgstr "Tallenna versio suljettaessa"
+msgstr "Automatikus verzió mentés kilépéskor"
 
 #. label for page property Content-Type
 #: lib/Zim/GUI/PropertiesDialog.pm:189
 msgid "Source Format"
-msgstr "Lähdemuoto"
+msgstr "Forrás formátuma"
 
 #. label for page property Creation-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:190
 msgid "Creation Date"
-msgstr "Luotu"
+msgstr "Létrehozás dátuma"
 
 #. label for page property Modification-Date
 #: lib/Zim/GUI/PropertiesDialog.pm:191
 msgid "Modification Date"
-msgstr "Muokkauspäivämäärän"
+msgstr "Módosítás dátuma"
 
 #. Dialog title |
 #. input label
 #: zim/gui/searchdialog.py:18 zim/gui/searchdialog.py:23
 msgid "Search"
-msgstr "Etsi"
+msgstr "Keresés"
 
 #. header search results
 #: lib/Zim/GUI/SearchDialog.pm:75
 msgid "Rank"
-msgstr "Arvo"
+msgstr "Rangsor"
 
 #. dialog title
 #: lib/Zim/GUI/SearchDialog.pm:177
 msgid "Edit Query"
-msgstr "Muokkaa tiedustelua"
+msgstr "Lekérdezés szerkesztése"
 
 #. dialog text
 #: lib/Zim/GUI/SearchDialog.pm:189
 msgid "You can add rules to your search query below"
-msgstr "Voit lisätä alapuolelle omia sääntöjä tiedusteluusi"
+msgstr "Az alábbi lekérdezéshez meg kell adni a keresési szabályokat"
 
 #. menu label & tooltip for TSpell
 #: lib/Zim/GUI/Spell.pm:31
 msgid "Check _spelling|Spell check"
-msgstr "Oikolue|Oikoluku"
+msgstr "_Helyesírás ellenőrzése|Helyesírás ellenőrzése"
 
 #. dialog title
 #: lib/Zim/GUI/TODOListDialog.pm:46
 msgid "TODO List"
-msgstr "TODO-lista"
+msgstr "Teendőlista"
 
 #. Input label
 #: zim/plugins/tasklist.py:109
 msgid "Filter"
-msgstr "Suodatin"
+msgstr "Szűrő"
 
 #. Button
 #: zim/plugins/tasklist.py:114
 msgid "_Filter"
-msgstr "_Suodata"
+msgstr "_Szűrő"
 
 #. Column header Task List dialog
 #: zim/plugins/tasklist.py:257
@@ -1694,133 +1689,133 @@ msgstr "Prio"
 #. Column header Task List dialog
 #: zim/plugins/tasklist.py:236
 msgid "Task"
-msgstr "Tehtävä"
+msgstr "Feladat"
 
 #. Column header Task List dialog |
 #. Column header versions dialog
 #: zim/plugins/tasklist.py:282 zim/plugins/versioncontrol/__init__.py:439
 msgid "Date"
-msgstr "Päivämäärä"
+msgstr "Dátum"
 
 #. ...
 #: lib/Zim/GUI/TODOListDialog.pm:139
 msgid "Include all open checkboxes"
-msgstr "Lisää mukaan kaikki avoimet valintaruudut"
+msgstr "Az összes jelöletlen checkbox beillesztése"
 
 #. number of tasks in TODO list
 #: lib/Zim/GUI/TODOListDialog.pm:284
 msgid "{number} item total"
 msgid_plural "{number} items total"
-msgstr[0] "{number} tehtävä"
-msgstr[1] "{number} tehtävää"
+msgstr[0] "Összesen {number} elem"
+msgstr[1] "Összesen {number} elem"
 
 #. Option in template selection to specify another file
 #: zim/gui/exportdialog.py:77 zim/gui/exportdialog.py:81
 #: zim/gui/exportdialog.py:104 zim/gui/exportdialog.py:220
 msgid "Other..."
-msgstr "Muu..."
+msgstr "Egyéb…"
 
 #. status bar info
 #: lib/Zim/GUI/TreeView.pm:363
 msgid "Scanning tree ..."
-msgstr "Luetaan puuta..."
+msgstr "Könyvtárfa ellenőrzése ..."
 
 #. Dialog title |
 #. dialog title
 #: zim/gui/versionsdialog.py:11 zim/plugins/versioncontrol/__init__.py:215
 #: zim/plugins/versioncontrol/__init__.py:230
 msgid "Versions"
-msgstr "Versiot"
+msgstr "Verziók"
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:76
 msgid "View _Annotated..."
-msgstr "Katso lisä_huomautetut..."
+msgstr "_Módosítások megtekintése"
 
 #. button
 #: lib/Zim/GUI/VersionsDialog.pm:79
 msgid "_Restore Version..."
-msgstr "_Palauta versio"
+msgstr "_Verzió visszaállítása..."
 
 #. column header for version id
 #: lib/Zim/GUI/VersionsDialog.pm:86
 msgid "Id"
-msgstr "Id"
+msgstr "Azonosító"
 
 #. column header for committer
 #: lib/Zim/GUI/VersionsDialog.pm:88
 msgid "User"
-msgstr "Käyttäjä"
+msgstr "Felhasználó"
 
 #. version details
 #: zim/plugins/versioncontrol/__init__.py:278
 msgid "Comment"
-msgstr "Kommentti"
+msgstr "Megjegyzés"
 
 #. label for version entry
 #: lib/Zim/GUI/VersionsDialog.pm:118
 msgid "Compare this version with"
-msgstr "Vertaa tämä versio toiseen"
+msgstr "Összehasonlítás ezzel a verzióval"
 
 #. special name for current version
 #: lib/Zim/GUI/VersionsDialog.pm:120 lib/Zim/GUI/VersionsDialog.pm:412
 msgid "Current"
-msgstr "Nykyinen"
+msgstr "Jelenlegi"
 
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:131
 msgid "_Page Changes..."
-msgstr "Sivumuutokset..."
+msgstr "_Oldal változásai..."
 
 #. button label
 #: lib/Zim/GUI/VersionsDialog.pm:133
 msgid "Co_mpare Page..."
-msgstr "Vertaa sivu..."
+msgstr "Oldal összehasonlítása..."
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:229
 msgid "No such page: {page}"
-msgstr "Sivu ei olemassa: {page}"
+msgstr "Nincs ilyen oldal: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:230
 msgid "Please give a page first"
-msgstr "Valitse sivu ensiksi"
+msgstr "Először adjon meg egy oldalt"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:240
 msgid "Please select a version first"
-msgstr "Valitse versio ensiksi"
+msgstr "Először válasszon ki egy verziót"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:316
 msgid "Could not get file for page: {page}"
-msgstr "En saanut tiedostoa sivulle: {page}"
+msgstr "Az oldalhoz tartozó fájl nem található: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:346
 msgid "Could not get changes for page: {page}"
-msgstr "En pysty hakemaan muutoksia sivulle: {page}"
+msgstr "Az adott oldal nem változott: {page}"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:347
 msgid "Could not get changes for this notebook"
-msgstr "En pysty hakemaan muutoksia tälle vihkolle"
+msgstr "Ez a jegyzetfüzet nem változott"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:365
 msgid "Could not get versions to compare"
-msgstr "En saanut versioita verrattaviksi"
+msgstr "Nincs összehasonlítható verzió"
 
 #. application type
 #: lib/Zim/GUI/VersionsDialog.pm:375
 msgid "Diff Editor"
-msgstr "Diff-editori"
+msgstr "Diff szerkesztő"
 
 #. error
 #: lib/Zim/GUI/VersionsDialog.pm:389
 msgid "Could not get annotated source for page {page}"
-msgstr "En saanut lisähuomautettua lähdettä sivulle {page}"
+msgstr "A(z) {page} oldal annotált forrása nem olvasható."
 
 #. confirmation for restore version, answers are 'cancel' or 'ok'
 #: lib/Zim/GUI/VersionsDialog.pm:415
@@ -1832,62 +1827,61 @@ msgid ""
 "\n"
 "All changes since the last saved version will be lost !"
 msgstr ""
-"<b>Palauta sivu tallennettuun versioon?</b>\n"
+"<b>Az oldal mentett verziójának visszaállítása</b>\n"
+"Vissza akarja állítani az oldalt: {page}\n"
+"a mentett {version}. verzióra?\n"
 "\n"
-"Haluatko palauttaa sivun: {page}\n"
-"versioon: {version} ?\n"
-"\n"
-"Kaikki viime tallenuksesta lähtien tehdyt muutokset menetetään!"
+"A mentés óta történt minden módosítás elvész!"
 
 #. menu label & tooltip for GoToday
 #: share/zim/plugins/Calendar.pl:7
 msgid "To_day|Today"
-msgstr "Tänään|Tänään"
+msgstr "_Ma|Ugrás a mai napra"
 
 #. menu label & tooltip for TCalendar
 #: share/zim/plugins/Calendar.pl:11
 msgid "Calen_dar|Show calendar"
-msgstr "Kalenteri|Näytä kalenteri"
+msgstr "_Naptár|Naptár megjelenítése"
 
 #. menu label & tooltip for InsertEquation
 #: share/zim/plugins/EquationEditor.pl:14
 msgid "E_quation...|Insert equation"
-msgstr "_Yhtälö|Lisää yhtälö"
+msgstr "_Egyenlet...|Egyenlet beszúrása"
 
 #. menu label & tooltip for InsertScreenshot
 #: share/zim/plugins/InsertScreenshot.pl:20
 msgid "_Screenshot...|Insert screenshot"
-msgstr "Kuvakaappaus...|Lisää kuvakaappaus"
+msgstr "Ké_pernyőkép|Képernyőkép beszúrása"
 
 #. menu label & tooltip for TmpPrint
 #: share/zim/plugins/PrintToBrowser.pl:32
 msgid "Print to Browser|Print to browser"
-msgstr "Tulosta selaimelle|Tulosta selaimelle"
+msgstr "Nyomtatás a böngészőbe|Nyomtatás a böngészőbe"
 
 #. menu label & tooltip for TTODOList
 #: share/zim/plugins/TODOList.pl:7
 msgid "_TODO List...|Open TODO List"
-msgstr "TO_DO-lista...|Avaa TODO-lista"
+msgstr "_Teendők...|Teendők megnyitása"
 
 #. menu label & tooltip for TEditMode
 #: share/zim/plugins/ToggleReadOnly.pl:13
 msgid "Page Editable|Page editable"
-msgstr "Sivu muokattavissa|Sivu muokattavissa"
+msgstr "Szerkeszthető oldal|Szerkeszthető oldal"
 
 #. menu label & tooltip for SvnCommit
 #: share/zim/plugins/VersionControl/Subversion.pl:30
 msgid "SVN commit|Commit notebook to SVN repository"
-msgstr "SVN-merkintä|Merkitse vihko SVN-varastoon"
+msgstr "SVN kommit|A jegyzetfüzet tárolása az SVN tárolóban"
 
 #. menu label & tooltip for SvnUpdate
 #: share/zim/plugins/VersionControl/Subversion.pl:31
 msgid "SVN update|Update notebook from SVN repository"
-msgstr "SVN-päivitys|Päivitä vihko SVN-varastosta"
+msgstr "SVN frissítés|A jegyzetfüzet frissítése az SVN tárolóból"
 
 #. menu label & tooltip for SvnCleanup
 #: share/zim/plugins/VersionControl/Subversion.pl:32
 msgid "SVN cleanup|Cleanup SVN working copy"
-msgstr "SVN siivous|Siivoa SVN-työkopio"
+msgstr "SVN tisztítás|A munkapéldány tisztítása az SVN tárolóban"
 
 #. SVN warning
 #: share/zim/plugins/VersionControl/Subversion.pl:90
@@ -1895,15 +1889,15 @@ msgid ""
 "This page was updated in the repository.\n"
 "Please update your working copy (Tools -> SVN update)."
 msgstr ""
-"Tästä sivusta on päivitys varastossa.\n"
-"Ole hyvä ja päivitä kopiosi (Työkalut -> SVN päivitys)."
+"Ennek az oldalnak újabb változata van a tárolóban.\n"
+"Kérem frissítse a munkapéldányát (Eszközök -> SVN frissítés)"
 
 #. Error in SVN update
 #: share/zim/plugins/VersionControl/Subversion.pl:104
 msgid "Failed update working copy."
-msgstr "Kopion päivitys epäonnistui."
+msgstr "Sikertelen a munkapéldány frissítése."
 
 #. ...
 #: share/zim/plugins/VersionControl/Subversion.pl:117
 msgid "Failed to cleanup SVN working copy."
-msgstr "En onnistunut siivoamaan SVN-työkopiota."
+msgstr "Sikertelen a munkapéldány tisztázása."

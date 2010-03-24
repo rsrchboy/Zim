@@ -4,7 +4,7 @@ use strict;
 use Zim::GUI::Component;
 use Zim::Utils;
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 
 our @ISA = qw/Zim::GUI::Component/;
 
@@ -41,6 +41,8 @@ Simple constructor.
 my $CONFIG = {
 	use_all_checkboxes => 0,
 	tags => 'TODO,FIXME',
+	due_date_prefix  => '[',
+	due_date_postfix => ']',
 };
 
 sub init {
@@ -92,11 +94,36 @@ sub init {
 	$$self{stat_label} = $stat_label;
 	$hbox->pack_end($stat_label, 0,0,0);
 
-	## Set up TreeView, Model and Columns
+	## Set up TreeView for tags
+	my $hpane = Gtk2::HPaned->new();
+	$hpane->set_position(80);
+	$vbox->add($hpane);
+
 	my $swindow = Gtk2::ScrolledWindow->new();
+	$swindow->set_policy('never', 'automatic'); # only scroll vertically
+	$swindow->set_shadow_type('in');
+
+	my $model = Gtk2::ListStore->new("Glib::String");
+	my $view = Gtk2::TreeView->new($model);
+	my $col = Gtk2::TreeViewColumn->new_with_attributes(
+		__('Tags'), Gtk2::CellRendererText->new, 'text' => 0 );
+	$view->append_column($col);
+	$hpane->add1($view);
+	$$self{tag_view} = $view;
+
+	$view->signal_connect(row_activated => sub {
+		my ($view, $path) = @_;
+		my $iter = $view->get_model()->get_iter($path);
+		my $tag = $view->get_model()->get_value($iter, 0);
+		$$self{tag_filter} = ($tag eq 'All') ? undef : $tag ;
+		$self->filter();
+	});
+
+	## Set up TreeView, Model and Columns
+	$swindow = Gtk2::ScrolledWindow->new();
 	$swindow->set_policy('automatic', 'automatic');
 	$swindow->set_shadow_type('in');
-	$vbox->add($swindow);
+	$hpane->add2($swindow);
 	
 	my $treemodel = Gtk2::TreeStore->new( map "Glib::$_",
 		# COL_VIS, COL_PRIO, COL_DESC, COL_DATE, COL_PAGE
@@ -119,6 +146,7 @@ sub init {
 	) {
 		my $c = Gtk2::TreeViewColumn->new_with_attributes(
 			$$_[0], $r, text => $$_[1] );
+		$c->set(resizable => 1);	
 		$c->set_sort_column_id($$_[1]);
 		$c->set_expand($$_[1]) if $$_[1] == COL_DESC;
 		$treeview->insert_column($c, -1);
@@ -229,32 +257,52 @@ sub filter {
 	my $text = $$self{filter_entry}->get_text;
 	if (length $text) {
 		# Filter, grep rows that match
-		my $regex = _filter_regex($text);
+		my ($negate, $regex) = _filter_regex($text);
 		warn "## TODOList: Filtering with regex: $regex\n";
 		$$self{list}->foreach( sub {
 			#print STDERR ".";
 			my ($model, undef, $iter) = @_;
 			my ($desc, $page) =
 				$model->get_value($iter, COL_DESC, COL_PAGE);
-			my $vis = (
-				$desc =~ $regex or
-				$page =~ $regex    );
+			my $vis = 0;
+			unless ($negate) {
+				$vis = (
+					$desc =~ $regex or
+					$page =~ $regex    );
+			}
+			else {
+				$vis = (
+					$desc !~ $regex and
+					$page !~ $regex    );
+			}
+			$vis = 0 if $$self{tag_filter}
+				and $desc !~ /\@$$self{tag_filter}/i ;
 			$model->set($iter, &COL_VIS => $vis);
 			0; # keep going
 		} );
 	}
 	else {
 		# Clear, set all rows visible
-		$$self{list}->foreach(
-			sub { $_[0]->set($_[2], &COL_VIS => 1); 0 } );
+		$$self{list}->foreach( sub {
+			my ($model, undef, $iter) = @_;
+			my ($desc, $page) =
+				$model->get_value($iter, COL_DESC, COL_PAGE);
+			my $vis = 1;
+			$vis = 0 if $$self{tag_filter}
+				and $desc !~ /\@$$self{tag_filter}/i ;
+			$model->set($iter, &COL_VIS => $vis);
+			0; # keep going
+		} );
 	}
 }
 
 sub _filter_regex {
 	my $string  = shift;
+	my $negate = 0;
+	$negate = 1 if $string =~ s/^\s*not\s+//;
 	my @words = split /\s+/, $string;
 	my $regex = join "\\s+", map quotemeta($_), @words;
-	return qr/(?i)$regex/;
+	return ($negate, qr/(?i)$regex/);
 }
 
 =item C<reload()>
@@ -275,15 +323,26 @@ sub reload {
 
 	# Search and filter in one go
 	my $text = $$self{filter_entry}->get_text;
-	my $regex = length($text) ? _filter_regex($text) : undef;
+	my ($negate, $regex) = length($text) ? _filter_regex($text) : (undef, undef);
+	my $tags = {};
 	$$self{app}{notebook}->search(
 		{regex => qr/$query/, case => 1, word => 1},
 		sub {
-			$self->parse_page($_[0][0], $regex) if @_;
+			$self->parse_page($_[0][0], $negate, $regex, $tags) if @_;
 			while (Gtk2->events_pending) {
 				Gtk2->main_iteration_do(0);
 			}
 		} );
+
+	# Populate tag list
+	my $model = $$self{tag_view}->get_model();
+	$model->clear();
+	my $iter = $model->append();
+	$model->set_value($iter, 0, 'All');
+	for my $tag (sort keys %$tags) {
+		my $iter = $model->append();
+		$model->set_value($iter, 0, ucfirst($tag));
+	}
 
 	# Collect stats on priorities
 	my ($total, @stats) = (0, 0);
@@ -295,7 +354,7 @@ sub reload {
 	} );
 	$$self{stat_label}->set_text(
 		__n("{number} item total", "{number} items total", number => $total) . #. number of tasks in TODO list
-		" (".join('/',reverse(@stats)).")" );
+		" (".join('/',map($_ + 0, reverse(@stats))).")" );
 
 	if ($total > 1) {
 		# select first item and scroll up
@@ -311,23 +370,33 @@ Check a page for TODO items. Adds found items to the list.
 =cut
 
 sub parse_page {
-	my ($self, $page, $filter) = @_;
+	my ($self, $page, $negate, $filter, $tags) = @_;
 	my $p = $$self{app}{notebook}->get_page($page);
 	my $tree = $p->get_parse_tree;
 	my @todo = $self->parse_tree($tree);
 	for (@todo) { # [DESC, PRIO, [@DATE]]
 		my ($desc, $prio, $date) = @$_;
-		my $vis = $filter 
-			? ($desc =~ $filter or $page =~ $filter)
-			: 1 ;
+		my $vis = 1;
+		if ($filter) {
+			$vis = $negate
+				? ($desc !~ $filter and $page !~ $filter)
+				: ($desc =~ $filter or $page =~ $filter) ;
+		}
+		$vis = 0 if $$self{tag_filter}
+			and $desc !~ /\@$$self{tag_filter}/i ;
 		my $iter = $$self{list}->append(undef);
 		$$self{list}->set($iter,
 			&COL_VIS  => $vis,
 			&COL_PRIO => $prio,
 			&COL_DESC => $desc,
-			&COL_DATE => "@$date",
+			&COL_DATE => Zim::Utils::iso_date(@$date),
 			&COL_PAGE => $page,
 		);
+
+		# extract tags
+		while ($desc =~ /(?<!\S)\@(\w+)\b/g) {
+			$$tags{lc($1)} = 1;
+		}
 	}
 }
 
@@ -339,7 +408,7 @@ Returns a list of TODO items for a given parse tree.
 
 sub parse_tree {
 	my ($self, $tree) = @_;
-	my $tags = join '|', map quotemeta($_), 
+	my $tags = join '|', map quotemeta($_),
 	           grep length($_), split /,/, $$self{settings}{tags} ;
 	#warn "TAGS >>$tags<<\n";
 
@@ -366,7 +435,7 @@ sub parse_tree {
 		# else ignore
 	}
 
-	# No turn list of paragraphs into list of TODO items
+	# Now turn list of paragraphs into list of TODO items
 	my @todo;
 	for my $n (@para) {
 		my $para = _plain($n);
@@ -374,7 +443,7 @@ sub parse_tree {
 		if ($tags and $para =~ s/\A\s*($tags)\b:?\s*$//m) {
 			# process multiline items
 			# FIXME support hierarchical lists
-			push @todo, grep /\w/, map {s/^\s*|\s*$//; $_} 
+			push @todo, grep /\w/, map {s/^\s*|\s*$//; $_}
 			            split /\n+/, $para ;
 		}
 		else {
@@ -384,7 +453,7 @@ sub parse_tree {
 					# start of line
 					push @todo, $2;
 				}
-				elsif ($tags and /^\s*([\x{2022}\-\*]\s|\[ \])/ 
+				elsif ($tags and /^\s*([\x{2022}\-\*]\s|\[ \])/
 				             and /\b($tags)\b/
 				) {
 					# list item or bullet, match anywhere
@@ -399,15 +468,24 @@ sub parse_tree {
 		}
 	}
 
-	# Filter out items flagged as DONE or with checked checkbox 
+	# Filter out items flagged as DONE or with checked checkbox
 	# and determine prio and due date
 	@todo = grep defined($_), map {
 		$_ = '' if /(^|\s)DONE:?(\s|$)/ or /^\s*\[[*xX]\]/;
 		s/^\s*\[ \]\s*//;
 		my ($prio, @date) = (0);
 		$prio = length($1) if s#(!+)##; # parse priority
-		@date = Zim::Utils::parse_date($2)
-			if s#(^|\s)(\d{1,2}/\d{1,2}(/\d{2,4})?)(\s|$)##;
+		my $prefix  = $$self{settings}{due_date_prefix}  || q();
+		my $postfix = $$self{settings}{due_date_postfix} || q();		
+		# escape all regex meta characters
+		$prefix  =~ s/(\W)/\\$1/g; 
+		$postfix =~ s/(\W)/\\$1/g; 
+		if ($_ =~ m/$prefix\s*(\d+.\d+(.\d*)?)\s*$postfix/) {
+			@date = Zim::Utils::parse_date($1); 
+			if ($date[0]) {
+				s/$prefix\s*(\d+.\d+(.\d*)?)\s*$postfix//;
+			}  
+		}
 		s/^\s*[\x{2022}\-\*]|\-\s*$//g; # remove bullets etc.
 		s/^\s+|\s+$//g;
 		($_ =~ /\S/) ? [$_, $prio, \@date] : undef;
@@ -450,4 +528,5 @@ modify it under the same terms as Perl itself.
 =head1 SEE ALSO
 
 =cut
+
 

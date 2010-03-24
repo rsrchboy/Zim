@@ -107,11 +107,13 @@ bar baz
 TODO: fix 1 !!!
 
 TODO:
-* fix 2 24/3/08 !!
+* fix 2 [24/3/08] !!
 * fix 3 !
+* another[ 30.7.2009 ] fix ! reported 24.3.09
 %% t/notebook/TODOList/bar.txt %%
 TODO: test 123 test !!
 
 * foo ! - TODO
 * bar ! - TODO
 * baz - TODO
+* TODO yep [2009-07-30] !!!

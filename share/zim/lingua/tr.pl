@@ -5,19 +5,20 @@
 # 
 # 
 # TRANSLATORS:
+# Gökdeniz Karadağ (tr)
 # M. Emin Akşehirli (tr)
 # 
 # Project-Id-Version: zim
 # Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>
 # POT-Creation-Date: 2008-10-27 21:09+0100
-# PO-Revision-Date: 2008-11-05 14:42+0000
-# Last-Translator: M. Emin Akşehirli <m.emin@aksehirli.name.tr>
+# PO-Revision-Date: 2009-11-18 08:05+0000
+# Last-Translator: Gökdeniz Karadağ <Unknown>
 # Language-Team: Turkish <tr@li.org>
 # MIME-Version: 1.0
 # Content-Type: text/plain; charset=UTF-8
 # Content-Transfer-Encoding: 8bit
 # Plural-Forms: nplurals=1; plural=0;
-# X-Launchpad-Export-Date: 2008-11-09 09:04+0000
+# X-Launchpad-Export-Date: 2010-01-10 10:44+0000
 # X-Generator: Launchpad (build Unknown)
 
 use utf8;
@@ -260,7 +261,7 @@ için bir parola girin.',
   'Please select a version first' => 'Öncelikle bir sürüm seçin',
   'Plugin already loaded: {name}' => '{name} adlı eklenti zaten yüklü.',
   'Plugins' => 'Eklentiler',
-  'Pr_eferences|Preferences dialog' => 'Y_eğlenenler|Yeğlenen ayarlar',
+  'Pr_eferences|Preferences dialog' => 'T_ercihler|Tercihleri düzenle',
   'Preferences' => 'Yeğlenenler',
   'Prefix document root' => 'Belge kök dizini ön eki',
   'Print to Browser|Print to browser' => 'Web Gezginine Gönder|Sayfanın Web gezgininde nasıl görüneceğine bakın',
@@ -316,8 +317,8 @@ bulunamadı. Denklem düzenlenemez.',
 Please update your working copy (Tools -> SVN update).' => 'Depodaki sayfa güncellenmiş.
 Lütfen çalıştığınız kopyayı güncelleyin (Tools -> SVN\'den güncelle).',
   'To_day|Today' => 'Bu_gün|Bugün',
-  'Toggle Checkbox \'V\'|Toggle checkbox' => 'Onay Kutusunu \'V\'le | Onay kutusunu değiştir',
-  'Toggle Checkbox \'X\'|Toggle checkbox' => 'Onay Kutusunu \'X\'le | Onay kutusunu değiştir',
+  'Toggle Chechbox \'V\'|Toggle checkbox' => 'Onay Kutusunu \'V\'le | Onay kutusunu değiştir',
+  'Toggle Chechbox \'X\'|Toggle checkbox' => 'Onay Kutusunu \'X\'le | Onay kutusunu değiştir',
   'Underline' => 'Altı çizili',
   'Updating links' => 'Bağlantılar güncelleniyor',
   'Updating links in {name}' => '{name} içindeki bağlantılar güncelleniyor',
