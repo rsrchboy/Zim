@@ -1,6 +1,7 @@
 package Zim::Events;
 
-use strict;
+use Moose::Role;
+use namespace::autoclean;
 
 our $VERSION = '0.26';
 
@@ -10,8 +11,8 @@ Zim::Events - Simple event dispatching
 
 =head1 DESCRIPTION
 
-Add a few routines to mimic Gtk style event dispatching for objects that
-do not inherit from a GObject.
+This is a L<Moose::Role> that adds a few routines to mimic Gtk style event
+dispatching for objects that do not inherit from a GObject.
 
 Since we use Perl there is no need to define events types etc. Calling
 C<signal_connect()> will create a new event if the event did not yet exist.

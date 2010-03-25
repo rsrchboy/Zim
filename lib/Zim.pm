@@ -1,5 +1,10 @@
 package Zim;
 
+use Moose;
+#use namespace::autoclean;
+
+with 'Zim::Events';
+
 use strict;
 use utf8; # for translator credits
 
@@ -10,14 +15,11 @@ use File::BaseDir 0.03 qw/
 	xdg_cache_home
 /;
 use Zim::Utils;
-use Zim::Events;
 use Zim::Store;
 use Zim::History;
 use Zim::Page;
 
 our $VERSION = '0.29';
-
-our @ISA = qw/Zim::Events/;
 
 our $COPYRIGHT = 'Copyright (c) 2005, 2008 Jaap G Karssenberg.';
 our $LONG_VERSION = << "EOT";
@@ -173,6 +175,7 @@ Constructor. Parameters can be:
 
 =cut
 
+# FIXME this needs to be refactored
 sub new {
 	my $class = shift;
 
@@ -947,7 +950,7 @@ sub check_version_control {
 	return ref($vcs) ? $vcs : undef;
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 __END__
 
