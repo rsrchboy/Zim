@@ -5,8 +5,16 @@ all_from 'lib/Zim.pm';
 #author   q{Chris Weyl <cweyl@alumni.drew.edu>};
 license  'perl';
 
+requires 'namespace::autoclean';
 requires 'Moose';
+requires 'MooseX::Types';
+requires 'MooseX::Types::Path::Class';
+requires 'MooseX::Role::WithOverloading';
+
+requires 'File::Slurp';
+requires 'Path::Class';
 requires 'Readonly';
+
 requires 
         'perl'           => '5.8.0',
         'Gtk2'           => '1.040',
