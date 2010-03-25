@@ -1,14 +1,17 @@
 package Zim::Store::Cached;
 
-use strict;
+use Moose;
+use namespace::autoclean;
+
+extends 'Zim::Store';
+
 use vars qw/$CODESET/;
 use POSIX qw(strftime);
 use Encode;
-use Zim::Store;
+
 use Zim::Utils;
 
 our $VERSION = '0.24';
-our @ISA = qw/Zim::Store/;
 
 *CODESET = \$Zim::CODESET;
 $CODESET ||= 'utf8';
@@ -39,7 +42,8 @@ NAMESPACE is the namespace that maps to that directory.
 
 =cut
 
-sub init { # called by new
+# FIXME was init() -- needs refactoring
+sub BUILD {
 	my $self = shift;
 	$self->check_dir;
 

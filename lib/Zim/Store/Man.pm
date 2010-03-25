@@ -1,10 +1,11 @@
 package Zim::Store::Man;
 
-use strict;
-use Zim::Store;
+use Moose;
+use namespace::autoclean;
+
+extends 'Zim::Store';
 
 our $VERSION = '0.26';
-our @ISA     = 'Zim::Store';
 
 =head1 NAME
 
@@ -23,7 +24,8 @@ It derives from L<Zim::Store>.
 
 =cut
 
-sub init {
+# FIXME was init() -- needs refactoring to behave properly
+sub BUILD {
 	my $self = shift;
 	$self->{no_show_in_sidepane} = 1; # temp HACK
 

@@ -1,13 +1,15 @@
 package Zim::Store::Gjots;
 
-use strict;
+use Moose;
+use namespace::autoclean;
+
+extends 'Zim::Store';
+
 use Carp;
 use Zim::Page;
 use Zim::Utils;
 
 our $VERSION = '0.26';
-
-our @ISA = qw/Zim::Store/;
 
 =head1 NAME
 
@@ -42,7 +44,8 @@ Adding write support is left as an exercise for the reader.
 
 =cut
 
-sub init {
+# FIXME -- needs refactoring
+sub BUILD {
 	my $self = shift;
 	$self->check_file;
 	$$self{tree} = $self->parse_gjots($$self{file});

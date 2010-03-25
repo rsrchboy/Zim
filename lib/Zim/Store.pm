@@ -1,6 +1,14 @@
 package Zim::Store;
 
-use strict;
+use Moose;
+use namespace::autoclean;
+
+use MooseX::Types::Moose       ':all';
+use MooseX::Types::Path::Class ':all';
+
+# let's see what we get passed
+use MooseX::StrictConstructor;
+
 use Carp;
 use Zim::Page;
 use Zim::Utils;
@@ -44,25 +52,29 @@ NAMESPACE is the prefix for all pages managed by this store.
 
 =cut
 
-sub new {
-	my $class = shift;
-	my %param = @_;
-	$param{namespace} ||= ':' ;
-	$param{namespace} =~ s/:?$/:/;
-	$param{indexpage} ||= $param{namespace};
-	$param{indexpage} =~ s/:*$//;
-	my $self = bless {%param}, $class;
-	$self->init();
-	return $self;
-}
+has parent    => (is => 'ro', isa => 'Zim', required => 1, predicate => 'has_parent');
+has namespace => (is => 'ro', isa => Str, required => 1);
+has indexpage => (is => 'ro', isa => Str, required => 1);
 
-=item C<init()>
+has document_root => (is => 'ro', isa => Dir, coerce => 1, lazy_build => 1);
 
-Stub init function, to be overloaded.
+around BUILDARGS => sub {
+    my $orig = shift;
+    my $class = shift;
 
-=cut
+    # either a hashref or list
+    my $params = @_ == 1 && ref $_[0] ? $_[0] : { @_ };
 
-sub init { }
+    # FIXME trigger on namespace instead?
+    $params->{namespace} ||= ':';
+    $params->{namespace} =~ s/:?$/:/;
+
+    # FIXME trigger on indexpage instead?
+    $params->{indexpage} ||= $params->{namespace};
+    $params->{indexpage} =~ s/:*$//;
+
+    return $class->$orig($params);
+};
 
 =item C<list_pages(NAMESPACE)>
 
@@ -292,7 +304,12 @@ Returns the document root directory or undef.
 
 =cut
 
-sub document_root { $_[0]{parent}{document_root} || $_[0]{document_root} }
+#sub document_root { $_[0]{parent}{document_root} || $_[0]{document_root} }
+sub _build_document_root {
+    my $self = shift @_;
+    
+    return $self->parent->document_root || undef;
+}
 
 =item C<store_file(FILE, PAGE, NAME, MOVE)>
 
@@ -604,7 +621,7 @@ sub wipe_array {
 	return $ref;
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 __END__
 

@@ -1,12 +1,14 @@
 package Zim::Store::Files;
 
-use strict;
+use Moose;
+use namespace::autoclean;
+
+extends 'Zim::Store::Cached';
+
 use File::MimeInfo;
 use Zim::Utils;
-use Zim::Store::Cached;
 
 our $VERSION = '0.29';
-our @ISA = qw/Zim::Store::Cached/;
 
 =head1 NAME
 
@@ -28,7 +30,8 @@ NAMESPACE is the namespace that maps to that directory.
 
 =cut
 
-sub init { # called by new
+# was init(); needs refactoring
+sub BUILD {
 	my $self = shift;
 	$self->check_dir;
 
@@ -40,7 +43,8 @@ sub init { # called by new
 	               ($self->{format} eq 'txt2tags') ? 't2t'  : 'txt' ;
 		# FIXME HACK FIXME - this belongs in a Formats.pm
 	
-	$self->SUPER::init();
+    # all BUILD()'s are called in order
+	#$self->SUPER::init();
 	
 	return $self;
 }
