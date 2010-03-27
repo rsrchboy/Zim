@@ -369,7 +369,7 @@ sub new {
 	croak "Invalid dirname: '$path'" unless $path =~ /\S/;
 	my $self = bless {}, $class;
 	
-	$$self{is_root} = 1 if $path eq '/' and ! $dir;
+	$$self{is_root} = 1 if $path eq '/' && ! $dir;
 	if ($dir) {
 		$$self{relpath} = Zim::FS->clean_path($path);
 		croak "\"$path\" is outside  \"$dir\""
@@ -485,7 +485,7 @@ sub file { Zim::FS::File->new(@_) } # File->new() checks for dir object
 sub subdir {
 	my $self = shift;
 	my $class = ref $self;
-	if (@_ == 1 and ref $_[0]) {
+	if (@_ == 1 && ref $_[0]) {
 		# single object argument => we want an existing
 		# directory object to become a child of the current one
 		my $path = Zim::FS->rel_path($_[0], $self);
@@ -493,7 +493,7 @@ sub subdir {
 		return $self if $path eq '.';
 		return $class->new($self, $path);
 	}
-	elsif (@_ == 1 and $_[0] =~ /^\.\/*$/) {
+	elsif (@_ == 1 && $_[0] =~ /^\.\/*$/) {
 		# special case
 		return $self;
 	}
@@ -514,9 +514,9 @@ sub _resolve {
 	#warn "RESOLVE: @parts EXT: $ext DIR: $is_dir IN: $self\n";
 
 	my $path = $self;
-	while (-d $path and @parts) {
+	while (-d $path && @parts) {
 		#warn "\tPATH: $path PARTS: @parts\n";
-		if (@parts == 1 and ! $is_dir) { # file
+		if (@parts == 1 && ! $is_dir) { # file
 			my $match = $path->_grep_file($parts[0], $ext);
 			last unless $match;
 			$path = $path->file($match);
@@ -991,7 +991,7 @@ Creates parent directories if needed.
 sub copy { $_[0]{dir}->copy_file($_[0] => _file($_[1])) }
 
 sub _file { # make sure we pass on object instead of string
-	return $_[0] if ref($_[0]) and @_ == 1;
+	return $_[0] if ref($_[0]) && @_ == 1;
 	Zim::FS::File->new(@_);
 }
 
@@ -1220,7 +1220,7 @@ sub open {
 	$mode ||= 'r';
 	my $cache = $$self{cache_file};
 	
-	if ($mode eq 'r' and ! $cache->exists) {
+	if ($mode eq 'r' && ! $cache->exists) {
 		$self->set_mtime;
 		return $self->SUPER::open($mode);
 	}
@@ -1382,7 +1382,7 @@ sub new {
 	# reference. This is done because the "open" function doesn't like
 	# blessed scalar references.
 	my $class = shift;
-	if (@_ == 1 and ref $_[0]) {
+	if (@_ == 1 && ref $_[0]) {
 		# wrap existing scalar reference
 		my $ref = shift;
 		croak "usage: new(\\\$STRING)" unless ref($ref) eq 'SCALAR';
