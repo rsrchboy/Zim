@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- encoding: utf-8 -*-
 #################################################################################################
 #                                                                                               #
 # tzim.py - Simple conversion module to convert a Tomboy notes database to zim format.          #
@@ -26,6 +27,10 @@
 #           along with this program.  If not, see <http://www.gnu.org/licenses/>.               #
 #                                                                                               #
 #           Copyright 2007,2008 Bengt J. Olsson                                                 #
+# Rev:      1.2.2                                                                               #
+# Date:     2013-04-30                                                                          #
+# Author    Laureà Molinari Carranza                                                            #
+# Changes:  Changed path default tomboy notes. Fix for get name the notebook.                   # 
 # Rev:      1.2.1                                                                               #
 # Date:     2008-03-25                                                                          #
 # Changes:  Corrected typo in dialog. Translates tomboy's monospace to zim verbatim             # 
@@ -50,10 +55,10 @@ import glob
 import re
 import datetime
 def main():
-	tomboynotes = raw_input("Path to tomboy notes directory (default ~/.tomboy): ")
+	tomboynotes = raw_input("Path to tomboy notes directory (default ~/.local/share/tomboy): ")
 	if tomboynotes == "":
 		tomboynotes = os.path.expanduser('~')
-		tomboynotes += '/.tomboy/'
+		tomboynotes += '/.local/share/tomboy/'
 	if not tomboynotes.rstrip == '/':
 		tomboynotes += '/*.note'
 	else:
@@ -116,7 +121,7 @@ def main():
 			print "create-date: could not be found"
 
 # --- Match folder (tomboy version > 0.3) ------------------------------------- 
-		match = re.search(r'.*<tag>system:notebook:(.+)</tag>',longline,re.S)
+		match = re.search(r'.*<tag>system:notebook:(\w+)</tag>',longline,re.S)
 		if match:
 			folder = match.group(1)
 		else:
